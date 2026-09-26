@@ -1,0 +1,3413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Green Plastwood - Let's Build Better Spaces Together</title>
+  <meta name="description"
+    content="Get in touch with Green Plastwood (SNG ECO INDIA). Have questions, project requirements, or need expert guidance on WPC solutions? We are here to help." />
+
+  <!-- Google Fonts: Barlow Condensed & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       0. CSS RESET & DESIGN TOKENS
+       ========================================================================== */
+    :root {
+      --bg-cream: #fbf9f4;
+      --bg-cream-alt: #f4efe5;
+      --bg-cream-card: #f7f3ea;
+      --green-primary: #1c3b2b;
+      --green-dark: #12281d;
+      --green-accent: #234d3d;
+      --green-subtle: #3a7556;
+      --text-main: #141715;
+      --text-heading: #1a201c;
+      --text-body: #4a544c;
+      --text-muted: #79827c;
+      --border-light: #e4dfd5;
+      --border-subtle: #dcd7cc;
+      --border-dark: #27312b;
+      --white: #ffffff;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .container-wide {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Section Sub-Tag with Horizontal Line */
+    .sec-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #79827c;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .sec-tag::after {
+      content: '';
+      display: inline-block;
+      width: 44px;
+      height: 1px;
+      background: #79827c;
+      opacity: 0.6;
+    }
+
+    .green-text {
+      color: var(--green-accent);
+    }
+
+    .charcoal-text {
+      color: var(--text-heading);
+    }
+
+    /* Outlined Button Style (like in mockup) */
+    .btn-outline-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 22px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #1a201c;
+      background: #ffffff;
+      border: 1px solid #233128;
+      border-radius: 6px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-outline-pill:hover {
+      background: var(--green-primary);
+      color: #ffffff;
+      border-color: var(--green-primary);
+      transform: translateY(-1px);
+    }
+
+    /* Dark Green Solid Button */
+    .btn-solid-green {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--green-primary);
+      color: #ffffff;
+      padding: 13px 32px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border: 1px solid var(--green-primary);
+      border-radius: 6px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-solid-green:hover {
+      background: #12281d;
+      border-color: #12281d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(28, 59, 43, 0.25);
+    }
+
+    /* ==========================================================================
+       1. STICKY HEADER & NAVBAR
+       ========================================================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 34px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #2b332d;
+      text-transform: capitalize;
+      transition: color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--green-primary);
+    }
+
+    .nav-link.active {
+      color: var(--green-primary);
+      font-weight: 600;
+    }
+
+    /* Underline for active Contact Us tab */
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--green-primary);
+      border-radius: 1px;
+    }
+
+    .btn-header-quote {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #4a685b;
+      color: #ffffff;
+      padding: 9px 24px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 50px;
+      transition: var(--transition);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      white-space: nowrap;
+    }
+
+    .btn-header-quote:hover {
+      background: #254234;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .hamburger-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--green-primary);
+      cursor: pointer;
+    }
+
+      .nav-item-mobile-quote {
+      display: none;
+    }
+
+    /* ==========================================================================
+       2. HERO SECTION ("LET'S BUILD BETTER SPACES TOGETHER.")
+       ========================================================================== */
+    .contact-hero-section {
+      background: var(--bg-cream);
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
+      padding: 38px 0 34px;
+    }
+
+    .contact-hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1.35fr;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .hero-text-col {
+      padding-right: 16px;
+    }
+
+    .hero-main-title {
+      font-family: var(--font-heading);
+      font-size: 64px;
+      line-height: 0.96;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin: 12px 0 18px;
+    }
+
+    .hero-main-title span.green-line {
+      color: var(--green-accent);
+      display: block;
+    }
+
+    .hero-description {
+      font-size: 14.5px;
+      color: var(--text-body);
+      line-height: 1.6;
+      max-width: 440px;
+    }
+
+    /* Right visual with reception desk & side tag */
+    .hero-visual-wrapper {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-end;
+      overflow: hidden;
+      border-radius: 3px;
+      min-height: 250px;
+    }
+
+    .hero-reception-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: center right;
+      border-radius: 3px;
+      box-shadow: var(--shadow-sm);
+      /* Subtle soft fade on the left edge */
+      mask-image: linear-gradient(to right, transparent 0%, black 14%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 14%);
+    }
+
+    /* Far right vertical tagline column: INQUIRE / COLLABORATE / DISTRIBUTE / GROW TOGETHER */
+    .hero-right-tagline {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-family: var(--font-body);
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.78);
+      text-transform: uppercase;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+      border-left: 1px solid rgba(255, 255, 255, 0.4);
+      padding-left: 12px;
+    }
+
+    .hero-right-tagline span {
+      white-space: nowrap;
+    }
+
+    /* ==========================================================================
+       3. GET IN TOUCH & SEND US A MESSAGE SECTION
+       ========================================================================== */
+    .contact-form-section {
+      background: var(--bg-cream);
+      padding: 56px 0 64px;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+    }
+
+    .contact-split-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.55fr;
+      gap: 54px;
+      align-items: flex-start;
+    }
+
+    /* Left: Get In Touch Info */
+    .get-in-touch-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .touch-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .touch-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .touch-icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid #cfc8ba;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--green-primary);
+      transition: var(--transition);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .touch-item:hover .touch-icon-circle {
+      border-color: var(--green-primary);
+      background: var(--green-primary);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .touch-info-content h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a201c;
+      margin-bottom: 3px;
+    }
+
+    .touch-info-content p,
+    .touch-info-content a {
+      font-size: 12.5px;
+      color: #555f57;
+      line-height: 1.45;
+      display: block;
+      transition: color 0.2s;
+    }
+
+    .touch-info-content a:hover {
+      color: var(--green-primary);
+      text-decoration: underline;
+    }
+
+    /* Right: Send Us A Message Form Box */
+    .message-form-col {
+      position: relative;
+    }
+
+    .message-form-container {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      padding: 38px 42px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      overflow: hidden;
+    }
+
+    /* Right decorative wood slats panel */
+    .form-slats-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 170px;
+      background: url('images/contact_wood_slats_hd.jpg') right center / cover no-repeat;
+      pointer-events: none;
+      opacity: 0.9;
+      mask-image: linear-gradient(to right, transparent 0%, black 50%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%);
+    }
+
+    .form-header-content {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 24px;
+    }
+
+    .form-subtitle-text {
+      font-size: 13px;
+      color: #647068;
+      margin-top: 4px;
+    }
+
+    .inquiry-form {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-row-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #dcd7cc;
+      border-radius: 3px;
+      padding: 12px 14px;
+      font-size: 12.5px;
+      color: #1a201c;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #8c968e;
+      font-size: 12px;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--green-primary);
+      box-shadow: 0 0 0 3px rgba(28, 59, 43, 0.08);
+    }
+
+    .form-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23666666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      cursor: pointer;
+      color: #4a544c;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .form-checkbox-row input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--green-primary);
+      cursor: pointer;
+    }
+
+    .form-checkbox-row label {
+      font-size: 12px;
+      color: #555f57;
+      cursor: pointer;
+    }
+
+    .form-submit-row {
+      margin-top: 8px;
+    }
+
+    /* ==========================================================================
+       4. OUR GLOBAL PRESENCE ("FROM INDIA TO THE WORLD.")
+       ========================================================================== */
+    .global-presence-section {
+      background: var(--bg-cream);
+      padding: 56px 0 60px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .presence-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.35fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .presence-left-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .presence-heading {
+      font-family: var(--font-heading);
+      font-size: 54px;
+      line-height: 0.98;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin: 10px 0 16px;
+    }
+
+    .presence-desc {
+      font-size: 13.5px;
+      color: var(--text-body);
+      line-height: 1.55;
+      margin-bottom: 24px;
+      max-width: 320px;
+    }
+
+    /* Center Map & Stats */
+    .presence-map-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .world-map-img-box {
+      width: 100%;
+      max-width: 440px;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .world-map-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: contrast(1.02);
+    }
+
+    .presence-stats-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 14px;
+      width: 100%;
+    }
+
+    .stat-single-item {
+      text-align: left;
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 38px;
+      font-weight: 800;
+      color: #1a201c;
+      line-height: 1;
+    }
+
+    .stat-label-text {
+      font-size: 11.5px;
+      color: #647068;
+      line-height: 1.3;
+      margin-top: 4px;
+    }
+
+    /* Right Country Cards Stack */
+    .presence-cards-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      padding: 14px 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+    }
+
+    .country-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 10px;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+
+    .country-card:hover {
+      background: #fbf9f4;
+    }
+
+    .country-flag-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .country-flag-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .country-info h5 {
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #1a201c;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .country-info span {
+      font-size: 11px;
+      color: #79827c;
+      display: block;
+    }
+
+    /* ==========================================================================
+       5. OUR OFFICE & FACTORY ("VISIT US AT AHMEDABAD")
+       ========================================================================== */
+    .factory-section {
+      background: var(--bg-cream);
+      padding: 56px 0 60px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .factory-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.35fr 1.05fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .factory-left-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .factory-heading {
+      font-family: var(--font-heading);
+      font-size: 54px;
+      line-height: 0.98;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin: 10px 0 16px;
+    }
+
+    .factory-desc {
+      font-size: 13.5px;
+      color: var(--text-body);
+      line-height: 1.55;
+      margin-bottom: 24px;
+      max-width: 300px;
+    }
+
+    .factory-photo-col {
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .factory-photo-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .factory-photo-col:hover .factory-photo-img {
+      transform: scale(1.03);
+    }
+
+    /* Factory Right Cards */
+    .factory-right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .factory-info-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+      transition: var(--transition);
+    }
+
+    .factory-info-card:hover {
+      border-color: #cfc8ba;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .factory-card-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .factory-card-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid #cfc8ba;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-primary);
+      flex-shrink: 0;
+    }
+
+    .factory-card-texts h5 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a201c;
+      margin-bottom: 3px;
+    }
+
+    .factory-card-texts p {
+      font-size: 11.5px;
+      color: #647068;
+      line-height: 1.4;
+    }
+
+    .btn-card-action {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #1a201c;
+      background: transparent;
+      border: 1px solid #2b332d;
+      border-radius: 6px;
+      padding: 8px 14px;
+      white-space: nowrap;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-card-action:hover {
+      background: var(--green-primary);
+      border-color: var(--green-primary);
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       6. OUR NETWORK ("ACROSS MAJOR CITIES IN INDIA")
+       ========================================================================== */
+    .network-section {
+      background: var(--bg-cream);
+      padding: 56px 0 60px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .network-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr 1.35fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .network-left-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .network-heading {
+      font-family: var(--font-heading);
+      font-size: 54px;
+      line-height: 0.98;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin: 10px 0 16px;
+    }
+
+    .network-desc {
+      font-size: 13.5px;
+      color: var(--text-body);
+      line-height: 1.55;
+      max-width: 310px;
+    }
+
+    .network-map-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .network-map-img {
+      max-width: 250px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* 3 Columns of Cities */
+    .network-cities-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px 20px;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      padding: 24px 22px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+    }
+
+    .city-col-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .city-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #3b443e;
+      font-weight: 500;
+    }
+
+    .city-pin-icon {
+      color: var(--green-primary);
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       7. OUR PROUD PARTNERS ("BUILDING GROWTH TOGETHER.")
+       ========================================================================== */
+    .partners-section {
+      background: var(--bg-cream);
+      padding: 56px 0 64px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .partners-header-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    .partners-left-content {
+      max-width: 480px;
+    }
+
+    .partners-heading {
+      font-family: var(--font-heading);
+      font-size: 38px;
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin: 10px 0 14px;
+      white-space: nowrap;
+    }
+
+
+    .partners-desc {
+      font-size: 13.5px;
+      color: var(--text-body);
+      line-height: 1.55;
+      white-space: nowrap;
+    }
+
+
+    .partners-nav-arrows {
+      display: flex;
+      gap: 8px;
+    }
+
+    .partner-arrow-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #cfc8ba;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4a544c;
+      font-size: 14px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .partner-arrow-btn:hover {
+      background: var(--green-primary);
+      border-color: var(--green-primary);
+      color: #ffffff;
+    }
+
+    .partners-cards-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .partner-card-box {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 6px;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+      transition: var(--transition);
+    }
+
+    .partner-card-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border-color: #cfc8ba;
+    }
+
+    .partner-logo-img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    /* ==========================================================================
+       8. FOOTER
+       ========================================================================== */
+    .footer {
+      background: #112419;
+      color: #ffffff;
+      padding: 70px 0 28px;
+      font-size: 13.5px;
+    }
+
+    .footer-main-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr 1.2fr 1.3fr;
+      gap: 36px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 16px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-brand-desc {
+      font-size: 13px;
+      color: #9ab3a2;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      max-width: 270px;
+    }
+
+    .footer-social-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social-link {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      transition: var(--transition);
+    }
+
+    .footer-social-link:hover {
+      background: var(--green-subtle);
+      transform: translateY(-2px);
+    }
+
+    .footer-column-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 18px;
+      position: relative;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-nav-list a {
+      color: #a4bea8;
+      transition: color 0.2s;
+    }
+
+    .footer-nav-list a:hover {
+      color: #ffffff;
+      padding-left: 2px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      color: #a4bea8;
+      margin-bottom: 14px;
+      font-size: 13px;
+    }
+
+    .footer-contact-icon {
+      color: #81a88c;
+      flex-shrink: 0;
+    }
+
+    .newsletter-form {
+      display: flex;
+      margin-top: 14px;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-right: none;
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      font-size: 12.5px;
+      border-radius: 2px 0 0 2px;
+      outline: none;
+    }
+
+    .newsletter-input::placeholder {
+      color: #7d9685;
+    }
+
+    .newsletter-btn {
+      padding: 10px 16px;
+      background: #2d6b49;
+      border: 1px solid #2d6b49;
+      color: #ffffff;
+      cursor: pointer;
+      border-radius: 0 2px 2px 0;
+      transition: background 0.2s;
+    }
+
+    .newsletter-btn:hover {
+      background: #39825b;
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #7d9685;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      color: #7d9685;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       9. MODALS (QUOTE, INQUIRY SUCCESS, DISTRIBUTOR, MAP)
+       ========================================================================== */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 40, 29, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #ffffff;
+      border-radius: 6px;
+      width: 100%;
+      max-width: 520px;
+      padding: 34px;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      animation: modalFadeIn 0.25s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.96) translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      line-height: 1;
+      color: #647068;
+      cursor: pointer;
+    }
+
+    .modal-title {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #1a201c;
+      margin-bottom: 6px;
+    }
+
+    .modal-subtitle {
+      font-size: 13px;
+      color: #647068;
+      margin-bottom: 20px;
+      line-height: 1.45;
+    }
+
+    .modal-form-group {
+      margin-bottom: 14px;
+      text-align: left;
+    }
+
+    .modal-form-group label {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #2b332d;
+      margin-bottom: 4px;
+    }
+
+    .modal-form-group input,
+    .modal-form-group select,
+    .modal-form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #dcd7cc;
+      border-radius: 3px;
+      font-size: 12.5px;
+      outline: none;
+    }
+
+    .modal-form-group input:focus,
+    .modal-form-group select:focus,
+    .modal-form-group textarea:focus {
+      border-color: var(--green-primary);
+    }
+
+    .btn-submit-modal {
+      width: 100%;
+      background: var(--green-primary);
+      color: #ffffff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.2s;
+    }
+
+    .btn-submit-modal:hover {
+      background: #12281d;
+    }
+
+    /* Success Modal Box */
+    .success-icon-badge {
+      width: 56px;
+      height: 56px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin: 0 auto 16px;
+    }
+
+    /* ==========================================================================
+       BROCHURE POPUP MODAL (FIRST TIME VISITOR)
+       ========================================================================== */
+    .brochure-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 19, 0.76);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .brochure-modal-backdrop.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .brochure-popup-card {
+      position: relative;
+      background: #ffffff;
+      width: 100%;
+      max-width: 860px;
+      border-radius: 8px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.2);
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      overflow: visible;
+      animation: brochurePopZoom 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes brochurePopZoom {
+      from {
+        opacity: 0;
+        transform: scale(0.94) translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    /* Circular Close Button at Top-Right Corner */
+    .brochure-popup-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1a201c;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.2s ease;
+    }
+
+    .brochure-popup-close:hover {
+      background: #f4efe6;
+      transform: scale(1.08) rotate(90deg);
+    }
+
+    /* Left Side Visual Banner */
+    .brochure-popup-left {
+      position: relative;
+      background: #f5f2eb url('images/popup_brochure_banner_sharp.jpg') center center / cover no-repeat;
+      border-radius: 8px 0 0 8px;
+      overflow: hidden;
+      min-height: 520px;
+    }
+
+    /* Right Side Form */
+    .brochure-popup-right {
+      background: #fcfaf6;
+      border-radius: 0 8px 8px 0;
+      padding: 34px 34px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .brochure-req-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #717c75;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .brochure-req-tag::after {
+      content: '';
+      display: inline-block;
+      width: 44px;
+      height: 1px;
+      background: #717c75;
+      opacity: 0.6;
+    }
+
+    .brochure-form-title {
+      font-family: var(--font-heading);
+      font-size: 34px;
+      line-height: 1.02;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      color: #1a201c;
+      margin-bottom: 6px;
+    }
+
+    .brochure-form-title span {
+      color: var(--green-primary);
+    }
+
+    .brochure-form-desc {
+      font-size: 12.5px;
+      color: #647068;
+      line-height: 1.45;
+      margin-bottom: 16px;
+    }
+
+    .brochure-form-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .brochure-input,
+    .brochure-select {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #dcd7cc;
+      border-radius: 3px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #1a201c;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .brochure-input::placeholder {
+      color: #8c968e;
+      font-size: 12px;
+    }
+
+    .brochure-input:focus,
+    .brochure-select:focus {
+      border-color: var(--green-primary);
+      box-shadow: 0 0 0 3px rgba(28, 59, 43, 0.08);
+    }
+
+    .brochure-form-row-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .brochure-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23666666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      cursor: pointer;
+      color: #4a544c;
+    }
+
+    .brochure-checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .brochure-checkbox-group input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      margin-top: 2px;
+      accent-color: var(--green-primary);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .brochure-checkbox-group label {
+      font-size: 11px;
+      color: #555f57;
+      line-height: 1.35;
+      cursor: pointer;
+    }
+
+    .btn-download-brochure {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--green-primary);
+      color: #ffffff;
+      padding: 12px 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-top: 4px;
+      box-shadow: 0 4px 12px rgba(28, 59, 43, 0.2);
+    }
+
+    .btn-download-brochure:hover {
+      background: #12281d;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(28, 59, 43, 0.3);
+    }
+
+    /* Bottom 3 Pillars Strip */
+    .brochure-pillars-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #e6e0d4;
+      padding-top: 14px;
+      margin-top: 16px;
+    }
+
+    .brochure-pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .pillar-icon {
+      font-size: 16px;
+      color: var(--green-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pillar-text {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #2b332d;
+      line-height: 1.25;
+      text-align: left;
+    }
+
+    .pillar-divider {
+      width: 1px;
+      height: 28px;
+      background: #e6e0d4;
+    }
+
+    @media (max-width: 820px) {
+      .brochure-popup-card {
+        grid-template-columns: 1fr;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+
+      .brochure-popup-left {
+        min-height: 240px;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .brochure-popup-right {
+        border-radius: 0 0 8px 8px;
+        padding: 24px 20px;
+      }
+
+      .brochure-popup-close {
+        top: 8px;
+        right: 8px;
+      }
+    }
+
+    /* ==========================================================================
+       10. RESPONSIVE DESIGN
+       ========================================================================== */
+    @media (max-width: 1080px) {
+
+      .contact-hero-grid,
+      .contact-split-grid,
+      .presence-grid,
+      .factory-grid,
+      .network-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero-main-title {
+        font-size: 52px;
+      }
+
+      .presence-heading,
+      .factory-heading,
+      .network-heading,
+      .partners-heading {
+        font-size: 44px;
+      }
+
+      .hero-reception-img {
+        height: 220px;
+      }
+
+      .partners-cards-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-main-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .btn-header-quote,
+      .btn-quote-outline {
+        display: none !important;
+      }
+
+      .nav-wrapper {
+        padding: 0 20px;
+        height: 68px;
+      }
+
+      .brand-logo-img {
+        height: 36px;
+        max-width: 170px;
+        object-fit: contain;
+      }
+
+      .hamburger-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: #ffffff;
+        border: 1px solid #dcd7cc;
+        border-radius: 8px;
+        font-size: 20px;
+        color: #141715;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.2s ease;
+      }
+
+      .hamburger-btn:hover {
+        background: #f4f0e6;
+        border-color: var(--green-primary);
+        color: var(--green-primary);
+      }
+
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 24px 24px;
+        border-bottom: 2px solid var(--green-primary);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+        gap: 0;
+        max-height: calc(100vh - 68px);
+        overflow-y: auto;
+        z-index: 9999;
+      }
+
+      .nav-menu.open {
+        display: flex;
+      }
+
+      .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #f0ece3;
+      }
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 0;
+        font-size: 15px;
+        font-weight: 600;
+        color: #1a221d;
+        width: 100%;
+        text-decoration: none;
+      }
+
+      .nav-link.active {
+        color: var(--green-primary);
+        font-weight: 700;
+      }
+
+      .nav-link.active::after {
+        display: none;
+      }
+
+      .nav-item .dropdown {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #ede8de;
+        background: #fbf9f5;
+        border-radius: 6px;
+        padding: 6px 8px;
+        margin: 4px 0 10px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: block;
+      }
+
+      .nav-item .dropdown a {
+        padding: 9px 14px;
+        font-size: 13.5px;
+        border-radius: 4px;
+        color: #232c26;
+      }
+
+
+      .nav-item-mobile-quote {
+        display: block !important;
+        width: 100%;
+        border-bottom: none !important;
+        padding-top: 18px;
+      }
+
+      .btn-sidebar-quote {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 13px 20px;
+        background: var(--green-primary);
+        color: #ffffff !important;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(28, 59, 43, 0.25);
+        transition: all 0.2s ease;
+      }
+
+      .btn-sidebar-quote:hover {
+        background: #12281d;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(28, 59, 43, 0.35);
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .form-row-2col {
+        grid-template-columns: 1fr;
+      }
+
+      .network-cities-col {
+        grid-template-columns: 1fr;
+      }
+
+      .partners-cards-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom-bar {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+
+    
+    /* ==========================================================================
+       GLOBAL TYPOGRAPHY SYSTEM (CONTEMPORARY ARCHITECTURAL - PLUS JAKARTA SANS)
+       - Handcrafted human designer hierarchy
+       - Display / Main Headings: Plus Jakarta Sans Bold/ExtraBold (700/800)
+       - Subheadings & Badges: Plus Jakarta Sans SemiBold (600)
+       - Body & Interactive: Plus Jakarta Sans Regular/Medium (400/500)
+       ========================================================================== */
+    :root {
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-subheading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-luxury: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    html,
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    /* Main Headings: Strong, architectural display presence */
+    h1,
+    h2,
+    .hero-h1,
+    .hero-title,
+    .hero-title-main,
+    .hero-title-sub,
+    .sec-h2,
+    .about-h2,
+    .journey-sec-h2,
+    .video-title,
+    .sec-reviews-title,
+    .sec-faq-title,
+    .cta-h2,
+    .story-heading,
+    .purpose-title,
+    .scale-title,
+    .founders-title,
+    .presence-title,
+    .commitment-title,
+    .products-hero-title,
+    .quality-spec-title,
+    .applications-title,
+    .overview-title,
+    .benefits-title,
+    .shades-title,
+    .catalogue-title,
+    .page-title,
+    .main-title,
+    .section-title,
+    .gallery-title,
+    .certificate-title,
+    .contact-title,
+    .modal-title,
+    .about-badge-h3,
+    .story-poster-num,
+    .story-poster-txt,
+    .trusted-title,
+    .specs-table-title {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.025em !important;
+    }
+
+    h1 *,
+    h2 *,
+    .hero-h1 *,
+    .hero-title *,
+    .hero-title-main *,
+    .hero-title-sub *,
+    .sec-h2 *,
+    .about-h2 *,
+    .journey-sec-h2 *,
+    .video-title *,
+    .sec-reviews-title *,
+    .sec-faq-title *,
+    .cta-h2 *,
+    .story-heading *,
+    .purpose-title *,
+    .scale-title *,
+    .founders-title *,
+    .presence-title *,
+    .commitment-title *,
+    .products-hero-title *,
+    .quality-spec-title *,
+    .applications-title *,
+    .overview-title *,
+    .benefits-title *,
+    .shades-title *,
+    .catalogue-title *,
+    .page-title *,
+    .main-title *,
+    .section-title *,
+    .gallery-title *,
+    .certificate-title *,
+    .contact-title *,
+    .modal-title * {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.025em !important;
+    }
+
+    /* Subheadings, Card Titles, and Section Accents */
+    h3,
+    h4,
+    h5,
+    h6,
+    .hero-subtitle,
+    .journey-subtitle,
+    .about-subtitle,
+    .purpose-header-desc,
+    .scale-header-desc,
+    .applications-desc,
+    .overview-subtitle,
+    .quality-spec-desc,
+    .products-hero-desc,
+    .subheading,
+    .subtitle,
+    [class*="subtitle"],
+    [class*="subheading"],
+    .stat-label,
+    .stat-number,
+    .benefit-label,
+    .blog-card-title,
+    .footer-column-title,
+    .footer-col-title,
+    .faq-question-btn,
+    .brochure-heading,
+    .timeline-year,
+    .product-title-badge,
+    .subnav-link,
+    .nav-link,
+    .btn,
+    button,
+    .cust-name,
+    .spec-card-title,
+    .shade-name,
+    .tab-btn,
+    .filter-btn,
+    .catalogue-tag,
+    .sec-tag,
+    .product-card-title {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.015em;
+    }
+
+    /* Children of Subheadings */
+    h3 *,
+    h4 *,
+    h5 *,
+    h6 *,
+    .subheading *,
+    .subtitle *,
+    [class*="subtitle"] *,
+    [class*="subheading"] *,
+    .nav-link *,
+    .footer-column-title *,
+    .footer-col-title *,
+    .btn *,
+    button * {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+    }
+
+    /* Body Text: Warm, readable human geometric typography */
+    p,
+    li,
+    a,
+    span,
+    label,
+    input,
+    textarea,
+    select,
+    td,
+    th,
+    blockquote,
+    .about-description,
+    .overview-text,
+    .purpose-col-desc,
+    .founders-desc,
+    .presence-desc,
+    .commitment-desc,
+    .cust-quote,
+    .faq-answer-panel,
+    .footer-desc,
+    .footer-copy,
+    .marquee-item {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+    }
+
+    /* Interactive buttons & Links: Confident SemiBold */
+    .nav-link,
+    .btn,
+    button,
+    .btn-know-more,
+    .view-all-link,
+    .btn-brochure,
+    .btn-watch-video,
+    .btn-primary,
+    .btn-secondary,
+    .btn-download-white,
+    .btn-explore-products,
+    .subnav-link.active,
+    .subnav-link:hover,
+    .footer-column-title,
+    .footer-col-title,
+    .quote-nav-btn {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.02em;
+    }
+
+  
+    /* Dropdown Menu */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #ffffff;
+      min-width: 200px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-light, #e4dfd5);
+      border-radius: 4px;
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+      list-style: none;
+      pointer-events: none;
+    }
+
+    .dropdown::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+    }
+
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-main, #141715);
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      background: #f4f0e6;
+      color: var(--green-primary, #1c3b2b);
+      padding-left: 24px;
+    }
+
+    .nav-link.dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-chevron {
+      transition: transform 0.25s ease;
+      opacity: 0.75;
+    }
+
+    .nav-item:hover .nav-chevron {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       1. HEADER & NAVIGATION BAR
+       ======================================================================== -->
+  <header class="header">
+    <div class="container-wide">
+      <div class="nav-wrapper">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" aria-label="Green Plastwood Home">
+          <img src="images/brand_logo_transparent.png" alt="Green Plastwood - SNG ECO INDIA" class="brand-logo-img" />
+        </a>
+
+        <!-- Desktop Navigation Menu (No dropdowns as requested) -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item has-dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle">
+            About Us
+            <svg class="nav-chevron" width="9" height="5" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <ul class="dropdown">
+            <li><a href="index.html#celvion">CELVION</a></li>
+            <li><a href="about.html">Green Plastwood</a></li>
+          </ul>
+        </li>
+          <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item"><a href="certificate.html" class="nav-link">Certificate</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link active">Contact Us</a></li>
+          <li class="nav-item-mobile-quote">
+            <a href="contact.html#contactInquiryForm" class="btn-sidebar-quote" onclick="if(typeof openQuoteModal==='function'){openQuoteModal('Mobile Nav');return false;}">
+              GET A QUOTE <span>→</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right Header Action -->
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <button class="btn-header-quote" onclick="openQuoteModal('Contact Page Quote Request')">
+            GET A QUOTE
+          </button>
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">&#9776;</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. HERO SECTION ("LET'S BUILD BETTER SPACES TOGETHER.")
+       ======================================================================== -->
+  <section class="contact-hero-section" id="hero">
+    <div class="container">
+      <div class="contact-hero-grid">
+        <!-- Left Title and Description -->
+        <div class="hero-text-col">
+
+          <h1 class="hero-main-title">
+            LET'S BUILD
+            <span class="green-line">BETTER SPACES</span>
+            TOGETHER.
+          </h1>
+          <p class="hero-description">
+            Have a question, project requirement or need expert guidance? Our team is here to help you with the right
+            WPC solutions.
+          </p>
+        </div>
+
+        <!-- Right Reception Photo & Side Tagline -->
+        <div class="hero-visual-wrapper">
+          <img src="images/contact_hero_photo_hd.jpg"
+            alt="Green Plastwood Corporate Reception Desk with Illuminated Sign and Vertical Wood Louvers"
+            class="hero-reception-img" />
+          <div class="hero-right-tagline">
+            <span>INQUIRE</span>
+            <span>COLLABORATE</span>
+            <span>DISTRIBUTE</span>
+            <span>GROW TOGETHER</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. GET IN TOUCH & SEND US A MESSAGE SECTION
+       ======================================================================== -->
+  <section class="contact-form-section" id="contact-form">
+    <div class="container">
+      <div class="contact-split-grid">
+        <!-- Left: Get In Touch -->
+        <div class="get-in-touch-col">
+
+
+          <div class="touch-items-list">
+            <!-- Call Us -->
+            <div class="touch-item">
+              <div class="touch-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="touch-info-content">
+                <h4>Call Us</h4>
+                <a href="tel:+919016136119">+91 90161 36119</a>
+                <a href="tel:+919825012345">+91 98250 12345 (Sales)</a>
+              </div>
+            </div>
+
+            <!-- Email Us -->
+            <div class="touch-item">
+              <div class="touch-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="touch-info-content">
+                <h4>Email Us</h4>
+                <a href="mailto:sng.ecoindia@gmail.com">sng.ecoindia@gmail.com</a>
+                <a href="mailto:sales@greenplastwood.com">sales@greenplastwood.com</a>
+              </div>
+            </div>
+
+            <!-- Visit Our Office -->
+            <div class="touch-item">
+              <div class="touch-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="touch-info-content">
+                <h4>Visit Our Office</h4>
+                <p>SNG ECO INDIA PVT. LTD.</p>
+                <p>Ahmedabad, Gujarat, India</p>
+              </div>
+            </div>
+
+            <!-- Working Hours -->
+            <div class="touch-item">
+              <div class="touch-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="touch-info-content">
+                <h4>Working Hours</h4>
+                <p>Mon - Sat : 9:00 AM - 6:00 PM</p>
+                <p>Sunday : Closed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Send Us A Message Form -->
+        <div class="message-form-col">
+          <div class="message-form-container">
+            <!-- Decorative wood slats backdrop on the right edge -->
+            <div class="form-slats-bg" aria-hidden="true"></div>
+
+            <div class="form-header-content">
+
+              <p class="form-subtitle-text">Fill in your details and our team will get back to you shortly.</p>
+            </div>
+
+            <form class="inquiry-form" id="contactInquiryForm" onsubmit="handleContactInquiry(event)">
+              <!-- Row 1: Full Name & Company Name -->
+              <div class="form-row-2col">
+                <input type="text" name="fullName" class="form-input" placeholder="Full Name *" required />
+                <input type="text" name="companyName" class="form-input" placeholder="Company Name" />
+              </div>
+
+              <!-- Row 2: Email & Phone Number -->
+              <div class="form-row-2col">
+                <input type="email" name="email" class="form-input" placeholder="Email Address *" required />
+                <input type="tel" name="phone" class="form-input" placeholder="Phone Number *" required />
+              </div>
+
+              <!-- Row 3: Product & Requirement Selectors -->
+              <div class="form-row-2col">
+                <select name="productService" class="form-select" required>
+                  <option value="" disabled selected>Select Product/Service *</option>
+                  <option value="WPC Wall Cladding">WPC Wall Cladding</option>
+                  <option value="WPC Louvers & Fluted Panels">WPC Louvers & Fluted Panels</option>
+                  <option value="WPC Deck Flooring">WPC Deck Flooring & Tiles</option>
+                  <option value="WPC Pergolas & Gazebos">WPC Pergolas & Gazebos</option>
+                  <option value="WPC Doors & Frames">WPC Doors & Window Frames</option>
+                  <option value="WPC Planks & Sheets">WPC Planks & Boards</option>
+                  <option value="Custom Architectural Solution">Custom Architectural Solution</option>
+                </select>
+
+                <select name="requirementType" class="form-select" required>
+                  <option value="" disabled selected>Select Requirement *</option>
+                  <option value="Commercial Project Inquiry">Commercial Project Inquiry</option>
+                  <option value="Residential Project Inquiry">Residential Project Inquiry</option>
+                  <option value="Dealership & Distribution">Dealership & Distribution</option>
+                  <option value="Sample Box Request">Sample Box Request</option>
+                  <option value="Bulk Order / Export">Bulk Order / Export</option>
+                  <option value="Architectural Technical Guidance">Architectural Technical Guidance</option>
+                </select>
+              </div>
+
+              <!-- Row 4: Your Message -->
+              <textarea name="message" class="form-textarea" rows="4" placeholder="Your Message *" required></textarea>
+
+              <!-- Row 5: Consent Checkbox -->
+              <div class="form-checkbox-row">
+                <input type="checkbox" id="consentCheckbox" required />
+                <label for="consentCheckbox">I agree to be contacted by the Green Plastwood team.</label>
+              </div>
+
+              <!-- Row 6: Submit Button -->
+              <div class="form-submit-row">
+                <button type="submit" class="btn-solid-green">
+                  <span>SEND INQUIRY</span>
+                  <span>&rarr;</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. OUR GLOBAL PRESENCE ("FROM INDIA TO THE WORLD.")
+       ======================================================================== -->
+  <section class="global-presence-section" id="global-presence">
+    <div class="container">
+      <div class="presence-grid">
+        <!-- Left: Heading & Button -->
+        <div class="presence-left-col">
+
+          <h2 class="presence-heading">
+            FROM INDIA TO<br />
+            <span class="green-text">THE WORLD.</span>
+          </h2>
+          <p class="presence-desc">
+            Our WPC solutions are trusted across India and in multiple international markets, helping build modern
+            spaces worldwide.
+          </p>
+          <div>
+            <button class="btn-outline-pill" onclick="openDistributorModal()">
+              <span>BECOME OUR DISTRIBUTOR</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Center: World Map & Numbers -->
+        <div class="presence-map-col">
+          <div class="world-map-img-box">
+            <img src="images/contact_world_map_hd.png"
+              alt="Global Presence World Map with Green Plastwood Distribution Network" class="world-map-img" />
+          </div>
+          <div class="presence-stats-row">
+            <div class="stat-single-item">
+              <div class="stat-number">4+</div>
+              <div class="stat-label-text">Countries Served<br />Globally</div>
+            </div>
+            <div style="width: 1px; height: 38px; background: #e0d9cd;"></div>
+            <div class="stat-single-item">
+              <div class="stat-number">420+</div>
+              <div class="stat-label-text">Dealers Across<br />India</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Country Cards Stack -->
+        <div class="presence-cards-col">
+          <!-- India -->
+          <div class="country-card">
+            <div class="country-flag-icon">
+              <!-- India Tiranga Flag SVG -->
+              <svg viewBox="0 0 32 32">
+                <rect width="32" height="10.66" fill="#FF9933" />
+                <rect y="10.66" width="32" height="10.66" fill="#FFFFFF" />
+                <rect y="21.33" width="32" height="10.66" fill="#138808" />
+                <circle cx="16" cy="16" r="3.5" fill="none" stroke="#000080" stroke-width="0.8" />
+                <circle cx="16" cy="16" r="0.8" fill="#000080" />
+              </svg>
+            </div>
+            <div class="country-info">
+              <h5>INDIA</h5>
+              <span>Pan India Network</span>
+            </div>
+          </div>
+
+          <!-- UAE -->
+          <div class="country-card">
+            <div class="country-flag-icon">
+              <!-- UAE Flag SVG -->
+              <svg viewBox="0 0 32 32">
+                <rect width="32" height="10.66" fill="#00732F" />
+                <rect y="10.66" width="32" height="10.66" fill="#FFFFFF" />
+                <rect y="21.33" width="32" height="10.66" fill="#000000" />
+                <rect width="9" height="32" fill="#FF0000" />
+              </svg>
+            </div>
+            <div class="country-info">
+              <h5>UAE</h5>
+              <span>Trusted Partner</span>
+            </div>
+          </div>
+
+          <!-- Nepal -->
+          <div class="country-card">
+            <div class="country-flag-icon">
+              <!-- Nepal Flag SVG -->
+              <svg viewBox="0 0 32 32" style="background: #ffffff;">
+                <polygon points="6,4 26,16 12,16 24,28 6,28" fill="#DC143C" stroke="#003893" stroke-width="1.5" />
+                <circle cx="12" cy="11" r="2" fill="#FFFFFF" />
+                <polygon points="12,21 13.5,23.5 11,23.5" fill="#FFFFFF" />
+              </svg>
+            </div>
+            <div class="country-info">
+              <h5>NEPAL</h5>
+              <span>Growing Presence</span>
+            </div>
+          </div>
+
+          <!-- Sri Lanka -->
+          <div class="country-card">
+            <div class="country-flag-icon">
+              <!-- Sri Lanka Flag SVG -->
+              <svg viewBox="0 0 32 32" style="background: #FFBE29;">
+                <rect x="2" y="2" width="28" height="28" fill="#8D153A" stroke="#FFBE29" stroke-width="1" />
+                <rect x="2" y="2" width="4.5" height="28" fill="#00534E" />
+                <rect x="6.5" y="2" width="4.5" height="28" fill="#EB7400" />
+                <circle cx="21" cy="16" r="4.5" fill="#FFBE29" />
+              </svg>
+            </div>
+            <div class="country-info">
+              <h5>SRI LANKA</h5>
+              <span>Expanding Reach</span>
+            </div>
+          </div>
+
+          <!-- Bangladesh -->
+          <div class="country-card">
+            <div class="country-flag-icon">
+              <!-- Bangladesh Flag SVG -->
+              <svg viewBox="0 0 32 32">
+                <rect width="32" height="32" fill="#006a4e" />
+                <circle cx="14" cy="16" r="7" fill="#f42a41" />
+              </svg>
+            </div>
+            <div class="country-info">
+              <h5>BANGLADESH</h5>
+              <span>In Discussions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. OUR OFFICE & FACTORY ("VISIT US AT AHMEDABAD")
+       ======================================================================== -->
+  <section class="factory-section" id="factory">
+    <div class="container">
+      <div class="factory-grid">
+        <!-- Left: Heading & Description -->
+        <div class="factory-left-col">
+
+          <h2 class="factory-heading">
+            VISIT US AT<br />
+            <span class="charcoal-text">AHMEDABAD</span>
+          </h2>
+          <p class="factory-desc">
+            Experience our manufacturing excellence and explore our product range in person.
+          </p>
+          <div>
+            <button class="btn-outline-pill" onclick="openDirectionsModal()">
+              <span>GET DIRECTIONS</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Middle: Modern Factory Exterior Photo -->
+        <div class="factory-photo-col">
+          <img src="images/contact_factory_hd.jpg"
+            alt="Green Plastwood SNG ECO INDIA Manufacturing Facility in Ahmedabad" class="factory-photo-img" />
+        </div>
+
+        <!-- Right: Address & Inquiry Cards -->
+        <div class="factory-right-col">
+          <!-- Factory Address Card -->
+          <div class="factory-info-card">
+            <div class="factory-card-left">
+              <div class="factory-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="factory-card-texts">
+                <h5>Factory Address</h5>
+                <p>SNG ECO INDIA PVT. LTD.<br />Ahmedabad, Gujarat, India</p>
+              </div>
+            </div>
+            <button class="btn-card-action" onclick="openDirectionsModal()">
+              <span>VIEW ON MAP</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+          <!-- Business Inquiries Card -->
+          <div class="factory-info-card">
+            <div class="factory-card-left">
+              <div class="factory-card-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="factory-card-texts">
+                <h5>Business Inquiries</h5>
+                <p>sng.ecoindia@gmail.com<br />sales@greenplastwood.com</p>
+              </div>
+            </div>
+            <a href="mailto:sng.ecoindia@gmail.com" class="btn-card-action">
+              <span>EMAIL US</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. OUR NETWORK ("ACROSS MAJOR CITIES IN INDIA")
+       ======================================================================== -->
+  <section class="network-section" id="network">
+    <div class="container">
+      <div class="network-grid">
+        <!-- Left: Heading & Description -->
+        <div class="network-left-col">
+
+          <h2 class="network-heading">
+            ACROSS MAJOR CITIES<br />
+            <span class="charcoal-text">IN INDIA</span>
+          </h2>
+          <p class="network-desc">
+            Our dealer and distribution network spans 420+ locations across India, ensuring easy availability and quick
+            service.
+          </p>
+        </div>
+
+        <!-- Center: India Pin Map Graphic -->
+        <div class="network-map-col">
+          <img src="images/contact_india_map_hd.png" alt="Green Plastwood Distribution Locations Pin Map across India"
+            class="network-map-img" />
+        </div>
+
+        <!-- Right: 3 Columns of Locations -->
+        <div class="network-cities-col">
+          <!-- Col 1 -->
+          <div class="city-col-list">
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Gujarat</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Maharashtra</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Rajasthan</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Madhya Pradesh</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Delhi NCR</span>
+            </div>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="city-col-list">
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Uttar Pradesh</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Bihar</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>West Bengal</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Karnataka</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Tamil Nadu</span>
+            </div>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="city-col-list">
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Telangana</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Andhra Pradesh</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Punjab</span>
+            </div>
+            <div class="city-item">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>Haryana</span>
+            </div>
+            <div class="city-item" style="color: #647068; font-style: italic;">
+              <span class="city-pin-icon">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span>And many more...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. OUR PROUD PARTNERS ("BUILDING GROWTH TOGETHER.")
+       ======================================================================== -->
+  <section class="partners-section" id="partners">
+    <div class="container">
+      <div class="partners-header-row">
+        <div class="partners-left-content">
+
+          <h2 class="partners-heading">BUILDING GROWTH TOGETHER.</h2>
+          <p class="partners-desc">We work with leading architects, builders, dealers and business partners across the globe.</p>
+        </div>
+
+
+      </div>
+
+      <!-- 5 Partner Cards Row -->
+      <div class="partners-cards-row" id="partnersRow">
+        <!-- Partner 1: Dusra Bachpan -->
+        <div class="partner-card-box">
+          <img src="images/contact_partner_1_card.png" alt="Partner - Dusra Bachpan Ghar Da Ghar"
+            class="partner-logo-img" />
+        </div>
+
+        <!-- Partner 2: Prasthan Infrastructure -->
+        <div class="partner-card-box">
+          <img src="images/contact_partner_2_card.png" alt="Partner - Prasthan Infrastructure Pvt. Ltd."
+            class="partner-logo-img" />
+        </div>
+
+        <!-- Partner 3: Construction -->
+        <div class="partner-card-box">
+          <img src="images/contact_partner_3_card.png" alt="Partner - Construction Emblem" class="partner-logo-img" />
+        </div>
+
+        <!-- Partner 4: Shayona Group -->
+        <div class="partner-card-box">
+          <img src="images/contact_partner_4_card.png" alt="Partner - Shayona Group" class="partner-logo-img" />
+        </div>
+
+        <!-- Partner 5: Tirupati -->
+        <div class="partner-card-box">
+          <img src="images/contact_partner_5_card.png" alt="Partner - Tirupati" class="partner-logo-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container-wide">
+      <div class="footer-main-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html">
+            <img src="images/brand_logo_transparent.png" alt="Green Plastwood" class="footer-logo-img" />
+          </a>
+          <p class="footer-brand-desc">
+            Setting the benchmark in green composite technology. Premium WPC solutions engineered for endurance,
+            aesthetic elegance and climate resilience.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-column-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#journey">CELVION</a></li>
+            <li><a href="about.html#journey">SNG</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Our Products -->
+        <div>
+          <h4 class="footer-column-title">Our Products</h4>
+          <ul class="footer-nav-list">
+            <li><a href="product-detail.html">WPC Door Frames</a></li>
+            <li><a href="product-detail.html">Louvers &amp; Wall Cladding</a></li>
+            <li><a href="product-detail.html">Pergolas &amp; Rafters</a></li>
+            <li><a href="product-detail.html">Deck Flooring &amp; Deck Tiles</a></li>
+            <li><a href="product-detail.html">WPC Boards</a></li>
+            <li><a href="product-detail.html">WPC Doors</a></li>
+            <li><a href="product-detail.html">Planks</a></li>
+            <li><a href="product-detail.html">Window Frames</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Us -->
+        <div>
+          <h4 class="footer-column-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>SNG ECO INDIA<br />Ahmedabad, Gujarat, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span>+91 90161 36119</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <span>sng.ecoindia@gmail.com</span>
+          </div>
+        </div>
+
+        <!-- Col 5: Newsletter -->
+        <div>
+          <h4 class="footer-column-title">Newsletter</h4>
+          <p style="font-size: 13px; color: #8c9790; line-height: 1.5; margin-bottom: 12px;">
+            Get the latest updates, product launches and industry insights.
+          </p>
+          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" required />
+            <button type="submit" class="newsletter-btn">&rarr;</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>&copy; 2024 Green Plastwood (SNG ECO INDIA). All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       9. MODALS
+       ======================================================================== -->
+
+
+  <!-- 2. Distributor Application Modal -->
+  <div class="modal-backdrop" id="distributorModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeDistributorModal()" aria-label="Close Modal">&times;</button>
+      <h3 class="modal-title">BECOME A DISTRIBUTOR</h3>
+      <p class="modal-subtitle">Partner with India's fastest growing WPC brand. Expand your dealership network with high
+        margins and factory warranty.</p>
+
+      <form onsubmit="handleDistributorSubmit(event)">
+        <div class="modal-form-group">
+          <label for="dName">Business / Proprietor Name *</label>
+          <input type="text" id="dName" placeholder="e.g. Apex Hardware & Building Materials" required />
+        </div>
+        <div class="modal-form-group">
+          <label for="dCity">City &amp; State / Country *</label>
+          <input type="text" id="dCity" placeholder="e.g. Pune, Maharashtra or Dubai, UAE" required />
+        </div>
+        <div class="modal-form-group">
+          <label for="dPhone">Mobile / WhatsApp Number *</label>
+          <input type="tel" id="dPhone" placeholder="+91 98765 43210" required />
+        </div>
+        <div class="modal-form-group">
+          <label for="dExperience">Existing Business Line</label>
+          <select id="dExperience">
+            <option value="Plywood & Timber Dealer">Plywood & Timber Dealer</option>
+            <option value="Interior Materials Showroom">Interior Materials Showroom</option>
+            <option value="Hardware / Construction Materials">Hardware / Construction Materials</option>
+            <option value="Architectural Contractor / Builder">Architectural Contractor / Builder</option>
+            <option value="New Distribution Venture">New Distribution Venture</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit-modal">APPLY FOR AUTHORIZED DEALERSHIP &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. Directions / Location Modal -->
+  <div class="modal-backdrop" id="directionsModal">
+    <div class="modal-box" style="max-width: 580px;">
+      <button class="modal-close-btn" onclick="closeDirectionsModal()" aria-label="Close Modal">&times;</button>
+      <h3 class="modal-title">VISIT SNG ECO INDIA</h3>
+      <p class="modal-subtitle">Headquarters &amp; State-of-the-Art WPC Manufacturing Facility</p>
+
+      <div
+        style="background: #fbf9f4; border: 1px solid #e4dfd5; border-radius: 4px; padding: 18px; margin-bottom: 20px;">
+        <div style="font-weight: 700; font-size: 14px; margin-bottom: 6px; color: #1c3b2b;">
+          SNG ECO INDIA PVT. LTD.
+        </div>
+        <p style="font-size: 13px; color: #555f57; line-height: 1.5; margin-bottom: 12px;">
+          GIDC Industrial Estate, Phase 4, Ahmedabad - 382445, Gujarat, India.
+        </p>
+        <div style="font-size: 12px; color: #79827c; line-height: 1.4;">
+          <strong>Visiting Hours:</strong> Monday &ndash; Saturday, 9:00 AM &ndash; 6:00 PM<br />
+          <strong>Direct Line:</strong> +91 90161 36119 / +91 98250 12345
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px;">
+        <a href="https://maps.google.com/?q=SNG+ECO+INDIA+Ahmedabad+Gujarat" target="_blank" rel="noopener"
+          class="btn-solid-green" style="flex: 1; text-align: center; text-decoration: none;">
+          <span>OPEN IN GOOGLE MAPS</span>
+          <span>&rarr;</span>
+        </a>
+        <button type="button" class="btn-outline-pill" onclick="closeDirectionsModal()">
+          CLOSE
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Success Modal -->
+  <div class="modal-backdrop" id="successModal">
+    <div class="modal-box" style="text-align: center;">
+      <button class="modal-close-btn" onclick="closeSuccessModal()" aria-label="Close Modal">&times;</button>
+      <div class="success-icon-badge">&#10003;</div>
+      <h3 class="modal-title" id="successTitle">THANK YOU!</h3>
+      <p class="modal-subtitle" id="successMsg" style="margin-bottom: 24px;">
+        Your inquiry has been successfully transmitted to our technical sales team.
+      </p>
+      <button type="button" class="btn-solid-green" onclick="closeSuccessModal()" style="width: 100%;">
+        OK, GOT IT
+      </button>
+    </div>
+  </div>
+
+  <!-- 5. First-Time Visitor Product Brochure Popup Modal (Same-To-Same Design) -->
+  <div class="brochure-modal-backdrop" id="brochurePopupModal">
+    <div class="brochure-popup-card">
+      <!-- Circular Close Button -->
+      <button class="brochure-popup-close" onclick="closeBrochurePopup()" aria-label="Close Brochure Modal">
+        ✕
+      </button>
+
+      <!-- Left Column: Visual Brochure Presentation -->
+      <div class="brochure-popup-left"></div>
+
+      <!-- Right Column: Request Your Copy Form -->
+      <div class="brochure-popup-right">
+        <div>
+          <div class="brochure-req-tag">REQUEST YOUR COPY</div>
+          <h2 class="brochure-form-title">
+            DOWNLOAD OUR<br />
+            <span>PRODUCT BROCHURE</span>
+          </h2>
+          <p class="brochure-form-desc">
+            Fill in your details and get the brochure instantly on your email.
+          </p>
+
+          <form class="brochure-form-fields" onsubmit="handleBrochureDownloadSubmit(event)">
+            <div class="brochure-form-group">
+              <input type="text" name="fullName" placeholder="Full Name *" class="brochure-input" required />
+            </div>
+
+            <div class="brochure-form-group">
+              <input type="text" name="companyName" placeholder="Company Name *" class="brochure-input" required />
+            </div>
+
+            <div class="brochure-form-row-2col">
+              <input type="email" name="email" placeholder="Email Address *" class="brochure-input" required />
+              <input type="tel" name="phone" placeholder="Phone Number *" class="brochure-input" required />
+            </div>
+
+            <div class="brochure-form-group">
+              <select name="interestCategory" class="brochure-select" required>
+                <option value="" disabled selected>Select Interest *</option>
+                <option value="Complete Product Range">Complete Product Range</option>
+                <option value="WPC Wall Cladding & Louvers">WPC Wall Cladding & Louvers</option>
+                <option value="WPC Deck Flooring & Tiles">WPC Deck Flooring & Tiles</option>
+                <option value="WPC Pergolas & Gazebos">WPC Pergolas & Gazebos</option>
+                <option value="WPC Doors & Window Frames">WPC Doors & Window Frames</option>
+                <option value="Architectural & Bulk Orders">Architectural & Bulk Orders</option>
+              </select>
+            </div>
+
+            <div class="brochure-checkbox-group">
+              <input type="checkbox" id="brochureUpdatesConsent" required checked />
+              <label for="brochureUpdatesConsent">
+                I agree to receive product updates and other communications from Green Plastwood.
+              </label>
+            </div>
+
+            <!-- Two Separate Buttons: 1. Submit, 2. Download Brochure -->
+            <div class="brochure-btn-group"
+              style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 10px; margin-top: 4px;">
+              <!-- 1. Submit Button -->
+              <button type="submit" id="brochureSubmitBtn" class="btn-popup-submit"
+                style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--green-primary); color: #ffffff; padding: 12px 14px; font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border: 1.5px solid var(--green-primary); border-radius: 6px; cursor: pointer; transition: all 0.2s ease;">
+                <span>SUBMIT</span>
+                <span style="font-size: 14px;">&rarr;</span>
+              </button>
+
+              <!-- 2. Download Brochure Button -->
+              <button type="button" id="brochureDownloadDirectBtn" onclick="handleDirectBrochureDownload()"
+                class="btn-popup-download"
+                style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #ffffff; color: var(--green-primary); border: 1.5px solid var(--green-primary); padding: 12px 14px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; border-radius: 6px; cursor: pointer; transition: all 0.2s ease;">
+                <span>DOWNLOAD BROCHURE</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Inline Success Screen inside Popup -->
+        <div id="brochureSuccessBox" style="display: none; text-align: center; padding: 24px 10px 18px;">
+          <div
+            style="width: 52px; height: 52px; background: #e8f5e9; color: #1c3b2b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 14px; font-weight: bold; border: 2px solid #a5d6a7;">
+            ✓</div>
+          <h3
+            style="font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: #1a201c; text-transform: uppercase; margin-bottom: 6px;">
+            REQUEST SUBMITTED!</h3>
+          <p id="brochureSuccessMsg" style="font-size: 13px; color: #555f57; line-height: 1.5; margin-bottom: 20px;">
+            Thank you! Your brochure request has been received. Your file download has started and a copy was sent to
+            your email.
+          </p>
+          <button type="button" onclick="closeBrochurePopup()" class="btn-solid-green" style="width: 100%;">
+            CLOSE WINDOW
+          </button>
+        </div>
+
+        <!-- Bottom 3 Pillars Strip -->
+        <div class="brochure-pillars-row">
+          <div class="brochure-pillar-item">
+            <span class="pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </span>
+            <span class="pillar-text">Instant<br />Access</span>
+          </div>
+          <div class="pillar-divider"></div>
+          <div class="brochure-pillar-item">
+            <span class="pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <text x="6.5" y="17.5" font-size="6.5" font-weight="bold" fill="currentColor"
+                  font-family="sans-serif">PDF</text>
+              </svg>
+            </span>
+            <span class="pillar-text">Detailed<br />Information</span>
+          </div>
+          <div class="pillar-divider"></div>
+          <div class="brochure-pillar-item">
+            <span class="pillar-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </span>
+            <span class="pillar-text">Explore<br />Our Range</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       10. JAVASCRIPT LOGIC
+       ======================================================================== -->
+  <script>
+    // Mobile navigation toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    if (hamburgerBtn && navMenu) {
+      hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+      });
+
+      // Close Mobile Menu on Link Click
+      document.querySelectorAll('.nav-link, .btn-sidebar-quote').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+        });
+      });
+    }
+
+    // Contact Form submission
+    function handleContactInquiry(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.fullName.value;
+      const product = form.productService.value;
+
+      showSuccessModal(
+        'INQUIRY RECEIVED',
+        `Thank you, ${name}! Your inquiry regarding "${product}" has been registered. Our Ahmedabad technical office will contact you within 2 business hours.`
+      );
+      form.reset();
+    }
+
+    // Partner logo carousel slide animation
+    function slidePartners(direction) {
+      const row = document.getElementById('partnersRow');
+      if (row) {
+        row.scrollBy({ left: direction * 220, behavior: 'smooth' });
+      }
+    }
+
+    // Scroll to Inquiry Form / Handle Quote Action
+    function openQuoteModal(context) {
+      const form = document.getElementById('contactInquiryForm');
+      if (form) {
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const nameInput = form.querySelector('input[name="fullName"]');
+        if (nameInput) {
+          setTimeout(() => nameInput.focus(), 300);
+        }
+      }
+    }
+
+    // Auto-scroll and pre-select product if passed via URL parameters
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const product = params.get('product') || params.get('interest') || params.get('subject');
+      if (product) {
+        const selectEl = document.querySelector('select[name="productService"]');
+        if (selectEl) {
+          const lower = product.toLowerCase();
+          for (let i = 0; i < selectEl.options.length; i++) {
+            if (selectEl.options[i].value.toLowerCase().includes(lower) || lower.includes(selectEl.options[i].value.toLowerCase())) {
+              selectEl.selectedIndex = i;
+              break;
+            }
+          }
+        }
+      }
+      if (window.location.hash === '#contactInquiryForm' || product) {
+        setTimeout(() => {
+          const form = document.getElementById('contactInquiryForm');
+          if (form) {
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const nameInput = form.querySelector('input[name="fullName"]');
+            if (nameInput) nameInput.focus();
+          }
+        }, 250);
+      }
+    });
+
+    // Distributor Modal
+    const distributorModal = document.getElementById('distributorModal');
+    function openDistributorModal() {
+      if (distributorModal) distributorModal.classList.add('open');
+    }
+    function closeDistributorModal() {
+      if (distributorModal) distributorModal.classList.remove('open');
+    }
+    function handleDistributorSubmit(e) {
+      e.preventDefault();
+      const bName = document.getElementById('dName').value;
+      closeDistributorModal();
+      showSuccessModal(
+        'APPLICATION SUBMITTED',
+        `Thank you! The authorized dealership inquiry for "${bName}" has been submitted to Green Plastwood Channel Operations.`
+      );
+      e.target.reset();
+    }
+
+    // Directions Modal
+    const directionsModal = document.getElementById('directionsModal');
+    function openDirectionsModal() {
+      if (directionsModal) directionsModal.classList.add('open');
+    }
+    function closeDirectionsModal() {
+      if (directionsModal) directionsModal.classList.remove('open');
+    }
+
+    // Success Modal
+    const successModal = document.getElementById('successModal');
+    const successTitle = document.getElementById('successTitle');
+    const successMsg = document.getElementById('successMsg');
+    function showSuccessModal(title, msg) {
+      if (successModal) {
+        successTitle.innerText = title;
+        successMsg.innerText = msg;
+        successModal.classList.add('open');
+      }
+    }
+    function closeSuccessModal() {
+      if (successModal) successModal.classList.remove('open');
+    }
+
+    // Newsletter submit
+    function handleNewsletter(e) {
+      e.preventDefault();
+      showSuccessModal(
+        'SUBSCRIBED',
+        'Thank you for subscribing to Green Plastwood announcements, case studies and innovations!'
+      );
+      e.target.reset();
+    }
+
+    // Close modals on clicking backdrop
+    [distributorModal, directionsModal, successModal].forEach((modal) => {
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.remove('open');
+          }
+        });
+      }
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDistributorModal();
+        closeDirectionsModal();
+        closeSuccessModal();
+        closeBrochurePopup();
+      }
+    });
+
+    // First-Time Visitor Brochure Popup Handlers
+    const brochureModal = document.getElementById('brochurePopupModal');
+
+    function openBrochurePopup() {
+      if (brochureModal) {
+        brochureModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeBrochurePopup() {
+      if (brochureModal) {
+        brochureModal.classList.remove('active');
+        document.body.style.overflow = '';
+        sessionStorage.setItem('gp_brochure_viewed', 'true');
+      }
+    }
+
+    if (brochureModal) {
+      brochureModal.addEventListener('click', (e) => {
+        if (e.target === brochureModal) {
+          closeBrochurePopup();
+        }
+      });
+    }
+
+    // Automatic trigger on opening website
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        if (!sessionStorage.getItem('gp_brochure_viewed')) {
+          openBrochurePopup();
+        }
+      }, 900);
+    });
+
+    function handleBrochureDownloadSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.fullName.value;
+      const email = form.email.value;
+      const interest = form.interestCategory.value;
+
+      const btn = document.getElementById('brochureSubmitBtn');
+      const origText = btn ? btn.innerHTML : 'SUBMIT';
+      if (btn) {
+        btn.innerHTML = '<span>SUBMITTING...</span>';
+        btn.style.opacity = '0.85';
+      }
+
+      setTimeout(() => {
+        // Trigger download of brochure as well
+        const dlLink = document.createElement('a');
+        dlLink.href = 'images/products_brochure_hd.png';
+        dlLink.download = 'Green_Plastwood_Product_Brochure.png';
+        document.body.appendChild(dlLink);
+        dlLink.click();
+        document.body.removeChild(dlLink);
+
+        // Show in-popup success box
+        const formContainer = form.closest('.brochure-popup-right').querySelector('div');
+        const successBox = document.getElementById('brochureSuccessBox');
+        const successMsg = document.getElementById('brochureSuccessMsg');
+
+        if (formContainer && successBox) {
+          formContainer.style.display = 'none';
+          if (successMsg) {
+            successMsg.innerText = `Thank you, ${name}! Your inquiry for "${interest}" has been submitted successfully. Our team will contact you shortly and your brochure download has started.`;
+          }
+          successBox.style.display = 'block';
+        }
+        if (btn) {
+          btn.innerHTML = origText;
+          btn.style.opacity = '1';
+        }
+        form.reset();
+      }, 600);
+    }
+
+    // Direct brochure download button handler
+    function handleDirectBrochureDownload() {
+      const dlLink = document.createElement('a');
+      dlLink.href = 'images/products_brochure_hd.png';
+      dlLink.download = 'Green_Plastwood_Product_Brochure.png';
+      document.body.appendChild(dlLink);
+      dlLink.click();
+      document.body.removeChild(dlLink);
+
+      const dlBtn = document.getElementById('brochureDownloadDirectBtn');
+      if (dlBtn) {
+        const prevHtml = dlBtn.innerHTML;
+        dlBtn.innerHTML = '<span>DOWNLOADING...</span>';
+        setTimeout(() => {
+          dlBtn.innerHTML = '<span>DOWNLOADED ✓</span>';
+          setTimeout(() => {
+            dlBtn.innerHTML = prevHtml;
+          }, 2000);
+        }, 500);
+      }
+    }
+  </script>
+</body>
+
+</html>

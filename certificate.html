@@ -1,0 +1,3035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates | Green Plastwood - Trusted Quality Built To Last</title>
+  <meta name="description"
+    content="Our certifications, standards and recognitions reflect our commitment to quality, safety and sustainable building solutions. ISO 9001:2015, RoHS, CE, REACH, SGS certified." />
+
+  <!-- Google Fonts: Barlow Condensed & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       0. CSS RESET & DESIGN TOKENS
+       ========================================================================== */
+    :root {
+      --bg-cream: #f8f6f0;
+      --bg-cream-card: #f2eee5;
+      --bg-cream-dark: #e8e3d8;
+      --green-primary: #1c3b2b;
+      --green-dark: #12281d;
+      --green-accent: #2c6847;
+      --green-subtle: #418b62;
+      --text-main: #141715;
+      --text-body: #454d47;
+      --text-muted: #79827c;
+      --border-light: #e4dfd5;
+      --border-dark: #27312b;
+      --white: #ffffff;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.13);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .container-wide {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+
+    /* Section Sub-Tag with Horizontal Line */
+    .sec-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #79827c;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .sec-tag::after {
+      content: '';
+      display: inline-block;
+      width: 44px;
+      height: 1px;
+      background: #79827c;
+      opacity: 0.6;
+    }
+
+    /* ==========================================================================
+       1. STICKY HEADER & NAVBAR
+       ========================================================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 34px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #2b332d;
+      text-transform: capitalize;
+      transition: color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--green-primary);
+    }
+
+    .nav-link.active {
+      color: var(--green-primary);
+      font-weight: 600;
+    }
+
+    /* Underline for active Certificate tab */
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--green-primary);
+      border-radius: 1px;
+    }
+
+    .btn-header-quote {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #4a685b;
+      color: #ffffff;
+      padding: 9px 24px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 50px;
+      transition: var(--transition);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      white-space: nowrap;
+    }
+
+    .btn-header-quote:hover {
+      background: #254234;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .hamburger-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--green-primary);
+      cursor: pointer;
+    }
+
+      .nav-item-mobile-quote {
+      display: none;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-strip {
+      padding: 14px 0 0;
+    }
+
+    .breadcrumb-nav {
+      font-size: 12px;
+      color: #8c968f;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .breadcrumb-nav a {
+      color: #6a756e;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb-nav a:hover {
+      color: var(--green-primary);
+    }
+
+    /* ==========================================================================
+       2. HERO SECTION ("TRUSTED QUALITY BUILT TO LAST.")
+       ========================================================================== */
+    .cert-hero-section {
+      background: var(--bg-cream);
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .cert-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      align-items: center;
+      width: 100%;
+      min-height: 380px;
+    }
+
+    .cert-hero-content {
+      padding-top: 36px;
+      padding-bottom: 50px;
+      padding-left: max(36px, calc((100vw - 1380px) / 2 + 36px));
+      padding-right: 48px;
+      z-index: 2;
+    }
+
+    .cert-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(40px, 5vw, 68px);
+      font-weight: 900;
+      line-height: 0.98;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .cert-hero-title .title-black {
+      color: #141715;
+      display: inline;
+      white-space: nowrap;
+    }
+
+
+    .cert-hero-title .title-green {
+      color: var(--green-accent);
+      display: block;
+    }
+
+
+    .cert-hero-desc {
+      font-size: 15px;
+      color: #454d47;
+      font-weight: 400;
+      line-height: 1.55;
+      max-width: 460px;
+    }
+
+    .cert-hero-photo-wrap {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      position: relative;
+      overflow: hidden;
+      background: #e2dcd0;
+    }
+
+    .cert-hero-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center left;
+    }
+
+    .cert-hero-badge {
+      position: absolute;
+      bottom: 24px;
+      right: 28px;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.95);
+      background: rgba(18, 40, 29, 0.75);
+      padding: 10px 16px;
+      border-radius: 2px;
+      backdrop-filter: blur(5px);
+      text-align: right;
+      line-height: 1.45;
+    }
+
+    /* ==========================================================================
+       3. TRUSTED PUBLICATIONS (PRESS LOGOS)
+       ========================================================================== */
+    .publications-section {
+      background: #fdfcf9;
+      border-bottom: 1px solid var(--border-light);
+      padding: 44px 0 54px;
+    }
+
+    .publications-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 28px;
+    }
+
+    .publications-title {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 3.2vw, 38px);
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: #141715;
+      line-height: 1.05;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+
+
+    .publications-desc {
+      font-size: 13.5px;
+      color: #5d6760;
+      margin-top: 6px;
+    }
+
+    .btn-view-features {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: transparent;
+      color: #26332a;
+      border: 1px solid #7c8880;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .btn-view-features:hover {
+      background: var(--green-primary);
+      color: #ffffff;
+      border-color: var(--green-primary);
+    }
+
+    .publications-cards-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .pub-card-box {
+      background: #ffffff;
+      border: 1px solid #ded9cd;
+      border-radius: 3px;
+      padding: 24px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 94px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: all 0.25s ease;
+    }
+
+    .pub-card-box:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: #c4bbb0;
+    }
+
+    .pub-logo-img {
+      max-height: 38px;
+      max-width: 85%;
+      object-fit: contain;
+    }
+
+    /* ==========================================================================
+       4. OUR CERTIFICATIONS (5 CARDS GRID)
+       ========================================================================== */
+    .certifications-section {
+      padding: 60px 0 68px;
+      background: var(--bg-cream);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .certifications-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 36px;
+    }
+
+    .certifications-title {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 3.8vw, 46px);
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: #141715;
+      line-height: 1.05;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+
+
+    .certifications-desc {
+      font-size: 13.5px;
+      color: #555f58;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-top: 6px;
+    }
+
+    .btn-download-all-certs {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: transparent;
+      color: #26332a;
+      border: 1px solid #7c8880;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .btn-download-all-certs:hover {
+      background: var(--green-primary);
+      color: #ffffff;
+      border-color: var(--green-primary);
+    }
+
+    .certifications-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .cert-badge-card {
+      background: #ffffff;
+      border: 1px solid #dfd9ce;
+      border-radius: 4px;
+      padding: 28px 16px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .cert-badge-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: #b5ccbf;
+    }
+
+    .cert-seal-wrap {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .cert-badge-card:hover .cert-seal-wrap {
+      transform: scale(1.08);
+    }
+
+    .cert-seal-img {
+      max-width: 78px;
+      max-height: 78px;
+      object-fit: contain;
+    }
+
+    .cert-card-code {
+      font-size: 11px;
+      font-weight: 800;
+      color: #172c21;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .cert-card-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #3b453e;
+      line-height: 1.35;
+      min-height: 32px;
+      margin-bottom: 18px;
+    }
+
+    .btn-view-cert {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #244b35;
+      background: none;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 0;
+      border-bottom: 1.5px solid transparent;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-view-cert:hover {
+      color: var(--green-primary);
+      border-color: var(--green-primary);
+    }
+
+    /* ==========================================================================
+       5. OUR LEGACY (A FOUNDATION OF QUALITY AND TRUST)
+       ========================================================================== */
+    .legacy-section {
+      background: #fdfcf9;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .legacy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      width: 100%;
+    }
+
+    .legacy-photo-wrap {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .legacy-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .legacy-content {
+      padding: 60px 48px;
+      padding-right: max(36px, calc((100vw - 1380px) / 2 + 36px));
+    }
+
+    .legacy-title {
+      font-family: var(--font-heading);
+      font-size: clamp(34px, 4vw, 50px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      color: #141715;
+      margin-bottom: 16px;
+    }
+
+    .legacy-title .title-green {
+      color: var(--green-accent);
+      display: block;
+    }
+
+    .legacy-desc {
+      font-size: 14.5px;
+      color: #454d47;
+      line-height: 1.6;
+      margin-bottom: 34px;
+    }
+
+    /* 4 Stats Counters */
+    .legacy-stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      position: relative;
+    }
+
+    .legacy-stat-item {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .legacy-stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      right: 0;
+      width: 1px;
+      height: 75%;
+      background: #dcd6c8;
+    }
+
+    .legacy-stat-number {
+      font-family: var(--font-heading);
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 900;
+      color: #141715;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .legacy-stat-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: #6d7770;
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       6. SUSTAINABLE TODAY. STRONGER TOMORROW.
+       ========================================================================== */
+    .sustainable-banner-section {
+      background: var(--green-primary);
+      color: #ffffff;
+      padding: 44px 0;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .sustainable-banner-grid {
+      display: grid;
+      grid-template-columns: 240px 1.4fr 1.6fr;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .sustainable-timber-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sustainable-timber-img {
+      max-height: 160px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4));
+    }
+
+    .sustainable-info-col h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 3.2vw, 42px);
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .sustainable-info-col p {
+      font-size: 13.5px;
+      color: #cad8cf;
+      line-height: 1.5;
+    }
+
+    .sustainable-badges-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-left: 1px solid rgba(255, 255, 255, 0.16);
+      padding-left: 32px;
+    }
+
+    .sustainable-badge-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .sustainable-icon-circle {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      color: #ffffff;
+      transition: all 0.3s ease;
+    }
+
+    .sustainable-badge-item:hover .sustainable-icon-circle {
+      background: #ffffff;
+      color: var(--green-primary);
+      border-color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .sustainable-badge-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #d1ded6;
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       7. FREQUENTLY ASKED QUESTIONS (FAQ)
+       ========================================================================== */
+    .faq-section {
+      padding: 60px 0 70px;
+      background: var(--bg-cream);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .faq-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 32px;
+    }
+
+    .faq-title {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 3.8vw, 46px);
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: #141715;
+      line-height: 1.05;
+    }
+
+    .btn-contact-team {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: transparent;
+      color: #26332a;
+      border: 1px solid #7c8880;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .btn-contact-team:hover {
+      background: var(--green-primary);
+      color: #ffffff;
+      border-color: var(--green-primary);
+    }
+
+    .faq-main-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* Accordion */
+    .accordion-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .accordion-item {
+      background: #ffffff;
+      border: 1px solid #dfd8cc;
+      border-radius: 3px;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .accordion-item:hover {
+      border-color: #c5bcae;
+    }
+
+    .accordion-item.active {
+      border-color: var(--green-accent);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .accordion-header {
+      width: 100%;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: #ffffff;
+      border: none;
+      text-align: left;
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #1f2722;
+      cursor: pointer;
+    }
+
+    .accordion-icon {
+      font-size: 18px;
+      font-weight: 400;
+      color: #79827c;
+      transition: transform 0.3s ease;
+      line-height: 1;
+    }
+
+    .accordion-item.active .accordion-icon {
+      transform: rotate(45deg);
+      color: var(--green-primary);
+    }
+
+    .accordion-body {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: 13px;
+      color: #4b544e;
+      line-height: 1.6;
+      border-top: 1px solid #f2eee5;
+      padding-top: 12px;
+    }
+
+    .accordion-item.active .accordion-body {
+      display: block;
+    }
+
+    /* Right Still Have Questions Banner */
+    .still-questions-container {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      min-height: 380px;
+    }
+
+    .still-questions-img {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .still-questions-card {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: #ffffff;
+      padding: 26px 24px;
+      border-radius: 3px;
+      max-width: 310px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .still-questions-card h3 {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: #141715;
+      margin-bottom: 8px;
+      line-height: 1.1;
+    }
+
+    .still-questions-card p {
+      font-size: 12px;
+      color: #555f58;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .btn-get-in-touch {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 1px solid #234d36;
+      background: transparent;
+      color: #1c3b2b;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-get-in-touch:hover {
+      background: var(--green-primary);
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       8. IN THE NEWS (MEDIA AND PR)
+       ========================================================================== */
+    .news-section {
+      padding: 60px 0 74px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .news-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 32px;
+    }
+
+    .news-title {
+      font-family: var(--font-heading);
+      font-size: clamp(32px, 3.8vw, 46px);
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: #141715;
+      line-height: 1.05;
+    }
+
+    .news-desc {
+      font-size: 13.5px;
+      color: #555f58;
+      margin-top: 6px;
+    }
+
+    .btn-view-media {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: transparent;
+      color: #26332a;
+      border: 1px solid #7c8880;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .btn-view-media:hover {
+      background: var(--green-primary);
+      color: #ffffff;
+      border-color: var(--green-primary);
+    }
+
+    .news-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .news-article-card {
+      background: #fdfbf7;
+      border: 1px solid #e2ddd3;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+
+    .news-article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: #c9bea7;
+    }
+
+    .news-img-wrap {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .news-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .news-article-card:hover .news-card-img {
+      transform: scale(1.06);
+    }
+
+    .news-card-body {
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .news-publisher-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #c0392b;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .news-card-title {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #141715;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      flex: 1;
+    }
+
+    .news-card-date {
+      font-size: 11.5px;
+      color: #8c9790;
+      margin-bottom: 16px;
+    }
+
+    .btn-read-article {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #244b35;
+      transition: color 0.2s;
+    }
+
+    .btn-read-article:hover {
+      color: var(--green-primary);
+    }
+
+    /* ==========================================================================
+       9. FOOTER
+       ========================================================================== */
+    .footer {
+      background: var(--green-dark);
+      color: #ffffff;
+      padding: 64px 0 28px;
+    }
+
+    .footer-columns-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr 1.1fr 1.3fr;
+      gap: 36px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand-logo {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand-logo img {
+      height: 38px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: #9aa8a0;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-social-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social-link {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #d1ded6;
+      transition: all 0.2s ease;
+    }
+
+    .footer-social-link:hover {
+      background: #ffffff;
+      color: var(--green-dark);
+      border-color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .footer-column-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: capitalize;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .footer-nav-list li a {
+      font-size: 13px;
+      color: #9aa8a0;
+      transition: color 0.2s;
+    }
+
+    .footer-nav-list li a:hover {
+      color: #ffffff;
+      padding-left: 2px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      color: #9aa8a0;
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }
+
+    .footer-contact-icon {
+      color: #52a677;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .newsletter-form {
+      display: flex;
+      align-items: stretch;
+      margin-top: 14px;
+    }
+
+    .newsletter-input {
+      width: 100%;
+      padding: 10px 14px;
+      font-size: 12.5px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-right: none;
+      border-radius: 2px 0 0 2px;
+      color: #ffffff;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .newsletter-input:focus {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .newsletter-input::placeholder {
+      color: #7d8c83;
+    }
+
+    .newsletter-btn {
+      background: #274c38;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      padding: 0 16px;
+      font-size: 14px;
+      border-radius: 0 2px 2px 0;
+      transition: background 0.2s;
+    }
+
+    .newsletter-btn:hover {
+      background: #396f52;
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #798780;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      color: #798780;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       10. MODALS (CERTIFICATE PREVIEW & QUOTE)
+       ========================================================================== */
+    .cert-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 18, 14, 0.85);
+      backdrop-filter: blur(6px);
+      z-index: 3000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .cert-modal.open {
+      display: flex;
+    }
+
+    .cert-modal-box {
+      background: #ffffff;
+      border-radius: 4px;
+      width: 100%;
+      max-width: 620px;
+      padding: 36px 32px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      animation: modalFadeIn 0.28s ease;
+      text-align: center;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cert-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      background: none;
+      border: none;
+      font-size: 26px;
+      color: #8c9790;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .cert-modal-close:hover {
+      color: #12281d;
+    }
+
+    .cert-modal-seal {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cert-modal-title {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--green-primary);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .cert-modal-subtitle {
+      font-size: 13.5px;
+      color: #555f59;
+      margin-bottom: 20px;
+    }
+
+    .cert-modal-details-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 12.5px;
+      margin-bottom: 24px;
+      background: #fbf9f5;
+      border: 1px solid #e6e0d5;
+      border-radius: 3px;
+    }
+
+    .cert-modal-details-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #ede8de;
+    }
+
+    .cert-modal-details-table td:first-child {
+      font-weight: 700;
+      color: #2f3832;
+      width: 40%;
+    }
+
+    .cert-modal-details-table td:last-child {
+      color: #59635c;
+    }
+
+    .btn-download-pdf {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      background: var(--green-primary);
+      color: #ffffff;
+      border: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-download-pdf:hover {
+      background: #142d20;
+    }
+
+    /* General Quote Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 18, 14, 0.65);
+      backdrop-filter: blur(5px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #ffffff;
+      border-radius: 4px;
+      width: 100%;
+      max-width: 520px;
+      padding: 36px 32px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+      animation: modalFadeIn 0.28s ease;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #8c9790;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .modal-close-btn:hover {
+      color: #12281d;
+    }
+
+    .modal-title {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--green-primary);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .modal-subtitle {
+      font-size: 13.5px;
+      color: #555f59;
+      margin-bottom: 22px;
+    }
+
+    .quote-form-group {
+      margin-bottom: 16px;
+    }
+
+    .quote-form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #2e3832;
+      margin-bottom: 6px;
+    }
+
+    .quote-form-group input,
+    .quote-form-group select,
+    .quote-form-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #d5cfc4;
+      border-radius: 2px;
+      font-family: inherit;
+      font-size: 13.5px;
+      background: #fbf9f5;
+    }
+
+    .btn-submit-modal {
+      width: 100%;
+      padding: 13px;
+      background: #1c3b2b;
+      color: #ffffff;
+      border: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      margin-top: 10px;
+      transition: background 0.2s;
+    }
+
+    .btn-submit-modal:hover {
+      background: #28573f;
+    }
+
+    /* ==========================================================================
+       11. RESPONSIVE DESIGN
+       ========================================================================== */
+    @media (max-width: 1100px) {
+      .publications-cards-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .certifications-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .sustainable-banner-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sustainable-badges-col {
+        border-left: none;
+        padding-left: 0;
+      }
+
+      .footer-columns-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .btn-header-quote,
+      .btn-quote-outline {
+        display: none !important;
+      }
+
+      .nav-wrapper {
+        padding: 0 20px;
+        height: 68px;
+      }
+
+      .brand-logo-img {
+        height: 36px;
+        max-width: 170px;
+        object-fit: contain;
+      }
+
+      .hamburger-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: #ffffff;
+        border: 1px solid #dcd7cc;
+        border-radius: 8px;
+        font-size: 20px;
+        color: #141715;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.2s ease;
+      }
+
+      .hamburger-btn:hover {
+        background: #f4f0e6;
+        border-color: var(--green-primary);
+        color: var(--green-primary);
+      }
+
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 24px 24px;
+        border-bottom: 2px solid var(--green-primary);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+        gap: 0;
+        max-height: calc(100vh - 68px);
+        overflow-y: auto;
+        z-index: 9999;
+      }
+
+      .nav-menu.open {
+        display: flex;
+      }
+
+      .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #f0ece3;
+      }
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 0;
+        font-size: 15px;
+        font-weight: 600;
+        color: #1a221d;
+        width: 100%;
+        text-decoration: none;
+      }
+
+      .nav-link.active {
+        color: var(--green-primary);
+        font-weight: 700;
+      }
+
+      .nav-link.active::after {
+        display: none;
+      }
+
+      .nav-item .dropdown {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #ede8de;
+        background: #fbf9f5;
+        border-radius: 6px;
+        padding: 6px 8px;
+        margin: 4px 0 10px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: block;
+      }
+
+      .nav-item .dropdown a {
+        padding: 9px 14px;
+        font-size: 13.5px;
+        border-radius: 4px;
+        color: #232c26;
+      }
+
+
+      .nav-item-mobile-quote {
+        display: block !important;
+        width: 100%;
+        border-bottom: none !important;
+        padding-top: 18px;
+      }
+
+      .btn-sidebar-quote {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 13px 20px;
+        background: var(--green-primary);
+        color: #ffffff !important;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(28, 59, 43, 0.25);
+        transition: all 0.2s ease;
+      }
+
+      .btn-sidebar-quote:hover {
+        background: #12281d;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(28, 59, 43, 0.35);
+      }
+
+      .cert-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cert-hero-content {
+        padding: 40px 24px 24px;
+      }
+
+      .cert-hero-photo-wrap {
+        min-height: 260px;
+        max-height: 340px;
+      }
+
+      .publications-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .publications-cards-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .certifications-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .certifications-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .legacy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .legacy-content {
+        padding: 40px 24px;
+      }
+
+      .legacy-photo-wrap {
+        min-height: 260px;
+      }
+
+      .legacy-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .legacy-stat-item:nth-child(2)::after {
+        display: none;
+      }
+
+      .faq-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .faq-main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .still-questions-container {
+        min-height: 300px;
+      }
+
+      .news-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .news-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-columns-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+
+      .container,
+      .container-wide {
+        padding: 0 20px;
+      }
+
+      .publications-cards-row {
+        grid-template-columns: 1fr;
+      }
+
+      .certifications-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sustainable-badges-col {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer-columns-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    
+    /* ==========================================================================
+       GLOBAL TYPOGRAPHY SYSTEM (CONTEMPORARY ARCHITECTURAL - PLUS JAKARTA SANS)
+       - Handcrafted human designer hierarchy
+       - Display / Main Headings: Plus Jakarta Sans Bold/ExtraBold (700/800)
+       - Subheadings & Badges: Plus Jakarta Sans SemiBold (600)
+       - Body & Interactive: Plus Jakarta Sans Regular/Medium (400/500)
+       ========================================================================== */
+    :root {
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-subheading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-luxury: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    html,
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    /* Main Headings: Strong, architectural display presence */
+    h1,
+    h2,
+    .hero-h1,
+    .hero-title,
+    .hero-title-main,
+    .hero-title-sub,
+    .sec-h2,
+    .about-h2,
+    .journey-sec-h2,
+    .video-title,
+    .sec-reviews-title,
+    .sec-faq-title,
+    .cta-h2,
+    .story-heading,
+    .purpose-title,
+    .scale-title,
+    .founders-title,
+    .presence-title,
+    .commitment-title,
+    .products-hero-title,
+    .quality-spec-title,
+    .applications-title,
+    .overview-title,
+    .benefits-title,
+    .shades-title,
+    .catalogue-title,
+    .page-title,
+    .main-title,
+    .section-title,
+    .gallery-title,
+    .certificate-title,
+    .contact-title,
+    .modal-title,
+    .about-badge-h3,
+    .story-poster-num,
+    .story-poster-txt,
+    .trusted-title,
+    .specs-table-title {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.025em !important;
+    }
+
+    h1 *,
+    h2 *,
+    .hero-h1 *,
+    .hero-title *,
+    .hero-title-main *,
+    .hero-title-sub *,
+    .sec-h2 *,
+    .about-h2 *,
+    .journey-sec-h2 *,
+    .video-title *,
+    .sec-reviews-title *,
+    .sec-faq-title *,
+    .cta-h2 *,
+    .story-heading *,
+    .purpose-title *,
+    .scale-title *,
+    .founders-title *,
+    .presence-title *,
+    .commitment-title *,
+    .products-hero-title *,
+    .quality-spec-title *,
+    .applications-title *,
+    .overview-title *,
+    .benefits-title *,
+    .shades-title *,
+    .catalogue-title *,
+    .page-title *,
+    .main-title *,
+    .section-title *,
+    .gallery-title *,
+    .certificate-title *,
+    .contact-title *,
+    .modal-title * {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.025em !important;
+    }
+
+    /* Subheadings, Card Titles, and Section Accents */
+    h3,
+    h4,
+    h5,
+    h6,
+    .hero-subtitle,
+    .journey-subtitle,
+    .about-subtitle,
+    .purpose-header-desc,
+    .scale-header-desc,
+    .applications-desc,
+    .overview-subtitle,
+    .quality-spec-desc,
+    .products-hero-desc,
+    .subheading,
+    .subtitle,
+    [class*="subtitle"],
+    [class*="subheading"],
+    .stat-label,
+    .stat-number,
+    .benefit-label,
+    .blog-card-title,
+    .footer-column-title,
+    .footer-col-title,
+    .faq-question-btn,
+    .brochure-heading,
+    .timeline-year,
+    .product-title-badge,
+    .subnav-link,
+    .nav-link,
+    .btn,
+    button,
+    .cust-name,
+    .spec-card-title,
+    .shade-name,
+    .tab-btn,
+    .filter-btn,
+    .catalogue-tag,
+    .sec-tag,
+    .product-card-title {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.015em;
+    }
+
+    /* Children of Subheadings */
+    h3 *,
+    h4 *,
+    h5 *,
+    h6 *,
+    .subheading *,
+    .subtitle *,
+    [class*="subtitle"] *,
+    [class*="subheading"] *,
+    .nav-link *,
+    .footer-column-title *,
+    .footer-col-title *,
+    .btn *,
+    button * {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+    }
+
+    /* Body Text: Warm, readable human geometric typography */
+    p,
+    li,
+    a,
+    span,
+    label,
+    input,
+    textarea,
+    select,
+    td,
+    th,
+    blockquote,
+    .about-description,
+    .overview-text,
+    .purpose-col-desc,
+    .founders-desc,
+    .presence-desc,
+    .commitment-desc,
+    .cust-quote,
+    .faq-answer-panel,
+    .footer-desc,
+    .footer-copy,
+    .marquee-item {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+    }
+
+    /* Interactive buttons & Links: Confident SemiBold */
+    .nav-link,
+    .btn,
+    button,
+    .btn-know-more,
+    .view-all-link,
+    .btn-brochure,
+    .btn-watch-video,
+    .btn-primary,
+    .btn-secondary,
+    .btn-download-white,
+    .btn-explore-products,
+    .subnav-link.active,
+    .subnav-link:hover,
+    .footer-column-title,
+    .footer-col-title,
+    .quote-nav-btn {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.02em;
+    }
+
+  
+    /* Dropdown Menu */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #ffffff;
+      min-width: 200px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-light, #e4dfd5);
+      border-radius: 4px;
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+      list-style: none;
+      pointer-events: none;
+    }
+
+    .dropdown::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+    }
+
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-main, #141715);
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      background: #f4f0e6;
+      color: var(--green-primary, #1c3b2b);
+      padding-left: 24px;
+    }
+
+    .nav-link.dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-chevron {
+      transition: transform 0.25s ease;
+      opacity: 0.75;
+    }
+
+    .nav-item:hover .nav-chevron {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       1. STICKY HEADER & NAVBAR
+       ======================================================================== -->
+  <header class="header" id="navbar">
+    <div class="container-wide nav-wrapper">
+      <a href="index.html" class="brand-logo" aria-label="Green Plastwood Home">
+        <img src="images/brand_logo_transparent.png" alt="Green Plastwood - SNG ECO INDIA" class="brand-logo-img" />
+      </a>
+
+      <!-- Desktop Nav Menu (No dropdowns) -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item has-dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle">
+            About Us
+            <svg class="nav-chevron" width="9" height="5" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <ul class="dropdown">
+            <li><a href="index.html#celvion">CELVION</a></li>
+            <li><a href="about.html">Green Plastwood</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="products.html" class="nav-link">Products</a>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="certificate.html" class="nav-link active">Certificate</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </li>
+        <li class="nav-item-mobile-quote">
+          <a href="contact.html#contactInquiryForm" class="btn-sidebar-quote" onclick="if(typeof openQuoteModal==='function'){openQuoteModal('Mobile Nav');return false;}">
+            GET A QUOTE <span>→</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Right Action Button & Mobile Hamburger -->
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <button class="btn-header-quote" id="headerQuoteBtn" onclick="openQuoteModal('Certificate Inquiries')">
+          GET A QUOTE
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. BREADCRUMB & HERO SECTION ("TRUSTED QUALITY BUILT TO LAST.")
+       ======================================================================== -->
+  <section class="cert-hero-section" id="hero">
+
+
+    <div class="cert-hero-grid">
+      <!-- Left: Heading & Intro -->
+      <div class="cert-hero-content">
+
+        <h1 class="cert-hero-title">
+          <span class="title-black">TRUSTED QUALITY</span>
+          <span class="title-green">BUILT TO LAST.</span>
+        </h1>
+        <p class="cert-hero-desc">
+          Our certifications, standards and recognitions reflect our commitment to quality, safety and sustainable
+          building solutions.
+        </p>
+      </div>
+
+      <!-- Right: High Resolution Architectural Facade -->
+      <div class="cert-hero-photo-wrap">
+        <img src="images/cert_hero_building_hd.jpg"
+          alt="Trusted Quality Built To Last - Modern Architectural Timber Facade" class="cert-hero-photo" />
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. TRUSTED PUBLICATIONS (PRESS LOGOS)
+       ======================================================================== -->
+  <section class="publications-section" id="publications">
+    <div class="container-wide">
+      <div class="publications-header">
+        <div>
+          <h2 class="publications-title">TRUSTED PUBLICATIONS</h2>
+          <p class="publications-desc">
+            Our work and innovations have been featured in leading publications and industry platforms.
+          </p>
+        </div>
+
+        <button class="btn-view-features" onclick="scrollToSection('news')">
+          VIEW ALL FEATURES <span>→</span>
+        </button>
+      </div>
+
+      <!-- 5 Publication Cards Row -->
+      <div class="publications-cards-row">
+        <!-- 1: The Economic Times -->
+        <div class="pub-card-box">
+          <img src="images/cert_pub_econ_times.jpg" alt="The Economic Times" class="pub-logo-img" />
+        </div>
+
+        <!-- 2: Business Standard -->
+        <div class="pub-card-box">
+          <img src="images/cert_pub_biz_standard.jpg" alt="Business Standard" class="pub-logo-img" />
+        </div>
+
+        <!-- 3: Hindustan Times -->
+        <div class="pub-card-box">
+          <img src="images/cert_pub_hindustan_times.jpg" alt="Hindustan Times" class="pub-logo-img" />
+        </div>
+
+        <!-- 4: Architect and Interiors India -->
+        <div class="pub-card-box">
+          <img src="images/cert_pub_architect_interiors.jpg" alt="Architect and Interiors India" class="pub-logo-img" />
+        </div>
+
+        <!-- 5: Construction Week -->
+        <div class="pub-card-box">
+          <img src="images/cert_pub_construction_week.jpg" alt="Construction Week" class="pub-logo-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. OUR CERTIFICATIONS (5 CARDS GRID)
+       ======================================================================== -->
+  <section class="certifications-section" id="certifications">
+    <div class="container-wide">
+      <div class="certifications-header">
+        <div>
+          <h2 class="certifications-title">OUR CERTIFICATIONS</h2>
+          <p class="certifications-desc">
+            Our products undergo rigorous testing and comply with international standards to ensure maximum durability,
+            safety and environmental responsibility.
+          </p>
+        </div>
+
+        <button class="btn-download-all-certs" onclick="openDownloadAllModal()">
+          DOWNLOAD CERTIFICATES <span>→</span>
+        </button>
+      </div>
+
+      <!-- 5 Certification Badges Row -->
+      <div class="certifications-cards-grid">
+        <!-- 1: ISO 9001:2015 -->
+        <div class="cert-badge-card">
+          <div class="cert-seal-wrap">
+            <svg width="74" height="74" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="46" fill="none" stroke="#005a9c" stroke-width="3" />
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#005a9c" stroke-width="1.5" stroke-dasharray="3,2" />
+              <text x="50" y="44" font-family="'Barlow Condensed', sans-serif" font-size="24" font-weight="900"
+                fill="#005a9c" text-anchor="middle">ISO</text>
+              <text x="50" y="60" font-family="sans-serif" font-size="9" font-weight="700" fill="#005a9c"
+                text-anchor="middle" letter-spacing="0.5">9001:2015</text>
+            </svg>
+          </div>
+          <div class="cert-card-code">ISO 9001:2015</div>
+          <h3 class="cert-card-title">QUALITY MANAGEMENT SYSTEM</h3>
+          <button class="btn-view-cert"
+            onclick="openCertModal('ISO 9001:2015', 'Quality Management System Standard', 'ISO', 'QMS-2024-GP8821', 'Bureau Veritas / NABCB', 'Valid until Dec 2027')">
+            VIEW CERTIFICATE <span>→</span>
+          </button>
+        </div>
+
+        <!-- 2: RoHS COMPLIANT -->
+        <div class="cert-badge-card">
+          <div class="cert-seal-wrap">
+            <svg width="74" height="74" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="46" fill="none" stroke="#227a42" stroke-width="3" />
+              <path d="M50 24 C38 24 30 35 34 46 C37 54 46 56 50 62 C54 56 63 54 66 46 C70 35 62 24 50 24 Z"
+                fill="#227a42" />
+              <text x="50" y="74" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="900"
+                fill="#227a42" text-anchor="middle" letter-spacing="1">ROHS</text>
+              <text x="50" y="85" font-family="sans-serif" font-size="7" font-weight="700" fill="#227a42"
+                text-anchor="middle">COMPLIANT</text>
+            </svg>
+          </div>
+          <div class="cert-card-code">ROHS</div>
+          <h3 class="cert-card-title">ROHS CERTIFICATION</h3>
+          <button class="btn-view-cert"
+            onclick="openCertModal('RoHS Compliance Certificate', 'Restriction of Hazardous Substances (2011/65/EU)', 'RoHS', 'ROHS-EU-99432', 'TÜV Rheinland', 'Lead & Heavy Metal Free')">
+            VIEW CERTIFICATE <span>→</span>
+          </button>
+        </div>
+
+        <!-- 3: CE CERTIFIED -->
+        <div class="cert-badge-card">
+          <div class="cert-seal-wrap">
+            <svg width="74" height="74" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="46" fill="none" stroke="#1a2e22" stroke-width="2.5" />
+              <text x="50" y="58" font-family="'Times New Roman', serif" font-size="34" font-weight="bold"
+                fill="#1a2e22" text-anchor="middle" letter-spacing="2">CE</text>
+            </svg>
+          </div>
+          <div class="cert-card-code">CE</div>
+          <h3 class="cert-card-title">CE CERTIFIED</h3>
+          <button class="btn-view-cert"
+            onclick="openCertModal('CE Declaration of Conformity', 'European Construction Products Regulation (EU 305/2011)', 'CE', 'CE-CPR-55102', 'Eurofins Certification', 'EU Harmonized Standard')">
+            VIEW CERTIFICATE <span>→</span>
+          </button>
+        </div>
+
+        <!-- 4: REACH REGULATION -->
+        <div class="cert-badge-card">
+          <div class="cert-seal-wrap">
+            <svg width="74" height="74" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="46" fill="none" stroke="#2c5e43" stroke-width="2.5" />
+              <text x="50" y="48" font-family="'Barlow Condensed', sans-serif" font-size="16" font-weight="900"
+                fill="#2c5e43" text-anchor="middle" letter-spacing="1">REACH</text>
+              <text x="50" y="62" font-family="sans-serif" font-size="8" font-weight="700" fill="#2c5e43"
+                text-anchor="middle" letter-spacing="0.5">COMPLIANT</text>
+            </svg>
+          </div>
+          <div class="cert-card-code">REACH</div>
+          <h3 class="cert-card-title">REACH REGULATION</h3>
+          <button class="btn-view-cert"
+            onclick="openCertModal('REACH Compliance Verification', 'Registration, Evaluation, Authorisation of Chemicals (EC 1907/2006)', 'REACH', 'REACH-SVHC-7740', 'Intertek Testing Services', 'SVHC Non-Detectable')">
+            VIEW CERTIFICATE <span>→</span>
+          </button>
+        </div>
+
+        <!-- 5: SGS TESTED -->
+        <div class="cert-badge-card">
+          <div class="cert-seal-wrap">
+            <svg width="74" height="74" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="46" fill="none" stroke="#e06a3b" stroke-width="3" />
+              <text x="50" y="55" font-family="'Barlow Condensed', sans-serif" font-size="28" font-weight="900"
+                fill="#e06a3b" text-anchor="middle">SGS</text>
+              <line x1="20" y1="62" x2="80" y2="62" stroke="#e06a3b" stroke-width="1.5" />
+              <text x="50" y="74" font-family="sans-serif" font-size="8" font-weight="700" fill="#e06a3b"
+                text-anchor="middle" letter-spacing="0.5">TESTED</text>
+            </svg>
+          </div>
+          <div class="cert-card-code">SGS</div>
+          <h3 class="cert-card-title">SGS TESTED</h3>
+          <button class="btn-view-cert"
+            onclick="openCertModal('SGS Performance & Durability Test Report', 'Mechanical Strength, Fire Resistance & Weathering Tests', 'SGS', 'SGS-IN-889012', 'SGS India Pvt. Ltd.', 'Passed Class A Ratings')">
+            VIEW CERTIFICATE <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. OUR LEGACY (A FOUNDATION OF QUALITY AND TRUST)
+       ======================================================================== -->
+  <section class="legacy-section" id="legacy">
+    <div class="legacy-grid">
+      <!-- Left: Factory & Manufacturing Floor Photo -->
+      <div class="legacy-photo-wrap">
+        <img src="images/factory_manufacturing.jpg" alt="Green Plastwood automated modern manufacturing plant"
+          class="legacy-photo" />
+      </div>
+
+      <!-- Right: Legacy Content & 4 Stats Counters -->
+      <div class="legacy-content">
+
+        <h2 class="legacy-title">
+          A FOUNDATION<br />
+          <span class="title-green">OF QUALITY AND TRUST.</span>
+        </h2>
+        <p class="legacy-desc">
+          For <strong>over 12 years</strong>, Green Plastwood (SNG ECO INDIA PVT. LTD.) has been committed to
+          manufacturing high-performance WPC solutions that meet global standards. Our focus on innovation, quality and
+          sustainability has earned us the trust of architects, builders and homeowners across India and overseas.
+        </p>
+
+        <!-- 4 Stats Counters Row -->
+        <div class="legacy-stats-row">
+          <div class="legacy-stat-item">
+            <span class="legacy-stat-number">12+</span>
+            <span class="legacy-stat-label">Years of<br />Experience</span>
+          </div>
+
+          <div class="legacy-stat-item">
+            <span class="legacy-stat-number">800K+ KG</span>
+            <span class="legacy-stat-label">Monthly<br />Production Capacity</span>
+          </div>
+
+          <div class="legacy-stat-item">
+            <span class="legacy-stat-number">420+</span>
+            <span class="legacy-stat-label">Dealers<br />Across India</span>
+          </div>
+
+          <div class="legacy-stat-item">
+            <span class="legacy-stat-number">4+</span>
+            <span class="legacy-stat-label">Countries<br />Served</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. SUSTAINABLE TODAY. STRONGER TOMORROW. (DARK GREEN BANNER)
+       ======================================================================== -->
+  <section class="sustainable-banner-section" id="sustainability">
+    <div class="container-wide">
+      <div class="sustainable-banner-grid">
+        <!-- Left: Stack of Timber Profile Extrusions -->
+        <div class="sustainable-timber-col">
+          <img src="images/products_brochure_hd.png" alt="Sustainable WPC Engineered Profiles"
+            class="sustainable-timber-img" />
+        </div>
+
+        <!-- Middle: Headline & Intro -->
+        <div class="sustainable-info-col">
+          <h2>SUSTAINABLE TODAY.<br />STRONGER TOMORROW.</h2>
+          <p>
+            Our certified manufacturing processes and eco-friendly materials help create a sustainable future for modern
+            construction.
+          </p>
+        </div>
+
+        <!-- Right: 3 Feature Badges with Line SVGs -->
+        <div class="sustainable-badges-col">
+          <!-- 1: Eco-Friendly Materials -->
+          <div class="sustainable-badge-item">
+            <div class="sustainable-icon-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+              </svg>
+            </div>
+            <span class="sustainable-badge-title">ECO-FRIENDLY<br />MATERIALS</span>
+          </div>
+
+          <!-- 2: Responsible Manufacturing -->
+          <div class="sustainable-badge-item">
+            <div class="sustainable-icon-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"></path>
+                <path d="M11 19h8.2a1.8 1.8 0 0 0 1.56-.88 1.78 1.78 0 0 0 .004-1.78L16.8 9.5"></path>
+                <path d="M12 2v4"></path>
+                <path d="m14 4-2-2-2 2"></path>
+                <path d="m18 17 2 2 2-2"></path>
+              </svg>
+            </div>
+            <span class="sustainable-badge-title">RESPONSIBLE<br />MANUFACTURING</span>
+          </div>
+
+          <!-- 3: Long-Lasting Performance -->
+          <div class="sustainable-badge-item">
+            <div class="sustainable-icon-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 12 11 14 15 10"></polyline>
+              </svg>
+            </div>
+            <span class="sustainable-badge-title">LONG-LASTING<br />PERFORMANCE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. FREQUENTLY ASKED QUESTIONS (FAQ)
+       ======================================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container-wide">
+      <div class="faq-header">
+        <div>
+
+          <h2 class="faq-title">FREQUENTLY ASKED QUESTIONS</h2>
+        </div>
+
+        <button class="btn-contact-team" onclick="openQuoteModal('Technical Compliance Inquiry')">
+          CONTACT OUR TEAM <span>→</span>
+        </button>
+      </div>
+
+      <!-- FAQ Main Split Grid -->
+      <div class="faq-main-grid">
+        <!-- Left: 6 Accordions -->
+        <div class="accordion-list">
+          <!-- Item 1 -->
+          <div class="accordion-item active">
+            <button class="accordion-header" onclick="toggleFaq(this)">
+              <span>Are your products ISO certified?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              Yes, Green Plastwood operates under an ISO 9001:2015 certified Quality Management System. Every batch
+              produced adheres to rigorous consistency, raw material inspection, and dimensional tolerance standards.
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleFaq(this)">
+              <span>What testings do your products undergo?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              Our WPC formulations undergo comprehensive physical, chemical, and fire tests including density
+              verification, flexural modulus, tensile strength, water absorption resistance, termite infestation
+              resistance, accelerated weathering, and flame retardancy compliance.
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleFaq(this)">
+              <span>Are your products safe for indoor use?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              Absolutely. Green Plastwood products are 100% lead-free, non-toxic, and comply with RoHS and REACH
+              regulations, releasing zero harmful volatile organic compounds (VOCs) into residential or office
+              interiors.
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleFaq(this)">
+              <span>Are your products environmentally friendly?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              Yes, our composite profiles are crafted from up to 95% reclaimed hardwood fibers and high-grade recycled
+              polymers. By choosing Green Plastwood, you actively prevent deforestation while keeping plastic waste out
+              of landfills.
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleFaq(this)">
+              <span>Do you provide test reports?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              Yes, certified test reports from accredited laboratories (including SGS, CIPET, and NABL-accredited test
+              houses) are available on demand for architectural specifications and institutional project approvals.
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleFaq(this)">
+              <span>Where can I download your certificates?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              You can download individual certificates by clicking the "View Certificate" link on any certification card
+              above, or click the "Download Certificates" button to receive our complete compliance dossier.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Louvers Photo with Floating Still Have Questions Card -->
+        <div class="still-questions-container">
+          <img src="images/cert_faq_louvers.jpg" alt="Modern architectural interior wood louvers wall installation"
+            class="still-questions-img" />
+
+          <!-- Floating Question Card -->
+          <div class="still-questions-card">
+            <h3>STILL HAVE QUESTIONS?</h3>
+            <p>
+              Our team is here to help you with certifications, technical details and compliance requirements.
+            </p>
+            <button class="btn-get-in-touch" onclick="openQuoteModal('Compliance Help')">
+              GET IN TOUCH <span>→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. IN THE NEWS (MEDIA AND PR)
+       ======================================================================== -->
+  <section class="news-section" id="news">
+    <div class="container-wide">
+      <div class="news-header">
+        <div>
+
+          <h2 class="news-title">IN THE NEWS</h2>
+          <p class="news-desc">
+            Read the latest articles, interviews and features about Green Plastwood in leading media outlets.
+          </p>
+        </div>
+
+        <button class="btn-view-media" onclick="openQuoteModal('Media and Press Kit')">
+          VIEW ALL MEDIA <span>→</span>
+        </button>
+      </div>
+
+      <!-- 3 Articles Grid -->
+      <div class="news-cards-grid">
+        <!-- Article 1: Business Standard -->
+        <article class="news-article-card">
+          <div class="news-img-wrap">
+            <img src="images/cert_news_img_1.jpg" alt="Green Plastwood WPC Building Facade" class="news-card-img" />
+          </div>
+          <div class="news-card-body">
+            <span class="news-publisher-tag">BUSINESS STANDARD</span>
+            <h3 class="news-card-title">Green Plastwood Strengthens Its Presence in the WPC Industry</h3>
+            <div class="news-card-date">12 July 2024</div>
+            <a href="javascript:void(0)"
+              onclick="openNewsModal('Business Standard', 'Green Plastwood Strengthens Its Presence in the WPC Industry', '12 July 2024')"
+              class="btn-read-article">
+              READ ARTICLE <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 2: Architect and Interiors India -->
+        <article class="news-article-card">
+          <div class="news-img-wrap">
+            <img src="images/cert_news_img_2.jpg" alt="Sustainable Building Solutions for Modern Spaces"
+              class="news-card-img" />
+          </div>
+          <div class="news-card-body">
+            <span class="news-publisher-tag" style="color: #27ae60;">ARCHITECT AND INTERIORS INDIA</span>
+            <h3 class="news-card-title">Sustainable Building Solutions for Modern Spaces</h3>
+            <div class="news-card-date">05 May 2024</div>
+            <a href="javascript:void(0)"
+              onclick="openNewsModal('Architect and Interiors India', 'Sustainable Building Solutions for Modern Spaces', '05 May 2024')"
+              class="btn-read-article">
+              READ ARTICLE <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 3: Construction Week -->
+        <article class="news-article-card">
+          <div class="news-img-wrap">
+            <img src="images/cert_news_img_3.jpg" alt="How WPC is Shaping the Future of Construction"
+              class="news-card-img" />
+          </div>
+          <div class="news-card-body">
+            <span class="news-publisher-tag" style="color: #d35400;">CONSTRUCTION WEEK</span>
+            <h3 class="news-card-title">How WPC is Shaping the Future of Construction in India</h3>
+            <div class="news-card-date">18 March 2024</div>
+            <a href="javascript:void(0)"
+              onclick="openNewsModal('Construction Week', 'How WPC is Shaping the Future of Construction in India', '18 March 2024')"
+              class="btn-read-article">
+              READ ARTICLE <span>→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container-wide">
+      <div class="footer-columns-grid">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <a href="index.html" class="footer-brand-logo">
+            <img src="images/brand_logo_transparent.png" alt="Green Plastwood - SNG ECO INDIA" />
+          </a>
+          <p class="footer-tagline">
+            Premium WPC solutions for modern spaces. Manufactured in Ahmedabad, trusted across India and beyond.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-column-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#journey">CELVION</a></li>
+            <li><a href="about.html#journey">SNG</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="index.html#cta">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Our Products -->
+        <div>
+          <h4 class="footer-column-title">Our Products</h4>
+          <ul class="footer-nav-list">
+            <li><a href="product-detail.html">WPC Door Frames</a></li>
+            <li><a href="product-detail.html">Louvers &amp; Wall Cladding</a></li>
+            <li><a href="product-detail.html">Pergolas &amp; Rafters</a></li>
+            <li><a href="product-detail.html">Deck Flooring &amp; Deck Tiles</a></li>
+            <li><a href="product-detail.html">WPC Boards</a></li>
+            <li><a href="product-detail.html">WPC Doors</a></li>
+            <li><a href="product-detail.html">Planks</a></li>
+            <li><a href="product-detail.html">Window Frames</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Us -->
+        <div>
+          <h4 class="footer-column-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>SNG ECO INDIA<br />Ahmedabad, Gujarat, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span>+91 95163 26770</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <span>sngecoindia@gmail.com</span>
+          </div>
+        </div>
+
+        <!-- Col 5: Newsletter -->
+        <div>
+          <h4 class="footer-column-title">Newsletter</h4>
+          <p style="font-size: 13px; color: #8c9790; line-height: 1.5; margin-bottom: 12px;">
+            Get the latest updates, product launches and industry insights.
+          </p>
+          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" required />
+            <button type="submit" class="newsletter-btn">→</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>© 2024 Green Plastwood (SNG ECO INDIA). All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       10. CERTIFICATE DETAILS MODAL
+       ======================================================================== -->
+  <div class="cert-modal" id="certModal">
+    <div class="cert-modal-box">
+      <button class="cert-modal-close" onclick="closeCertModal()" aria-label="Close Certificate">&times;</button>
+      <div class="cert-modal-seal" id="modalSeal">
+        <svg width="80" height="80" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="#1c3b2b" stroke-width="3" />
+          <path d="M50 20 L58 38 L78 40 L63 54 L68 74 L50 63 L32 74 L37 54 L22 40 L42 38 Z" fill="#2c6847" />
+        </svg>
+      </div>
+      <h3 class="cert-modal-title" id="modalCertTitle">ISO 9001:2015</h3>
+      <p class="cert-modal-subtitle" id="modalCertSubtitle">Quality Management System</p>
+
+      <table class="cert-modal-details-table">
+        <tr>
+          <td>Standard / Scope:</td>
+          <td id="modalScope">Manufacturing of WPC Products</td>
+        </tr>
+        <tr>
+          <td>Certificate No:</td>
+          <td id="modalCertNo">GP-ISO-2024-889</td>
+        </tr>
+        <tr>
+          <td>Accredited Body:</td>
+          <td id="modalBody">Bureau Veritas Certification</td>
+        </tr>
+        <tr>
+          <td>Validity Status:</td>
+          <td id="modalValidity" style="color: #27ae60; font-weight: 700;">Verified &amp; Active</td>
+        </tr>
+      </table>
+
+      <button class="btn-download-pdf" onclick="simulateCertDownload()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>DOWNLOAD OFFICIAL CERTIFICATE PDF</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       11. DOWNLOAD ALL CERTIFICATES MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="allCertsModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeDownloadAllModal()" aria-label="Close Modal">&times;</button>
+      <h3 class="modal-title">DOWNLOAD CERTIFICATES DOSSIER</h3>
+      <p class="modal-subtitle">Enter your details to receive all certified test reports (ISO, RoHS, CE, REACH, SGS) in
+        one ZIP bundle.</p>
+
+      <form onsubmit="handleAllCertsSubmit(event)">
+        <div class="quote-form-group">
+          <label for="allCertsName">Full Name / Architect Firm *</label>
+          <input type="text" id="allCertsName" placeholder="e.g. Studio Vista Architecture" required />
+        </div>
+
+        <div class="quote-form-group">
+          <label for="allCertsEmail">Email Address *</label>
+          <input type="email" id="allCertsEmail" placeholder="your@email.com" required />
+        </div>
+
+        <div class="quote-form-group">
+          <label for="allCertsPhone">Phone / WhatsApp Number *</label>
+          <input type="tel" id="allCertsPhone" placeholder="+91 98765 43210" required />
+        </div>
+
+        <button type="submit" class="btn-submit-modal">DOWNLOAD COMPLIANCE DOSSIER (24 MB) ↓</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- ========================================================================
+       13. NEWS ARTICLE MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="newsModal">
+    <div class="modal-box" style="max-width: 600px;">
+      <button class="modal-close-btn" onclick="closeNewsModal()" aria-label="Close Modal">&times;</button>
+      <span class="news-publisher-tag" id="newsModalPub" style="margin-bottom: 6px;">BUSINESS STANDARD</span>
+      <h3 class="modal-title" id="newsModalTitle" style="font-size: 24px; line-height: 1.15; margin-bottom: 8px;">
+        Article Title</h3>
+      <div id="newsModalDate" style="font-size: 12px; color: #8c9790; margin-bottom: 16px;">12 July 2024</div>
+      <p style="font-size: 13.5px; color: #454d47; line-height: 1.6; margin-bottom: 22px;">
+        Green Plastwood continues to spearhead sustainable innovation across India's architectural landscape with its
+        state-of-the-art manufacturing infrastructure and rigorously tested WPC profiles engineered for extreme climate
+        endurance.
+      </p>
+      <button type="button" class="btn-submit-modal" onclick="closeNewsModal()">CLOSE ARTICLE</button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       14. JAVASCRIPT LOGIC
+       ======================================================================== -->
+  <script>
+    // Mobile navigation toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    if (hamburgerBtn && navMenu) {
+      hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+      });
+
+      // Close Mobile Menu on Link Click
+      document.querySelectorAll('.nav-link, .btn-sidebar-quote').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+        });
+      });
+    }
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(buttonEl) {
+      const parentItem = buttonEl.closest('.accordion-item');
+      const allItems = document.querySelectorAll('.accordion-item');
+
+      allItems.forEach((item) => {
+        if (item !== parentItem) {
+          item.classList.remove('active');
+        }
+      });
+
+      parentItem.classList.toggle('active');
+    }
+
+    // Certificate Viewer Modal
+    const certModal = document.getElementById('certModal');
+    const modalCertTitle = document.getElementById('modalCertTitle');
+    const modalCertSubtitle = document.getElementById('modalCertSubtitle');
+    const modalScope = document.getElementById('modalScope');
+    const modalCertNo = document.getElementById('modalCertNo');
+    const modalBody = document.getElementById('modalBody');
+    const modalValidity = document.getElementById('modalValidity');
+
+    function openCertModal(title, subtitle, type, certNo, body, validity) {
+      if (certModal) {
+        modalCertTitle.innerText = title;
+        modalCertSubtitle.innerText = subtitle;
+        modalScope.innerText = subtitle;
+        modalCertNo.innerText = certNo;
+        modalBody.innerText = body;
+        modalValidity.innerText = validity;
+        certModal.classList.add('open');
+      }
+    }
+
+    function closeCertModal() {
+      if (certModal) {
+        certModal.classList.remove('open');
+      }
+    }
+
+    if (certModal) {
+      certModal.addEventListener('click', (e) => {
+        if (e.target === certModal) closeCertModal();
+      });
+    }
+
+    function simulateCertDownload() {
+      alert('Your official certificate PDF download has commenced.');
+      closeCertModal();
+    }
+
+    // Download All Certificates Modal
+    const allCertsModal = document.getElementById('allCertsModal');
+
+    function openDownloadAllModal() {
+      if (allCertsModal) allCertsModal.classList.add('open');
+    }
+
+    function closeDownloadAllModal() {
+      if (allCertsModal) allCertsModal.classList.remove('open');
+    }
+
+    if (allCertsModal) {
+      allCertsModal.addEventListener('click', (e) => {
+        if (e.target === allCertsModal) closeDownloadAllModal();
+      });
+    }
+
+    function handleAllCertsSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! The complete Green Plastwood Certificates Dossier ZIP (24 MB) download has started.');
+      closeDownloadAllModal();
+      e.target.reset();
+    }
+
+    // Contact / Quote Action - Opens Contact Us Page
+    function openQuoteModal(subject) {
+      let url = 'contact.html#contactInquiryForm';
+      if (subject) {
+        url = 'contact.html?subject=' + encodeURIComponent(subject) + '#contactInquiryForm';
+      }
+      window.location.href = url;
+    }
+
+    // News Article Modal
+    const newsModal = document.getElementById('newsModal');
+    const newsModalPub = document.getElementById('newsModalPub');
+    const newsModalTitle = document.getElementById('newsModalTitle');
+    const newsModalDate = document.getElementById('newsModalDate');
+
+    function openNewsModal(pub, title, date) {
+      if (newsModal) {
+        newsModalPub.innerText = pub;
+        newsModalTitle.innerText = title;
+        newsModalDate.innerText = date;
+        newsModal.classList.add('open');
+      }
+    }
+
+    function closeNewsModal() {
+      if (newsModal) newsModal.classList.remove('open');
+    }
+
+    if (newsModal) {
+      newsModal.addEventListener('click', (e) => {
+        if (e.target === newsModal) closeNewsModal();
+      });
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      alert('Thank you for subscribing to Green Plastwood updates!');
+      e.target.reset();
+    }
+
+    // Keyboard ESC listener
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCertModal();
+        closeDownloadAllModal();
+        closeNewsModal();
+      }
+    });
+  </script>
+</body>
+
+</html>

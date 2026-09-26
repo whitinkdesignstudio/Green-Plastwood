@@ -1,0 +1,2861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Green Plastwood - Real Spaces. Real Possibilities.</title>
+  <meta name="description"
+    content="Explore our WPC solutions brought to life in homes, offices and commercial spaces. Discover our project installations, video walkthroughs, and social gallery." />
+
+  <!-- Google Fonts: Barlow Condensed & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       0. CSS RESET & DESIGN TOKENS
+       ========================================================================== */
+    :root {
+      --bg-cream: #f8f6f0;
+      --bg-cream-card: #f2eee5;
+      --bg-cream-dark: #e8e3d8;
+      --green-primary: #1c3b2b;
+      --green-dark: #12281d;
+      --green-accent: #2c6847;
+      --green-subtle: #418b62;
+      --text-main: #141715;
+      --text-body: #454d47;
+      --text-muted: #79827c;
+      --border-light: #e4dfd5;
+      --border-dark: #27312b;
+      --white: #ffffff;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.13);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .container-wide {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+
+    /* Section Sub-Tag with Horizontal Line */
+    .sec-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #79827c;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .sec-tag::after {
+      content: '';
+      display: inline-block;
+      width: 44px;
+      height: 1px;
+      background: #79827c;
+      opacity: 0.6;
+    }
+
+    /* ==========================================================================
+       1. STICKY HEADER & NAVBAR
+       ========================================================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 34px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #2b332d;
+      text-transform: capitalize;
+      transition: color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--green-primary);
+    }
+
+    .nav-link.active {
+      color: var(--green-primary);
+      font-weight: 600;
+    }
+
+    /* Underline for active Gallery tab */
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--green-primary);
+      border-radius: 1px;
+    }
+
+    .btn-header-quote {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #4a685b;
+      color: #ffffff;
+      padding: 9px 24px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 50px;
+      transition: var(--transition);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      white-space: nowrap;
+    }
+
+    .btn-header-quote:hover {
+      background: #254234;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .hamburger-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--green-primary);
+      cursor: pointer;
+    }
+
+      .nav-item-mobile-quote {
+      display: none;
+    }
+
+    /* ==========================================================================
+       2. HERO SECTION ("REAL SPACES. REAL POSSIBILITIES.")
+       ========================================================================== */
+    .gallery-hero-section {
+      background: var(--bg-cream);
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .gallery-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      align-items: center;
+      width: 100%;
+      min-height: 380px;
+    }
+
+    .gallery-hero-content {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: max(36px, calc((100vw - 1380px) / 2 + 36px));
+      padding-right: 48px;
+      z-index: 2;
+    }
+
+    .gallery-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(40px, 5vw, 68px);
+      font-weight: 900;
+      line-height: 0.98;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .gallery-hero-title .title-black {
+      color: #141715;
+      display: block;
+      white-space: nowrap;
+    }
+
+    .gallery-hero-title .title-green {
+      color: var(--green-accent);
+      display: block;
+      white-space: nowrap;
+    }
+
+
+    .gallery-hero-desc {
+      font-size: 15px;
+      color: #454d47;
+      font-weight: 400;
+      line-height: 1.55;
+      max-width: 460px;
+    }
+
+    .gallery-hero-photo-wrap {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      position: relative;
+      overflow: hidden;
+      background: #e2dcd0;
+    }
+
+    .gallery-hero-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center left;
+    }
+
+    .gallery-hero-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 28px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.9);
+      background: rgba(18, 40, 29, 0.7);
+      padding: 6px 14px;
+      border-radius: 2px;
+      backdrop-filter: blur(4px);
+      text-align: right;
+      line-height: 1.3;
+    }
+
+    /* ==========================================================================
+       3. FEATURED VIDEO ("INSIDE GREEN PLASTWOOD")
+       ========================================================================== */
+    .featured-video-section {
+      background: #fdfcf9;
+      border-bottom: 1px solid var(--border-light);
+      padding: 60px 0;
+    }
+
+    .featured-video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .featured-video-info {
+      max-width: 480px;
+    }
+
+    .featured-video-title {
+      font-family: var(--font-heading);
+      font-size: clamp(36px, 4.5vw, 56px);
+      font-weight: 900;
+      line-height: 1.02;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      color: #141715;
+      margin-bottom: 16px;
+    }
+
+    .featured-video-desc {
+      font-size: 14.5px;
+      color: #4b544e;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .btn-watch-youtube {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 26px;
+      background: var(--green-primary);
+      color: #ffffff;
+      border: 1px solid var(--green-primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-watch-youtube:hover {
+      background: #12281d;
+      border-color: #12281d;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(28, 59, 43, 0.25);
+    }
+
+    .btn-watch-youtube svg {
+      flex-shrink: 0;
+    }
+
+    /* Video Player Container Mockup */
+    .video-player-container {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      background: #111;
+    }
+
+    .video-thumbnail-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .video-player-container:hover .video-thumbnail-img {
+      transform: scale(1.02);
+    }
+
+    .video-overlay-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.45) 0%,
+          rgba(0, 0, 0, 0.05) 40%,
+          rgba(0, 0, 0, 0.75) 100%);
+      pointer-events: none;
+    }
+
+    .video-top-tagline {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+    }
+
+    /* Big Center Play Button */
+    .video-center-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: rgba(28, 59, 43, 0.88);
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    .video-player-container:hover .video-center-play {
+      transform: translate(-50%, -50%) scale(1.12);
+      background: #1c3b2b;
+      border-color: #ffffff;
+    }
+
+    .video-center-play svg {
+      margin-left: 3px;
+    }
+
+    /* Video Player Bottom Controls Bar */
+    .video-controls-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+      font-size: 11px;
+      z-index: 2;
+    }
+
+    .video-progress-line {
+      position: absolute;
+      bottom: 38px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .video-progress-fill {
+      width: 32%;
+      height: 100%;
+      background: #ff0000;
+    }
+
+    .video-controls-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: monospace;
+      font-size: 11px;
+      color: #e5e5e5;
+    }
+
+    .video-controls-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #e5e5e5;
+    }
+
+    /* ==========================================================================
+       4. PROJECT GALLERY ("OUR WORK IN REAL SPACES")
+       ========================================================================== */
+    .project-gallery-section {
+      padding: 60px 0 70px;
+      background: var(--bg-cream);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .project-gallery-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 28px;
+    }
+
+    .project-gallery-title {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 2.8vw, 36px);
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: #141715;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+
+    .project-gallery-header-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      max-width: 620px;
+    }
+
+    .project-gallery-desc {
+      font-size: 13.5px;
+      color: #555f58;
+      line-height: 1.45;
+      white-space: nowrap;
+    }
+
+
+    .btn-view-photos {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: transparent;
+      color: #26332a;
+      border: 1px solid #7c8880;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .btn-view-photos:hover {
+      background: var(--green-primary);
+      color: #ffffff;
+      border-color: var(--green-primary);
+    }
+
+    /* Filter Tabs Row */
+    .gallery-filter-tabs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .filter-tab-btn {
+      padding: 8px 18px;
+      background: #ffffff;
+      border: 1px solid #dcd7cd;
+      border-radius: 3px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #3e4741;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .filter-tab-btn:hover {
+      background: #f4efe6;
+      border-color: #c7beaf;
+      color: var(--green-primary);
+    }
+
+    .filter-tab-btn.active {
+      background: var(--green-primary);
+      border-color: var(--green-primary);
+      color: #ffffff;
+    }
+
+    /* Bento Grid for Project Works */
+    .bento-gallery-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .bento-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .bento-item-card {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 18px;
+    }
+
+    .bento-item-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .bento-item-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    .bento-item-card:hover .bento-item-img {
+      transform: scale(1.05);
+    }
+
+    .bento-item-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top,
+          rgba(14, 18, 16, 0.9) 0%,
+          rgba(14, 18, 16, 0.3) 50%,
+          rgba(0, 0, 0, 0.05) 100%);
+      z-index: 2;
+      transition: background 0.3s ease;
+    }
+
+    .bento-item-card:hover .bento-item-overlay {
+      background: linear-gradient(to top,
+          rgba(14, 18, 16, 0.95) 0%,
+          rgba(14, 18, 16, 0.4) 50%,
+          rgba(0, 0, 0, 0.1) 100%);
+    }
+
+    .bento-item-info {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .bento-item-title {
+      font-family: var(--font-heading);
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .bento-item-arrow {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .bento-item-card:hover .bento-item-arrow {
+      background: #ffffff;
+      color: var(--green-primary);
+      border-color: #ffffff;
+      transform: scale(1.08);
+    }
+
+    /* Bento Heights */
+    .bento-tall {
+      height: 486px;
+    }
+
+    .bento-half {
+      height: 235px;
+    }
+
+    .bento-subgrid-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      height: 235px;
+    }
+
+    /* ==========================================================================
+       5. VIDEO GALLERY ("SEE OUR PRODUCTS IN ACTION")
+       ========================================================================== */
+    .video-gallery-section {
+      padding: 60px 0 64px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .video-gallery-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .video-gallery-title {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 2.8vw, 36px);
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: #141715;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+
+    .video-gallery-header-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      max-width: 620px;
+    }
+
+    .video-gallery-desc {
+      font-size: 13.5px;
+      color: #555f58;
+      line-height: 1.45;
+      white-space: nowrap;
+      margin-top: 10px;
+    }
+
+
+
+    .btn-view-videos {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background: transparent;
+      color: #26332a;
+      border: 1px solid #7c8880;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .btn-view-videos:hover {
+      background: var(--green-primary);
+      color: #ffffff;
+      border-color: var(--green-primary);
+    }
+
+    .video-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .video-card-item {
+      position: relative;
+      height: 220px;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    .video-card-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .video-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    .video-card-item:hover .video-card-img {
+      transform: scale(1.05);
+    }
+
+    .video-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top,
+          rgba(10, 14, 12, 0.88) 0%,
+          rgba(10, 14, 12, 0.25) 50%,
+          rgba(0, 0, 0, 0.35) 100%);
+      z-index: 2;
+    }
+
+    .video-card-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(28, 59, 43, 0.9);
+      border: 1.5px solid rgba(255, 255, 255, 0.85);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 3;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .video-card-item:hover .video-card-play-btn {
+      transform: translate(-50%, -50%) scale(1.12);
+      background: #255038;
+      border-color: #ffffff;
+    }
+
+    .video-card-play-btn svg {
+      margin-left: 2px;
+    }
+
+    .video-card-bottom {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .video-card-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .video-card-duration {
+      font-family: monospace;
+      font-size: 11.5px;
+      color: #cad8ce;
+    }
+
+    /* ==========================================================================
+       6. FOLLOW OUR JOURNEY ("ON SOCIAL MEDIA")
+       ========================================================================== */
+    .social-media-section {
+      padding: 60px 0 74px;
+      background: var(--bg-cream);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .social-media-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 28px;
+    }
+
+    .social-media-title {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 2.8vw, 36px);
+      font-weight: 900;
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      color: #141715;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+
+    .social-media-header-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .social-media-desc {
+      font-size: 13px;
+      color: #555f58;
+      line-height: 1.45;
+      white-space: nowrap;
+      margin-top: 10px;
+    }
+
+
+    .social-round-btns-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .social-round-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid #7c8880;
+      background: #ffffff;
+      color: #2b332d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .social-round-btn:hover {
+      background: var(--green-primary);
+      color: #ffffff;
+      border-color: var(--green-primary);
+      transform: translateY(-2px);
+    }
+
+    /* 7 Social Media Reels Row */
+    .social-reels-row {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 12px;
+    }
+
+    .social-reel-card {
+      position: relative;
+      aspect-ratio: 1 / 1.18;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #111;
+    }
+
+    .social-reel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .social-reel-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .social-reel-card:hover .social-reel-img {
+      transform: scale(1.06);
+    }
+
+    .social-reel-icon {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 26px;
+      height: 26px;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      z-index: 2;
+    }
+
+    /* ==========================================================================
+       7. FOOTER
+       ========================================================================== */
+    .footer {
+      background: var(--green-dark);
+      color: #ffffff;
+      padding: 64px 0 28px;
+    }
+
+    .footer-columns-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr 1.1fr 1.3fr;
+      gap: 36px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand-logo {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand-logo img {
+      height: 38px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: #9aa8a0;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-social-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social-link {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #d1ded6;
+      transition: all 0.2s ease;
+    }
+
+    .footer-social-link:hover {
+      background: #ffffff;
+      color: var(--green-dark);
+      border-color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .footer-column-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: capitalize;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .footer-nav-list li a {
+      font-size: 13px;
+      color: #9aa8a0;
+      transition: color 0.2s;
+    }
+
+    .footer-nav-list li a:hover {
+      color: #ffffff;
+      padding-left: 2px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      color: #9aa8a0;
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }
+
+    .footer-contact-icon {
+      color: #52a677;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .newsletter-form {
+      display: flex;
+      align-items: stretch;
+      margin-top: 14px;
+    }
+
+    .newsletter-input {
+      width: 100%;
+      padding: 10px 14px;
+      font-size: 12.5px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-right: none;
+      border-radius: 2px 0 0 2px;
+      color: #ffffff;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .newsletter-input:focus {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .newsletter-input::placeholder {
+      color: #7d8c83;
+    }
+
+    .newsletter-btn {
+      background: #274c38;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      padding: 0 16px;
+      font-size: 14px;
+      border-radius: 0 2px 2px 0;
+      transition: background 0.2s;
+    }
+
+    .newsletter-btn:hover {
+      background: #396f52;
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #798780;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      color: #798780;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       8. INTERACTIVE LIGHTBOX & VIDEO MODALS
+       ========================================================================== */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(8, 12, 10, 0.94);
+      backdrop-filter: blur(8px);
+      z-index: 3000;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .lightbox-modal.open {
+      display: flex;
+    }
+
+    .lightbox-content-box {
+      position: relative;
+      max-width: 1000px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-img {
+      max-height: 75vh;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-caption {
+      margin-top: 14px;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .lightbox-subcaption {
+      font-size: 12px;
+      color: #8fa699;
+      margin-top: 2px;
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: none;
+      border: none;
+      font-size: 32px;
+      color: #ffffff;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .lightbox-close-btn:hover {
+      color: #88bc9c;
+    }
+
+    /* Video Player Modal */
+    .video-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 10, 7, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 3000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .video-modal.open {
+      display: flex;
+    }
+
+    .video-modal-box {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      background: #000000;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    .video-modal-screen {
+      position: relative;
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio */
+      background: #0d1410;
+    }
+
+    .video-modal-screen video,
+    .video-modal-screen iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-modal-header {
+      padding: 14px 20px;
+      background: #111a14;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+    }
+
+    .video-modal-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .video-modal-close {
+      background: none;
+      border: none;
+      color: #aaaaaa;
+      font-size: 24px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .video-modal-close:hover {
+      color: #ffffff;
+    }
+
+    /* Quote Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 18, 14, 0.65);
+      backdrop-filter: blur(5px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #ffffff;
+      border-radius: 4px;
+      width: 100%;
+      max-width: 520px;
+      padding: 36px 32px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+      animation: modalFadeIn 0.28s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #8c9790;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .modal-close-btn:hover {
+      color: #12281d;
+    }
+
+    .modal-title {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--green-primary);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .modal-subtitle {
+      font-size: 13.5px;
+      color: #555f59;
+      margin-bottom: 22px;
+    }
+
+    .quote-form-group {
+      margin-bottom: 16px;
+    }
+
+    .quote-form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #2e3832;
+      margin-bottom: 6px;
+    }
+
+    .quote-form-group input,
+    .quote-form-group select,
+    .quote-form-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #d5cfc4;
+      border-radius: 2px;
+      font-family: inherit;
+      font-size: 13.5px;
+      background: #fbf9f5;
+    }
+
+    .btn-submit-modal {
+      width: 100%;
+      padding: 13px;
+      background: #1c3b2b;
+      color: #ffffff;
+      border: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      margin-top: 10px;
+      transition: background 0.2s;
+    }
+
+    .btn-submit-modal:hover {
+      background: #28573f;
+    }
+
+    /* ==========================================================================
+       9. RESPONSIVE DESIGN
+       ========================================================================== */
+    @media (max-width: 1100px) {
+      .bento-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bento-tall {
+        height: 380px;
+      }
+
+      .social-reels-row {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .footer-columns-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .btn-header-quote,
+      .btn-quote-outline {
+        display: none !important;
+      }
+
+      .nav-wrapper {
+        padding: 0 20px;
+        height: 68px;
+      }
+
+      .brand-logo-img {
+        height: 36px;
+        max-width: 170px;
+        object-fit: contain;
+      }
+
+      .hamburger-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: #ffffff;
+        border: 1px solid #dcd7cc;
+        border-radius: 8px;
+        font-size: 20px;
+        color: #141715;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.2s ease;
+      }
+
+      .hamburger-btn:hover {
+        background: #f4f0e6;
+        border-color: var(--green-primary);
+        color: var(--green-primary);
+      }
+
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 24px 24px;
+        border-bottom: 2px solid var(--green-primary);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+        gap: 0;
+        max-height: calc(100vh - 68px);
+        overflow-y: auto;
+        z-index: 9999;
+      }
+
+      .nav-menu.open {
+        display: flex;
+      }
+
+      .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #f0ece3;
+      }
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 0;
+        font-size: 15px;
+        font-weight: 600;
+        color: #1a221d;
+        width: 100%;
+        text-decoration: none;
+      }
+
+      .nav-link.active {
+        color: var(--green-primary);
+        font-weight: 700;
+      }
+
+      .nav-link.active::after {
+        display: none;
+      }
+
+      .nav-item .dropdown {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #ede8de;
+        background: #fbf9f5;
+        border-radius: 6px;
+        padding: 6px 8px;
+        margin: 4px 0 10px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: block;
+      }
+
+      .nav-item .dropdown a {
+        padding: 9px 14px;
+        font-size: 13.5px;
+        border-radius: 4px;
+        color: #232c26;
+      }
+
+
+      .nav-item-mobile-quote {
+        display: block !important;
+        width: 100%;
+        border-bottom: none !important;
+        padding-top: 18px;
+      }
+
+      .btn-sidebar-quote {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 13px 20px;
+        background: var(--green-primary);
+        color: #ffffff !important;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(28, 59, 43, 0.25);
+        transition: all 0.2s ease;
+      }
+
+      .btn-sidebar-quote:hover {
+        background: #12281d;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(28, 59, 43, 0.35);
+      }
+
+      .gallery-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-hero-content {
+        padding: 40px 24px 24px;
+      }
+
+      .gallery-hero-photo-wrap {
+        min-height: 260px;
+        max-height: 340px;
+      }
+
+      .featured-video-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .project-gallery-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .video-gallery-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .video-cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .social-media-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .social-reels-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-columns-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+
+      .container,
+      .container-wide {
+        padding: 0 20px;
+      }
+
+      .bento-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bento-tall,
+      .bento-half,
+      .bento-subgrid-row {
+        height: 260px;
+      }
+
+      .bento-subgrid-row {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .social-reels-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-columns-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* ==========================================================================
+       GLOBAL TYPOGRAPHY SYSTEM (CONTEMPORARY ARCHITECTURAL - PLUS JAKARTA SANS)
+       - Handcrafted human designer hierarchy
+       - Display / Main Headings: Plus Jakarta Sans Bold/ExtraBold (700/800)
+       - Subheadings & Badges: Plus Jakarta Sans SemiBold (600)
+       - Body & Interactive: Plus Jakarta Sans Regular/Medium (400/500)
+       ========================================================================== */
+    :root {
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-subheading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-luxury: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    html,
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    /* Main Headings: Strong, architectural display presence */
+    h1,
+    h2,
+    .hero-h1,
+    .hero-title,
+    .hero-title-main,
+    .hero-title-sub,
+    .sec-h2,
+    .about-h2,
+    .journey-sec-h2,
+    .video-title,
+    .sec-reviews-title,
+    .sec-faq-title,
+    .cta-h2,
+    .story-heading,
+    .purpose-title,
+    .scale-title,
+    .founders-title,
+    .presence-title,
+    .commitment-title,
+    .products-hero-title,
+    .quality-spec-title,
+    .applications-title,
+    .overview-title,
+    .benefits-title,
+    .shades-title,
+    .catalogue-title,
+    .page-title,
+    .main-title,
+    .section-title,
+    .gallery-title,
+    .certificate-title,
+    .contact-title,
+    .modal-title,
+    .about-badge-h3,
+    .story-poster-num,
+    .story-poster-txt,
+    .trusted-title,
+    .specs-table-title {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.025em !important;
+    }
+
+    h1 *,
+    h2 *,
+    .hero-h1 *,
+    .hero-title *,
+    .hero-title-main *,
+    .hero-title-sub *,
+    .sec-h2 *,
+    .about-h2 *,
+    .journey-sec-h2 *,
+    .video-title *,
+    .sec-reviews-title *,
+    .sec-faq-title *,
+    .cta-h2 *,
+    .story-heading *,
+    .purpose-title *,
+    .scale-title *,
+    .founders-title *,
+    .presence-title *,
+    .commitment-title *,
+    .products-hero-title *,
+    .quality-spec-title *,
+    .applications-title *,
+    .overview-title *,
+    .benefits-title *,
+    .shades-title *,
+    .catalogue-title *,
+    .page-title *,
+    .main-title *,
+    .section-title *,
+    .gallery-title *,
+    .certificate-title *,
+    .contact-title *,
+    .modal-title * {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.025em !important;
+    }
+
+    /* Subheadings, Card Titles, and Section Accents */
+    h3,
+    h4,
+    h5,
+    h6,
+    .hero-subtitle,
+    .journey-subtitle,
+    .about-subtitle,
+    .purpose-header-desc,
+    .scale-header-desc,
+    .applications-desc,
+    .overview-subtitle,
+    .quality-spec-desc,
+    .products-hero-desc,
+    .subheading,
+    .subtitle,
+    [class*="subtitle"],
+    [class*="subheading"],
+    .stat-label,
+    .stat-number,
+    .benefit-label,
+    .blog-card-title,
+    .footer-column-title,
+    .footer-col-title,
+    .faq-question-btn,
+    .brochure-heading,
+    .timeline-year,
+    .product-title-badge,
+    .subnav-link,
+    .nav-link,
+    .btn,
+    button,
+    .cust-name,
+    .spec-card-title,
+    .shade-name,
+    .tab-btn,
+    .filter-btn,
+    .catalogue-tag,
+    .sec-tag,
+    .product-card-title {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.015em;
+    }
+
+    /* Children of Subheadings */
+    h3 *,
+    h4 *,
+    h5 *,
+    h6 *,
+    .subheading *,
+    .subtitle *,
+    [class*="subtitle"] *,
+    [class*="subheading"] *,
+    .nav-link *,
+    .footer-column-title *,
+    .footer-col-title *,
+    .btn *,
+    button * {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+    }
+
+    /* Body Text: Warm, readable human geometric typography */
+    p,
+    li,
+    a,
+    span,
+    label,
+    input,
+    textarea,
+    select,
+    td,
+    th,
+    blockquote,
+    .about-description,
+    .overview-text,
+    .purpose-col-desc,
+    .founders-desc,
+    .presence-desc,
+    .commitment-desc,
+    .cust-quote,
+    .faq-answer-panel,
+    .footer-desc,
+    .footer-copy,
+    .marquee-item {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.005em;
+    }
+
+    /* Interactive buttons & Links: Confident SemiBold */
+    .nav-link,
+    .btn,
+    button,
+    .btn-know-more,
+    .view-all-link,
+    .btn-brochure,
+    .btn-watch-video,
+    .btn-primary,
+    .btn-secondary,
+    .btn-download-white,
+    .btn-explore-products,
+    .subnav-link.active,
+    .subnav-link:hover,
+    .footer-column-title,
+    .footer-col-title,
+    .quote-nav-btn {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.02em;
+    }
+  
+    /* Dropdown Menu */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #ffffff;
+      min-width: 200px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-light, #e4dfd5);
+      border-radius: 4px;
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+      list-style: none;
+      pointer-events: none;
+    }
+
+    .dropdown::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+    }
+
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-main, #141715);
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      background: #f4f0e6;
+      color: var(--green-primary, #1c3b2b);
+      padding-left: 24px;
+    }
+
+    .nav-link.dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-chevron {
+      transition: transform 0.25s ease;
+      opacity: 0.75;
+    }
+
+    .nav-item:hover .nav-chevron {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       1. STICKY HEADER & NAVBAR
+       ======================================================================== -->
+  <header class="header" id="navbar">
+    <div class="container-wide nav-wrapper">
+      <a href="index.html" class="brand-logo" aria-label="Green Plastwood Home">
+        <img src="images/brand_logo_transparent.png" alt="Green Plastwood - SNG ECO INDIA" class="brand-logo-img" />
+      </a>
+
+      <!-- Desktop Nav Menu (No dropdowns) -->
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item has-dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle">
+            About Us
+            <svg class="nav-chevron" width="9" height="5" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <ul class="dropdown">
+            <li><a href="index.html#celvion">CELVION</a></li>
+            <li><a href="about.html">Green Plastwood</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="products.html" class="nav-link">Products</a>
+        </li>
+        <li class="nav-item">
+          <a href="gallery.html" class="nav-link active">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a href="certificate.html" class="nav-link">Certificate</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </li>
+        <li class="nav-item-mobile-quote">
+          <a href="contact.html#contactInquiryForm" class="btn-sidebar-quote" onclick="if(typeof openQuoteModal==='function'){openQuoteModal('Mobile Nav');return false;}">
+            GET A QUOTE <span>→</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Right Action Button & Mobile Hamburger -->
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <button class="btn-header-quote" id="headerQuoteBtn" onclick="openQuoteModal('General Inquiry')">
+          GET A QUOTE
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. HERO SECTION ("REAL SPACES. REAL POSSIBILITIES.")
+       ======================================================================== -->
+  <section class="gallery-hero-section" id="hero">
+    <div class="gallery-hero-grid">
+      <!-- Left: Heading & Intro -->
+      <div class="gallery-hero-content">
+
+        <h1 class="gallery-hero-title">
+          <span class="title-black">REAL SPACES.</span>
+          <span class="title-green">REAL POSSIBILITIES.</span>
+        </h1>
+        <p class="gallery-hero-desc">
+          Explore our WPC solutions brought to life in homes, offices and commercial spaces.
+        </p>
+      </div>
+
+      <!-- Right: High Resolution Reception Space Built With Green Plastwood -->
+      <div class="gallery-hero-photo-wrap">
+        <img src="images/gallery_hero_reception_hd.jpg"
+          alt="Spaces Built With Green Plastwood - Luxury Commercial Reception Wall Cladding"
+          class="gallery-hero-photo" />
+        <div class="gallery-hero-badge">
+          SPACES BUILT WITH<br />GREEN PLASTWOOD
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. FEATURED VIDEO ("INSIDE GREEN PLASTWOOD")
+       ======================================================================== -->
+  <section class="featured-video-section" id="featured-video">
+    <div class="container-wide">
+      <div class="featured-video-grid">
+        <!-- Left: Text & CTA -->
+        <div class="featured-video-info">
+
+          <h2 class="featured-video-title">
+            INSIDE GREEN<br />PLASTWOOD
+          </h2>
+          <p class="featured-video-desc">
+            Take a closer look at our manufacturing process, product range and the spaces we help build.
+          </p>
+          <button class="btn-watch-youtube"
+            onclick="openVideoPlayer('Inside Green Plastwood - Manufacturing Excellence', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+            </svg>
+            <span>WATCH ON YOUTUBE</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <!-- Right: Interactive Video Player Mockup -->
+        <div class="video-player-container" onclick="openVideoPlayer('Inside Green Plastwood - Manufacturing Journey')">
+          <img src="images/gallery_featured_video_thumb.jpg" alt="Inside Green Plastwood Manufacturing Facility"
+            class="video-thumbnail-img" />
+          <div class="video-overlay-gradient"></div>
+
+          <div class="video-top-tagline">
+            A GLIMPSE INTO OUR JOURNEY
+          </div>
+
+          <!-- Big Center Play Button -->
+          <div class="video-center-play">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+
+          <!-- Video Progress Bar -->
+          <div class="video-progress-line">
+            <div class="video-progress-fill"></div>
+          </div>
+
+          <!-- Video Bottom Controls -->
+          <div class="video-controls-bar">
+            <div class="video-controls-left">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              <span>0:00 / 3:24</span>
+            </div>
+            <div class="video-controls-right">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="M7 15h4M13 15h4M7 11h2M11 11h6"></path>
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. PROJECT GALLERY ("OUR WORK IN REAL SPACES")
+       ======================================================================== -->
+  <section class="project-gallery-section" id="projects">
+    <div class="container-wide">
+      <div class="project-gallery-header">
+        <div>
+          <h2 class="project-gallery-title">OUR WORK IN REAL SPACES</h2>
+          <p class="project-gallery-desc">See how architects, builders and homeowners are using Green Plastwood across different spaces.</p>
+        </div>
+
+        <div class="project-gallery-header-right">
+          <button class="btn-view-photos" onclick="filterGallery('all')">
+            VIEW ALL PHOTOS <span>→</span>
+          </button>
+        </div>
+      </div>
+
+
+      <!-- Filter Buttons Row -->
+      <div class="gallery-filter-tabs">
+        <button class="filter-tab-btn active" data-filter="all">ALL</button>
+        <button class="filter-tab-btn" data-filter="commercial">COMMERCIAL</button>
+        <button class="filter-tab-btn" data-filter="residential">RESIDENTIAL</button>
+        <button class="filter-tab-btn" data-filter="outdoor">OUTDOOR</button>
+        <button class="filter-tab-btn" data-filter="interiors">INTERIORS</button>
+        <button class="filter-tab-btn" data-filter="door-frames">DOOR FRAMES</button>
+        <button class="filter-tab-btn" data-filter="louvers">LOUVERS</button>
+        <button class="filter-tab-btn" data-filter="cladding">CLADDING</button>
+        <button class="filter-tab-btn" data-filter="decking">DECKING</button>
+      </div>
+
+      <!-- Bento-Style Project Works Grid -->
+      <div class="bento-gallery-grid" id="projectGrid">
+
+        <!-- Column 1: Commercial Facade (Tall Card) -->
+        <div class="bento-item-card bento-tall" data-category="commercial cladding"
+          onclick="openLightbox('images/gallery_work_comm_facade.jpg', 'Commercial Facade', 'Architectural WPC External Louver Cladding')">
+          <img src="images/gallery_work_comm_facade.jpg" alt="Commercial Facade - Green Plastwood"
+            class="bento-item-img" />
+          <div class="bento-item-overlay"></div>
+          <div class="bento-item-info">
+            <h3 class="bento-item-title">Commercial Facade</h3>
+            <div class="bento-item-arrow">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Interior Ceiling & (Deck Flooring + Wall Cladding) -->
+        <div class="bento-col">
+          <!-- Interior Ceiling -->
+          <div class="bento-item-card bento-half" data-category="interiors commercial residential"
+            onclick="openLightbox('images/gallery_work_ceiling.jpg', 'Interior Ceiling', 'Slatted WPC Linear Ceiling Architecture')">
+            <img src="images/gallery_work_ceiling.jpg" alt="Interior Ceiling Rafters" class="bento-item-img" />
+            <div class="bento-item-overlay"></div>
+            <div class="bento-item-info">
+              <h3 class="bento-item-title">Interior Ceiling</h3>
+              <div class="bento-item-arrow">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subgrid: Deck Flooring & Wall Cladding -->
+          <div class="bento-subgrid-row">
+            <!-- Deck Flooring -->
+            <div class="bento-item-card" data-category="decking outdoor residential"
+              onclick="openLightbox('images/gallery_work_deck.jpg', 'Deck Flooring', 'Waterproof Outdoor Pool Decking Solutions')">
+              <img src="images/gallery_work_deck.jpg" alt="Deck Flooring" class="bento-item-img" />
+              <div class="bento-item-overlay"></div>
+              <div class="bento-item-info">
+                <h3 class="bento-item-title">Deck Flooring</h3>
+                <div class="bento-item-arrow">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wall Cladding -->
+            <div class="bento-item-card" data-category="cladding interiors residential"
+              onclick="openLightbox('images/gallery_work_cladding.jpg', 'Wall Cladding', 'Contemporary Living Room Feature Wall Panel')">
+              <img src="images/gallery_work_cladding.jpg" alt="Wall Cladding" class="bento-item-img" />
+              <div class="bento-item-overlay"></div>
+              <div class="bento-item-info">
+                <h3 class="bento-item-title">Wall Cladding</h3>
+                <div class="bento-item-arrow">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Pergola & Outdoor Spaces + Louvers -->
+        <div class="bento-col">
+          <!-- Pergola & Outdoor Spaces -->
+          <div class="bento-item-card bento-half" data-category="outdoor residential"
+            onclick="openLightbox('images/gallery_work_pergola.jpg', 'Pergola & Outdoor Spaces', 'Weather-Resistant Architectural Gazebo Canopy')">
+            <img src="images/gallery_work_pergola.jpg" alt="Pergola & Outdoor Spaces" class="bento-item-img" />
+            <div class="bento-item-overlay"></div>
+            <div class="bento-item-info">
+              <h3 class="bento-item-title">Pergola &amp; Outdoor Spaces</h3>
+              <div class="bento-item-arrow">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Louvers -->
+          <div class="bento-item-card bento-half" data-category="louvers interiors commercial"
+            onclick="openLightbox('images/gallery_work_louvers.jpg', 'Louvers', 'Vertical Room Partition & Shading Louvers')">
+            <img src="images/gallery_work_louvers.jpg" alt="Louvers Partition" class="bento-item-img" />
+            <div class="bento-item-overlay"></div>
+            <div class="bento-item-info">
+              <h3 class="bento-item-title">Louvers</h3>
+              <div class="bento-item-arrow">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 4: WPC Door Frame + Residential Exterior -->
+        <div class="bento-col">
+          <!-- WPC Door Frame -->
+          <div class="bento-item-card bento-half" data-category="door-frames residential commercial"
+            onclick="openLightbox('images/gallery_work_door.jpg', 'WPC Door Frame', 'Termite-Proof High Strength Entryway Frame')">
+            <img src="images/gallery_work_door.jpg" alt="WPC Door Frame" class="bento-item-img" />
+            <div class="bento-item-overlay"></div>
+            <div class="bento-item-info">
+              <h3 class="bento-item-title">WPC Door Frame</h3>
+              <div class="bento-item-arrow">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Residential Exterior -->
+          <div class="bento-item-card bento-half" data-category="residential outdoor cladding"
+            onclick="openLightbox('images/gallery_work_res_ext.jpg', 'Residential Exterior', 'Luxury Modern Villa Exterior Cladding')">
+            <img src="images/gallery_work_res_ext.jpg" alt="Residential Exterior" class="bento-item-img" />
+            <div class="bento-item-overlay"></div>
+            <div class="bento-item-info">
+              <h3 class="bento-item-title">Residential Exterior</h3>
+              <div class="bento-item-arrow">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. VIDEO GALLERY ("SEE OUR PRODUCTS IN ACTION")
+       ======================================================================== -->
+  <section class="video-gallery-section" id="videos">
+    <div class="container-wide">
+      <div class="video-gallery-header">
+        <div>
+          <h2 class="video-gallery-title">SEE OUR PRODUCTS IN ACTION</h2>
+          <p class="video-gallery-desc">Short videos, project highlights and installation glimpses from real spaces.</p>
+        </div>
+
+        <div class="video-gallery-header-right">
+          <button class="btn-view-videos" onclick="openVideoPlayer('Green Plastwood - Video Highlights')">
+            VIEW ALL VIDEOS <span>→</span>
+          </button>
+        </div>
+      </div>
+
+
+      <!-- 3 Video Cards Row -->
+      <div class="video-cards-grid">
+        <!-- Video 1 -->
+        <div class="video-card-item" onclick="openVideoPlayer('WPC Installation Process')">
+          <img src="images/gallery_video_install.jpg" alt="WPC Installation Process Video" class="video-card-img" />
+          <div class="video-card-overlay"></div>
+          <div></div>
+          <div class="video-card-play-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+          <div class="video-card-bottom">
+            <span class="video-card-name">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              WPC Installation Process
+            </span>
+            <span class="video-card-duration">1:28</span>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card-item" onclick="openVideoPlayer('Project Walkthrough')">
+          <img src="images/gallery_video_walkthrough.jpg" alt="Project Walkthrough Video" class="video-card-img" />
+          <div class="video-card-overlay"></div>
+          <div></div>
+          <div class="video-card-play-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+          <div class="video-card-bottom">
+            <span class="video-card-name">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              Project Walkthrough
+            </span>
+            <span class="video-card-duration">2:15</span>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card-item" onclick="openVideoPlayer('Product Features & Interlocking Joint System')">
+          <img src="images/gallery_video_features.jpg" alt="Product Features Video" class="video-card-img" />
+          <div class="video-card-overlay"></div>
+          <div></div>
+          <div class="video-card-play-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+          <div class="video-card-bottom">
+            <span class="video-card-name">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              Product Features
+            </span>
+            <span class="video-card-duration">1:42</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. FOLLOW OUR JOURNEY ("ON SOCIAL MEDIA")
+       ======================================================================== -->
+  <section class="social-media-section" id="social">
+    <div class="container-wide">
+      <div class="social-media-header">
+        <div>
+          <h2 class="social-media-title">ON SOCIAL MEDIA</h2>
+          <p class="social-media-desc">Stay updated with our latest projects, product launches and moments from our day-to-day.</p>
+        </div>
+
+        <div class="social-media-header-right">
+          <div class="social-round-btns-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-round-btn"
+              aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-round-btn"
+              aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-round-btn" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-round-btn"
+              aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 Social Media Reels Row -->
+      <div class="social-reels-row">
+        <!-- Reel 1 -->
+        <div class="social-reel-card"
+          onclick="openLightbox('images/gallery_social_1.jpg', 'Modern Slatted Sliding Door', '@greenplastwood Instagram Reel')">
+          <img src="images/gallery_social_1.jpg" alt="Slatted Sliding Door Installation" class="social-reel-img" />
+          <div class="social-reel-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Reel 2 -->
+        <div class="social-reel-card"
+          onclick="openLightbox('images/gallery_social_2.jpg', 'Outdoor Gazebo Lounge', '@greenplastwood Instagram Reel')">
+          <img src="images/gallery_social_2.jpg" alt="Outdoor Gazebo Lounge" class="social-reel-img" />
+          <div class="social-reel-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Reel 3 -->
+        <div class="social-reel-card"
+          onclick="openLightbox('images/gallery_social_3.jpg', 'Double-Height Feature Wall', '@greenplastwood Instagram Reel')">
+          <img src="images/gallery_social_3.jpg" alt="Double-Height Feature Wall" class="social-reel-img" />
+          <div class="social-reel-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Reel 4 -->
+        <div class="social-reel-card"
+          onclick="openLightbox('images/gallery_social_4.jpg', 'Architectural Door & Louvers Panel', '@greenplastwood Instagram Reel')">
+          <img src="images/gallery_social_4.jpg" alt="Architectural Door Panel" class="social-reel-img" />
+          <div class="social-reel-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Reel 5 -->
+        <div class="social-reel-card"
+          onclick="openLightbox('images/gallery_social_5.jpg', 'Poolside Decking Installation', '@greenplastwood Instagram Reel')">
+          <img src="images/gallery_social_5.jpg" alt="Poolside Decking Installation" class="social-reel-img" />
+          <div class="social-reel-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Reel 6 -->
+        <div class="social-reel-card"
+          onclick="openLightbox('images/gallery_social_6.jpg', 'Engineered Profile Cross Section', '@greenplastwood Instagram Reel')">
+          <img src="images/gallery_social_6.jpg" alt="Engineered Profile Cross Section" class="social-reel-img" />
+          <div class="social-reel-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Reel 7 -->
+        <div class="social-reel-card"
+          onclick="openLightbox('images/gallery_social_7.jpg', 'Modern Residential Exterior Facade', '@greenplastwood Instagram Reel')">
+          <img src="images/gallery_social_7.jpg" alt="Modern Residential Exterior Facade" class="social-reel-img" />
+          <div class="social-reel-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container-wide">
+      <div class="footer-columns-grid">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <a href="index.html" class="footer-brand-logo">
+            <img src="images/brand_logo_transparent.png" alt="Green Plastwood - SNG ECO INDIA" />
+          </a>
+          <p class="footer-tagline">
+            Premium WPC solutions for modern spaces. Manufactured in Ahmedabad, trusted across India and beyond.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-column-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#journey">CELVION</a></li>
+            <li><a href="about.html#journey">SNG</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="index.html#trusted">Certificate</a></li>
+            <li><a href="index.html#cta">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Our Products -->
+        <div>
+          <h4 class="footer-column-title">Our Products</h4>
+          <ul class="footer-nav-list">
+            <li><a href="product-detail.html">WPC Door Frames</a></li>
+            <li><a href="product-detail.html">Louvers &amp; Wall Cladding</a></li>
+            <li><a href="product-detail.html">Pergolas &amp; Rafters</a></li>
+            <li><a href="product-detail.html">Deck Flooring &amp; Deck Tiles</a></li>
+            <li><a href="product-detail.html">WPC Boards</a></li>
+            <li><a href="product-detail.html">WPC Doors</a></li>
+            <li><a href="product-detail.html">Planks</a></li>
+            <li><a href="product-detail.html">Window Frames</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Us -->
+        <div>
+          <h4 class="footer-column-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>SNG ECO INDIA<br />Ahmedabad, Gujarat, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span>+91 95163 26770</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <span>sngecoindia@gmail.com</span>
+          </div>
+        </div>
+
+        <!-- Col 5: Newsletter -->
+        <div>
+          <h4 class="footer-column-title">Newsletter</h4>
+          <p style="font-size: 13px; color: #8c9790; line-height: 1.5; margin-bottom: 12px;">
+            Get the latest updates, product launches and industry insights.
+          </p>
+          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" required />
+            <button type="submit" class="newsletter-btn">→</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>© 2024 Green Plastwood (SNG ECO INDIA). All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       8. LIGHTBOX MODAL FOR IMAGES
+       ======================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">&times;</button>
+      <img src="" alt="Full view" id="lightboxImg" class="lightbox-img" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <div class="lightbox-subcaption" id="lightboxSubcaption"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       9. VIDEO MODAL FOR PLAYBACK
+       ======================================================================== -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-box">
+      <div class="video-modal-header">
+        <span class="video-modal-title" id="videoModalTitle">Video Title</span>
+        <button class="video-modal-close" onclick="closeVideoPlayer()" aria-label="Close Video">&times;</button>
+      </div>
+      <div class="video-modal-screen">
+        <iframe id="videoIframe" src="" title="Video Player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ========================================================================
+       11. JAVASCRIPT LOGIC
+       ======================================================================== -->
+  <script>
+    // Mobile navigation toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    if (hamburgerBtn && navMenu) {
+      hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+      });
+
+      // Close Mobile Menu on Link Click
+      document.querySelectorAll('.nav-link, .btn-sidebar-quote').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+        });
+      });
+    }
+
+    // Interactive Category Filtering
+    const filterTabs = document.querySelectorAll('.filter-tab-btn');
+    const projectCards = document.querySelectorAll('#projectGrid .bento-item-card');
+
+    function filterGallery(category) {
+      filterTabs.forEach((tab) => {
+        if (tab.getAttribute('data-filter') === category) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+
+      projectCards.forEach((card) => {
+        const itemCat = card.getAttribute('data-category') || '';
+        if (category === 'all' || itemCat.includes(category)) {
+          card.style.display = 'flex';
+          card.style.opacity = '0';
+          setTimeout(() => {
+            card.style.transition = 'opacity 0.3s ease';
+            card.style.opacity = '1';
+          }, 30);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    filterTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const cat = tab.getAttribute('data-filter');
+        filterGallery(cat);
+      });
+    });
+
+    // Lightbox Modal Functions
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxSubcaption = document.getElementById('lightboxSubcaption');
+
+    function openLightbox(imgSrc, title, subtitle) {
+      if (lightboxModal && lightboxImg) {
+        lightboxImg.src = imgSrc;
+        lightboxCaption.innerText = title || '';
+        lightboxSubcaption.innerText = subtitle || '';
+        lightboxModal.classList.add('open');
+      }
+    }
+
+    function closeLightbox() {
+      if (lightboxModal) {
+        lightboxModal.classList.remove('open');
+      }
+    }
+
+    if (lightboxModal) {
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) closeLightbox();
+      });
+    }
+
+    // Video Player Modal Functions
+    const videoModal = document.getElementById('videoModal');
+    const videoModalTitle = document.getElementById('videoModalTitle');
+    const videoIframe = document.getElementById('videoIframe');
+
+    function openVideoPlayer(title, videoUrl) {
+      if (videoModal && videoIframe) {
+        videoModalTitle.innerText = title || 'Inside Green Plastwood';
+        // Use high-definition architectural video demo or embed
+        videoIframe.src = videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+        videoModal.classList.add('open');
+      }
+    }
+
+    function closeVideoPlayer() {
+      if (videoModal && videoIframe) {
+        videoIframe.src = '';
+        videoModal.classList.remove('open');
+      }
+    }
+
+    if (videoModal) {
+      videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) closeVideoPlayer();
+      });
+    }
+
+    // Quote / Inquiry Action - Opens Contact Us Page
+    function openQuoteModal(interest) {
+      let url = 'contact.html#contactInquiryForm';
+      if (interest) {
+        url = 'contact.html?product=' + encodeURIComponent(interest) + '#contactInquiryForm';
+      }
+      window.location.href = url;
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      alert('Thank you for subscribing to Green Plastwood updates!');
+      e.target.reset();
+    }
+
+    // Keyboard ESC listener
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        closeVideoPlayer();
+      }
+    });
+  </script>
+</body>
+
+</html>
