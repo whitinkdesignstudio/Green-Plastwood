@@ -1,0 +1,101 @@
+/* ==========================================================================
+   GREEN PLASTWOOD — LEAD UI (sticky bar, WhatsApp bubble, quick-quote modal,
+   inline quick-quote section, trust panel, sample CTA, landing pages)
+   ========================================================================== */
+
+/* ---------- Mobile sticky bar ---------- */
+.gp-sticky-bar { display: none; }
+@media (max-width: 900px) {
+  .gp-sticky-bar {
+    display: grid; grid-template-columns: 1fr 1fr 1.25fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 1200;
+    background: #fff; border-top: 1px solid #e3ded6; box-shadow: 0 -6px 24px rgba(0,0,0,.08);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .gp-sticky-bar a { display: flex; align-items: center; justify-content: center; gap: 8px; height: 58px; font-size: 14px; font-weight: 700; color: #2B2422; text-decoration: none; letter-spacing: .3px; }
+  .gp-sticky-bar .gp-sb-wa { color: #128c4b; border-left: 1px solid #eee; border-right: 1px solid #eee; }
+  .gp-sticky-bar .gp-sb-quote { background: #00866A; color: #fff; }
+  body.gp-has-sticky { padding-bottom: 58px; }
+  .gp-float { display: none !important; }
+}
+
+/* ---------- Desktop floating buttons ---------- */
+.gp-float { position: fixed; right: 22px; bottom: 22px; z-index: 1200; display: flex; flex-direction: column; gap: 12px; align-items: flex-end; }
+.gp-float a { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; box-shadow: 0 10px 26px rgba(0,0,0,.18); transition: transform .2s; position: relative; text-decoration: none; }
+.gp-float a:hover { transform: translateY(-2px) scale(1.04); }
+.gp-float-wa { background: #25d366; }
+.gp-float-wa svg { width: 28px; height: 28px; }
+.gp-float-call { background: #00866A; width: 46px !important; height: 46px !important; }
+.gp-float-tip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: #2B2422; color: #fff; font-size: 13px; font-weight: 600; white-space: nowrap; padding: 8px 12px; border-radius: 6px; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.gp-float-wa:hover .gp-float-tip { opacity: 1; }
+
+/* ---------- Quick quote modal ---------- */
+.gpq-lock, .gpq-lock body { overflow: hidden; }
+.gpq-backdrop { position: fixed; inset: 0; z-index: 3000; background: rgba(6, 28, 22, .62); backdrop-filter: blur(3px); display: none; align-items: center; justify-content: center; padding: 20px; }
+.gpq-backdrop.is-open { display: flex; animation: gpqIn .25s ease; }
+@keyframes gpqIn { from { opacity: 0; } to { opacity: 1; } }
+.gpq-card { position: relative; width: 100%; max-width: 860px; max-height: calc(100vh - 40px); overflow: auto; background: #fff; border-radius: 10px; display: grid; grid-template-columns: 0.9fr 1.1fr; box-shadow: 0 30px 80px rgba(0,0,0,.35); }
+.gpq-close { position: absolute; top: 10px; right: 12px; width: 36px; height: 36px; border-radius: 50%; border: 0; background: #f2eee5; font-size: 22px; line-height: 1; cursor: pointer; z-index: 2; color: #2B2422; }
+.gpq-form { padding: 36px 34px 30px; }
+.gpq-form h3 { font-size: 28px; font-weight: 800; line-height: 1.15; margin: 0 0 8px; color: #2B2422; }
+.gpq-sub { font-size: 15.5px; color: #4E4744; line-height: 1.55; margin: 0 0 20px; }
+.gpq-field { display: block; margin-bottom: 14px; }
+.gpq-field span { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: .6px; color: #4E4744; margin-bottom: 6px; text-transform: uppercase; }
+.gpq-field input, .gpq-field select, .gp-quick-form input, .gp-quick-form select {
+  width: 100%; height: 50px; border: 1.5px solid #e0dacf; border-radius: 6px; padding: 0 14px; font-size: 16px; font-family: inherit; color: #2B2422; background: #fff; transition: border-color .2s;
+}
+.gpq-field input:focus, .gpq-field select:focus, .gp-quick-form input:focus, .gp-quick-form select:focus { outline: none; border-color: #00866A; box-shadow: 0 0 0 3px rgba(0, 134, 106,.12); }
+.gpq-submit, .gp-quick-submit { width: 100%; height: 54px; border: 0; border-radius: 6px; background: #00866A; color: #fff; font-size: 15px; font-weight: 800; letter-spacing: 1px; cursor: pointer; font-family: inherit; margin-top: 6px; transition: background .2s; }
+.gpq-submit:hover, .gp-quick-submit:hover { background: #052A23; }
+.gpq-submit:disabled, .gp-quick-submit:disabled { opacity: .7; cursor: wait; }
+.gpq-note { font-size: 12.5px; color: #7A716D; margin: 12px 0 0; text-align: center; }
+
+/* ---------- Trust panel ---------- */
+.gpq-trust { background: #052A23; color: #fff; display: flex; flex-direction: column; border-radius: 10px 0 0 10px; overflow: hidden; }
+.gpq-amb { position: relative; height: 230px; background: #f2eee5; }
+.gpq-amb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+.gpq-trust-body { padding: 22px 24px 26px; }
+.gpq-tag { display: inline-block; font-size: 11.5px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: #7ED6BB; margin-bottom: 14px; }
+.gpq-trust-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.gpq-trust-list li { display: flex; gap: 10px; align-items: baseline; border-bottom: 1px solid rgba(255,255,255,.1); padding-bottom: 10px; }
+.gpq-trust-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.gpq-trust-list b { font-size: 17px; font-weight: 900; color: #fff; white-space: nowrap; }
+.gpq-trust-list span { font-size: 13.5px; color: rgba(255,255,255,.72); }
+@media (max-width: 760px) {
+  .gpq-card { grid-template-columns: 1fr; }
+  .gpq-trust { display: none; }
+  .gpq-form { padding: 30px 22px 24px; }
+  .gpq-form h3 { font-size: 24px; }
+}
+
+/* ---------- Inline quick quote section ---------- */
+.gp-qq { background: #f2eee5; padding: var(--sec-pad, 100px) 0; }
+.gp-qq-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 0; background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #e3ded6; box-shadow: 0 20px 50px rgba(11, 45, 36,.08); }
+.gp-qq-grid .gpq-trust { border-radius: 0; }
+.gp-qq-form { padding: 44px 44px 38px; }
+.gp-qq-form h2 { margin-bottom: 10px !important; }
+.gp-qq-form > p { font-size: 17px !important; color: #4E4744; margin: 0 0 24px; line-height: 1.6 !important; }
+.gp-quick-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.gp-quick-form .gp-qf-full { grid-column: 1 / -1; }
+.gp-quick-form .gp-qf-type { display: flex; gap: 10px; flex-wrap: wrap; grid-column: 1 / -1; }
+.gp-qf-type label { flex: 1 1 140px; display: flex; align-items: center; gap: 8px; border: 1.5px solid #e0dacf; border-radius: 6px; padding: 12px 14px; font-size: 15px; font-weight: 600; cursor: pointer; }
+.gp-qf-type input { width: 18px; height: 18px; accent-color: #00866A; }
+.gp-qf-type label:has(input:checked) { border-color: #00866A; background: #E3F2EC; }
+.gp-qq-alt { display: flex; gap: 12px; align-items: center; margin-top: 16px; font-size: 14.5px; color: #4E4744; flex-wrap: wrap; }
+.gp-qq-alt a { font-weight: 700; color: #00866A; display: inline-flex; gap: 6px; align-items: center; }
+@media (max-width: 900px) {
+  .gp-qq-grid { grid-template-columns: 1fr; }
+  .gp-qq-grid .gpq-trust { display: grid; grid-template-columns: 120px 1fr; }
+  .gp-qq-grid .gpq-amb { height: auto; min-height: 100%; }
+  .gp-qq-form { padding: 30px 20px; }
+  .gp-quick-form { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) { .gp-qq-grid .gpq-trust { grid-template-columns: 1fr; } .gp-qq-grid .gpq-amb { height: 200px; } }
+
+/* ---------- CTA buttons ---------- */
+.gp-btn--sample { background: #fff; color: #543C3C; border-color: #543C3C; }
+.gp-btn--sample:hover { background: #543C3C; color: #fff; border-color: #543C3C; }
+.gp-btn--wa { background: #25d366; border-color: #25d366; color: #fff; }
+.gp-btn--wa:hover { background: #1eb457; border-color: #1eb457; }
+.gp-sample-strip { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 24px 28px; border: 1.5px dashed #B7A29B; border-radius: 8px; background: #F8F4F2; margin-top: 28px; }
+.gp-sample-strip strong { font-size: 19px; color: #2B2422; display: block; }
+.gp-sample-strip span { font-size: 15px; color: #4E4744; }

@@ -1,0 +1,58 @@
+
+/* ==========================================================================
+   GREEN PLASTWOOD — LOGO THEME LAYER
+   Emerald (GREEN) + earth brown (PLASTWOOD) + leaf lime + cream ground.
+   ========================================================================== */
+:root {
+  --lg-brand: #009C78; --lg-primary: #00866A; --lg-primary-dk: #006E56;
+  --lg-deep: #073A30; --lg-deepest: #052A23; --lg-mint: #7ED6BB; --lg-leaf: #8DC63F;
+  --lg-tint: #E3F2EC; --lg-earth: #543C3C; --lg-ink: #2B2422; --lg-cream: #F6F4EF;
+}
+/* headings: logo structure — brown-black words with the emerald highlight */
+section h1, section h2 { color: var(--lg-ink); }
+section h2 em, .gp-page-title span, .gp-h2 em { color: var(--lg-brand) !important; }
+.gp-sec--dark h2, .gp-sec--green h2, .gp-statement p, .gp-cta h2 { color: #fff; }
+.gp-sec--dark .gp-h2 em, .gp-sec--green .gp-h2 em { color: var(--lg-mint) !important; }
+/* alternate band = soft logo tint (CELVION-style) */
+.gp-sec--sand, .gp-qq { background: var(--lg-tint) !important; }
+/* buttons & links */
+.gp-btn:not(.gp-btn--ghost):not(.gp-btn--light):not(.gp-btn--line-light):not(.gp-btn--sample):not(.gp-btn--wa) { background: var(--lg-primary); border-color: var(--lg-primary); }
+.gp-btn:not(.gp-btn--ghost):not(.gp-btn--light):not(.gp-btn--line-light):not(.gp-btn--sample):not(.gp-btn--wa):hover { background: var(--lg-primary-dk); border-color: var(--lg-primary-dk); }
+.gp-btn--ghost { color: var(--lg-primary); border-color: var(--lg-primary); }
+.gp-btn--ghost:hover { background: var(--lg-primary); color: #fff; }
+.gp-link { color: var(--lg-primary); }
+/* small accents from the logo leaves */
+.gp-sec--dark .gp-checks li::before, .gp-sec--green .gp-checks li::before { background-color: var(--lg-brand); }
+.gp-timeline::before { background: linear-gradient(90deg, var(--lg-brand) 0%, var(--lg-leaf) 55%, var(--lg-earth) 100%); }
+.gp-band-track span::after { color: var(--lg-leaf); }
+.gp-strip-item .gp-icon { color: var(--lg-leaf) !important; }
+.nav-link.active::after { background: var(--lg-brand) !important; }
+/* coloured highlight words in draft headings → logo emerald */
+.green-line, .green-text, .title-green, .hero-h1-green, .cta-h2-green, .title-green span { color: var(--lg-brand) !important; }
+.btn-quote-outline, .btn-header-quote { background: var(--lg-primary) !important; border-color: var(--lg-primary) !important; color: #fff !important; }
+::selection { background: var(--lg-brand); color: #fff; }
+
+/* ---------- One footer on every page (logo deep green) ---------- */
+footer.site-footer, footer.footer {
+  background: #052A23 !important; color: rgba(255,255,255,.78) !important; border-top: 0 !important;
+}
+footer .footer-col-title, footer .footer-column-title, footer .footer-brand-title { color: #FFFFFF !important; }
+footer .footer-col-title::after, footer .footer-column-title::after { background: #009C78 !important; }
+footer p, footer li, footer span, footer .footer-contact-item, footer .contact-line { color: rgba(255,255,255,.72); }
+footer a { color: rgba(255,255,255,.78) !important; }
+footer a:hover { color: #7ED6BB !important; }
+footer .footer-bottom-bar { border-top: 1px solid rgba(255,255,255,.12) !important; color: rgba(255,255,255,.55) !important; }
+footer .footer-bottom-bar a { color: rgba(255,255,255,.6) !important; }
+footer .social-btn, footer .footer-social-link {
+  background: rgba(255,255,255,.06) !important; border: 1px solid rgba(255,255,255,.18) !important; color: #FFFFFF !important;
+}
+footer .social-btn svg, footer .footer-social-link svg { fill: currentColor; }
+footer .social-btn:hover, footer .footer-social-link:hover { background: #009C78 !important; border-color: #009C78 !important; }
+footer .newsletter-form { background: rgba(255,255,255,.06) !important; border: 1px solid rgba(255,255,255,.18) !important; }
+footer .newsletter-input { background: transparent !important; border: 0 !important; color: #fff !important; }
+footer .newsletter-input::placeholder { color: rgba(255,255,255,.5); }
+footer .newsletter-btn { background: #009C78 !important; border-color: #009C78 !important; color: #fff !important; }
+footer .footer-brand-sub { color: #7ED6BB !important; }
+footer .gp-footer-seo { border-bottom-color: rgba(255,255,255,.12) !important; }
+footer .gp-footer-seo h2 { color: #7ED6BB !important; }
+footer .gp-footer-seo p { color: rgba(255,255,255,.6) !important; }

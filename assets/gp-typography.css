@@ -1,0 +1,155 @@
+/* ==========================================================================
+   GREEN PLASTWOOD — SITE-WIDE TYPOGRAPHY & SPACING SYSTEM
+   Section headings 38px · paragraphs 19px · sub-headings scaled to match
+   Loaded last on every page so it overrides the draft's per-section sizes.
+   ========================================================================== */
+:root {
+  --t-h2: 38px;
+  --t-p: 19px;
+  --t-sub-lg: 30px;
+  --t-sub: 26px;
+  --t-h3: 21px;
+  --t-card-p: 16px;
+  --sec-pad: 100px;
+}
+@media (max-width: 1024px) { :root { --t-h2: 34px; --t-p: 18px; --t-sub-lg: 27px; --t-sub: 24px; --t-h3: 20px; --sec-pad: 80px; } }
+@media (max-width: 600px)  { :root { --t-h2: 26px; --t-p: 17px; --t-sub-lg: 23px; --t-sub: 21px; --t-h3: 19px; --t-card-p: 15.5px; --sec-pad: 60px; } }
+
+/* ---------- 1. Main section headings: 38px, 1–2 lines ---------- */
+section h2 {
+  font-size: var(--t-h2) !important;
+  line-height: 1.16 !important;
+  letter-spacing: -0.3px !important;
+  max-width: none !important;
+  margin-bottom: 18px !important;
+  text-wrap: balance;
+}
+section h2 span { display: inline !important; white-space: normal !important; }
+section h2 em { font-style: normal; }
+
+/* ---------- 2. Paragraphs: 19px ---------- */
+section .gp-lead, section .gp-p,
+.about-hero-para, .about-hero-desc, .purpose-header-desc, .scale-header-desc, .presence-desc,
+.cert-hero-desc, .certifications-desc, .legacy-desc, .hero-description, .form-subtitle-text,
+.partners-desc, .gallery-hero-desc, .featured-video-desc, .video-gallery-desc, .social-media-desc,
+.hero-para, .celvion-desc, .about-description, .video-desc, .cta-subtext,
+.product-body-desc, .overview-text, .cert-col-desc, .custom-solution-desc, .products-hero-desc,
+.catalogue-desc, .quality-spec-desc, .choosing-cta-desc, .purpose-col-text,
+.story-paragraphs p, .gp-letter-body p, .gp-duo-col > p:not(.gp-duo-quote), .gp-cta p, .gp-split > p {
+  font-size: var(--t-p) !important;
+  line-height: 1.7 !important;
+}
+section .gp-lead { max-width: 860px; margin-bottom: 14px; }
+.gp-head--center .gp-lead { margin-left: auto; margin-right: auto; }
+.gp-head--split .gp-lead:last-child, .gp-head .gp-lead:last-child { margin-bottom: 0 !important; }
+.hero-para { max-width: 600px !important; }
+
+/* smaller text inside cards / lists stays readable but secondary */
+section .gp-card p, section .gp-doc p, .value-desc, .gp-tl-item p, .gp-step p, .touch-info-content p, .touch-info-content a {
+  font-size: var(--t-card-p) !important; line-height: 1.65 !important;
+}
+.gp-img-card-body p, .product-card-desc { font-size: 15px !important; }
+section .gp-checks li, .usp-item { font-size: 17px !important; line-height: 1.55 !important; }
+.faq-body, .faq-answer-panel, .accordion-body { font-size: 17px !important; line-height: 1.7 !important; }
+.faq-header span, .faq-question-btn span, .accordion-header span { font-size: 17px !important; }
+.gp-quote-card blockquote { font-size: 18px !important; }
+.gp-note { font-size: 14px !important; }
+.gp-pending { font-size: 15px !important; }
+
+/* ---------- 3. Sub-headings scaled to the 38px / 19px system ---------- */
+.gp-subhead {
+  font-size: var(--t-sub) !important; font-weight: 800; line-height: 1.25; color: #2B2422;
+  text-transform: none; letter-spacing: -0.2px; margin: 0 0 22px !important;
+}
+.gp-subhead--lg { font-size: var(--t-sub-lg) !important; margin-bottom: 18px !important; }
+section .gp-h3 { font-size: var(--t-h3) !important; line-height: 1.3 !important; margin-bottom: 10px; }
+section .gp-card--row .gp-h3 { font-size: 18px !important; }
+.gp-duo-col .gp-h3 { font-size: var(--t-sub) !important; }
+.gp-step h3, .gp-tl-item h3 { font-size: 19px !important; line-height: 1.3 !important; }
+.gp-h3--light { color: #7ED6BB !important; font-size: 17px !important; text-transform: uppercase; letter-spacing: 1px; }
+.gp-sub, .product-tagline { font-size: 22px !important; line-height: 1.4 !important; margin-top: 0 !important; }
+.gp-duo-quote { font-size: 23px !important; line-height: 1.45 !important; }
+.purpose-col-heading { font-size: 24px !important; line-height: 1.3 !important; }
+.custom-solution-title { font-size: var(--t-sub-lg) !important; }
+.blog-card-title { font-size: 20px !important; line-height: 1.35 !important; }
+.gp-closing { font-size: 24px !important; }
+/* statement size set below */
+.gp-tab-intro h3 { font-size: var(--t-sub) !important; }
+.gp-tab-intro p { font-size: 17px !important; }
+
+/* ---------- 4. Heading layout: give headings room for 1–2 lines ---------- */
+.gp-head { margin-bottom: 48px !important; }
+.gp-head--split { grid-template-columns: 1.35fr 1fr !important; gap: 56px !important; align-items: end; }
+.gp-head--split h2 { margin-bottom: 0 !important; }
+@media (max-width: 900px) { .gp-head--split { grid-template-columns: 1fr !important; gap: 14px !important; } }
+.section-header-flex, .publications-header, .certifications-header, .faq-header, .video-gallery-header,
+.social-media-header, .quality-spec-header, .project-gallery-header, .partners-header-row {
+  align-items: flex-end; gap: 32px; margin-bottom: 40px !important;
+}
+.section-header-flex > div, .certifications-header > div, .quality-spec-header > div,
+.video-gallery-header > div, .social-media-header > div { flex: 1 1 auto; max-width: 900px; }
+
+/* ---------- 5. Consistent vertical rhythm ---------- */
+.gp-sec { padding: var(--sec-pad) 0 !important; }
+.gp-sec--tight { padding: calc(var(--sec-pad) * .75) 0 !important; }
+.gp-statement { padding: calc(var(--sec-pad) * .8) 24px !important; }
+.about-section, .products-section, .blog-section, .reviews-faq-section, .cta-banner-section,
+.story-section, .purpose-section, .scale-section, .presence-section,
+.certifications-section, .faq-section, .featured-video-section, .video-gallery-section, .social-media-section,
+.contact-form-section, .partners-section, .products-catalog-section, .quality-spec-section, .choosing-cta-section,
+.product-overview-section, .key-benefits-section, .cert-usp-section, .shade-range-section, .specs-section,
+.applications-section, .faq-cta-section, .related-products-section {
+  padding-top: var(--sec-pad) !important; padding-bottom: var(--sec-pad) !important;
+}
+/* same-background neighbours: avoid double gaps */
+.gp-sec + .gp-sec[style*="padding-top:0"] { padding-top: 0 !important; }
+.cta-banner-section { padding-top: calc(var(--sec-pad) * .6) !important; }
+.gp-band + .gp-sec, .gp-strip + section { border-top: 0; }
+
+/* spacing inside blocks */
+section h2 + .gp-lead, section h2 + p { margin-top: 0; }
+.gp-btns { margin-top: 30px; }
+.gp-grid.gp-g3, .gp-grid.gp-g4, .gp-grid.gp-g2 { row-gap: 24px; }
+.gp-pending { margin-top: 32px !important; }
+.gp-closing { margin-top: 44px !important; }
+.product-info-wrap .product-main-title { margin-bottom: 12px !important; }
+.product-body-desc { margin-bottom: 14px !important; }
+
+/* ---------- 6. Layout tweaks so headings sit in 1–2 lines ---------- */
+.gp-head--split { grid-template-columns: 1fr !important; gap: 16px !important; }
+.gp-head--split > div:last-child .gp-lead { max-width: 900px; }
+.gp-h2--full { margin-bottom: 28px !important; }
+.gp-h2--full + .gp-split { margin-top: 0; }
+.gp-cta { grid-template-columns: 1fr !important; gap: 26px !important; }
+.cta-card-box { flex-wrap: wrap !important; row-gap: 26px !important; }
+.cta-title-block { flex: 1 1 100% !important; max-width: none !important; }
+.cta-title-block .cta-subtext { max-width: 900px !important; }
+.cta-card-box .cta-vertical-divider:first-of-type { display: none; }
+.story-grid { grid-template-columns: 0.68fr 1.32fr !important; }
+.story-content { padding-right: 40px !important; }
+.about-grid { grid-template-columns: 0.85fr 1.15fr !important; }
+@media (max-width: 900px) { .story-grid, .about-grid { grid-template-columns: 1fr !important; } }
+@media (min-width: 1025px) {
+  .presence-layout-grid { grid-template-columns: 1.25fr auto 2fr !important; }
+  .sustainable-banner-grid { grid-template-columns: 0.8fr 1.6fr 1.2fr !important; }
+}
+/* fixes after visual pass */
+.gp-statement p { font-size: inherit; }
+.gp-statement > p { font-size: clamp(22px, 2.4vw, 30px) !important; line-height: 1.3 !important; }
+.gp-statement .gp-cert p { font-size: 12px !important; }
+.gp-wrap > .gp-statement { padding: 56px 0 0 !important; }
+.gp-split > .gp-statement { padding: 48px 32px !important; }
+.hero-content { max-width: 560px !important; }
+.hero-para { max-width: 540px !important; }
+.hero-subtitle { max-width: 560px; }
+.gp-subhead { margin-top: 52px !important; }
+.gp-subhead:first-child, .gp-reveal > .gp-subhead:first-child, div > .gp-subhead:first-child { margin-top: 0 !important; }
+/* draft had white-space:nowrap on several headings/descriptions — let them wrap */
+.social-media-title, .partners-desc, .about-hero-desc, .purpose-title, .partners-heading, .social-media-desc,
+.video-gallery-title, .scale-header-desc, .scale-title, .video-gallery-desc, .quality-spec-title, .purpose-header-desc,
+.choosing-cta-title, .quality-spec-desc, section h2, section p { white-space: normal !important; }
+.quality-spec-header { flex-wrap: wrap; }
+.quality-spec-header > div:first-child { flex: 1 1 560px; }
+.partners-left-content { max-width: none !important; }
+.form-header-content { max-width: 80%; }
+@media (max-width: 900px) { .form-header-content { max-width: none; } }

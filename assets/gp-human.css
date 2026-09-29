@@ -1,0 +1,16 @@
+
+/* ---- human pass: calmer headings, no forced caps on section titles ---- */
+section h2, .about-h2, .story-heading, .scale-title, .presence-title, .purpose-title, .catalogue-title, .quality-spec-title,
+.choosing-cta-title, .sec-h2, .sec-faq-title, .video-title, .partners-heading, .legacy-title, .sustainable-title, .cert-col-title,
+.social-media-title, .video-gallery-title, .featured-video-title, .faq-title, .related-title, .overview-title, .benefits-title,
+.shade-title, .specs-title, .app-title, .custom-solution-title, .cta-heading, .cta-title, .certifications-title { text-transform: none !important; letter-spacing: -0.3px !important; }
+.gp-band-track span { text-transform: none; }
+.contact-line-icon svg, .footer-contact-icon svg { vertical-align: -3px; }
+.footer-social-link svg, .social-btn svg { display: block; }
+.btn-watch-video { display: inline-flex; align-items: center; }
+/* ---- compact vertical rhythm (all pages) ---- */
+:root { --sec-pad: 80px; }
+@media (max-width: 1024px) { :root { --sec-pad: 68px; } }
+@media (max-width: 600px) { :root { --sec-pad: 48px; } }
+.gp-head { margin-bottom: 32px !important; }
+.gp-h2--full { margin-bottom: 22px !important; }
