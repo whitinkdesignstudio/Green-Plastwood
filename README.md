@@ -1,25 +1,37 @@
-# Green-Plastwood
+# Green Plastwood website
 
-Premium WPC (Wood Polymer Composite) website for GREEN PLASTWOOD by SNG Eco India Pvt. Ltd.
+Static website for GREEN PLASTWOOD, the WPC brand of SNG Eco India Pvt. Ltd. Plain HTML, CSS and JavaScript: no build step.
+Upload the whole folder as it is. `index.html` is the home page.
 
 ## Pages
-index.html · about.html · manufacturing.html (new) · products.html · product-wpc-door-frames.html · product-wpc-solid-doors.html ·
-product-wpc-pvc-sheets.html · product-wpc-boards.html · product-wpc-windows.html · product-pvc-louvers.html ·
-certificate.html · gallery.html · resources.html (new) · contact.html
-(product.html, product-detail.html, contact-us.html = redirects)
+- Main: `index.html`, `about.html`, `manufacturing.html`, `products.html`, `gallery.html`, `certificate.html`, `resources.html`, `contact.html`
+- Products (5): `product-wpc-door-frames.html` (WPC Chaukhat), `product-wpc-solid-doors.html` (WPC Doors),
+  `product-wpc-boards-sheets.html` (WPC Sheets & Boards), `product-wpc-window-frames.html`, `product-wpc-louvers.html`.
+  A sub-category opens with a link such as `product-wpc-solid-doors.html#type-3-layer`.
+- Blogs: `blogs.html` and 8 articles `blog-*.html`
+- Guides: 7 pages `guide-*.html`
+- Ad landing pages: `lp-*.html` (not in the menu, hidden from search engines)
+- `thank-you.html` (shown after a form is sent)
+- Redirect pages (old addresses, keep them): `product.html`, `product-detail.html`, `contact-us.html`, `product-wpc-boards.html`,
+  `product-wpc-pvc-sheets.html`, `product-wpc-windows.html`, `product-pvc-louvers.html`, `product-wpc-3-layer-doors.html`, `product-wpc-3-layer-boards.html`
 
-Shared styles/scripts for the new content: assets/gp-content.css, assets/gp-content.js
+## Folders
+- `assets/` styles and scripts. `gp-type.css` holds the fonts and the text sizes for the whole site. `assets/fonts/` holds the Questrial font files.
+- `images/` all images and the manufacturing film.
+- `docs/` the 8 catalogue PDFs. The download buttons need this folder next to the pages.
 
-## Pending from client (yellow ⏳ boxes on the site)
-To hide all pending notes before going live: add `.gp-pending{display:none}` to assets/gp-content.css
-1. Phone number (doc has +91 XXXXX XXXXX; draft had 3 different numbers — unified to +91 90163 36119, please confirm)
-2. Certificate list + PDFs (doc keeps [CERTIFICATION NAME] placeholders; draft shows ISO / RoHS / CE / REACH / SGS — confirm or remove)
-3. Founder photo, name & designation
-4. 8–10 video testimonials + corporate / factory film
-5. Verified company numbers (dealers, cities, projects) — About > "Our Growth Measured by Trust"
-6. Actual product dimensions (all * values), full colour card, door designs, laminate catalogue
-7. Catalogue PDFs (Corporate, Product, Technical, Door Frame, Doors, Boards, Sheets, Louvers, Installation Guide, TDS)
-8. Factory address (show or not), aerial factory / machinery / team photos
-9. Social media links (Facebook, Instagram, LinkedIn, YouTube)
-10. Brand ambassador announcement copy (Dayanand Shetty), exhibition dates (Acetech / IndiaWood), news posts, blog articles
-11. Confirm: CELVION shown as parent company (doc says SNG Eco India Pvt. Ltd.); 12+ years / 420+ dealers / 4+ countries (not in doc)
+## Before going live
+1. `assets/gp-config.js`: put the Formspree form address in `formEndpoint` (until then forms go to the thank-you page but no e-mail is sent),
+   and the Google Analytics / Meta Pixel IDs if they are used.
+2. Site address: pages, `sitemap.xml`, `robots.txt` and `llms.txt` use `https://whitinkdesignstudio.github.io/Green-Plastwood/`.
+   Replace it in all files when the site moves to its own domain.
+3. Footer links "Privacy Policy", "Terms of Service" and "Sitemap" have no pages yet.
+
+## Still needed from the client
+- Founders' photos and approval of the founders' message.
+- Real plant photos and factory film (the current ones are illustrations).
+- Business-partner cities, export countries and unit locations for the map on the About page.
+- One fixed YouTube video for the home page; real customer reviews.
+- Products: warranty terms, double rebate and window frame drawings, minimum order for chaukhat, window frames and louvers.
+
+`CHANGES.md` lists every change made to the site.

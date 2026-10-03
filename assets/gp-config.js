@@ -21,7 +21,7 @@ window.GP_CONFIG = {
   metaPixelId: '',         // e.g. '123456789012345'
 
   // Videos: paste a YouTube link or ID for each slot. Empty = the card opens our YouTube channel.
-  youtubeChannel: 'https://www.youtube.com/@greenplastwood7601',
+  youtubeChannel: 'https://www.youtube.com/@greenplastwoodindia',
   videos: {
     corporate: '',      // Home + Gallery: corporate / brand film
     factory: '',        // Manufacturing + Gallery: factory walk-through

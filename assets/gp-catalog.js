@@ -23,7 +23,7 @@
       var limit = (q || !page) ? matches.length : shown;
       items.forEach(function (it) { it.classList.add('is-hidden'); });
       matches.forEach(function (it, i) { if (i < limit) it.classList.remove('is-hidden'); });
-      if (count) count.textContent = matches.length ? ('Showing ' + Math.min(limit, matches.length) + ' of ' + matches.length + ' designs') : 'No design found for that code — try e.g. MSD-104 or SG-003';
+      if (count) count.textContent = matches.length ? ('Showing ' + Math.min(limit, matches.length) + ' of ' + matches.length + ' designs') : 'No design found for that code — try e.g. SGD-104 or SG-003';
       if (moreBtn) moreBtn.style.display = (!q && page && matches.length > limit) ? '' : 'none';
     }
     chips.forEach(function (c) {
@@ -133,7 +133,7 @@
 
 /* ---- video cards ---- */
 (function () {
-  var C = window.GP_CONFIG || {}, V = C.videos || {}, CH = C.youtubeChannel || 'https://www.youtube.com/@greenplastwood7601';
+  var C = window.GP_CONFIG || {}, V = C.videos || {}, CH = C.youtubeChannel || 'https://www.youtube.com/@greenplastwoodindia';
   function vid(v) {
     if (!v) return '';
     var m = String(v).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);

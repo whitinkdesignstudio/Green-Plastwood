@@ -52,10 +52,14 @@
     var msg = document.querySelector('textarea[name="message"]');
     if (msg && !msg.value) msg.value = 'Enquiry about: ' + prod + '\n';
   }
-  var type = params.get('type');
+  var type = params.get('type') || params.get('category');
   if (type) {
-    var who = document.querySelector('select[name="customerType"]');
-    if (who) who.value = type;
+    var who = document.querySelector('select[name="customerType"], select[name="category"]');
+    if (who) {
+      var optWho = Array.prototype.find.call(who.options, function (o) { return o.value.toLowerCase() === type.toLowerCase(); });
+      if (optWho) who.value = optWho.value;
+      else who.value = type;
+    }
   }
 })();
 

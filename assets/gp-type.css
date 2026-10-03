@@ -1,0 +1,153 @@
+/* =====================================================================
+   Green Plastwood — one type scale for the whole site (loaded last)
+   Main heading 38px · Sub-heading 26px · Card title 21px · Paragraph 19px · Card text 16px
+   Change a size here and it changes on every page.
+   ===================================================================== */
+/* ---------- fonts: the same pair as celvionglobal.com ----------
+   Text: Questrial (files in assets/fonts, SIL Open Font License).
+   Headings: Avenir Light where the device has it (Apple devices); other devices show Questrial.
+   Avenir is a licensed font and is not shipped with the site, exactly as on the CELVION site. */
+@font-face { font-family: 'Questrial'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/questrial-latin-ext-400-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Questrial'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/questrial-latin-400-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Avenir Light'; font-style: normal; font-weight: 300; src: local('Avenir Light'), local('Avenir-Light'), local('AvenirNext-Light'), local('Avenir Next Light'); }
+:root { --gp-font-body: 'Questrial', -apple-system, 'Segoe UI', Roboto, sans-serif; --gp-font-head: 'Avenir Light', 'Avenir Next', 'Avenir', 'Questrial', sans-serif; }
+body, button, input, select, textarea { font-family: var(--gp-font-body); }
+/* headings: Avenir Light / Questrial at regular weight, as on the CELVION site */
+:root:root:root:root:root h1, :root:root:root:root:root h2, :root:root:root:root:root h3,
+:root:root:root:root:root .v2-slide-title, :root:root:root:root:root .product-main-title, :root:root:root:root:root .gp-page-title, :root:root:root:root:root .gpx-title, :root:root:root:root:root .v2-vhero-title {
+  font-family: var(--gp-font-head) !important; font-weight: 400 !important; }
+/* Questrial has one weight: stop the browser drawing a heavy fake bold on large text */
+:root:root:root:root:root h1 b, :root:root:root:root:root h2 b, :root:root:root:root:root h1 strong, :root:root:root:root:root h2 strong,
+:root:root:root:root:root h1 span, :root:root:root:root:root h2 span, :root:root:root:root:root h3 span, :root:root:root:root:root h1 a, :root:root:root:root:root h2 a, :root:root:root:root:root h3 a, :root:root:root:root:root h1 em, :root:root:root:root:root h2 em {
+  font-family: inherit !important; font-weight: 400 !important; }
+/* ---------- end fonts ---------- */
+
+
+
+:root {
+  --gp-h: 38px;        /* every page / section main heading (h1, h2) */
+  --gp-sub: 26px;      /* sub-heading inside a section */
+  --gp-card-h: 21px;   /* card / tile title */
+  --gp-p: 19px;        /* paragraph */
+  --gp-card-p: 16px;   /* text inside cards */
+}
+@media (max-width: 991px) { :root { --gp-h: 32px; --gp-sub: 24px; } }
+@media (max-width: 600px) { :root { --gp-h: 28px; --gp-sub: 22px; --gp-card-h: 19px; --gp-p: 17px; --gp-card-p: 15.5px; } }
+
+/* ---------- main headings: hero + section, same size everywhere ---------- */
+:root:root:root:root section h1,
+:root:root:root:root section h2,
+:root:root:root:root section .gp-h2,
+:root:root:root:root section .v2-slide-title,
+:root:root:root:root section .product-main-title,
+:root:root:root:root section .gp-page-title,
+:root:root:root:root section .gpx-title,
+:root:root:root:root section .v2-vhero-title {
+  font-size: var(--gp-h) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+}
+
+/* ---------- sub-headings ---------- */
+:root:root:root:root section .gp-subhead,
+:root:root:root:root section .v2-vals-clean-title,
+:root:root:root:root section .v2-qp-policy h3,
+:root:root:root:root section .v2-mv-card-new h3,
+:root:root:root:root section .gpm-block > .gp-h3,
+:root:root:root:root section .gp-wrap > .gp-h3,
+:root:root:root:root section .gp-article h2 {
+  font-size: var(--gp-sub) !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.005em !important;
+  text-transform: none !important;
+}
+
+/* ---------- card / tile titles ---------- */
+:root:root:root:root section .gp-card > .gp-h3,
+:root:root:root:root section .gp-tab-panel .gp-h3,
+:root:root:root:root section .gpc-product-body h3,
+:root:root:root:root section .v2-line-body h3,
+:root:root:root:root section .blog-card-title,
+:root:root:root:root section .gp-article h3,
+:root:root:root:root section .gp-art-more h3,
+:root:root:root:root section .v2-series h3,
+:root:root:root:root section .gpc-istep h3,
+:root:root:root:root section .gpc-order h3,
+:root:root:root:root section .v2-dealer-list h3,
+:root:root:root:root section .mfg-step-title,
+:root:root:root:root section .still-questions-card h3 {
+  font-size: var(--gp-card-h) !important;
+  line-height: 1.3 !important;
+}
+/* compact cards keep their own smaller title size */
+:root:root:root:root section .v2-qc-card > .gp-h3 { font-size: 16px !important; }
+
+/* no heading is forced to capitals: the case typed in the page is the case shown */
+:root:root:root:root section h3,
+:root:root:root:root section h4 { text-transform: none !important; letter-spacing: 0 !important; }
+
+/* ---------- paragraphs ---------- */
+:root:root:root:root section .gp-lead,
+:root:root:root:root section .gp-p,
+:root:root:root:root section .legacy-desc,
+:root:root:root:root section .cert-sec-subtitle,
+:root:root:root:root section .res-subtitle,
+:root:root:root:root section .form-subtitle-text,
+:root:root:root:root section .gpx-lead,
+:root:root:root:root section .lp-hero-sub,
+:root:root:root:root section .product-body-desc,
+:root:root:root:root section .v2-bslide-text p,
+:root:root:root:root section .v2-vhero-in p,
+:root:root:root:root section .v2-phero-text p,
+:root:root:root:root section .gp-page-hero-text p,
+:root:root:root:root section .gp-article p:not(.gp-art-meta):not(.gpc-note),
+:root:root:root:root section .gp-article li,
+:root:root:root:root section .v2-founder-msg p,
+:root:root:root:root section .v2-mv-card-new p,
+:root:root:root:root section .v2-bp-left p,
+:root:root:root:root section .v2-qp-policy p,
+:root:root:root:root section .v2-qp-policy li,
+:root:root:root:root section .v2-qp-belief p:not(.v2-qp-quote),
+:root:root:root:root section .gp-qq-form > p,
+:root:root:root:root section .gp-cta p,
+:root:root:root:root section .gpc-qa details p,
+:root:root:root:root section .faq-answer-panel,
+:root:root:root:root section .accordion-body,
+:root:root:root:root section .gpm-sub,
+:root:root:root:root section .v2-trusted-head p,
+:root:root:root:root section .gp-reveal:not(.gp-card):not(.gp-address-card) > p:not([class]) {
+  font-size: var(--gp-p) !important;
+  line-height: 1.65 !important;
+}
+
+/* ---------- text inside cards ---------- */
+:root:root:root:root section .gpc-product-body p,
+:root:root:root:root section .v2-line-body p,
+:root:root:root:root section .gp-card p,
+:root:root:root:root section .touch-info-content p,
+:root:root:root:root section .gp-address-card p,
+:root:root:root:root section .v2-leader p,
+:root:root:root:root section .v2-feat4 p,
+:root:root:root:root section .mfg-step-desc,
+:root:root:root:root section .v2-review blockquote {
+  font-size: var(--gp-card-p) !important;
+  line-height: 1.6 !important;
+}
+
+/* taglines sit between a heading and its paragraph */
+:root:root:root:root section .product-tagline,
+:root:root:root:root section .v2-phero-text p.v2-phero-tag { font-size: 22px !important; line-height: 1.4 !important; }
+@media (max-width: 600px) {
+  :root:root:root:root section .product-tagline,
+  :root:root:root:root section .v2-phero-text p.v2-phero-tag { font-size: 19px !important; }
+}
+
+/* ---------- heading lines ---------- */
+/* no forced breaks inside a heading: it runs on one line when it fits, otherwise it splits into even lines */
+:root:root:root:root section h1 > span,
+:root:root:root:root section h2 > span { display: inline !important; }
+:root:root:root:root section h1,
+:root:root:root:root section h2 { max-width: none !important; text-wrap: balance; }

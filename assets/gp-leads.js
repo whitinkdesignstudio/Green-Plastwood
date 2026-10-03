@@ -9,7 +9,7 @@
 (function () {
   'use strict';
   var C = window.GP_CONFIG || {};
-  var PRODUCTS = ["WPC Door Frames", "WPC Window Frames", "WPC Solid Doors", "WPC 3 Layer Doors", "WPC / PVC Boards & Sheets", "WPC 3 Layer Boards"];
+  var PRODUCTS = ["WPC Door Frames", "WPC Window Frames", "WPC Solid Doors", "WPC 3 Layer Doors", "WPC / PVC Boards & Sheets", "WPC 3 Layer Boards", "WPC / PVC Louvers"];
   var ATTR_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid'];
 
   /* ---------- safe storage ---------- */
@@ -80,13 +80,17 @@
     if (!form) return false;
     if (form.reportValidity && !form.reportValidity()) return false;
     stampForm(form, formName);
+    var leadFirst = val(form, ['firstName']), leadSur = val(form, ['surname']);
+    var leadCombinedName = [leadFirst, leadSur].filter(Boolean).join(' ');
+    var leadCity = val(form, ['city']), leadState = val(form, ['state']);
+    var leadCombinedCity = [leadCity, leadState].filter(Boolean).join(', ');
     var lead = {
       form: formName,
-      name: val(form, ['fullName', 'name']),
+      name: val(form, ['fullName', 'name']) || leadCombinedName,
       phone: val(form, ['phone', 'mobile']),
-      city: val(form, ['cityState', 'city']),
+      city: val(form, ['cityState']) || leadCombinedCity || leadCity,
       product: val(form, ['productService', 'interestCategory', 'product']),
-      type: val(form, ['requestType']) || formName,
+      type: val(form, ['requestType', 'category']) || formName,
       design: val(form, ['designCode'])
     };
     sset('gp_last_lead', lead, true);

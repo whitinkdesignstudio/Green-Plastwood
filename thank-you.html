@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You | Green Plastwood</title>
+  <link rel="preload" href="assets/fonts/questrial-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
   <!-- SEO -->
   <link rel="canonical" href="https://whitinkdesignstudio.github.io/Green-Plastwood/thank-you.html" />
   <meta property="og:type" content="website" />
@@ -25,13 +26,6 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta name="description" content="Thank you for contacting Green Plastwood. We will call you shortly." />
 
-  <!-- Google Fonts: Poppins (Clean Sans-Serif), Barlow Condensed (Bold Architectural Headings) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
-    rel="stylesheet" />
-
   <style>
     /* ==========================================================================
        CSS RESET & BRAND VARIABLES
@@ -47,8 +41,8 @@
       --text-muted: #4E4644;
       --text-sub: #6E6663;
       --border-light: #E5DFD7;
-      --font-heading: 'Plus Jakarta Sans', sans-serif;
-      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-heading: 'Questrial', sans-serif;
+      --font-body: 'Questrial', sans-serif;
       --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -1901,20 +1895,20 @@
     /* ==========================================================================
        GLOBAL TYPOGRAPHY SYSTEM (CONTEMPORARY ARCHITECTURAL - PLUS JAKARTA SANS)
        - Handcrafted human designer hierarchy
-       - Display / Main Headings: Plus Jakarta Sans Bold/ExtraBold (700/800)
-       - Subheadings & Badges: Plus Jakarta Sans SemiBold (600)
-       - Body & Interactive: Plus Jakarta Sans Regular/Medium (400/500)
+       - Display / Main Headings: Questrial Bold/ExtraBold (700/800)
+       - Subheadings & Badges: Questrial SemiBold (600)
+       - Body & Interactive: Questrial Regular/Medium (400/500)
        ========================================================================== */
     :root {
-      --font-heading: 'Plus Jakarta Sans', sans-serif;
-      --font-subheading: 'Plus Jakarta Sans', sans-serif;
-      --font-body: 'Plus Jakarta Sans', sans-serif;
-      --font-luxury: 'Plus Jakarta Sans', sans-serif;
+      --font-heading: 'Questrial', sans-serif;
+      --font-subheading: 'Questrial', sans-serif;
+      --font-body: 'Questrial', sans-serif;
+      --font-luxury: 'Questrial', sans-serif;
     }
 
     html,
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-family: 'Questrial', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
       font-weight: 400;
       letter-spacing: -0.01em;
     }
@@ -1958,7 +1952,7 @@
     .story-poster-txt,
     .trusted-title,
     .specs-table-title {
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-family: 'Questrial', sans-serif !important;
       font-weight: 800 !important;
       letter-spacing: -0.025em !important;
     }
@@ -1996,7 +1990,7 @@
     .certificate-title *,
     .contact-title *,
     .modal-title * {
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-family: 'Questrial', sans-serif !important;
       font-weight: 800 !important;
       letter-spacing: -0.025em !important;
     }
@@ -2041,7 +2035,7 @@
     .catalogue-tag,
     .sec-tag,
     .product-card-title {
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-family: 'Questrial', sans-serif !important;
       font-weight: 600 !important;
       letter-spacing: -0.015em;
     }
@@ -2060,7 +2054,7 @@
     .footer-col-title *,
     .btn *,
     button * {
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-family: 'Questrial', sans-serif !important;
       font-weight: 600 !important;
     }
 
@@ -2087,7 +2081,7 @@
     .footer-desc,
     .footer-copy,
     .marquee-item {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Questrial', sans-serif;
       font-weight: 400;
       letter-spacing: -0.005em;
     }
@@ -2109,7 +2103,7 @@
     .footer-column-title,
     .footer-col-title,
     .quote-nav-btn {
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-family: 'Questrial', sans-serif !important;
       font-weight: 600 !important;
       letter-spacing: 0.02em;
     }
@@ -2129,6 +2123,8 @@
   <style>.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
   <link rel="stylesheet" href="assets/gp-leads.css" />
   <link rel="stylesheet" href="assets/gp-human.css" />
+  <link rel="stylesheet" href="assets/gp-v2.css" />
+  <link rel="stylesheet" href="assets/gp-type.css" />
 </head>
 
 <body>
@@ -2148,9 +2144,8 @@
           <a href="about.html" class="nav-link active dropdown-toggle">About Us <svg class="nav-chevron" width="9" height="5" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <ul class="dropdown">
             <li><a href="about.html">Green Plastwood</a></li>
-            <li><a href="about.html#founder">Founder's Message</a></li>
-            <li><a href="about.html#infrastructure">Infrastructure</a></li>
-            <li><a href="index.html#celvion">CELVION</a></li>
+            <li><a href="about.html#founder">Founders</a></li>
+            <li><a href="manufacturing.html#plants">Infrastructure</a></li>
           </ul>
         </li>
         <li class="nav-item"><a href="manufacturing.html" class="nav-link">Manufacturing</a></li>
@@ -2158,12 +2153,18 @@
           <a href="products.html" class="nav-link dropdown-toggle">Products <svg class="nav-chevron" width="9" height="5" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <ul class="dropdown">
             <li><a href="products.html">All Products</a></li>
-            <li><a href="product-wpc-door-frames.html">WPC Door Frames (Chaukhat)</a></li><li><a href="product-wpc-window-frames.html">WPC Window Frames</a></li><li><a href="product-wpc-solid-doors.html">WPC Solid Doors</a></li><li><a href="product-wpc-3-layer-doors.html">WPC 3 Layer Doors</a></li><li><a href="product-wpc-boards-sheets.html">WPC Boards &amp; Sheets</a></li><li><a href="product-wpc-3-layer-boards.html">WPC 3 Layer Boards</a></li>
+            <li><a href="product-wpc-door-frames.html">WPC Chaukhat</a></li><li><a href="product-wpc-solid-doors.html">WPC Doors</a></li><li><a href="product-wpc-boards-sheets.html">WPC Sheets &amp; Boards</a></li><li><a href="product-wpc-window-frames.html">WPC Window Frame</a></li><li><a href="product-wpc-louvers.html">WPC / PVC Louvers</a></li><li><a href="http://www.celvionglobal.com/" target="_blank" rel="noopener">CELVION</a></li>
           </ul>
         </li>
         <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
         <li class="nav-item"><a href="certificate.html" class="nav-link">Certifications</a></li>
-        <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+        <li class="nav-item has-dropdown">
+          <a href="resources.html" class="nav-link dropdown-toggle">Resources <svg class="nav-chevron" width="9" height="5" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="dropdown">
+            <li><a href="resources.html">Downloads &amp; guides</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
         <li class="nav-item-mobile-quote">
           <a href="contact.html#contactInquiryForm" data-gp-quote="Quote" class="btn-sidebar-quote" onclick="if(typeof openQuoteModal==='function'){openQuoteModal('Mobile Nav');return false;}">
@@ -2187,7 +2188,7 @@
   <section class="gp-sec" id="hero">
     <div class="gp-wrap" style="max-width:980px;text-align:center;">
       <div style="width:84px;height:84px;border-radius:50%;background:#00866A;color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:40px;">✓</div>
-      <h1 class="gp-h2" id="tyTitle" style="font-size:clamp(30px,3.6vw,44px) !important;">Thank you! Your enquiry has been received!</h1>
+      <h1 class="gp-h2" id="tyTitle">Thank you! Your enquiry has been <span class="v2-green">received!</span></h1>
       <p class="gp-lead" id="tyText" style="margin:0 auto 12px;">Our team will call you back with pricing, specifications and availability.</p>
       <p class="gp-lead" id="tyProductRow" style="margin:0 auto;"><strong>Product:</strong> <span id="tyProduct"></span></p>
       <div class="gp-btns" style="justify-content:center;">
@@ -2198,7 +2199,7 @@
     </div>
   </section>
   <section class="gp-sec gp-sec--cream"><div class="gp-wrap">
-    <div class="gp-head gp-head--center gp-reveal"><h2 class="gp-h2">What Happens Next?</h2></div>
+    <div class="gp-head gp-head--center gp-reveal"><h2 class="gp-h2">What happens <span class="v2-green">next?</span></h2></div>
     <div class="gp-grid gp-g3">
       <div class="gp-card gp-reveal"><span class="gp-card-num">01</span><span class="gp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><h3 class="gp-h3">Our team calls you</h3><p>A Green Plastwood executive will call you on the number you shared to understand your requirement.</p></div>
       <div class="gp-card gp-reveal"><span class="gp-card-num">02</span><span class="gp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><h3 class="gp-h3">Pricing &amp; specifications</h3><p>You receive the right specification, catalogue and pricing for your project or city.</p></div>
@@ -2206,8 +2207,8 @@
     </div>
   </div></section>
   <section class="gp-sec"><div class="gp-wrap">
-    <div class="gp-head gp-head--center gp-reveal"><h2 class="gp-h2">While You Wait, Explore Our Range</h2></div>
-    <div class="gpc-products"><a class="gpc-product" href="product-wpc-door-frames.html"><div class="gpc-frame gpc-r-photo"><img src="images/products/wpc-door-frames-range.webp" alt="Green Plastwood WPC door frames (chaukhats) in natural, ivory and black" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">01</span><h3>WPC Door Frames</h3><p>Single &amp; double rebate chaukhats in 12+ sizes, 8 colours and 7–10 ft lengths.</p><ul><li>30 Years Warranty*</li><li>Single &amp; Double Rebate</li><li>8 Colours</li></ul><span class="gpc-product-go">View details →</span></div></a><a class="gpc-product" href="product-wpc-window-frames.html"><div class="gpc-frame gpc-r-photo"><img src="images/gp_window.jpg" alt="WPC Window Frames by Green Plastwood" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">02</span><h3>WPC Window Frames</h3><p>70 × 30 mm and 120 × 50 mm window chaukhats. Water proof, termite proof and weather resistant.</p><ul><li>70 × 30 mm</li><li>120 × 50 mm</li><li>8 Colours</li></ul><span class="gpc-product-go">View details →</span></div></a><a class="gpc-product" href="product-wpc-solid-doors.html"><div class="gpc-frame gpc-r-photo"><img src="images/products/wpc-solid-doors-range.webp" alt="Green Plastwood WPC solid doors in five finishes" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">03</span><h3>WPC Solid Doors</h3><p>17–35 mm solid WPC doors in standard sizes, 6 colours and 110+ digital &amp; texture designs.</p><ul><li>17–35 mm Thickness</li><li>5 Standard Sizes</li><li>110+ Designs</li></ul><span class="gpc-product-go">View details →</span></div></a><a class="gpc-product" href="product-wpc-3-layer-doors.html"><div class="gpc-frame gpc-r-photo"><img src="images/products/3-layer-door-home.webp" alt="WPC 3 layer door in a home" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">04</span><h3>WPC 3 Layer Doors</h3><p>24–35 mm doors with 0.8–1 mm rigid PVC skins for hotels, schools, hospitals &amp; offices.</p><ul><li>24–35 mm Thickness</li><li>Rigid PVC Outer Layers</li><li>4 Colours</li></ul><span class="gpc-product-go">View details →</span></div></a><a class="gpc-product" href="product-wpc-boards-sheets.html"><div class="gpc-frame gpc-r-photo"><img src="images/products/wpc-board-interior.webp" alt="Bedroom wardrobes made with WPC boards" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">05</span><h3>WPC / PVC Boards &amp; Sheets</h3><p>5–35 mm boards in 8 × 4 ft sheets for modular kitchens, wardrobes, furniture &amp; partitions.</p><ul><li>5–35 mm Thickness</li><li>8 × 4 ft Standard</li><li>9 Colours on Order</li></ul><span class="gpc-product-go">View details →</span></div></a><a class="gpc-product" href="product-wpc-3-layer-boards.html"><div class="gpc-frame gpc-r-photo"><img src="images/products/3-layer-board-interior.webp" alt="Modular kitchen made with Green Plastwood WPC 3 layer boards" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">06</span><h3>WPC 3 Layer Boards</h3><p>6–35 mm three-layer boards, 8 × 4 ft, for kitchens, wardrobes, offices &amp; hospitals.</p><ul><li>6–35 mm Thickness</li><li>8 × 4 ft Standard</li><li>Bulk Orders 9 T+</li></ul><span class="gpc-product-go">View details →</span></div></a></div>
+    <div class="gp-head gp-head--center gp-reveal"><h2 class="gp-h2">While you wait, explore our <span class="v2-green">range</span></h2></div>
+    <div class="gpc-products"><a class="gpc-product" href="product-wpc-door-frames.html"><div class="gpc-frame gpc-r-photo"><img src="images/products/wpc-door-frames-range.webp" alt="Green Plastwood WPC door frames (chaukhats) in natural, ivory and black" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">01</span><h3>WPC Chaukhat</h3><p>Single &amp; double rebate chaukhats in 12+ sizes, 8 colours and 7–10 ft lengths.</p><ul><li>30 Years Warranty*</li><li>Single &amp; Double Rebate</li><li>8 Colours</li></ul><span class="gpc-product-go">View details →</span></div></a><a class="gpc-product" href="product-wpc-window-frames.html"><div class="gpc-frame gpc-r-photo"><img src="images/gp_window.jpg" alt="WPC Window Frames by Green Plastwood" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">02</span><h3>WPC Window Frame</h3><p>70 × 30 mm and 120 × 50 mm window chaukhats. Water proof, termite proof and weather resistant.</p><ul><li>70 × 30 mm</li><li>120 × 50 mm</li><li>8 Colours</li></ul><span class="gpc-product-go">View details →</span></div></a><a class="gpc-product" href="product-wpc-solid-doors.html"><div class="gpc-frame gpc-r-photo"><img src="images/products/wpc-solid-doors-range.webp" alt="Green Plastwood WPC solid doors in five finishes" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">03</span><h3>WPC Solid Doors</h3><p>17–35 mm solid WPC doors in standard sizes, 6 colours and 112 texture and digital print designs.</p><ul><li>17–35 mm Thickness</li><li>5 Standard Sizes</li><li>112 Designs</li></ul><span class="gpc-product-go">View details →</span></div></a><a class="gpc-product" href="product-wpc-solid-doors.html#type-3-layer"><div class="gpc-frame gpc-r-photo"><img src="images/products/3-layer-door-home.webp" alt="WPC 3 layer door in a home" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">04</span><h3>WPC 3 Layer Doors</h3><p>24–35 mm doors with 0.8–1 mm rigid PVC skins for hotels, schools, hospitals &amp; offices.</p><ul><li>24–35 mm Thickness</li><li>Rigid PVC Outer Layers</li><li>4 Colours</li></ul><span class="gpc-product-go">View details →</span></div></a><a class="gpc-product" href="product-wpc-boards-sheets.html"><div class="gpc-frame gpc-r-photo"><img src="images/products/wpc-board-interior.webp" alt="Bedroom wardrobes made with WPC boards" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">05</span><h3>WPC Sheets &amp; Boards</h3><p>5–35 mm WPC / PVC boards and 6–35 mm 3 layer boards in 8 × 4 ft sheets for kitchens, wardrobes &amp; furniture.</p><ul><li>5–35 mm Thickness</li><li>8 × 4 ft Standard</li><li>Boards &amp; 3 Layer Boards</li></ul><span class="gpc-product-go">View details →</span></div></a><a class="gpc-product" href="product-wpc-louvers.html"><div class="gpc-frame gpc-r-photo"><img src="images/products/cards/louvers.jpg" alt="Living room wall in Green Plastwood WPC louvers" loading="lazy" decoding="async" /></div><div class="gpc-product-body"><span class="gpc-product-no">06</span><h3>WPC / PVC Louvers</h3><p>Fluted wall and ceiling panels in 12, 15 and 24 mm, 2900 mm long, in 63 designs.</p><ul><li>12 · 15 · 24 mm</li><li>2900 mm Length</li><li>63 Designs</li></ul><span class="gpc-product-go">View details →</span></div></a></div>
   </div></section>
   </main>
   <!-- ========================================================================
@@ -2221,25 +2222,30 @@
           <a href="index.html" class="footer-brand-logo" aria-label="Green Plastwood Home">
             <img src="images/brand_logo_transparent.png" alt="Green Plastwood - SNG ECO INDIA" class="footer-logo-img" loading="lazy" decoding="async" />
           </a>
-          <p class="footer-about-text">
-            WPC Life With Future. Door frames, doors and boards made in Gujarat by SNG Eco India Pvt. Ltd. since 2012.</p>
+          <p class="footer-about-text">WPC Life With Future. Green Plastwood is the WPC brand of SNG Eco India Pvt. Ltd., Ahmedabad. Since 2012 we have made WPC chaukhats, doors, boards, window frames and louvers in our 3 plants in Gujarat, and supply builders and dealers across India through 50+ stock points.</p>
           <div class="footer-social-row">
-            <a href="https://www.facebook.com/SNGECOIND/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+            <a href="https://www.facebook.com/greenplastwoodindia" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
               <svg viewBox="0 0 24 24">
                 <path
                   d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
             </a>
-            <a href="https://www.instagram.com/green_plastwood/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+            <a href="https://www.instagram.com/greenplastwoodindia/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
               <svg viewBox="0 0 24 24">
                 <path
                   d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
               </svg>
             </a>
-            <a href="https://in.linkedin.com/company/sng-eco-india" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/greenplastwoodindia/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24">
                 <path
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@greenplastwoodindia" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>
             <a href="https://wa.me/919016336119" target="_blank" rel="noopener" class="social-btn"
@@ -2263,6 +2269,7 @@
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="certificate.html">Certifications &amp; Test Reports</a></li>
             <li><a href="resources.html">Resources</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="contact.html#partner">Become a Dealer</a></li>
           </ul>
@@ -2272,12 +2279,11 @@
         <div>
           <h4 class="footer-col-title">Our Products</h4>
           <ul class="footer-links-list">
-            <li><a href="product-wpc-door-frames.html">WPC Door Frames (Chaukhat)</a></li>
-            <li><a href="product-wpc-window-frames.html">WPC Window Frames</a></li>
-            <li><a href="product-wpc-solid-doors.html">WPC Solid Doors</a></li>
-            <li><a href="product-wpc-3-layer-doors.html">WPC 3 Layer Doors</a></li>
-            <li><a href="product-wpc-boards-sheets.html">WPC Boards &amp; Sheets</a></li>
-            <li><a href="product-wpc-3-layer-boards.html">WPC 3 Layer Boards</a></li>
+            <li><a href="product-wpc-door-frames.html">WPC Chaukhat</a></li>
+            <li><a href="product-wpc-solid-doors.html">WPC Doors</a></li>
+            <li><a href="product-wpc-boards-sheets.html">WPC Sheets &amp; Boards</a></li>
+            <li><a href="product-wpc-window-frames.html">WPC Window Frame</a></li>
+            <li><a href="product-wpc-louvers.html">WPC / PVC Louvers</a></li>
             <li><a href="products.html#compare">Compare Products</a></li>
           </ul>
         </div>
@@ -2300,16 +2306,12 @@
             New door designs, product news and exhibition dates.
           </p>
           <form class="newsletter-form" onsubmit="return gpNewsletter(event)">
-            <input type="email" placeholder="Enter your email" name="email" required class="newsletter-input" />
+            <input type="email" id="newsletterInput" placeholder="Enter your email" name="email" required class="newsletter-input" />
             <button type="submit" class="newsletter-btn" aria-label="Subscribe">→</button>
           </form>
         </div>
       </div>
-
-      <div class="gp-footer-seo">
-        <h2>About SNG Eco India Pvt. Ltd.</h2>
-        <p>SNG Eco India Pvt. Ltd. is the parent company behind Green Plastwood, a trusted Indian manufacturer of Wood Polymer Composite building solutions. Driven by innovation, sustainability and manufacturing excellence, the company produces WPC Door Frames, Boards, Sheets and Profiles for residential, commercial, industrial and institutional projects across India. Through advanced infrastructure, quality-focused manufacturing and responsible business practices, Green Plastwood continues building a stronger future for modern construction.</p>
-      </div>
+      <!-- Footer Bottom Bar -->
       <div class="footer-bottom-bar">
         <div>
           © 2026 Green Plastwood (SNG ECO INDIA PVT. LTD.). All Rights Reserved.
@@ -2411,6 +2413,7 @@
     if (document.readyState === 'complete') fire(); else window.addEventListener('load', fire);
   }
 })();</script>
+  <script src="assets/gp-v2.js" defer></script>
 </body>
 
 </html>
