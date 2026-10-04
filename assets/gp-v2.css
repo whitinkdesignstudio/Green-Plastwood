@@ -854,6 +854,9 @@
   align-items: center;
   justify-content: center;
   padding: 8px 12px;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
 }
 
 .v2-logo img {
@@ -2322,7 +2325,9 @@
 }
 
 .v2-logo {
-  box-shadow: 0 4px 12px rgba(7, 58, 48, .08);
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
 }
 
 /* reviews slider */
@@ -3611,7 +3616,8 @@
   width: 50px;
   height: 50px;
   min-width: 50px;
-  background: #E8F5F1;
+  background: #FEE2E2;
+  border: 1px solid #FECACA;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -4179,6 +4185,62 @@
 .mf6-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 24px; }
 .mf6-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .mf6-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+
+/* 5-4 Process Grid: 5 cards in 1st line, 4 cards in 2nd line */
+.mf6-grid--process-5-4 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.mf6-grid--process-5-4 > .mf6-card {
+  flex: 0 0 calc((100% - 64px) / 5);
+  max-width: calc((100% - 64px) / 5);
+}
+
+.mf6-grid--process-5-4 > .mf6-card:nth-child(n+6) {
+  flex: 0 0 calc((100% - 48px) / 4);
+  max-width: calc((100% - 48px) / 4);
+}
+
+.mf6-grid--process-5-4 .mf6-body {
+  padding: 14px 14px 18px;
+}
+
+:root:root:root:root .mf6-grid--process-5-4 .mf6-body h3 {
+  font-size: 15.5px !important;
+  line-height: 1.35 !important;
+  font-weight: 700;
+  margin: 0 0 5px !important;
+  color: #231F1D;
+}
+
+:root:root:root:root .mf6-grid--process-5-4 .mf6-body p {
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  color: #5E5651;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .mf6-grid--process-5-4 > .mf6-card,
+  .mf6-grid--process-5-4 > .mf6-card:nth-child(n+6) {
+    flex: 0 0 calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .mf6-grid--process-5-4 > .mf6-card,
+  .mf6-grid--process-5-4 > .mf6-card:nth-child(n+6) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 .mf6-card { background: #fff; border: 1px solid var(--v2-line, #E5DFD7); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; transition: transform .25s ease, box-shadow .25s ease; }
 .mf6-card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px -22px rgba(7, 58, 48, .45); }
 .mf6-img { position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: #E9E4DA; }

@@ -263,3 +263,69 @@
   .pd-page #designs .gpc-design small { font-size: 10px; letter-spacing: 0; }
 }
 .pd-table--fit td:last-child { white-space: nowrap; }
+
+
+/* ==========================================================================
+   PRODUCT DETAIL PAGES — HIGH-END LUXURY DESIGN OVERRIDES
+   ========================================================================== */
+
+/* Lightbox Modal Popup Container & Image Frame */
+.gpc-lb {
+  background: rgba(4, 30, 25, 0.94) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+.gpc-lb-fig {
+  background: linear-gradient(145deg, #FAF7F2 0%, #EFE7DA 100%) !important;
+  padding: 24px 28px 20px !important;
+  border-radius: 18px !important;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.3) !important;
+  max-width: min(1000px, 92vw) !important;
+}
+.gpc-lb-fig img {
+  background: transparent !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+  max-height: calc(100vh - 220px) !important;
+  object-fit: contain !important;
+  border: 0 !important;
+}
+.gpc-lb-cap {
+  color: #2D2523 !important;
+  margin-top: 14px !important;
+}
+.gpc-lb-cap b {
+  color: #1A1412 !important;
+  font-size: 19px !important;
+  font-weight: 800 !important;
+}
+.gpc-lb-cap span {
+  color: #6E6663 !important;
+  font-size: 14.5px !important;
+}
+
+/* Image Containers & Cards across All Product Pages */
+.pd-shot, .gpc-frame, .gpc-frame--contain, .pd-card-img.is-contain, .pd-fig--contain, .gpc-profile .gpc-frame {
+  background: linear-gradient(145deg, #FAF8F5 0%, #EFE8DC 100%) !important;
+  border: 1px solid rgba(185, 176, 166, 0.35) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.pd-shot:hover, .pd-card:hover .pd-card-img, .gpc-profile:hover .gpc-frame {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 14px 30px rgba(0, 134, 106, 0.14), 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  border-color: rgba(0, 134, 106, 0.4) !important;
+}
+
+.pd-shot .gpc-frame {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.pd-shot figcaption {
+  margin-top: 10px !important;
+  font-weight: 700 !important;
+  color: #2D2523 !important;
+}
