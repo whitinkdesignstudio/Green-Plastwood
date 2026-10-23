@@ -1,0 +1,5126 @@
+{
+  "_about": {
+    "name": "Greenplastwood product data master",
+    "version": "1.0 (12 Oct 2026)",
+    "purpose": "Single source of truth for products.html and the 6 product detail pages. Every text and number on those pages must come from this file.",
+    "sources": [
+      "Current verified site pages (Green-Plastwood-full-9oct-v7 (2)(1).zip, 12 Oct 2026)",
+      "Client correction PDF SNG_Website_Corrections.pdf",
+      "Client catalogues: Company Profile 2026, Digital Doors, Texture Doors, Interior & Exterior, PVC/Louvers 12-15-24 mm, Plastic Pallets",
+      "Alekh Plastics Testing Centre reports, Nov 2022"
+    ],
+    "rules": [
+      "Use text and numbers EXACTLY as written here. Do not round, merge, re-word numbers or invent new facts.",
+      "A field set to null means: this product does not have that section. Hide the section on that page (do not fill it with anything else).",
+      "Fields named 'ref' point to shared data in 'common' (e.g. common.lab_tests.door_frame).",
+      "Brand is always 'Greenplastwood' (never 'Green Plastwood'). Never write 'Louver/Louvers' on any page, 'Dealer' (use Business Associate), 'Free Sample' (use Request a Sample).",
+      "Never show total design counts for doors (no '106' / '112'). PVC panel '63 designs' is allowed.",
+      "Boards are 5–18 mm, 3 layer boards 6–18 mm (client PDF).",
+      "Notes in fields ending in _note, CLIENT_RULE, PENDING or check_note are instructions for the builder. Never print them on the page.",
+      "Lab-test link label must be 'How we control quality' → certificate.html."
+    ],
+    "section_keys": [
+      "hero(key_facts, hero_stats, gallery, quick_picks, trust_lines)",
+      "overview",
+      "advantages / advantage_groups",
+      "types",
+      "type_comparison",
+      "sizes",
+      "finishes",
+      "colours",
+      "designs",
+      "photos",
+      "compare",
+      "pallet_comparison",
+      "applications",
+      "installation",
+      "lab",
+      "properties",
+      "ordering",
+      "downloads",
+      "faqs",
+      "related",
+      "quote (common form)"
+    ]
+  },
+  "common": {
+    "brand": "Greenplastwood",
+    "brand_caps": "GREENPLASTWOOD",
+    "tagline": "WPC LIFE WITH FUTURE",
+    "company": "SNG Eco India Pvt. Ltd.",
+    "since": {
+      "company": "2012",
+      "brand": "2017",
+      "years_wpc": "9 years of WPC manufacturing (since 2017)"
+    },
+    "stats": {
+      "capacity": "1,300 MT a month",
+      "team": "125+",
+      "plants": "3",
+      "area": "105,000 sq ft",
+      "projects": "300+",
+      "certifications": "9+",
+      "stock_points": "50+",
+      "countries": "4+",
+      "companies": "150+",
+      "business_associates": "200+",
+      "iso": "ISO 9001:2015"
+    },
+    "contact": {
+      "phone": "+91 90163 36119",
+      "tel": "tel:+919016336119",
+      "whatsapp": "https://wa.me/919016336119",
+      "email": "sales.executive11@sngecoindia.com",
+      "hq": "1312, 1313, 1314, 13th Floor, Fortune Business Hub, Nr. Shell Petrol Pump, Science City Road, Sola, Ahmedabad – 380060, Gujarat, India",
+      "hours": "Monday to Saturday, 9:30 AM to 6:30 PM"
+    },
+    "product_order": [
+      "door-frames",
+      "window-frames",
+      "doors",
+      "boards",
+      "pvc-panel",
+      "recycled-sheet"
+    ],
+    "common_benefits_title": "Common to every Greenplastwood WPC product",
+    "common_benefits": [
+      "UV protection",
+      "Fire retardant",
+      "Eco friendly",
+      "Carpenter friendly",
+      "100% termite proof",
+      "100% recyclable",
+      "100% water proof",
+      "Non toxic",
+      "High density",
+      "Anti corrosion"
+    ],
+    "common_benefits_detail": [
+      {
+        "label": "100% water proof",
+        "detail": "0.2% water absorption in lab test"
+      },
+      {
+        "label": "100% termite proof",
+        "detail": "No chemical treatment needed"
+      },
+      {
+        "label": "Fire retardant",
+        "detail": "UL-94 V-0 flammability rating"
+      },
+      {
+        "label": "UV protection",
+        "detail": "Holds its colour in the sun"
+      },
+      {
+        "label": "Eco friendly",
+        "detail": "Replaces natural timber"
+      },
+      {
+        "label": "100% recyclable",
+        "detail": "Formaldehyde & lead free"
+      },
+      {
+        "label": "Carpenter friendly",
+        "detail": "Cut, screw and nail like wood"
+      },
+      {
+        "label": "Non toxic",
+        "detail": "Safe for homes, schools & hospitals"
+      },
+      {
+        "label": "High density",
+        "detail": "Frames up to 1200 kg/m³"
+      },
+      {
+        "label": "Anti corrosion",
+        "detail": "No rust, rot or swelling"
+      }
+    ],
+    "trust_strip": [
+      {
+        "value": "9 Years",
+        "label": "of WPC manufacturing (since 2017)"
+      },
+      {
+        "value": "1,300 MT",
+        "label": "capacity a month · 3 plants"
+      },
+      {
+        "value": "300+ Projects",
+        "label": "50+ stock points · 4+ countries"
+      },
+      {
+        "value": "9+ Certifications",
+        "label": "ISO 9001:2015 · 125+ team"
+      }
+    ],
+    "compare_wpc_vs_plywood": {
+      "title": "WPC Compared With Plywood",
+      "source": "Greenplastwood product catalogue",
+      "columns": [
+        "Property",
+        "Greenplastwood WPC",
+        "Plywood"
+      ],
+      "rows": [
+        {
+          "property": "Water & moisture proof",
+          "wpc": true,
+          "plywood": false
+        },
+        {
+          "property": "Termite & pest proof",
+          "wpc": true,
+          "plywood": false
+        },
+        {
+          "property": "No shrinking, no swelling",
+          "wpc": true,
+          "plywood": false
+        },
+        {
+          "property": "Fire retardant",
+          "wpc": true,
+          "plywood": false
+        },
+        {
+          "property": "Borer proof",
+          "wpc": true,
+          "plywood": false
+        },
+        {
+          "property": "Corrosion retardant",
+          "wpc": true,
+          "plywood": true
+        },
+        {
+          "property": "Maintenance friendly",
+          "wpc": true,
+          "plywood": false
+        },
+        {
+          "property": "Environment friendly",
+          "wpc": true,
+          "plywood": false
+        },
+        {
+          "property": "Smooth surface",
+          "wpc": "Much smoother",
+          "plywood": "Less smooth"
+        },
+        {
+          "property": "Outdoor adaptability",
+          "wpc": true,
+          "plywood": true
+        },
+        {
+          "property": "Gluing & lamination",
+          "wpc": true,
+          "plywood": true
+        },
+        {
+          "property": "Weather & ageing resistant",
+          "wpc": true,
+          "plywood": true
+        },
+        {
+          "property": "High screw adaptability",
+          "wpc": true,
+          "plywood": true
+        },
+        {
+          "property": "Sawing & cutting",
+          "wpc": true,
+          "plywood": true
+        },
+        {
+          "property": "Use of traditional tools",
+          "wpc": true,
+          "plywood": true
+        }
+      ],
+      "score": {
+        "wpc": "15 of 15",
+        "plywood": "7 of 15",
+        "note": "Counted from the 15 catalogue properties; smooth surface: WPC much smoother, plywood less smooth."
+      },
+      "guide_link": "guide-wpc-vs-plywood-door-frames.html"
+    },
+    "lab_tests": {
+      "door_frame": {
+        "title": "Lab-tested Performance",
+        "lab": "Alekh Plastics Testing Centre, Ahmedabad",
+        "date": "24 November 2022",
+        "sample": "WPC door frame",
+        "conditions": "27 °C and 63% relative humidity",
+        "results": [
+          {
+            "test": "Apparent density",
+            "method": "ASTM D 1622-20",
+            "result": "0.90 g/cc"
+          },
+          {
+            "test": "Water absorption",
+            "method": "ASTM D 570-08",
+            "result": "0.2%"
+          },
+          {
+            "test": "Flammability",
+            "method": "UL-94",
+            "result": "V-0 rating"
+          },
+          {
+            "test": "Tensile strength at break",
+            "method": "ASTM D 638-17",
+            "result": "11.4 MPa"
+          },
+          {
+            "test": "Flexural strength",
+            "method": "ASTM D 790-03",
+            "result": "21 MPa"
+          },
+          {
+            "test": "Compressive strength",
+            "method": "ASTM D 695-16",
+            "result": "61 MPa"
+          },
+          {
+            "test": "Impact test",
+            "method": "1 kg from 1.2 m height",
+            "result": "No break"
+          },
+          {
+            "test": "Thermal resistance",
+            "method": "80 °C for 30 minutes",
+            "result": "No effect"
+          },
+          {
+            "test": "Chemical resistance",
+            "method": "ASTM D 543, 10% HCl for 24 hours",
+            "result": "No effect"
+          },
+          {
+            "test": "Screw withdrawal force",
+            "method": "IS 4020-16",
+            "result": "2236 N"
+          }
+        ],
+        "reports": [
+          {
+            "title": "WPC door frame, physical tests",
+            "ref": "TR/22-23/0601-1 · Nov 2022",
+            "image": "images/certificates/test-report-door-frame-physical.webp",
+            "thumb": "images/certificates/test-report-door-frame-physical-sm.webp"
+          },
+          {
+            "title": "WPC door frame, mechanical tests",
+            "ref": "TR/22-23/0601-1A · Nov 2022",
+            "image": "images/certificates/test-report-door-frame-mechanical.webp",
+            "thumb": "images/certificates/test-report-door-frame-mechanical-sm.webp"
+          }
+        ]
+      },
+      "door_board": {
+        "title": "Lab-tested Performance",
+        "lab": "Alekh Plastics Testing Centre, Ahmedabad",
+        "date": "24 November 2022",
+        "sample": "WPC door and board",
+        "conditions": "27 °C and 63% relative humidity",
+        "results": [
+          {
+            "test": "Apparent density",
+            "method": "ASTM D 1622-20",
+            "result": "0.66 g/cc"
+          },
+          {
+            "test": "Water absorption",
+            "method": "ASTM D 570-08",
+            "result": "0.2%"
+          },
+          {
+            "test": "Flammability",
+            "method": "UL-94",
+            "result": "V-0 rating"
+          },
+          {
+            "test": "Tensile strength at break",
+            "method": "ASTM D 638-17",
+            "result": "15.7 MPa"
+          },
+          {
+            "test": "Flexural strength",
+            "method": "ASTM D 790-03",
+            "result": "23 MPa"
+          },
+          {
+            "test": "Compressive strength",
+            "method": "ASTM D 695-16",
+            "result": "65 MPa"
+          },
+          {
+            "test": "Impact test",
+            "method": "1 kg from 1.2 m height",
+            "result": "No break"
+          },
+          {
+            "test": "Thermal resistance",
+            "method": "80 °C for 30 minutes",
+            "result": "No effect"
+          },
+          {
+            "test": "Chemical resistance",
+            "method": "ASTM D 543, 10% HCl for 24 hours",
+            "result": "No effect"
+          },
+          {
+            "test": "Screw withdrawal force",
+            "method": "IS 4020-16",
+            "result": "1565 N"
+          }
+        ],
+        "reports": [
+          {
+            "title": "WPC door & board, physical tests",
+            "ref": "TR/22-23/0601 · Nov 2022",
+            "image": "images/certificates/test-report-door-board-physical.webp",
+            "thumb": "images/certificates/test-report-door-board-physical-sm.webp"
+          },
+          {
+            "title": "WPC door & board, mechanical tests",
+            "ref": "TR/22-23/0601A · Nov 2022",
+            "image": "images/certificates/test-report-door-board-mechanical.webp",
+            "thumb": "images/certificates/test-report-door-board-mechanical-sm.webp"
+          }
+        ]
+      }
+    },
+    "lab_link": {
+      "label": "How we control quality",
+      "href": "certificate.html",
+      "note": "The old text 'See all certificates and test reports' must NOT be used: certificates and test reports were removed from certificate.html on the client's instruction."
+    },
+    "frame_installation_steps": [
+      {
+        "step": 1,
+        "title": "Cut The Posts And The Head",
+        "text": "Cut the two vertical posts to the opening height and the head piece to the opening width, allowing for the joint you will use. The drawings show the types of cutting for vertical and horizontal posts.",
+        "images": [
+          "images/install/cutting-1.webp",
+          "images/install/cutting-2.webp",
+          "images/install/cutting-3.webp",
+          "images/install/cutting-4.webp",
+          "images/install/cutting-5.webp"
+        ]
+      },
+      {
+        "step": 1,
+        "title": "Make The Corner Joints",
+        "text": "Join the head to the posts with one of the joints shown. Screw the joint; WPC frames are joined with screws.",
+        "images": [
+          "images/install/joint-1.webp",
+          "images/install/joint-2.webp",
+          "images/install/joint-3.webp",
+          "images/install/joint-4.webp",
+          "images/install/joint-5.webp"
+        ]
+      },
+      {
+        "step": 1,
+        "title": "Fix The Frame In The Wall",
+        "text": "Place the frame in the opening, check both posts with a spirit level, then fix it to the wall. Keep the frame square so the shutter closes evenly.",
+        "images": [
+          "images/install/fitting-1.webp",
+          "images/install/fitting-2.webp",
+          "images/install/fitting-3.webp",
+          "images/install/fitting-4.webp",
+          "images/install/fitting-5.webp"
+        ]
+      }
+    ],
+    "ordering_support": {
+      "sample_text": "Screen colours vary. Ask for a physical sample before you place the order, and send us your drawing if you need a custom size.",
+      "links": [
+        {
+          "label": "Call +91 90163 36119",
+          "href": "tel:+919016336119"
+        },
+        {
+          "label": "WhatsApp us",
+          "href": "#",
+          "attr": "data-gp-wa"
+        },
+        {
+          "label": "Become a business associate",
+          "href": "lp-dealership.html"
+        }
+      ]
+    },
+    "company_profile_pdf": {
+      "title": "Company Profile 2026",
+      "file": "docs/Green-Plastwood-WPC-Company-Profile-2026.pdf",
+      "cover": "images/docs/company-profile-cover.webp",
+      "desc": "All products, sizes, colours and certificates. 19 pages."
+    },
+    "ambassador": {
+      "name": "Dayanand Shetty",
+      "image": "images/hero_spokesperson_clean.webp",
+      "rule": "Real photos only. Never generate or alter his face."
+    }
+  },
+  "products_page": {
+    "page": "products.html",
+    "hero": {
+      "breadcrumb": [
+        "Home",
+        "Products"
+      ],
+      "h1": [
+        "WPC Doors, Frames,",
+        "Boards & PVC Panels"
+      ],
+      "intro": "Six product lines and their types, all made in our own plants in Gujarat. Sizes, colours, designs and test values are on this page; drawings and installation are on each product page."
+    },
+    "search": {
+      "placeholder_hint": "door frame, chaukhat, door, board, PVC panel, kitchen, bathroom or a size like 100x63",
+      "no_result": "No product found. Try door frame, chaukhat, door, board, PVC panel, kitchen, bathroom or a size like 100x63."
+    },
+    "cards": "Use products[].card (tag, summary, chips, image) in the official order; link = products[].page",
+    "card_types": {
+      "door-frames": [
+        [
+          "Single rebate frames",
+          "9 sizes, 60 × 30 to 150 × 63 mm"
+        ],
+        [
+          "Double rebate frames",
+          "120 × 50, 125 × 63, 150 × 63 mm"
+        ],
+        [
+          "Three models",
+          "Mould & Groove, Mould & Plain, Square"
+        ]
+      ],
+      "window-frames": [
+        [
+          "70 × 30 mm profile",
+          "For light windows and ventilators"
+        ],
+        [
+          "120 × 50 mm profile",
+          "For larger window openings"
+        ]
+      ],
+      "doors": [
+        [
+          "Solid doors",
+          "17 to 35 mm thick, density 550 kg/m³"
+        ],
+        [
+          "3 layer doors",
+          "WPC core with rigid PVC skins, 24 to 35 mm"
+        ],
+        [
+          "Texture doors",
+          "6 wood-texture designs, SG-001 to SG-006"
+        ],
+        [
+          "Digital print doors",
+          "Designs SGD-009 to SGD-152"
+        ]
+      ],
+      "boards": [
+        [
+          "WPC / PVC boards & sheets",
+          "5 to 18 mm thick, density 450 to 600 kg/m³"
+        ],
+        [
+          "3 layer boards",
+          "6 to 18 mm thick, density 550 to 600 kg/m³"
+        ]
+      ],
+      "pvc-panel": [
+        [
+          "12 mm 2G, 200 Series",
+          "200 × 2900 mm panel, 21 designs"
+        ],
+        [
+          "15 mm 8G, 300 Series",
+          "165 × 2900 mm panel, 21 designs"
+        ],
+        [
+          "24 mm, 100 Series",
+          "165 × 2900 mm panel, 21 designs"
+        ],
+        [
+          "Exterior PVC panels",
+          "215 × 25 / 26 mm, 8 ft and 10 ft"
+        ]
+      ],
+      "recycled-sheet": [
+        [
+          "Brick & paver block pallets",
+          "For fly ash brick and paver block plants"
+        ],
+        [
+          "Shuttering ply replacement",
+          "In place of traditional shuttering ply"
+        ]
+      ]
+    },
+    "card_facts": {
+      "door-frames": [
+        [
+          "Length",
+          "7, 8, 9 and 10 ft"
+        ],
+        [
+          "Density",
+          "750 to 1200 kg/m³"
+        ],
+        [
+          "Colours",
+          "8 standard colours"
+        ],
+        [
+          "Finish",
+          "Paint, polish or laminate"
+        ]
+      ],
+      "window-frames": [
+        [
+          "Length",
+          "7, 8, 9 and 10 ft"
+        ],
+        [
+          "Density",
+          "750 to 1200 kg/m³"
+        ],
+        [
+          "Colours",
+          "8 standard colours"
+        ]
+      ],
+      "doors": [
+        [
+          "Standard sizes",
+          "27 × 78, 30 × 81, 33 × 84, 36 × 81, 38 × 84 in"
+        ],
+        [
+          "Colours",
+          "Ivory regular; White, Grey, Brown, Sephia, Teakwood"
+        ],
+        [
+          "Minimum order",
+          "300 doors for colours other than Ivory"
+        ]
+      ],
+      "boards": [
+        [
+          "Standard size",
+          "8 ft × 4 ft"
+        ],
+        [
+          "Colours",
+          "White, Ivory, Grey, Sephia, Brown, Teakwood and more on order"
+        ],
+        [
+          "Minimum order",
+          "100 sheets per colour and thickness; 3 layer boards from 9 tons"
+        ]
+      ],
+      "pvc-panel": [
+        [
+          "Designs",
+          "63, each with a design code"
+        ],
+        [
+          "Used in",
+          "Living room, bedroom, TV wall, kitchen, bathroom, café, shop"
+        ]
+      ],
+      "recycled-sheet": [
+        [
+          "Made by",
+          "SNG Eco India Pvt. Ltd."
+        ],
+        [
+          "Sizes",
+          "Customised for bulk orders"
+        ]
+      ]
+    },
+    "card_downloads": {
+      "door-frames": [
+        "Catalogue PDF"
+      ],
+      "window-frames": [
+        "Catalogue PDF"
+      ],
+      "doors": [
+        "Digital doors PDF",
+        "Texture doors PDF"
+      ],
+      "boards": [
+        "Catalogue PDF"
+      ],
+      "pvc-panel": [],
+      "recycled-sheet": [
+        "Pallets PDF"
+      ]
+    },
+    "library": {
+      "title": [
+        "Colour &",
+        "Design Library"
+      ],
+      "lead": "Selected door and PVC panel designs, every chaukhat profile and the standard colours. Tap a design to see it larger and enquire.",
+      "tabs": [
+        "Door Designs",
+        "PVC Panel Designs",
+        "Chaukhat Profiles",
+        "Frame Colours",
+        "Door Colours",
+        "Board Colours"
+      ],
+      "door_featured": [
+        "SG-001",
+        "SG-004",
+        "SGD-010",
+        "SGD-024",
+        "SGD-030",
+        "SGD-033",
+        "SGD-069",
+        "SGD-123",
+        "SGD-138",
+        "SGD-142"
+      ],
+      "pvc_featured": [
+        [
+          "201",
+          "12 mm 2G"
+        ],
+        [
+          "206",
+          "12 mm 2G"
+        ],
+        [
+          "221",
+          "12 mm 2G"
+        ],
+        [
+          "305",
+          "15 mm 8G"
+        ],
+        [
+          "309",
+          "15 mm 8G"
+        ],
+        [
+          "326",
+          "15 mm 8G"
+        ],
+        [
+          "328",
+          "15 mm 8G"
+        ],
+        [
+          "114",
+          "24 mm"
+        ],
+        [
+          "120",
+          "24 mm"
+        ],
+        [
+          "129",
+          "24 mm"
+        ]
+      ],
+      "profiles": "ref:products[door-frames].sizes.profile_drawings",
+      "frame_colours": "ref:products[door-frames].colours",
+      "door_colours": "ref:products[doors].colours",
+      "board_colours": "ref:products[boards].colours"
+    },
+    "compare": {
+      "title": [
+        "Compare Products &",
+        "Specifications"
+      ],
+      "lead": "Thickness, size, density and use of each product, side by side. Full size charts and profile drawings are on each product page.",
+      "columns": [
+        "Compare",
+        "WPC Chaukhat",
+        "WPC Window Frame",
+        "WPC Solid Doors",
+        "WPC 3 Layer Doors",
+        "WPC / PVC Boards & Sheets",
+        "WPC 3 Layer Boards",
+        "PVC Panel"
+      ],
+      "rows": [
+        [
+          "Best for",
+          "Door openings in homes, offices, bathrooms",
+          "Window openings, exterior walls",
+          "Bathroom, bedroom, kitchen & office doors",
+          "Hotels, schools, hospitals, offices",
+          "Kitchens, wardrobes, furniture, partitions",
+          "Premium kitchens, wardrobes, office furniture",
+          "Interior & exterior walls, ceilings"
+        ],
+        [
+          "Thickness / profile",
+          "Single rebate 60×30 to 150×63 mm; double rebate 120×50, 125×63, 150×63 mm",
+          "70×30 mm, 120×50 mm",
+          "17, 18, 24, 25, 28, 30, 32, 35 mm",
+          "24, 25, 28, 30, 32, 35 mm",
+          "5, 6, 8, 10, 12, 15, 17, 18 mm",
+          "6, 8, 10, 12, 15, 17, 18 mm",
+          "12, 15, 24 mm"
+        ],
+        [
+          "Standard size",
+          "7–10 ft length",
+          "7–10 ft length",
+          "27×78, 30×81, 33×84, 36×81, 38×84 in",
+          "27×78, 30×81, 33×84, 36×81, 38×84 in",
+          "8 × 4 ft",
+          "8 × 4 ft",
+          "200 or 165 × 2900 mm"
+        ],
+        [
+          "Density (kg/m³)",
+          "750–1200",
+          "750–1200",
+          "550 (up to 750)",
+          "600 (up to 750)",
+          "450–600 (up to 750)",
+          "550–600 (up to 750)",
+          "—"
+        ],
+        [
+          "Colours",
+          "8",
+          "8",
+          "6 (Ivory regular)",
+          "4 (Ivory regular)",
+          "9 on order",
+          "4",
+          "63 designs"
+        ],
+        [
+          "Surface",
+          "Paint / polish / laminate",
+          "Paint / polish / laminate",
+          "Plain, colour, laminate, texture, digital",
+          "Rigid PVC skin",
+          "Smooth, laminate ready",
+          "Three-layer smooth finish",
+          "Wood, marble, stone, solid finishes"
+        ],
+        [
+          "Water proof",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓"
+        ],
+        [
+          "Termite & borer proof",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓"
+        ],
+        [
+          "Fire retardant",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "✓",
+          "—"
+        ],
+        [
+          "Minimum order",
+          "Ask our team",
+          "Ask our team",
+          "Ivory regular; other colours 300 doors",
+          "Ivory regular; other colours 300 doors",
+          "100 sheets per colour and thickness",
+          "9 tons or more",
+          "Ask our team"
+        ]
+      ],
+      "CLIENT_RULE": "Boards columns corrected to 5–18 mm and 6–18 mm (old table showed '18 … 35 mm'). Recycled Plastic Sheet is not in this table on purpose (not a WPC product)."
+    },
+    "why_wpc": {
+      "title": [
+        "Why Greenplastwood",
+        "WPC"
+      ],
+      "lead": "Ten properties every Greenplastwood product shares, and how WPC compares with plywood.",
+      "items": "ref:common.common_benefits_detail",
+      "compare": "ref:common.compare_wpc_vs_plywood",
+      "compare_lead": "From our product catalogue. Where plywood needs edge sealing, termite treatment and care around water, WPC needs none of it, and it still cuts, screws, glues and laminates with normal carpentry tools."
+    },
+    "applications": {
+      "title": [
+        "Where Each Product",
+        "Is Used"
+      ],
+      "lead": "Where Greenplastwood doors, frames and boards are used every day.",
+      "groups": [
+        {
+          "name": "Doors & Frames",
+          "image": "images/products/3-layer-door-bathroom.webp",
+          "items": [
+            "Bathroom doors",
+            "Main & interior doors",
+            "Children room doors",
+            "Hotel room doors",
+            "School & classroom doors",
+            "Office doors"
+          ]
+        },
+        {
+          "name": "Kitchens & Wardrobes",
+          "image": "images/products/wpc-board-modular-kitchen.webp",
+          "items": [
+            "Modular kitchen",
+            "Kitchen cabinets",
+            "Bathroom cabinets",
+            "Wardrobes",
+            "Children room furniture"
+          ]
+        },
+        {
+          "name": "Offices & Commercial",
+          "image": "images/products/wpc-board-office-furniture.webp",
+          "items": [
+            "Office furniture",
+            "Office partitions",
+            "Cubicles & partitions",
+            "Reception areas",
+            "Modern interior architecture"
+          ]
+        },
+        {
+          "name": "Hospitals & Institutions",
+          "image": "images/products/wpc-board-hospital.webp",
+          "items": [
+            "Hospitals & clinics",
+            "Schools",
+            "Hotels",
+            "Decorative thru grills",
+            "Wave boards"
+          ]
+        },
+        {
+          "name": "PVC Panels",
+          "image": "images/louvers/louvers-hallway.webp",
+          "items": [
+            "Living & TV room walls",
+            "Bedroom & library walls",
+            "Kitchen & bathroom walls",
+            "Office ceilings",
+            "Cafés, restaurants & shops",
+            "Building facades"
+          ]
+        }
+      ]
+    },
+    "more_products": {
+      "title": [
+        "More From",
+        "Greenplastwood"
+      ],
+      "lead": "Exterior WPC profiles from our Interior & Exterior catalogue, and pallets for brick and paver plants.",
+      "catalogue": "docs/Green-Plastwood-WPC-Interior-Exterior.pdf",
+      "items": [
+        {
+          "name": "WPC Deck Flooring",
+          "image": "images/products/range/deck-flooring.webp",
+          "text": "Reversible deck planks fixed on an aluminium frame with concealed clips. Anti-skid and safe for bare feet.",
+          "specs": [
+            [
+              "Size",
+              "150 × 23 mm"
+            ],
+            [
+              "Length",
+              "8 ft, 10 ft"
+            ],
+            [
+              "Finish",
+              "Brushing, sanding"
+            ],
+            [
+              "Colour",
+              "Teak, Brown, Grey"
+            ]
+          ],
+          "guide": "guide-wpc-deck-flooring-installation.html"
+        },
+        {
+          "name": "WPC Wall Cladding",
+          "image": "images/products/range/wall-cladding.webp",
+          "text": "Interlocking hollow-core boards for elevations and ceilings. The joint keeps water away from the wall behind.",
+          "specs": [
+            [
+              "Size",
+              "145 × 20.5 mm"
+            ],
+            [
+              "Length",
+              "8 ft, 10 ft"
+            ],
+            [
+              "Finish",
+              "Brushing, sanding"
+            ],
+            [
+              "Colour",
+              "Teak, Brown, Grey"
+            ]
+          ],
+          "guide": "guide-wpc-wall-cladding-pergola.html"
+        },
+        {
+          "name": "WPC Planks",
+          "image": "images/products/range/planks.webp",
+          "text": "Wood and HDPE planks for balconies, gates, railings and exterior PVC panels.",
+          "specs": [
+            [
+              "Size",
+              "142 × 10 mm"
+            ],
+            [
+              "Length",
+              "8 ft, 10 ft"
+            ],
+            [
+              "Finish",
+              "Sanding, brushing"
+            ],
+            [
+              "Colour",
+              "Teak, Brown, Grey"
+            ]
+          ],
+          "guide": "guide-wpc-wall-cladding-pergola.html"
+        },
+        {
+          "name": "WPC Deck Tiles",
+          "image": "images/products/range/deck-tiles.webp",
+          "text": "Tiles with a four-side interlocking base for balconies, rooftops and pool sides. Laid without tools.",
+          "specs": [
+            [
+              "Size",
+              "300 × 300 mm"
+            ],
+            [
+              "Finish",
+              "Brushing"
+            ],
+            [
+              "Colour",
+              "Teak, Brown, Grey"
+            ]
+          ],
+          "guide": "guide-wpc-deck-flooring-installation.html"
+        },
+        {
+          "name": "Pergola & Gazebo Profiles",
+          "image": "images/products/range/pergola-gazebo.webp",
+          "text": "Hollow profiles for terrace and garden pergolas, gazebos, car parks and elevation features.",
+          "specs": [
+            [
+              "Sizes",
+              "48 × 38, 120 × 60, 150 × 150 mm"
+            ],
+            [
+              "Length",
+              "8 ft, 10 ft"
+            ],
+            [
+              "Finish",
+              "Brushing"
+            ]
+          ],
+          "guide": "guide-wpc-wall-cladding-pergola.html"
+        },
+        {
+          "name": "Rafters & Baffle Ceilings",
+          "image": "images/products/range/rafters.webp",
+          "text": "Rafters for baffle ceilings, panelled partitions, staircase partitions and sunshades.",
+          "specs": [
+            [
+              "Sizes",
+              "48 × 38, 120 × 60, 150 × 150 mm"
+            ],
+            [
+              "Length",
+              "8 ft, 10 ft"
+            ],
+            [
+              "Finish",
+              "Brushing"
+            ]
+          ],
+          "guide": "guide-wpc-wall-cladding-pergola.html"
+        }
+      ],
+      "other_note": "Other SNG Eco India products: fly ash brick pallets, paver block pallets, recycled plastic pallets and plastic shuttering ply."
+    },
+    "business_associate": {
+      "title": "Become A Greenplastwood Business Associate",
+      "lead": "We are adding business associates in cities where we do not have a stock point yet.",
+      "text": "Plywood, hardware and building material shops can sell our full WPC range.",
+      "stats": [
+        [
+          "50+",
+          "Stock points"
+        ],
+        [
+          "300+",
+          "Projects supplied"
+        ],
+        [
+          "4+",
+          "Export countries"
+        ]
+      ],
+      "benefits": [
+        "Products from our 3 plants in Gujarat",
+        "Brand campaigns with brand ambassador Dayanand Shetty",
+        "Catalogues, samples and test reports",
+        "Project enquiries from your area",
+        "A dedicated business associate support team",
+        "Door frames, doors, boards and PVC panels from one brand"
+      ],
+      "cta": [
+        {
+          "label": "Apply to become a business associate",
+          "href": "lp-dealership.html"
+        },
+        {
+          "label": "WhatsApp us",
+          "href": "https://wa.me/919016336119"
+        }
+      ]
+    },
+    "guides": [
+      {
+        "href": "guide-wpc-vs-plywood-door-frames.html",
+        "image": "images/products/wpc-bathroom-door-frame-guide.webp",
+        "title": "WPC Vs Wood Vs Plywood: Which Door Frame For A Bathroom?",
+        "desc": "A plain comparison for each opening in a project."
+      },
+      {
+        "href": "guide-wpc-chaukhat-sizes.html",
+        "image": "images/products/wpc-chaukhat-sizes-guide.webp",
+        "title": "WPC Chaukhat Sizes Explained",
+        "desc": "All sizes from 75 × 50 to 150 × 63 mm and which wall they suit."
+      },
+      {
+        "href": "guide-install-wpc-door-frame.html",
+        "image": "images/products/wpc-door-frame-installation-guide.webp",
+        "title": "How To Install A WPC Door Frame",
+        "desc": "Cutting, corner joints and fixing in the wall."
+      },
+      {
+        "href": "guide-wpc-wall-louvers.html",
+        "image": "images/products/wpc-wall-louvers-guide.webp",
+        "title": "PVC Wall Panels: 12 Mm, 15 Mm And 24 Mm",
+        "desc": "The three series compared, and how to install them."
+      },
+      {
+        "href": "guide-wpc-deck-flooring-installation.html",
+        "image": "images/products/wpc-deck-flooring-guide.webp",
+        "title": "Installing WPC Deck Flooring And Deck Tiles",
+        "desc": "Deck planks on a frame, and interlocking tiles."
+      },
+      {
+        "href": "guide-wpc-wall-cladding-pergola.html",
+        "image": "images/products/wpc-cladding-pergola-guide.webp",
+        "title": "WPC Wall Cladding And Pergolas",
+        "desc": "Profiles, advantages and step-by-step installation."
+      },
+      {
+        "href": "guide-wpc-industrial-pallets.html",
+        "image": "images/products/wpc-industrial-pallets-guide.webp",
+        "title": "Pallets For Fly Ash Brick And Paver Block Plants",
+        "desc": "Sizes, physical properties and the buy-back offer."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is WPC and how is it different from wood?",
+        "a": "WPC (Wood Polymer Composite) is made from wood fibre and polymer. Unlike conventional wood, Greenplastwood products are 100% water proof, termite & borer proof and fire retardant, so they do not swell, crack or rot. In lab tests our WPC showed only 0.2% water absorption and a UL-94 V-0 flammability rating."
+      },
+      {
+        "q": "Which products does Greenplastwood manufacture?",
+        "a": "WPC Chaukhat (door frames), WPC Window Frames, WPC Doors (solid, 3 layer, texture and digital print), WPC Sheets & Boards (WPC / PVC boards and 3 layer boards), PVC Panel and, from SNG Eco India, Recycled Plastic Sheet.",
+        "changed": "Updated to the 6 official product lines (old answer missed PVC Panel and Recycled Plastic Sheet)."
+      },
+      {
+        "q": "Are WPC door frames suitable for bathrooms and kitchens?",
+        "a": "Yes. Our door frames are 100% water proof, termite & borer proof and fire retardant, making them ideal for bathrooms, kitchens and humid environments, with no chemical treatment required against termites."
+      },
+      {
+        "q": "Can door frames be painted, laminated or polished?",
+        "a": "Yes. Greenplastwood door frames are ready for paint, laminate & polish, like normal wood."
+      },
+      {
+        "q": "Do you supply across India and for bulk projects?",
+        "a": "Yes. We supply across India through 50+ stock points and take bulk project orders with custom sizes and colours. Call or WhatsApp us for a quote."
+      },
+      {
+        "q": "What sizes do WPC door frames come in?",
+        "a": "Single rebate frames from 75 × 50 mm to 150 × 63 mm, double rebate frames in 120 × 50, 125 × 63 and 150 × 63 mm, in 7, 8, 9 and 10 ft lengths. See the size guide."
+      },
+      {
+        "q": "Is there a warranty on WPC door frames?",
+        "a": "Greenplastwood door frames carry a 30 years warranty*. Ask our team for the warranty terms for your order."
+      },
+      {
+        "q": "What is the minimum order?",
+        "a": "For doors, Ivory is the regular colour and other colours need 300 doors. Boards need 100 sheets per colour and thickness, and 3 layer boards are made on bulk orders of 9 tons or more."
+      },
+      {
+        "q": "How can I become a Greenplastwood business associate?",
+        "a": "Fill the business associate form on our contact page or WhatsApp us with your city and business. Our business associate team will call you."
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "door-frames",
+      "order": 1,
+      "page": "product-wpc-door-frames.html",
+      "name": "WPC Chaukhat",
+      "name_long": "WPC Chaukhat Door Frames",
+      "h1": [
+        "WPC Chaukhat",
+        "Door Frames"
+      ],
+      "eyebrow": "Door frames",
+      "tagline": "Door frames that stay straight in bathrooms and kitchens.",
+      "description": "Wooden chaukhats in bathrooms and kitchens swell, rot at the bottom and get termites. Greenplastwood WPC chaukhats are 100% water proof, termite and borer proof and fire retardant, so the frame you fit today stays the same for years.",
+      "card": {
+        "tag": "Door frames",
+        "summary": "Solid WPC door frames that do not swell, rot or get termites. Cut, joined and fixed like wood. 30 years warranty*.",
+        "chips": [
+          "12 sizes",
+          "8 colours",
+          "30 yrs warranty*"
+        ],
+        "image": "images/products/cards/chaukhat.webp"
+      },
+      "quote_product": "WPC Door Frames",
+      "quote_url": "contact.html?product=WPC+Door+Frames#contactInquiryForm",
+      "sample_url": "contact.html?product=WPC+Door+Frames+Sample#contactInquiryForm",
+      "key_facts": [
+        {
+          "label": "Types",
+          "value": "Single rebate and double rebate"
+        },
+        {
+          "label": "Sizes",
+          "value": "12 sizes, 60 × 30 mm to 150 × 63 mm"
+        },
+        {
+          "label": "Length",
+          "value": "7, 8, 9 and 10 ft"
+        },
+        {
+          "label": "Density",
+          "value": "750 to 1200 kg/m³"
+        },
+        {
+          "label": "Colours",
+          "value": "8 standard colours"
+        },
+        {
+          "label": "Warranty",
+          "value": "30 years*"
+        }
+      ],
+      "hero_stats": [
+        {
+          "value": "12",
+          "label": "sizes",
+          "note": "60 × 30 to 150 × 63 mm"
+        },
+        {
+          "value": "4",
+          "label": "lengths",
+          "note": "7, 8, 9 and 10 ft"
+        },
+        {
+          "value": "8",
+          "label": "colours",
+          "note": "standard, NFC on bulk"
+        },
+        {
+          "value": "30",
+          "label": "years warranty*",
+          "note": "ask for the terms"
+        },
+        {
+          "value": "0.2%",
+          "label": "water absorption",
+          "note": "ASTM D 570, lab tested"
+        },
+        {
+          "value": "V-0",
+          "label": "fire rating",
+          "note": "UL-94, lab tested"
+        }
+      ],
+      "footnote": "*Ask for the warranty terms with your quote.",
+      "trust_lines": [
+        "ISO 9001:2015 certified",
+        "Lab tested: 0.2% water absorption, UL-94 V-0",
+        "9 years of WPC manufacturing in our own plants in Gujarat"
+      ],
+      "quick_picks": [
+        {
+          "label": "Single rebate",
+          "target": "type-single"
+        },
+        {
+          "label": "Double rebate",
+          "target": "type-double"
+        },
+        {
+          "label": "3 profile models",
+          "target": "type-models"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "images/products/cards/chaukhat.webp",
+          "alt": "Three WPC door frames (chaukhats) in teak wood, chocolate brown and ivory finishes",
+          "caption": "Three WPC chaukhat door frames"
+        },
+        {
+          "src": "images/products/wpc-chaukhat-sizes-guide.webp",
+          "alt": "WPC chaukhat profiles of different sizes on a work table",
+          "caption": "Chaukhat profiles in different sizes"
+        },
+        {
+          "src": "images/products/mockups/wpc-door-frames-colour-profiles.webp",
+          "alt": "WPC chaukhat profiles in black, teak, ivory and white",
+          "caption": "Chaukhat colour range",
+          "contain": true
+        },
+        {
+          "src": "images/products/mockups/wpc-door-frame-profile-chocolate-brown-section.webp",
+          "alt": "Chocolate Brown WPC chaukhat showing the rebate",
+          "caption": "Chocolate Brown, rebate profile",
+          "contain": true
+        },
+        {
+          "src": "images/products/mockups/wpc-door-frame-profile-black-section.webp",
+          "alt": "Black WPC chaukhat showing the rebate",
+          "caption": "Black, rebate profile",
+          "contain": true
+        },
+        {
+          "src": "images/products/wpc-door-frames-range.webp",
+          "alt": "Three WPC door frames in natural, ivory and black",
+          "caption": "Assembled frames in three colours"
+        }
+      ],
+      "overview": {
+        "title": [
+          "About WPC",
+          "Chaukhat"
+        ],
+        "paragraphs": [
+          "A chaukhat is the frame fixed in the wall that carries the door. It is also the part that fails first: it stands on a wet floor and it is the first thing termites reach. Greenplastwood chaukhats are made of wood polymer composite (WPC) at 750 to 1200 kg/m³, so they do not absorb water, swell or rot.",
+          "They are worked like wood. Your carpenter cuts, joins and screws them with the same tools, and the frame can be painted, polished or laminated. Choose single or double rebate, three profile models, four lengths and eight colours. Sizes and colours can be customised on bulk orders."
+        ],
+        "image": {
+          "src": "images/products/wpc-door-frame-installation-guide.webp",
+          "alt": "Carpenter fixing a WPC door frame in a wall opening with a spirit level",
+          "caption": "Fixed in the wall like a wooden frame, with the same tools."
+        },
+        "problem_vs_solution": {
+          "problem_title": "Wooden chaukhat",
+          "problems": [
+            "Swells near water",
+            "Rots at the bottom on a wet floor",
+            "Gets termites"
+          ],
+          "solution_title": "Greenplastwood WPC chaukhat",
+          "solutions": [
+            "100% water proof",
+            "Termite and borer proof",
+            "Fire retardant"
+          ]
+        }
+      },
+      "advantages": [
+        "100% water proof and moisture proof",
+        "Stands up to high moisture and humidity",
+        "Best to use as exterior-grade material",
+        "Bacteria and fungus resistant",
+        "Termite and borer proof",
+        "Fire retardant",
+        "High load-bearing capacity",
+        "Non-toxic and insect resistant",
+        "Can be processed like natural wood and solid wood",
+        "Low polish cost compared with wood",
+        "Zero maintenance",
+        "Environment friendly, eco-recycle product"
+      ],
+      "advantage_groups": [
+        {
+          "title": "Water and weather",
+          "items": [
+            "100% water proof and moisture proof",
+            "Stands up to high moisture and humidity",
+            "Best to use as exterior-grade material",
+            "Bacteria and fungus resistant"
+          ]
+        },
+        {
+          "title": "Strength and safety",
+          "items": [
+            "Termite and borer proof",
+            "Fire retardant",
+            "High load-bearing capacity",
+            "Non-toxic and insect resistant"
+          ]
+        },
+        {
+          "title": "Easy to work and own",
+          "items": [
+            "Can be processed like natural wood and solid wood",
+            "Low polish cost compared with wood",
+            "Zero maintenance",
+            "Environment friendly, eco-recycle product"
+          ]
+        }
+      ],
+      "types": {
+        "title": [
+          "Chaukhat",
+          "Types"
+        ],
+        "lead": "Two frame types and three profile models.",
+        "items": [
+          {
+            "id": "type-single",
+            "name": "Single Rebate Chaukhat",
+            "text": "One rebate, the step where the door shutter sits, for one door. This is the standard frame for bedroom, bathroom, kitchen and main doors.",
+            "image": {
+              "src": "images/products/mockups/wpc-door-frame-profile-chocolate-brown-section.webp",
+              "alt": "Single rebate WPC chaukhat profile in Chocolate Brown"
+            },
+            "specs": [
+              {
+                "label": "Sizes with drawings",
+                "value": "75 × 50 · 100 × 50 · 100 × 63 · 125 × 63 · 150 × 63 mm",
+                "note": ""
+              },
+              {
+                "label": "Other sizes",
+                "value": "60 × 30 · 65 × 40 · 90 × 45 · 90 × 63 mm",
+                "note": ""
+              },
+              {
+                "label": "Profile models",
+                "value": "Mould & Groove · Mould & Plain · Square",
+                "note": "150 × 63 mm is made in the Square model."
+              },
+              {
+                "label": "Rebate",
+                "value": "32 to 38 mm wide × 12 mm deep",
+                "note": "From the size chart; see each drawing for the exact figure."
+              },
+              {
+                "label": "Length",
+                "value": "7, 8, 9 and 10 ft",
+                "note": ""
+              },
+              {
+                "label": "Colours",
+                "value": "8 standard colours",
+                "note": ""
+              }
+            ],
+            "cta": "Get a quote for single rebate"
+          },
+          {
+            "id": "type-double",
+            "name": "Double Rebate Chaukhat",
+            "text": "A rebate on both sides of the frame, so two shutters can hang in one opening, for example a main door with a mesh door.",
+            "image": {
+              "src": "images/products/mockups/wpc-door-frames-colour-profiles.webp",
+              "alt": "WPC chaukhat profiles in four colours"
+            },
+            "specs": [
+              {
+                "label": "Sizes",
+                "value": "120 × 50 · 125 × 63 · 150 × 63 mm",
+                "note": ""
+              },
+              {
+                "label": "Length",
+                "value": "7, 8, 9 and 10 ft",
+                "note": ""
+              },
+              {
+                "label": "Density",
+                "value": "750 to 1200 kg/m³",
+                "note": ""
+              },
+              {
+                "label": "Colours",
+                "value": "8 standard colours",
+                "note": ""
+              },
+              {
+                "label": "Profile drawing",
+                "value": "Shared with your quote",
+                "note": "Tell us the size and we send the drawing."
+              }
+            ],
+            "cta": "Get a quote for double rebate"
+          }
+        ],
+        "models": {
+          "id": "type-models",
+          "title": "Three Profile Models",
+          "text": "The model changes the look of the frame edge, not its strength. All three are shown here in 75 × 50 mm. Tap a drawing for the dimensions.",
+          "items": [
+            {
+              "name": "Mould & Groove",
+              "text": "Rounded front edge, with grooves on the back face.",
+              "drawing": "images/profiles/chaukhat-75x50-mould-grew.webp"
+            },
+            {
+              "name": "Mould & Plain",
+              "text": "Rounded front edge, with a plain back.",
+              "drawing": "images/profiles/chaukhat-75x50-mould-plain.webp"
+            },
+            {
+              "name": "Square",
+              "text": "Straight edges for a flat, modern look.",
+              "drawing": "images/profiles/chaukhat-75x50-square.webp"
+            }
+          ]
+        }
+      },
+      "sizes": {
+        "title": [
+          "Sizes And",
+          "Profile Drawings"
+        ],
+        "lead": "A size is written as width × thickness in millimetres. The width should match your finished wall, and the thickness depends on how heavy the door is.",
+        "columns": [
+          "Size",
+          "Inches",
+          "Profile models",
+          "Rebate (width × depth)",
+          "Commonly used for*"
+        ],
+        "rows": [
+          {
+            "rebate_type": "single",
+            "width_mm": 60,
+            "thickness_mm": 30,
+            "size": "60 × 30 mm",
+            "inches": "–",
+            "models": "On request",
+            "rebate": "–",
+            "rebate_note": "",
+            "use": "Smaller openings, cupboards, special requirements"
+          },
+          {
+            "rebate_type": "single",
+            "width_mm": 65,
+            "thickness_mm": 40,
+            "size": "65 × 40 mm",
+            "inches": "–",
+            "models": "On request",
+            "rebate": "–",
+            "rebate_note": "",
+            "use": "Smaller openings, cupboards, special requirements"
+          },
+          {
+            "rebate_type": "single",
+            "width_mm": 75,
+            "thickness_mm": 50,
+            "size": "75 × 50 mm",
+            "inches": "3.0\" × 2.0\"",
+            "models": "Mould & Groove, Mould & Plain, Square",
+            "rebate": "32 × 12 mm",
+            "rebate_note": "",
+            "use": "Bathrooms, toilets, store rooms, light internal doors"
+          },
+          {
+            "rebate_type": "single",
+            "width_mm": 90,
+            "thickness_mm": 45,
+            "size": "90 × 45 mm",
+            "inches": "–",
+            "models": "On request",
+            "rebate": "–",
+            "rebate_note": "",
+            "use": "Smaller openings, special requirements"
+          },
+          {
+            "rebate_type": "single",
+            "width_mm": 90,
+            "thickness_mm": 63,
+            "size": "90 × 63 mm",
+            "inches": "–",
+            "models": "On request",
+            "rebate": "–",
+            "rebate_note": "",
+            "use": "Smaller openings, special requirements"
+          },
+          {
+            "rebate_type": "single",
+            "width_mm": 100,
+            "thickness_mm": 50,
+            "size": "100 × 50 mm",
+            "inches": "4.0\" × 2.0\"",
+            "models": "Mould & Groove, Mould & Plain, Square",
+            "rebate": "32 × 12 mm",
+            "rebate_note": "",
+            "use": "Bedroom and internal doors in 4\" walls"
+          },
+          {
+            "rebate_type": "single",
+            "width_mm": 100,
+            "thickness_mm": 63,
+            "size": "100 × 63 mm",
+            "inches": "4.0\" × 2.5\"",
+            "models": "Mould & Groove, Mould & Plain, Square",
+            "rebate": "32 × 12 mm",
+            "rebate_note": "",
+            "use": "Internal doors where a heavier door is used"
+          },
+          {
+            "rebate_type": "single",
+            "width_mm": 125,
+            "thickness_mm": 63,
+            "size": "125 × 63 mm",
+            "inches": "5.0\" × 2.5\"",
+            "models": "Mould & Groove, Mould & Plain, Square",
+            "rebate": "32 × 12 mm",
+            "rebate_note": "35 × 12 mm in Mould & Plain and Square",
+            "use": "Main doors and 5\" walls"
+          },
+          {
+            "rebate_type": "single",
+            "width_mm": 150,
+            "thickness_mm": 63,
+            "size": "150 × 63 mm",
+            "inches": "6.0\" × 2.5\"",
+            "models": "Square",
+            "rebate": "38 × 12 mm",
+            "rebate_note": "",
+            "use": "Main doors and 6\" walls"
+          },
+          {
+            "rebate_type": "double",
+            "width_mm": 120,
+            "thickness_mm": 50,
+            "size": "120 × 50 mm",
+            "inches": "–",
+            "models": "On request",
+            "rebate": "–",
+            "rebate_note": "",
+            "use": "Openings with two shutters, e.g. a main door and a mesh door"
+          },
+          {
+            "rebate_type": "double",
+            "width_mm": 125,
+            "thickness_mm": 63,
+            "size": "125 × 63 mm",
+            "inches": "5.0\" × 2.5\"",
+            "models": "On request",
+            "rebate": "–",
+            "rebate_note": "",
+            "use": "Openings with two shutters"
+          },
+          {
+            "rebate_type": "double",
+            "width_mm": 150,
+            "thickness_mm": 63,
+            "size": "150 × 63 mm",
+            "inches": "6.0\" × 2.5\"",
+            "models": "On request",
+            "rebate": "–",
+            "rebate_note": "",
+            "use": "Openings with two shutters"
+          }
+        ],
+        "note": "*General guidance only. Confirm the right size for your wall and door with our team. Every size is made in 7, 8, 9 and 10 ft lengths at 750 to 1200 kg/m³. Sizes can be customised on bulk orders.",
+        "how_to_choose": [
+          "Measure the finished wall thickness, including plaster.",
+          "Pick the frame width closest to it: 75, 100, 125 or 150 mm.",
+          "Pick 50 mm thickness for light doors and 63 mm for heavier or main doors.",
+          "Choose single or double rebate.",
+          "Choose the length: 7 ft for standard doors, 8 to 10 ft for taller openings.",
+          "Choose one of the 8 colours."
+        ],
+        "guide_link": "guide-wpc-chaukhat-sizes.html",
+        "size_chart": {
+          "src": "images/products/wpc-chaukhat-size-chart.webp",
+          "alt": "Greenplastwood WPC chaukhat size chart with single rebate profile drawings"
+        },
+        "profile_drawings": [
+          {
+            "size": "75 × 50 mm",
+            "inches": "3.0\" × 2.0\"",
+            "drawings": [
+              {
+                "model": "Mould & Groove",
+                "src": "images/profiles/chaukhat-75x50-mould-grew.webp"
+              },
+              {
+                "model": "Mould & Plain",
+                "src": "images/profiles/chaukhat-75x50-mould-plain.webp"
+              },
+              {
+                "model": "Square",
+                "src": "images/profiles/chaukhat-75x50-square.webp"
+              }
+            ]
+          },
+          {
+            "size": "100 × 50 mm",
+            "inches": "4.0\" × 2.0\"",
+            "drawings": [
+              {
+                "model": "Mould & Groove",
+                "src": "images/profiles/chaukhat-100x50-mould-grew.webp"
+              },
+              {
+                "model": "Mould & Plain",
+                "src": "images/profiles/chaukhat-100x50-mould-plain.webp"
+              },
+              {
+                "model": "Square",
+                "src": "images/profiles/chaukhat-100x50-square.webp"
+              }
+            ]
+          },
+          {
+            "size": "100 × 63 mm",
+            "inches": "4.0\" × 2.5\"",
+            "drawings": [
+              {
+                "model": "Mould & Groove",
+                "src": "images/profiles/chaukhat-100x63-mould-grew.webp"
+              },
+              {
+                "model": "Mould & Plain",
+                "src": "images/profiles/chaukhat-100x63-mould-plain.webp"
+              },
+              {
+                "model": "Square",
+                "src": "images/profiles/chaukhat-100x63-square.webp"
+              }
+            ]
+          },
+          {
+            "size": "125 × 63 mm",
+            "inches": "5.0\" × 2.5\"",
+            "drawings": [
+              {
+                "model": "Mould & Groove",
+                "src": "images/profiles/chaukhat-125x63-mould-grew.webp"
+              },
+              {
+                "model": "Mould & Plain",
+                "src": "images/profiles/chaukhat-125x63-mould-plain.webp"
+              },
+              {
+                "model": "Square",
+                "src": "images/profiles/chaukhat-125x63-square.webp"
+              }
+            ]
+          },
+          {
+            "size": "150 × 63 mm",
+            "inches": "6.0\" × 2.5\"",
+            "drawings": [
+              {
+                "model": "Square",
+                "src": "images/profiles/chaukhat-150x63-square.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "colours": {
+        "title": [
+          "Colours And",
+          "Finish"
+        ],
+        "lead": "Eight standard colours. The colour runs through the profile, and the frame can also be painted, polished or laminated.",
+        "groups": [
+          {
+            "name": "Door & window frames",
+            "items": [
+              {
+                "name": "Light Ivory",
+                "hex": "#FCE8C3"
+              },
+              {
+                "name": "Yellow Ivory",
+                "hex": "#CFB254"
+              },
+              {
+                "name": "Pure White",
+                "hex": "#F4F1EA"
+              },
+              {
+                "name": "Beach White",
+                "hex": "#F6EED7"
+              },
+              {
+                "name": "Teak Wood",
+                "hex": "#BA6B20"
+              },
+              {
+                "name": "Chocolate Brown",
+                "hex": "#59392C"
+              },
+              {
+                "name": "Coco Brown",
+                "hex": "#47003E"
+              },
+              {
+                "name": "Black",
+                "hex": "#2B2B29"
+              }
+            ]
+          }
+        ],
+        "note": "Screen colours vary, so ask for a physical sample before you order. Other (NFC) colours can be made on bulk orders.",
+        "finish": "Paint, polish or laminate"
+      },
+      "designs": null,
+      "photos": {
+        "title": "Profiles Up Close",
+        "lead": "Real product photos of our WPC chaukhat door frames in various installations. Tap a photo to enlarge it and enquire.",
+        "items": [
+          {
+            "src": "images/products/wpc-door-frames-range.webp",
+            "title": "Colour range",
+            "sub": "3 assembled frames"
+          },
+          {
+            "src": "images/products/3-layer-door-home.webp",
+            "title": "Chocolate Brown",
+            "sub": "Home installation"
+          },
+          {
+            "src": "images/products/3-layer-door-office.webp",
+            "title": "Chocolate Brown",
+            "sub": "Office installation"
+          },
+          {
+            "src": "images/products/3-layer-door-school.webp",
+            "title": "Black",
+            "sub": "School installation"
+          },
+          {
+            "src": "images/products/3-layer-door-clinic.webp",
+            "title": "Black",
+            "sub": "Hospital & clinic"
+          },
+          {
+            "src": "images/products/cards/chaukhat.webp",
+            "title": "Brown",
+            "sub": "Hallway installation"
+          },
+          {
+            "src": "images/products/wpc-chaukhat-sizes-guide.webp",
+            "title": "Brown",
+            "sub": "Profile sizes"
+          }
+        ]
+      },
+      "compare": {
+        "ref": "common.compare_wpc_vs_plywood",
+        "lead": "From our product catalogue. Wooden and plywood frames need termite treatment and care around water. WPC needs neither, and it is still cut, screwed and laminated with normal carpentry tools."
+      },
+      "type_comparison": null,
+      "applications": {
+        "title": [
+          "Where WPC Chaukhats",
+          "Are Used"
+        ],
+        "lead": "Any door opening, and above all the ones that get wet.",
+        "cards": [
+          {
+            "image": "images/products/wpc-bathroom-door-frame-guide.webp",
+            "alt": "WPC door frame and door at a bathroom entrance",
+            "title": "Bathroom And Toilet",
+            "text": "Frames that stand on a wet floor every day without swelling or rotting at the bottom."
+          },
+          {
+            "image": "images/products/3-layer-door-home.webp",
+            "alt": "WPC door and frame in a home",
+            "title": "Home",
+            "text": "Bedroom, kitchen and main door frames in one size and colour across the flat."
+          },
+          {
+            "image": "images/products/3-layer-door-office.webp",
+            "alt": "Office door",
+            "title": "Office",
+            "text": "Frames for cabins, meeting rooms and washrooms."
+          },
+          {
+            "image": "images/products/3-layer-door-school.webp",
+            "alt": "School door",
+            "title": "School And College",
+            "text": "Classroom and washroom frames that are washed daily and take heavy use."
+          },
+          {
+            "image": "images/products/3-layer-door-clinic.webp",
+            "alt": "Clinic door",
+            "title": "Hospital And Clinic",
+            "text": "Frames that are cleaned often and need no termite treatment."
+          }
+        ],
+        "also_title": "Also supplied for",
+        "also": [
+          "Residential homes",
+          "Apartments",
+          "Villas",
+          "Hotels",
+          "Hospitals",
+          "Schools",
+          "Offices",
+          "Commercial buildings",
+          "Institutional projects"
+        ]
+      },
+      "installation": {
+        "title": [
+          "Installation",
+          "Guide"
+        ],
+        "lead": "A WPC chaukhat is installed the same way as a wooden one, with the same saw, drill and screws. It needs no termite treatment.",
+        "steps": "common.frame_installation_steps",
+        "need": [
+          "Two vertical posts and one head piece of the right size",
+          "A fine-tooth saw or a mitre saw",
+          "Drill, screws and wall plugs or hold-fasts",
+          "Spirit level and measuring tape"
+        ],
+        "after": "Clean the frame with a damp cloth. If you want a different shade, the frame can be painted, polished or laminated. In bathrooms, fix the frame before tiling so the tiles finish neatly against it.",
+        "guide_link": "guide-install-wpc-door-frame.html"
+      },
+      "lab": {
+        "ref": "common.lab_tests.door_frame",
+        "lead": "A Greenplastwood WPC door frame sample was tested by Alekh Plastics Testing Centre, Ahmedabad. Reports dated 24 November 2022."
+      },
+      "properties": null,
+      "ordering": {
+        "tell_us": [
+          "Frame type: single or double rebate",
+          "Size: width × thickness in mm",
+          "Profile model: Mould & Groove, Mould & Plain or Square",
+          "Length: 7, 8, 9 or 10 ft",
+          "Colour: one of the 8 standard colours",
+          "Quantity and delivery city"
+        ],
+        "min_order": [
+          {
+            "label": "Standard sizes and colours",
+            "value": "Ask our team for stock and minimum quantity"
+          },
+          {
+            "label": "Custom size, length or density",
+            "value": "On bulk orders"
+          },
+          {
+            "label": "Custom (NFC) colour",
+            "value": "On bulk orders"
+          },
+          {
+            "label": "Warranty",
+            "value": "30 years*. Ask for the terms with your quote"
+          }
+        ]
+      },
+      "downloads": {
+        "lead": "The chaukhat pages are in the company profile: specification, advantages, installation guide and applications.",
+        "files": [
+          {
+            "ref": "common.company_profile_pdf"
+          },
+          {
+            "title": "Chaukhat size chart",
+            "file": "images/products/wpc-chaukhat-size-chart.webp",
+            "cover": "images/products/wpc-chaukhat-size-chart.webp",
+            "desc": "Single rebate drawings, lengths, density and colours. 1 page."
+          }
+        ],
+        "guides": [
+          {
+            "href": "guide-wpc-chaukhat-sizes.html",
+            "title": "WPC chaukhat sizes explained",
+            "desc": "Which size for which wall and door."
+          },
+          {
+            "href": "guide-install-wpc-door-frame.html",
+            "title": "How to install a WPC door frame",
+            "desc": "Cutting, corner joints and fixing in the wall."
+          },
+          {
+            "href": "guide-wpc-vs-plywood-door-frames.html",
+            "title": "WPC vs wood vs plywood",
+            "desc": "A side-by-side comparison for wet areas."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "What sizes are WPC chaukhats available in?",
+          "a": "Single rebate frames come in 75 × 50, 100 × 50, 100 × 63, 125 × 63 and 150 × 63 mm, plus 60 × 30, 65 × 40, 90 × 45 and 90 × 63 mm. Double rebate frames come in 120 × 50, 125 × 63 and 150 × 63 mm. Standard lengths are 7, 8, 9 and 10 ft. Sizes can be customised on bulk orders."
+        },
+        {
+          "q": "What is the difference between single and double rebate?",
+          "a": "The rebate is the step cut into the frame where the door shutter sits. A single rebate frame has one step and takes one door. A double rebate frame has a step on both sides, so two shutters can hang in the same opening, for example a main door and a mesh door."
+        },
+        {
+          "q": "Which model should I choose: Mould & Groove, Mould & Plain or Square?",
+          "a": "They change the look of the frame edge, not its strength. Mould & Groove has a rounded edge with grooves on the back face, Mould & Plain has a rounded edge with a plain back, and Square has straight edges for a flat, modern look."
+        },
+        {
+          "q": "Are WPC chaukhats suitable for bathrooms and kitchens?",
+          "a": "Yes. Greenplastwood WPC chaukhats are 100% water proof and moisture proof, so they do not swell, rot or warp in bathrooms, kitchens or other humid areas."
+        },
+        {
+          "q": "Do WPC chaukhats need anti-termite treatment?",
+          "a": "No. The frames are termite and borer proof and bacteria and fungus resistant, so no chemical treatment is needed."
+        },
+        {
+          "q": "What is the density of Greenplastwood chaukhats?",
+          "a": "Chaukhats are made at 750 to 1200 kg/m³. In lab testing by Alekh Plastics Testing Centre (Nov 2022) a door-frame sample showed 0.90 g/cc density, 0.2% water absorption, a UL-94 V-0 flammability rating and 2236 N screw withdrawal force."
+        },
+        {
+          "q": "Which colours are available?",
+          "a": "Light Ivory, Yellow Ivory, Pure White, Beach White, Teak Wood, Chocolate Brown, Coco Brown and Black. Other (NFC) colours can be made on bulk orders."
+        },
+        {
+          "q": "Can a WPC chaukhat be painted or polished?",
+          "a": "Yes. The frame can be painted, polished or laminated, and polishing costs less than on wood. Regular re-polishing is not needed."
+        },
+        {
+          "q": "How is a WPC chaukhat installed?",
+          "a": "The same way as a wooden one. The posts and head are cut, joined at the corners and fixed in the wall opening with screws, using normal carpentry tools."
+        },
+        {
+          "q": "Can sizes be customised?",
+          "a": "Yes. Size, length, density and colour can be customised on bulk orders. Send us your drawing or requirement."
+        }
+      ],
+      "finishes": null,
+      "pallet_comparison": null,
+      "related": [
+        "window-frames",
+        "doors",
+        "boards",
+        "pvc-panel"
+      ]
+    },
+    {
+      "id": "window-frames",
+      "order": 2,
+      "page": "product-wpc-window-frames.html",
+      "name": "WPC Window Frame",
+      "name_long": "WPC Window Frame",
+      "h1": [
+        "WPC Window",
+        "Frame"
+      ],
+      "eyebrow": "Window chaukhat in two profiles",
+      "tagline": "Window frames that do not rot or swell in rain and sun.",
+      "description": "Greenplastwood WPC window frames are made of the same high-density wood polymer composite as our door chaukhats. They are 100% water proof, termite and borer proof and weather and ageing resistant, so they hold their shape in rain, sun and humidity.",
+      "card": {
+        "tag": "Two profiles",
+        "summary": "Window frames in the same WPC as our chaukhats: water proof, termite proof and fit for exterior walls.",
+        "chips": [
+          "70 × 30 mm",
+          "120 × 50 mm",
+          "8 colours"
+        ],
+        "image": "images/products/cards/window.webp"
+      },
+      "quote_product": "WPC Window Frames",
+      "quote_url": "contact.html?product=WPC+Window+Frames#contactInquiryForm",
+      "sample_url": "contact.html?product=WPC+Window+Frames+Sample#contactInquiryForm",
+      "key_facts": [
+        {
+          "label": "Profiles",
+          "value": "70 × 30 mm and 120 × 50 mm"
+        },
+        {
+          "label": "Length",
+          "value": "7, 8, 9 and 10 ft"
+        },
+        {
+          "label": "Density",
+          "value": "750 to 1200 kg/m³"
+        },
+        {
+          "label": "Colours",
+          "value": "8 standard colours"
+        },
+        {
+          "label": "Material",
+          "value": "Wood polymer composite (WPC)"
+        },
+        {
+          "label": "Customisation",
+          "value": "Size, length and colour on bulk orders"
+        }
+      ],
+      "hero_stats": [
+        {
+          "value": "2",
+          "label": "profiles",
+          "note": "70 × 30 and 120 × 50 mm"
+        },
+        {
+          "value": "4",
+          "label": "lengths",
+          "note": "7, 8, 9 and 10 ft"
+        },
+        {
+          "value": "8",
+          "label": "colours",
+          "note": "same as door chaukhats"
+        },
+        {
+          "value": "0.2%",
+          "label": "water absorption",
+          "note": "same WPC as door frames"
+        }
+      ],
+      "footnote": null,
+      "trust_lines": [
+        "ISO 9001:2015 certified",
+        "Same WPC as our lab-tested door frames",
+        "9 years of WPC manufacturing in our own plants in Gujarat"
+      ],
+      "quick_picks": [
+        {
+          "label": "70 × 30 mm",
+          "target": "type-70x30"
+        },
+        {
+          "label": "120 × 50 mm",
+          "target": "type-120x50"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "images/products/cards/window.webp",
+          "alt": "Greenplastwood standard 3-panel casement WPC window frame in Teak Wood finish",
+          "caption": "Greenplastwood WPC Window Frame (Teak Finish)"
+        },
+        {
+          "src": "images/gp_window.webp",
+          "alt": "Wood-finish window frame seen from inside a room",
+          "caption": "Wood finish"
+        },
+        {
+          "src": "images/products/mockups/wpc-door-frame-profile-coco-brown-rounded.webp",
+          "alt": "WPC window frame profile in Coco Brown with a rounded edge",
+          "caption": "Coco Brown profile",
+          "contain": true
+        },
+        {
+          "src": "images/products/mockups/wpc-door-frame-profile-coco-brown-front.webp",
+          "alt": "WPC frame profile in Coco Brown, front face",
+          "caption": "Coco Brown, front face",
+          "contain": true
+        },
+        {
+          "src": "images/products/mockups/wpc-door-frames-colour-profiles.webp",
+          "alt": "WPC frame profiles in four colours",
+          "caption": "Frame colour range",
+          "contain": true
+        }
+      ],
+      "overview": {
+        "title": [
+          "About WPC",
+          "Window Frame"
+        ],
+        "paragraphs": [
+          "A window frame sits in an outside wall, so it takes rain on one side and sun on the other. Wooden frames swell, then shrink, then the paint cracks and termites get in. A WPC frame does not absorb water and is not attacked by termites or borers, so it stays the size it was fitted.",
+          "Greenplastwood makes two window frame profiles, 70 × 30 mm and 120 × 50 mm, in 7 to 10 ft lengths and the same eight colours as our door chaukhats. They are cut, screwed, polished or laminated like wood. Profiles, lengths and colours can be customised on bulk orders."
+        ],
+        "image": {
+          "src": "images/gp_window.webp",
+          "alt": "Wood-finish window frame seen from inside a room",
+          "caption": "A wood-finish window frame."
+        },
+        "problem_vs_solution": {
+          "problem_title": "Wooden window frame",
+          "problems": [
+            "Swells, then shrinks",
+            "Paint cracks",
+            "Termites get in"
+          ],
+          "solution_title": "Greenplastwood WPC window frame",
+          "solutions": [
+            "Does not absorb water",
+            "Not attacked by termites or borers",
+            "Stays the size it was fitted"
+          ]
+        }
+      },
+      "advantages": [
+        "100% water proof, good for exterior walls",
+        "Weather and ageing resistant",
+        "Termite and borer proof",
+        "Fire retardant",
+        "Can be cut, screwed and polished like wood",
+        "Low polish cost compared with wood",
+        "Zero maintenance",
+        "Environment friendly and recyclable"
+      ],
+      "advantage_groups": null,
+      "types": {
+        "title": [
+          "Window Frame",
+          "Profiles"
+        ],
+        "lead": "Two profile sizes.",
+        "items": [
+          {
+            "id": "type-70x30",
+            "name": "70 × 30 Mm Window Frame",
+            "text": "The lighter of the two profiles, generally used for smaller windows and ventilators.",
+            "image": {
+              "src": "images/products/mockups/wpc-door-frame-profile-coco-brown-rounded.webp",
+              "alt": "WPC window frame profile in Coco Brown with a rounded edge"
+            },
+            "specs": [
+              {
+                "label": "Profile size",
+                "value": "70 × 30 mm",
+                "note": ""
+              },
+              {
+                "label": "Length",
+                "value": "7, 8, 9 and 10 ft",
+                "note": ""
+              },
+              {
+                "label": "Density",
+                "value": "750 to 1200 kg/m³",
+                "note": ""
+              },
+              {
+                "label": "Colours",
+                "value": "8 standard colours",
+                "note": ""
+              },
+              {
+                "label": "Customisation",
+                "value": "Size, length and colour on bulk orders",
+                "note": ""
+              }
+            ],
+            "cta": "Get a quote for 70 × 30 mm"
+          },
+          {
+            "id": "type-120x50",
+            "name": "120 × 50 Mm Window Frame",
+            "text": "The heavier profile, generally used for larger window openings.",
+            "image": {
+              "src": "images/products/mockups/wpc-door-frame-profile-coco-brown-front.webp",
+              "alt": "WPC frame profile in Coco Brown, front face"
+            },
+            "specs": [
+              {
+                "label": "Profile size",
+                "value": "120 × 50 mm",
+                "note": ""
+              },
+              {
+                "label": "Length",
+                "value": "7, 8, 9 and 10 ft",
+                "note": ""
+              },
+              {
+                "label": "Density",
+                "value": "750 to 1200 kg/m³",
+                "note": ""
+              },
+              {
+                "label": "Colours",
+                "value": "8 standard colours",
+                "note": ""
+              },
+              {
+                "label": "Customisation",
+                "value": "Size, length and colour on bulk orders",
+                "note": ""
+              }
+            ],
+            "cta": "Get a quote for 120 × 50 mm"
+          }
+        ],
+        "note": "The uses given for each profile are general guidance. Confirm the right profile for your opening with our team.",
+        "models": null
+      },
+      "sizes": {
+        "title": [
+          "Window Frame",
+          "Specifications"
+        ],
+        "lead": null,
+        "columns": [
+          "Specification",
+          "Value"
+        ],
+        "rows": [
+          {
+            "label": "Window frame size",
+            "value": "70 × 30 mm · 120 × 50 mm"
+          },
+          {
+            "label": "Length",
+            "value": "7, 8, 9 and 10 ft",
+            "note": "Size can be customised on bulk orders."
+          },
+          {
+            "label": "Density",
+            "value": "750 to 1200 kg/m³"
+          },
+          {
+            "label": "Colours",
+            "value": "Light Ivory, Yellow Ivory, Pure White, Beach White, Teak Wood, Chocolate Brown, Coco Brown, Black",
+            "note": "NFC colour can be customised on bulk orders."
+          },
+          {
+            "label": "Material",
+            "value": "Wood polymer composite (WPC)"
+          }
+        ],
+        "note": null,
+        "how_to_choose": null,
+        "size_chart": null,
+        "profile_drawings": null
+      },
+      "colours": {
+        "title": [
+          "Colours And",
+          "Finish"
+        ],
+        "lead": "Eight standard colours, the same as our door chaukhats, so the door and window frames in a room can match.",
+        "groups": [
+          {
+            "name": "Door & window frames",
+            "items": [
+              {
+                "name": "Light Ivory",
+                "hex": "#FCE8C3"
+              },
+              {
+                "name": "Yellow Ivory",
+                "hex": "#CFB254"
+              },
+              {
+                "name": "Pure White",
+                "hex": "#F4F1EA"
+              },
+              {
+                "name": "Beach White",
+                "hex": "#F6EED7"
+              },
+              {
+                "name": "Teak Wood",
+                "hex": "#BA6B20"
+              },
+              {
+                "name": "Chocolate Brown",
+                "hex": "#59392C"
+              },
+              {
+                "name": "Coco Brown",
+                "hex": "#47003E"
+              },
+              {
+                "name": "Black",
+                "hex": "#2B2B29"
+              }
+            ]
+          }
+        ],
+        "note": "Screen colours vary, so ask for a physical sample before you order. Other (NFC) colours can be made on bulk orders.",
+        "finish": "Cut, screwed, polished or laminated like wood"
+      },
+      "designs": null,
+      "photos": {
+        "title": "Profiles Up Close",
+        "lead": null,
+        "items": [
+          {
+            "src": "images/products/cards/window.webp",
+            "title": "Living room",
+            "sub": "WPC window frame"
+          },
+          {
+            "src": "images/gp_window.webp",
+            "title": "Wood finish",
+            "sub": "Close view"
+          },
+          {
+            "src": "images/products/wpc-door-frames-range.webp",
+            "title": "Frame colour range",
+            "sub": "Available finishes"
+          }
+        ]
+      },
+      "compare": {
+        "ref": "common.compare_wpc_vs_plywood",
+        "lead": "From our product catalogue. On an outside wall the two rows that matter most are water and weather: WPC is water proof and weather and ageing resistant, and it is still worked with normal carpentry tools."
+      },
+      "type_comparison": null,
+      "applications": {
+        "title": [
+          "Where WPC Window Frames",
+          "Are Used"
+        ],
+        "lead": null,
+        "cards": [
+          {
+            "image": "images/products/cards/window.webp",
+            "alt": "WPC-framed windows in a living room",
+            "title": "Home",
+            "text": "Living room, bedroom and kitchen windows, including those on rain-facing walls."
+          },
+          {
+            "image": "images/products/3-layer-door-bathroom.webp",
+            "alt": "Bathroom",
+            "title": "Bathroom",
+            "text": "Bathroom windows and ventilators that stay damp."
+          },
+          {
+            "image": "images/products/3-layer-door-office.webp",
+            "alt": "Office",
+            "title": "Office",
+            "text": "Window frames for offices and commercial buildings."
+          },
+          {
+            "image": "images/products/3-layer-door-school.webp",
+            "alt": "School",
+            "title": "School",
+            "text": "Classroom windows that take daily wear."
+          },
+          {
+            "image": "images/products/3-layer-door-clinic.webp",
+            "alt": "Clinic",
+            "title": "Clinic",
+            "text": "Frames that are cleaned often and need no polishing."
+          }
+        ],
+        "also_title": "Also supplied for",
+        "also": [
+          "Residential projects",
+          "Villas",
+          "Commercial buildings",
+          "Hospitality projects",
+          "Educational institutions",
+          "Healthcare facilities"
+        ],
+        "image_note": "Bathroom/office/school/clinic cards currently reuse DOOR photos. Replace with real window photos when available (flag, do not invent)."
+      },
+      "installation": {
+        "title": [
+          "Installation",
+          "Guide"
+        ],
+        "lead": "Window frames are cut, joined and fixed the same way as our door chaukhats. The drawings below are from the installation guide in our catalogue.",
+        "steps": "common.frame_installation_steps",
+        "need": null,
+        "after": null,
+        "guide_link": "guide-install-wpc-door-frame.html"
+      },
+      "lab": {
+        "ref": "common.lab_tests.door_frame",
+        "lead": "Window frames are made of the same WPC, at the same density, as our door frames. The results below are for a Greenplastwood WPC door frame sample tested by Alekh Plastics Testing Centre, Ahmedabad. Reports dated 24 November 2022."
+      },
+      "properties": null,
+      "ordering": {
+        "tell_us": [
+          "Profile: 70 × 30 mm or 120 × 50 mm",
+          "Length: 7, 8, 9 or 10 ft",
+          "Colour: one of the 8 standard colours",
+          "Quantity and delivery city",
+          "Your window drawing, if you need a custom profile"
+        ],
+        "min_order": [
+          {
+            "label": "Standard profiles and colours",
+            "value": "Ask our team for stock and minimum quantity"
+          },
+          {
+            "label": "Custom size or length",
+            "value": "On bulk orders"
+          },
+          {
+            "label": "Custom (NFC) colour",
+            "value": "On bulk orders"
+          }
+        ]
+      },
+      "downloads": {
+        "lead": "Window frame sizes are listed with the chaukhat specification in the company profile.",
+        "files": [
+          {
+            "ref": "common.company_profile_pdf"
+          }
+        ],
+        "guides": [
+          {
+            "href": "guide-install-wpc-door-frame.html",
+            "title": "How to install a WPC door frame",
+            "desc": "Cutting, corner joints and fixing in the wall."
+          },
+          {
+            "href": "guide-wpc-vs-plywood-door-frames.html",
+            "title": "WPC vs wood vs plywood",
+            "desc": "A side-by-side comparison for wet areas."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "What sizes are WPC window frames available in?",
+          "a": "Greenplastwood WPC window frames are made in 70 × 30 mm and 120 × 50 mm profiles, in 7, 8, 9 and 10 ft lengths. Sizes can be customised on bulk orders."
+        },
+        {
+          "q": "Are WPC window frames good for exterior walls?",
+          "a": "Yes. WPC is 100% water proof and weather and ageing resistant, and our catalogue lists it as best used as an exterior-grade material. It does not rot, swell or get termites like a wooden window frame."
+        },
+        {
+          "q": "Which colours can I choose?",
+          "a": "Light Ivory, Yellow Ivory, Pure White, Beach White, Teak Wood, Chocolate Brown, Coco Brown and Black. Other colours can be made on bulk orders."
+        },
+        {
+          "q": "Can WPC window frames be painted or polished?",
+          "a": "Yes. WPC is processed like natural wood: it is cut, screwed, polished or laminated, and polishing costs less than on wood."
+        },
+        {
+          "q": "What is the density?",
+          "a": "Window frames are made at 750 to 1200 kg/m³, the same range as our door chaukhats. A lab-tested door-frame sample showed 0.90 g/cc density, 0.2% water absorption and a UL-94 V-0 rating."
+        },
+        {
+          "q": "How is a WPC window frame installed?",
+          "a": "Like a wooden one. The frame members are cut, joined at the corners with screws and fixed in the wall opening, using normal carpentry tools."
+        },
+        {
+          "q": "Do WPC window frames need termite treatment?",
+          "a": "No. They are termite and borer proof, so no chemical treatment is needed."
+        }
+      ],
+      "finishes": null,
+      "pallet_comparison": null,
+      "related": [
+        "door-frames",
+        "doors",
+        "boards",
+        "pvc-panel"
+      ]
+    },
+    {
+      "id": "doors",
+      "order": 3,
+      "page": "product-wpc-solid-doors.html",
+      "name": "WPC Doors",
+      "name_long": "WPC Doors",
+      "h1": [
+        "WPC",
+        "Doors"
+      ],
+      "eyebrow": "Solid, 3 layer, texture and digital print",
+      "tagline": "Water proof doors for bathrooms, bedrooms, offices, hotels and schools.",
+      "description": "Greenplastwood WPC doors are 100% water proof, termite proof and fire retardant. They are made as solid doors and as 3 layer doors with rigid PVC skins, in plain colours and catalogue designs.",
+      "card": {
+        "tag": "Solid, 3 layer, texture and digital",
+        "summary": "Water proof doors for bathrooms, bedrooms, offices, hotels and schools, in plain colours and catalogue designs.",
+        "chips": [
+          "Solid",
+          "3 layer",
+          "Digital print"
+        ],
+        "image": "images/products/cards/doors.webp"
+      },
+      "quote_product": "WPC Solid Doors",
+      "quote_url": "contact.html?product=WPC+Solid+Doors#contactInquiryForm",
+      "sample_url": "contact.html?product=WPC+Solid+Doors+Sample#contactInquiryForm",
+      "key_facts": [
+        {
+          "label": "Types",
+          "value": "Solid, 3 layer, texture and digital print"
+        },
+        {
+          "label": "Thickness",
+          "value": "17 to 35 mm"
+        },
+        {
+          "label": "Standard sizes",
+          "value": "5 sizes, 27 × 78 in to 38 × 84 in"
+        },
+        {
+          "label": "Density",
+          "value": "550 to 600 kg/m³, up to 750 on order"
+        },
+        {
+          "label": "Designs",
+          "value": "6 texture and many digital print designs"
+        },
+        {
+          "label": "Minimum order",
+          "value": "Ivory regular; other colours 300 doors"
+        }
+      ],
+      "hero_stats": [
+        {
+          "value": "4",
+          "label": "door types",
+          "note": "solid, 3 layer, texture, digital"
+        },
+        {
+          "value": "5",
+          "label": "standard sizes",
+          "note": "27 × 78 to 38 × 84 in"
+        },
+        {
+          "value": "17–35",
+          "label": "mm thickness",
+          "note": "3 layer from 24 mm"
+        },
+        {
+          "value": "0.2%",
+          "label": "water absorption",
+          "note": "lab tested"
+        }
+      ],
+      "footnote": null,
+      "trust_lines": [
+        "ISO 9001:2015 certified",
+        "Lab tested: 0.2% water absorption, UL-94 V-0",
+        "9 years of WPC manufacturing in our own plants in Gujarat"
+      ],
+      "quick_picks": [
+        {
+          "label": "Solid doors",
+          "target": "type-solid"
+        },
+        {
+          "label": "3 layer doors",
+          "target": "type-3layer"
+        },
+        {
+          "label": "Texture doors",
+          "target": "type-texture"
+        },
+        {
+          "label": "Digital print doors",
+          "target": "type-digital"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "images/products/cards/doors.webp",
+          "alt": "Three WPC solid doors in teak wood, dark chocolate brown texture and ivory finishes",
+          "caption": "Three WPC solid doors"
+        },
+        {
+          "src": "images/products/wpc-solid-doors-range.webp",
+          "alt": "Five Greenplastwood WPC solid doors in different finishes",
+          "caption": "Solid door range"
+        },
+        {
+          "src": "images/products/wpc-bathroom-door-frame-guide.webp",
+          "alt": "WPC door and frame at a bathroom entrance",
+          "caption": "Bathroom door"
+        },
+        {
+          "src": "images/products/mockups/wpc-door-plain-ivory.webp",
+          "alt": "WPC door in Ivory",
+          "caption": "Plain Ivory",
+          "contain": true
+        },
+        {
+          "src": "images/products/mockups/wpc-door-pattern-6.webp",
+          "alt": "WPC door, pattern 6",
+          "caption": "Pattern 6",
+          "contain": true
+        },
+        {
+          "src": "images/designs/digital/sgd-123.webp",
+          "alt": "WPC digital print door design SGD-123",
+          "caption": "Digital print SGD-123",
+          "contain": true
+        }
+      ],
+      "overview": {
+        "title": [
+          "About WPC",
+          "Doors"
+        ],
+        "paragraphs": [
+          "A wooden or flush door in a bathroom swells at the bottom, then stops closing. A WPC door does not absorb water, so it keeps its size and shape in bathrooms, kitchens and washed-down corridors, and termites and borers do not attack it.",
+          "Greenplastwood makes two constructions. Solid doors are a single WPC core, 17 to 35 mm thick. 3 layer doors add a rigid PVC skin on both faces for buildings where doors take heavy daily use. Both come in five standard sizes, and thickness, width, length and density can be customised on bulk orders."
+        ],
+        "image": {
+          "src": "images/products/wpc-bathroom-door-frame-guide.webp",
+          "alt": "WPC door and frame at a bathroom entrance",
+          "caption": "A WPC door and chaukhat at a bathroom entrance."
+        },
+        "problem_vs_solution": {
+          "problem_title": "Wooden or flush door",
+          "problems": [
+            "Swells at the bottom in a bathroom",
+            "Stops closing",
+            "Termites and borers attack it"
+          ],
+          "solution_title": "Greenplastwood WPC door",
+          "solutions": [
+            "Does not absorb water",
+            "Keeps its size and shape",
+            "Termite and borer proof"
+          ]
+        }
+      },
+      "advantages": [
+        "100% water proof, safe for bathrooms",
+        "Termite and borer proof",
+        "Fire retardant",
+        "No shrinking, no swelling",
+        "Takes laminate, texture, paint and digital print",
+        "High screw holding",
+        "Zero maintenance",
+        "Eco friendly and 100% recyclable"
+      ],
+      "advantage_groups": null,
+      "types": {
+        "title": [
+          "Door",
+          "Types"
+        ],
+        "lead": "Two constructions and two design collections.",
+        "items": [
+          {
+            "id": "type-solid",
+            "name": "WPC Solid Doors",
+            "text": "A single solid WPC core, 17 to 35 mm thick. This is the standard Greenplastwood door for bathrooms, bedrooms, children's rooms and interior openings.",
+            "image": {
+              "src": "images/products/wpc-solid-doors-range.webp",
+              "alt": "Five Greenplastwood WPC solid doors in different finishes"
+            },
+            "specs": [
+              {
+                "label": "Thickness",
+                "value": "17, 18, 24, 25, 28, 30, 32, 35 mm",
+                "note": ""
+              },
+              {
+                "label": "Density",
+                "value": "550 kg/m³",
+                "note": "Up to 750 kg/m³ on order."
+              },
+              {
+                "label": "Standard sizes",
+                "value": "27 × 78 · 30 × 81 · 33 × 84 · 36 × 81 · 38 × 84 in",
+                "note": ""
+              },
+              {
+                "label": "Colours",
+                "value": "Ivory is the regular colour",
+                "note": "White, Grey, Brown, Sephia and Teakwood on a minimum order of 300 doors."
+              },
+              {
+                "label": "Finishes",
+                "value": "Plain with carving · Colour · Laminate · Texture · Digital print",
+                "note": ""
+              }
+            ],
+            "cta": "Get a quote for solid doors",
+            "quote_url": "contact.html?product=WPC+Solid+Doors#contactInquiryForm"
+          },
+          {
+            "id": "type-3layer",
+            "name": "WPC 3 Layer Doors",
+            "text": "A WPC core between two rigid PVC outer layers of 0.8 to 1 mm. The skins make the face harder and smoother, so the door stands up to daily knocks in hotels, schools, offices and hospitals.",
+            "image": {
+              "src": "images/products/mockups/wpc-door-plain-ivory.webp",
+              "alt": "WPC 3 layer door in Ivory"
+            },
+            "specs": [
+              {
+                "label": "Thickness",
+                "value": "24, 25, 28, 30, 32, 35 mm",
+                "note": ""
+              },
+              {
+                "label": "Core density",
+                "value": "600 kg/m³",
+                "note": "Up to 750 kg/m³ on order."
+              },
+              {
+                "label": "Outer layers",
+                "value": "0.8 to 1 mm rigid PVC, density 1400 kg/m³",
+                "note": ""
+              },
+              {
+                "label": "Standard sizes",
+                "value": "27 × 78 · 30 × 81 · 33 × 84 · 36 × 81 · 38 × 84 in",
+                "note": ""
+              },
+              {
+                "label": "Colours",
+                "value": "Ivory is the regular colour",
+                "note": "White, Yellow and Brown on a minimum order of 300 doors."
+              }
+            ],
+            "cta": "Get a quote for 3 layer doors",
+            "quote_url": "contact.html?product=WPC+3+Layer+Doors#contactInquiryForm"
+          },
+          {
+            "id": "type-texture",
+            "name": "Texture Doors",
+            "text": "Six wood-texture designs from our Texture Doors catalogue, SG-001 to SG-006.",
+            "codes": [
+              "SG-001",
+              "SG-002",
+              "SG-003",
+              "SG-004",
+              "SG-005",
+              "SG-006"
+            ],
+            "cta": "Get a quote for texture doors",
+            "catalogue": "docs/Green-Plastwood-WPC-Texture-Doors.pdf"
+          },
+          {
+            "id": "type-digital",
+            "name": "Digital Print Doors",
+            "text": "Printed designs, SGD-009 to SGD-152: wood grains, geometric patterns, marble and floral work.",
+            "featured_codes": [
+              "SGD-010",
+              "SGD-024",
+              "SGD-030",
+              "SGD-033",
+              "SGD-069",
+              "SGD-104",
+              "SGD-112",
+              "SGD-123",
+              "SGD-138",
+              "SGD-142"
+            ],
+            "cta": "Get a quote for digital doors",
+            "catalogue": "docs/Green-Plastwood-WPC-Digital-Doors.pdf"
+          }
+        ],
+        "models": null
+      },
+      "type_comparison": {
+        "title": "Solid Or 3 Layer?",
+        "columns": [
+          "",
+          "Solid door",
+          "3 layer door"
+        ],
+        "rows": [
+          [
+            "Construction",
+            "Single WPC core",
+            "WPC core with a rigid PVC layer on both faces"
+          ],
+          [
+            "Thickness",
+            "17, 18, 24, 25, 28, 30, 32, 35 mm",
+            "24, 25, 28, 30, 32, 35 mm"
+          ],
+          [
+            "Density",
+            "550 kg/m³, up to 750 on order",
+            "Core 600 kg/m³, up to 750 on order"
+          ],
+          [
+            "Outer layers",
+            "–",
+            "0.8 to 1 mm rigid PVC, 1400 kg/m³"
+          ],
+          [
+            "Standard sizes",
+            "27 × 78, 30 × 81, 33 × 84, 36 × 81, 38 × 84 in",
+            "27 × 78, 30 × 81, 33 × 84, 36 × 81, 38 × 84 in"
+          ],
+          [
+            "Colours",
+            "Ivory regular; White, Grey, Brown, Sephia, Teakwood",
+            "Ivory regular; White, Yellow, Brown"
+          ],
+          [
+            "Minimum order",
+            "Other colours: 300 doors",
+            "Other colours: 300 doors"
+          ],
+          [
+            "Used for",
+            "Bathroom, children's room, main and interior doors, office partitions",
+            "Hotel room, school, classroom, office, bathroom, main and interior doors"
+          ]
+        ]
+      },
+      "sizes": {
+        "title": [
+          "Sizes And",
+          "Specifications"
+        ],
+        "lead": "Five standard door sizes, as listed in our product catalogue.",
+        "columns": [
+          "Size (inches)",
+          "Feet and inches",
+          "Millimetres (approx.)"
+        ],
+        "rows": [
+          {
+            "inches": "27 × 78",
+            "feet": "2' 3\" × 6' 6\"",
+            "mm": "686 × 1981"
+          },
+          {
+            "inches": "30 × 81",
+            "feet": "2' 6\" × 6' 9\"",
+            "mm": "762 × 2057"
+          },
+          {
+            "inches": "33 × 84",
+            "feet": "2' 9\" × 7' 0\"",
+            "mm": "838 × 2134"
+          },
+          {
+            "inches": "36 × 81",
+            "feet": "3' 0\" × 6' 9\"",
+            "mm": "914 × 2057"
+          },
+          {
+            "inches": "38 × 84",
+            "feet": "3' 2\" × 7' 0\"",
+            "mm": "965 × 2134"
+          }
+        ],
+        "note": "Width × height, the same for solid and 3 layer doors. Millimetre figures are converted from the catalogue sizes in inches.",
+        "thickness_mm": [
+          17,
+          18,
+          24,
+          25,
+          28,
+          30,
+          32,
+          35
+        ],
+        "thickness_note": "Solid doors are made in all eight. 3 layer doors start at 24 mm.",
+        "customisation": "On bulk orders the thickness, width, length and density are made to your requirement. Send us the door schedule or drawing and we will confirm what can be made.",
+        "how_to_choose": null,
+        "size_chart": null,
+        "profile_drawings": null
+      },
+      "finishes": {
+        "title": "Finishes And Colours",
+        "lead": "One WPC door, five finishes.",
+        "items": [
+          {
+            "name": "Plain With Carving",
+            "image": "images/products/wpc-door-plain-carving.webp"
+          },
+          {
+            "name": "Colour Doors",
+            "image": "images/products/wpc-solid-door-colour.webp"
+          },
+          {
+            "name": "Laminate Doors",
+            "image": "images/products/wpc-door-laminate.webp"
+          },
+          {
+            "name": "Texture Doors",
+            "image": "images/products/wpc-door-texture.webp"
+          },
+          {
+            "name": "Digital Doors",
+            "image": "images/products/wpc-door-digital.webp"
+          }
+        ],
+        "note": "From our catalogue: Greenplastwood manufactures the plain door; laminate and texture finishing are in the customer's scope.",
+        "plain_colour_doors": [
+          {
+            "name": "Plain Ivory",
+            "image": "images/products/mockups/wpc-door-plain-ivory.webp"
+          },
+          {
+            "name": "Plain White",
+            "image": "images/products/mockups/wpc-door-plain-white.webp"
+          },
+          {
+            "name": "Plain Grey",
+            "image": "images/products/mockups/wpc-door-plain-dark-grey.webp"
+          },
+          {
+            "name": "Plain Brown",
+            "image": "images/products/mockups/wpc-door-plain-brown.webp"
+          },
+          {
+            "name": "Plain Yellow (3 layer)",
+            "image": "images/products/mockups/wpc-door-plain-yellow.webp"
+          }
+        ],
+        "patterns": [
+          {
+            "name": "Pattern 1",
+            "image": "images/products/mockups/wpc-door-pattern-1.webp"
+          },
+          {
+            "name": "Pattern 2",
+            "image": "images/products/mockups/wpc-door-pattern-2.webp"
+          },
+          {
+            "name": "Pattern 3",
+            "image": "images/products/mockups/wpc-door-pattern-3.webp"
+          },
+          {
+            "name": "Pattern 4A",
+            "image": "images/products/mockups/wpc-door-pattern-4a.webp"
+          },
+          {
+            "name": "Pattern 4B",
+            "image": "images/products/mockups/wpc-door-pattern-4b.webp"
+          },
+          {
+            "name": "Pattern 5",
+            "image": "images/products/mockups/wpc-door-pattern-5.webp"
+          },
+          {
+            "name": "Pattern 6",
+            "image": "images/products/mockups/wpc-door-pattern-6.webp"
+          },
+          {
+            "name": "Pattern 7",
+            "image": "images/products/mockups/wpc-door-pattern-7.webp"
+          }
+        ],
+        "patterns_lead": "Laminate and grooved pattern finishes. Tap a door to enlarge it and enquire with its pattern number."
+      },
+      "colours": {
+        "title": [
+          "Door",
+          "Colours"
+        ],
+        "lead": null,
+        "groups": [
+          {
+            "name": "Solid Door Colours",
+            "items": [
+              {
+                "name": "White"
+              },
+              {
+                "name": "Ivory"
+              },
+              {
+                "name": "Grey"
+              },
+              {
+                "name": "Sephia"
+              },
+              {
+                "name": "Brown"
+              },
+              {
+                "name": "Teakwood"
+              }
+            ],
+            "note": "Ivory is the regular colour. Other colours on a minimum order of 300 doors."
+          },
+          {
+            "name": "3 Layer Door Colours",
+            "items": [
+              {
+                "name": "White"
+              },
+              {
+                "name": "Ivory"
+              },
+              {
+                "name": "Yellow"
+              },
+              {
+                "name": "Brown"
+              }
+            ],
+            "note": "Ivory is the regular colour. Other colours on a minimum order of 300 doors. Screen colours vary, so ask for a physical sample."
+          }
+        ],
+        "note": null,
+        "finish": null,
+        "hex_note": "No hex codes are given in the catalogue for door colours. Use the real door photos, or neutral swatches named in text."
+      },
+      "designs": {
+        "title": [
+          "Door Design",
+          "Library"
+        ],
+        "lead": "All texture and digital print designs. Filter by type, search by design code and tap a door to enquire.",
+        "groups": [
+          {
+            "name": "Texture Doors",
+            "count": 6,
+            "codes": [
+              "SG-001",
+              "SG-002",
+              "SG-003",
+              "SG-004",
+              "SG-005",
+              "SG-006"
+            ],
+            "image_pattern": "images/designs/texture/{code_lower}-sm.webp",
+            "large_pattern": "images/designs/texture/{code_lower}.webp"
+          },
+          {
+            "name": "Digital Print Doors",
+            "count": 106,
+            "codes": [
+              "SGD-009",
+              "SGD-010",
+              "SGD-011",
+              "SGD-012",
+              "SGD-013",
+              "SGD-014",
+              "SGD-015",
+              "SGD-016",
+              "SGD-017",
+              "SGD-018",
+              "SGD-019",
+              "SGD-020",
+              "SGD-021",
+              "SGD-022",
+              "SGD-023",
+              "SGD-024",
+              "SGD-025",
+              "SGD-026",
+              "SGD-027",
+              "SGD-028",
+              "SGD-029",
+              "SGD-030",
+              "SGD-031",
+              "SGD-032",
+              "SGD-033",
+              "SGD-034",
+              "SGD-035",
+              "SGD-036",
+              "SGD-037",
+              "SGD-038",
+              "SGD-039",
+              "SGD-040",
+              "SGD-041",
+              "SGD-042",
+              "SGD-043",
+              "SGD-044",
+              "SGD-047",
+              "SGD-048",
+              "SGD-049",
+              "SGD-050",
+              "SGD-051",
+              "SGD-052",
+              "SGD-053",
+              "SGD-054",
+              "SGD-058",
+              "SGD-059",
+              "SGD-062",
+              "SGD-063",
+              "SGD-064",
+              "SGD-068",
+              "SGD-069",
+              "SGD-070",
+              "SGD-072",
+              "SGD-073",
+              "SGD-101",
+              "SGD-102",
+              "SGD-103",
+              "SGD-104",
+              "SGD-105",
+              "SGD-106",
+              "SGD-107",
+              "SGD-108",
+              "SGD-109",
+              "SGD-110",
+              "SGD-111",
+              "SGD-112",
+              "SGD-113",
+              "SGD-114",
+              "SGD-115",
+              "SGD-116",
+              "SGD-117",
+              "SGD-118",
+              "SGD-119",
+              "SGD-120",
+              "SGD-121",
+              "SGD-122",
+              "SGD-123",
+              "SGD-124",
+              "SGD-125",
+              "SGD-126",
+              "SGD-127",
+              "SGD-128",
+              "SGD-129",
+              "SGD-130",
+              "SGD-131",
+              "SGD-132",
+              "SGD-133",
+              "SGD-134",
+              "SGD-135",
+              "SGD-136",
+              "SGD-137",
+              "SGD-138",
+              "SGD-139",
+              "SGD-140",
+              "SGD-141",
+              "SGD-142",
+              "SGD-143",
+              "SGD-144",
+              "SGD-145",
+              "SGD-146",
+              "SGD-147",
+              "SGD-148",
+              "SGD-149",
+              "SGD-150",
+              "SGD-151",
+              "SGD-152"
+            ],
+            "image_pattern": "images/designs/digital/{code_lower}.webp"
+          }
+        ],
+        "catalogues": [
+          "docs/Green-Plastwood-WPC-Digital-Doors.pdf",
+          "docs/Green-Plastwood-WPC-Texture-Doors.pdf"
+        ],
+        "rule": "Do NOT print a total design count on the page (client removed '106' and '112'). Show codes only."
+      },
+      "photos": null,
+      "compare": {
+        "ref": "common.compare_wpc_vs_plywood",
+        "lead": "From our product catalogue. A plywood or flush door needs edge sealing and care around water. WPC needs neither, and it is still cut, screwed, glued and laminated with normal carpentry tools."
+      },
+      "applications": {
+        "title": [
+          "Where WPC Doors",
+          "Are Used"
+        ],
+        "lead": null,
+        "cards": [
+          {
+            "image": "images/products/3-layer-door-bathroom.webp",
+            "alt": "WPC bathroom door",
+            "title": "Bathroom",
+            "text": "The door that gets wet every day. WPC does not swell at the bottom."
+          },
+          {
+            "image": "images/products/3-layer-door-home.webp",
+            "alt": "WPC door in a home",
+            "title": "Home",
+            "text": "Bedroom, children's room, main and interior doors."
+          },
+          {
+            "image": "images/products/3-layer-door-office.webp",
+            "alt": "WPC door in an office",
+            "title": "Office",
+            "text": "Cabin and washroom doors, partitions and cubicles."
+          },
+          {
+            "image": "images/products/3-layer-door-school.webp",
+            "alt": "WPC doors in a school",
+            "title": "School",
+            "text": "Classroom doors that take heavy daily use. 3 layer doors are common here."
+          },
+          {
+            "image": "images/products/3-layer-door-clinic.webp",
+            "alt": "WPC door in a clinic",
+            "title": "Clinic And Hospital",
+            "text": "Doors that are cleaned often and stay smooth."
+          }
+        ],
+        "also_title": "From our catalogue",
+        "also": [
+          "Bathroom doors",
+          "Children's room doors",
+          "Main doors",
+          "Interior doors",
+          "Office doors",
+          "Office partitions",
+          "Hotel room doors",
+          "School doors",
+          "Classroom doors",
+          "Cubicles and partitions",
+          "Decorative thru grills"
+        ]
+      },
+      "installation": null,
+      "lab": {
+        "ref": "common.lab_tests.door_board",
+        "lead": "A Greenplastwood WPC door and board sample was tested by Alekh Plastics Testing Centre, Ahmedabad. Reports dated 24 November 2022."
+      },
+      "properties": null,
+      "ordering": {
+        "tell_us": [
+          "Door type: solid or 3 layer",
+          "Size: one of the 5 standard sizes, or your size on bulk orders",
+          "Thickness: 17 to 35 mm",
+          "Colour: Ivory is regular",
+          "Finish or design code, e.g. SG-003 or SGD-104",
+          "Quantity and delivery city"
+        ],
+        "min_order": [
+          {
+            "label": "Ivory doors",
+            "value": "Regular colour"
+          },
+          {
+            "label": "Other colours",
+            "value": "Minimum 300 doors"
+          },
+          {
+            "label": "Custom thickness, width, length or density",
+            "value": "On bulk orders"
+          },
+          {
+            "label": "Laminate and texture finishing",
+            "value": "In the customer's scope, as per our catalogue"
+          }
+        ]
+      },
+      "downloads": {
+        "lead": "Door specifications are in the company profile. The two design catalogues show every texture and digital print door.",
+        "files": [
+          {
+            "ref": "common.company_profile_pdf"
+          },
+          {
+            "title": "Digital Print Doors",
+            "file": "docs/Green-Plastwood-WPC-Digital-Doors.pdf",
+            "cover": "images/docs/digital-doors-cover.webp",
+            "desc": "Door designs SGD-009 to SGD-152. 17 pages."
+          },
+          {
+            "title": "Texture Doors",
+            "file": "docs/Green-Plastwood-WPC-Texture-Doors.pdf",
+            "cover": "images/docs/texture-doors-cover.webp",
+            "desc": "6 texture door designs, 2025 collection. 8 pages."
+          }
+        ],
+        "guides": [
+          {
+            "href": "guide-wpc-vs-plywood-door-frames.html",
+            "title": "WPC vs wood vs plywood",
+            "desc": "A side-by-side comparison for wet areas."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "What sizes and thickness do WPC doors come in?",
+          "a": "Standard sizes are 27 × 78, 30 × 81, 33 × 84, 36 × 81 and 38 × 84 inches. Solid doors are made in 17, 18, 24, 25, 28, 30, 32 and 35 mm thickness, and 3 layer doors in 24, 25, 28, 30, 32 and 35 mm. Thickness, width, length and density can be customised on bulk orders."
+        },
+        {
+          "q": "Are WPC doors good for bathrooms?",
+          "a": "Yes. WPC doors are 100% water proof and do not swell, rot or get termites, which is why they are the usual choice for bathroom and kitchen doors."
+        },
+        {
+          "q": "What is the difference between a solid door and a 3 layer door?",
+          "a": "A solid door is a single WPC core at 550 kg/m³, 17 to 35 mm thick. A 3 layer door has a 600 kg/m³ WPC core between two rigid PVC outer layers of 0.8 to 1 mm, 24 to 35 mm thick, for a harder and smoother surface."
+        },
+        {
+          "q": "Where are 3 layer doors used?",
+          "a": "Hotel room doors, school and classroom doors, office doors, interior and main doors, bathroom doors and children's room doors: anywhere a door gets heavy daily use."
+        },
+        {
+          "q": "What is the density of a WPC door?",
+          "a": "Solid doors are 550 kg/m³ and 3 layer doors have a 600 kg/m³ core; both can be made up to 750 kg/m³ on order. A lab-tested door and board sample showed 0.66 g/cc density, 0.2% water absorption, a UL-94 V-0 rating and 65 MPa compressive strength."
+        },
+        {
+          "q": "Which designs are available?",
+          "a": "Plain colour doors, six texture designs (SG-001 to SG-006) and digital print designs (SGD-009 to SGD-152). Share the design code when you enquire."
+        },
+        {
+          "q": "What is the minimum order for coloured doors?",
+          "a": "Ivory is the regular colour. Other colours are made on a minimum order of 300 doors."
+        },
+        {
+          "q": "Can a WPC door be cut and fitted by a carpenter?",
+          "a": "Yes. WPC is sawn, cut and screwed with traditional carpentry tools, and it holds screws well. A lab-tested door and board sample showed a screw withdrawal force of 1565 N."
+        },
+        {
+          "q": "Can door sizes be customised?",
+          "a": "Yes. Thickness, width, length and density can be customised on bulk orders."
+        }
+      ],
+      "pallet_comparison": null,
+      "related": [
+        "door-frames",
+        "window-frames",
+        "boards",
+        "pvc-panel"
+      ]
+    },
+    {
+      "id": "boards",
+      "order": 4,
+      "page": "product-wpc-boards-sheets.html",
+      "name": "WPC Sheets & Boards",
+      "name_long": "WPC Sheets & Boards",
+      "h1": [
+        "WPC Sheets",
+        "& Boards"
+      ],
+      "eyebrow": "WPC / PVC boards and 3 layer boards",
+      "tagline": "A water proof replacement for plywood in kitchens, wardrobes and interiors.",
+      "description": "Greenplastwood WPC / PVC boards and sheets are a 100% water proof, termite proof alternative to plywood and MDF for modular kitchens, bathroom cabinets, wardrobes, office furniture and partitions.",
+      "card": {
+        "tag": "WPC / PVC boards and 3 layer boards",
+        "summary": "A water proof alternative to plywood for kitchens, wardrobes, bathroom cabinets, office furniture and partitions.",
+        "chips": [
+          "5–18 mm",
+          "8 × 4 ft",
+          "3 layer boards"
+        ],
+        "image": "images/products/cards/boards.webp"
+      },
+      "quote_product": "WPC / PVC Boards & Sheets",
+      "quote_url": "contact.html?product=WPC+%2F+PVC+Boards+%26+Sheets#contactInquiryForm",
+      "sample_url": "contact.html?product=WPC+%2F+PVC+Boards+%26+Sheets+Sample#contactInquiryForm",
+      "key_facts": [
+        {
+          "label": "Types",
+          "value": "WPC / PVC boards and 3 layer boards"
+        },
+        {
+          "label": "Thickness",
+          "value": "5 to 18 mm"
+        },
+        {
+          "label": "Standard size",
+          "value": "8 ft × 4 ft"
+        },
+        {
+          "label": "Density",
+          "value": "450 to 600 kg/m³, up to 750 on order"
+        },
+        {
+          "label": "Colours",
+          "value": "White, Ivory, Grey, Sephia, Brown, Teakwood and more on order"
+        },
+        {
+          "label": "Minimum order",
+          "value": "100 sheets per colour and thickness"
+        }
+      ],
+      "hero_stats": [
+        {
+          "value": "5–18",
+          "label": "mm boards",
+          "note": "3 layer boards 6–18 mm"
+        },
+        {
+          "value": "8 × 4",
+          "label": "ft sheet",
+          "note": "about 2440 × 1220 mm"
+        },
+        {
+          "value": "0.2%",
+          "label": "water absorption",
+          "note": "lab tested"
+        },
+        {
+          "value": "Free",
+          "label": "of formaldehyde & lead",
+          "note": "both boards"
+        }
+      ],
+      "footnote": null,
+      "trust_lines": [
+        "ISO 9001:2015 certified",
+        "Lab tested: 0.2% water absorption, UL-94 V-0",
+        "9 years of WPC manufacturing in our own plants in Gujarat"
+      ],
+      "quick_picks": [
+        {
+          "label": "WPC / PVC boards",
+          "target": "type-boards"
+        },
+        {
+          "label": "3 layer boards",
+          "target": "type-3layer"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "images/products/cards/boards.webp",
+          "alt": "Modular kitchen with an island made with WPC boards",
+          "caption": "Modular kitchen"
+        },
+        {
+          "src": "images/products/wpc-board-interior.webp",
+          "alt": "Interior made with WPC boards",
+          "caption": "Interior"
+        },
+        {
+          "src": "images/products/mockups/wpc-board-colour-samples.webp",
+          "alt": "WPC board samples in five colours",
+          "caption": "Board colour samples",
+          "contain": true
+        },
+        {
+          "src": "images/products/mockups/wpc-board-samples-white-ivory-brown.webp",
+          "alt": "Brown, Ivory and White WPC board samples",
+          "caption": "White, Ivory and Brown boards",
+          "contain": true
+        },
+        {
+          "src": "images/products/mockups/wpc-3-layer-board-wood-finish-1.webp",
+          "alt": "WPC 3 layer boards with wood-grain laminate",
+          "caption": "3 layer board, oak-grain laminate",
+          "contain": true
+        },
+        {
+          "src": "images/products/3-layer-board-interior.webp",
+          "alt": "Interior made with WPC 3 layer boards",
+          "caption": "3 layer board interior"
+        }
+      ],
+      "overview": {
+        "title": [
+          "About WPC",
+          "Sheets & Boards"
+        ],
+        "paragraphs": [
+          "Plywood in a kitchen or bathroom takes in water at the edges, the layers open up and termites follow. A WPC board does not absorb water and has nothing for termites to eat, so cabinets under a sink or next to a shower stay as they were built.",
+          "The boards are worked like plywood. They are sawn, routed, screwed, glued and laminated with normal carpentry tools. Greenplastwood makes single-layer WPC / PVC boards from 5 mm and 3 layer boards from 6 mm, both in the standard 8 ft × 4 ft sheet, and both free of formaldehyde and lead."
+        ],
+        "image": {
+          "src": "images/products/wpc-board-modular-kitchen.webp",
+          "alt": "Modular kitchen made with WPC boards",
+          "caption": "A modular kitchen in WPC boards."
+        },
+        "problem_vs_solution": {
+          "problem_title": "Plywood",
+          "problems": [
+            "Takes in water at the edges",
+            "Layers open up",
+            "Termites follow"
+          ],
+          "solution_title": "Greenplastwood WPC board",
+          "solutions": [
+            "Does not absorb water",
+            "Nothing for termites to eat",
+            "Cabinets stay as they were built"
+          ]
+        }
+      },
+      "advantages": [
+        "100% water proof, no swelling like plywood",
+        "Termite and borer proof",
+        "Fire retardant",
+        "Smooth surface for lamination",
+        "Works with traditional carpentry tools",
+        "High screw holding",
+        "Formaldehyde and lead free",
+        "Eco friendly and recyclable"
+      ],
+      "advantage_groups": null,
+      "types": {
+        "title": [
+          "Board",
+          "Types"
+        ],
+        "lead": "Two constructions, both in 8 ft × 4 ft sheets.",
+        "items": [
+          {
+            "id": "type-boards",
+            "name": "WPC / PVC Boards & Sheets",
+            "text": "Single-layer boards from 5 mm, for kitchen and bathroom cabinets, wardrobes, office furniture and partitions. They are cut, routed, screwed, glued and laminated like plywood.",
+            "image": {
+              "src": "images/products/mockups/wpc-board-colour-samples.webp",
+              "alt": "WPC board samples in five colours"
+            },
+            "specs": [
+              {
+                "label": "Thickness",
+                "value": "5, 6, 8, 10, 12, 15, 17, 18 mm",
+                "note": ""
+              },
+              {
+                "label": "Standard size",
+                "value": "8 ft × 4 ft",
+                "note": "Other sizes on big orders."
+              },
+              {
+                "label": "Density",
+                "value": "450 to 600 kg/m³",
+                "note": "Up to 750 kg/m³ on order."
+              },
+              {
+                "label": "Colours",
+                "value": "White, Red, Ivory, Orange, Coco Brown, Dark Grey, Yellow, Blue, Green",
+                "note": ""
+              },
+              {
+                "label": "Minimum order",
+                "value": "100 sheets per colour and thickness",
+                "note": ""
+              }
+            ],
+            "cta": "Get a quote for boards"
+          },
+          {
+            "id": "type-3layer",
+            "name": "WPC 3 Layer Boards",
+            "text": "Built in three layers for a harder, smoother face than a single-layer board, while staying water proof and termite proof. Used for premium furniture, modular kitchens and hospital interiors.",
+            "image": {
+              "src": "images/products/mockups/wpc-3-layer-board-wood-finish-1.webp",
+              "alt": "WPC 3 layer boards with wood-grain laminate"
+            },
+            "specs": [
+              {
+                "label": "Thickness",
+                "value": "6, 8, 10, 12, 15, 17, 18 mm",
+                "note": ""
+              },
+              {
+                "label": "Standard size",
+                "value": "8 ft × 4 ft",
+                "note": "Other sizes on big orders."
+              },
+              {
+                "label": "Density",
+                "value": "550 to 600 kg/m³",
+                "note": "Up to 750 kg/m³ on order."
+              },
+              {
+                "label": "Colours",
+                "value": "White (standard), Ivory, Brown, WPC",
+                "note": ""
+              },
+              {
+                "label": "Bulk order",
+                "value": "9 tons or more",
+                "note": ""
+              }
+            ],
+            "cta": "Get a quote for 3 layer boards",
+            "quote_url": "contact.html?product=WPC+3+Layer+Boards#contactInquiryForm"
+          }
+        ],
+        "models": null
+      },
+      "type_comparison": {
+        "title": "Board Or 3 Layer Board?",
+        "columns": [
+          "",
+          "WPC / PVC board",
+          "3 layer board"
+        ],
+        "rows": [
+          [
+            "Construction",
+            "Single layer",
+            "Three layers, for a harder and smoother face"
+          ],
+          [
+            "Thickness",
+            "5 to 18 mm",
+            "6 to 18 mm"
+          ],
+          [
+            "Density",
+            "450 to 600 kg/m³, up to 750 on order",
+            "550 to 600 kg/m³, up to 750 on order"
+          ],
+          [
+            "Standard size",
+            "8 ft × 4 ft",
+            "8 ft × 4 ft"
+          ],
+          [
+            "Colours",
+            "White, Red, Ivory, Orange, Coco Brown, Dark Grey, Yellow, Blue, Green",
+            "White (standard), Ivory, Brown, WPC"
+          ],
+          [
+            "Minimum order",
+            "100 sheets per colour and thickness",
+            "Bulk orders from 9 tons"
+          ],
+          [
+            "Used for",
+            "Kitchen and bathroom cabinets, wardrobes, office furniture, partitions",
+            "Premium furniture, modular kitchens, office and hospital interiors"
+          ]
+        ]
+      },
+      "sizes": {
+        "title": [
+          "Thickness And",
+          "Sheet Size"
+        ],
+        "lead": null,
+        "columns": null,
+        "rows": null,
+        "thickness_mm": [
+          5,
+          6,
+          8,
+          10,
+          12,
+          15,
+          17,
+          18
+        ],
+        "thickness_note": "WPC / PVC boards are made in all of these. 3 layer boards start at 6 mm.",
+        "sheet_size": "8 ft × 4 ft is standard, about 2440 × 1220 mm. Other sizes can be made on big orders.",
+        "customisation": "On bulk orders the thickness, length and density are made to your requirement, up to 750 kg/m³.",
+        "how_to_choose": null,
+        "size_chart": null,
+        "profile_drawings": null,
+        "CLIENT_RULE": "Client PDF: boards 5–18 mm, 3 layer boards 6–18 mm. The current page still lists 18 to 25, 28, 30, 32 and 35 mm (and the FAQ says up to 35 mm). Do NOT carry those over."
+      },
+      "colours": {
+        "title": [
+          "Colours And",
+          "Finish"
+        ],
+        "lead": "The colour swatches printed in our catalogue, and the colours made on order.",
+        "groups": [
+          {
+            "name": "WPC / PVC Boards",
+            "items": [
+              {
+                "name": "White"
+              },
+              {
+                "name": "Ivory"
+              },
+              {
+                "name": "Grey"
+              },
+              {
+                "name": "Sephia"
+              },
+              {
+                "name": "Brown"
+              },
+              {
+                "name": "Teakwood"
+              }
+            ],
+            "note": "Also made on order in White, Red, Ivory, Orange, Coco Brown, Dark Grey, Yellow, Blue and Green. Minimum 100 sheets per colour and thickness."
+          },
+          {
+            "name": "3 Layer Boards",
+            "items": [
+              {
+                "name": "White",
+                "tag": "Standard"
+              },
+              {
+                "name": "Ivory"
+              },
+              {
+                "name": "Brown"
+              },
+              {
+                "name": "WPC"
+              }
+            ],
+            "note": "White is standard. Bulk orders from 9 tons. Screen colours vary, so ask for a physical sample."
+          }
+        ],
+        "note": null,
+        "finish": "Smooth surface; lamination as per your design",
+        "samples": [
+          {
+            "src": "images/products/mockups/wpc-board-colour-samples.webp",
+            "title": "Board colour samples"
+          },
+          {
+            "src": "images/products/mockups/wpc-board-samples-white-ivory-brown.webp",
+            "title": "White, Ivory and Brown boards"
+          },
+          {
+            "src": "images/products/mockups/wpc-3-layer-board-wood-finish-1.webp",
+            "title": "3 layer board",
+            "sub": "Oak-grain laminate"
+          },
+          {
+            "src": "images/products/mockups/wpc-3-layer-board-wood-finish-2.webp",
+            "title": "3 layer board",
+            "sub": "Dark wood laminate"
+          },
+          {
+            "src": "images/products/mockups/wpc-3-layer-board-wood-finish-3.webp",
+            "title": "3 layer board",
+            "sub": "Walnut and teak laminate"
+          }
+        ],
+        "samples_note": "The 3 layer boards are shown with wood-grain laminate applied, as used in furniture. Lamination is done as per your design."
+      },
+      "designs": null,
+      "photos": null,
+      "compare": {
+        "ref": "common.compare_wpc_vs_plywood",
+        "lead": "From our product catalogue. Plywood needs edge sealing, termite treatment and care around water. A WPC board needs none of it, and it still cuts, screws, glues and laminates with normal carpentry tools."
+      },
+      "applications": {
+        "title": [
+          "Where WPC Boards",
+          "Are Used"
+        ],
+        "lead": null,
+        "cards": [
+          {
+            "image": "images/products/wpc-board-modular-kitchen.webp",
+            "alt": "Modular kitchen in WPC boards",
+            "title": "Modular Kitchen",
+            "text": "Carcasses and shutters under sinks and next to hobs, where plywood swells."
+          },
+          {
+            "image": "images/products/wpc-board-wardrobe.webp",
+            "alt": "Wardrobe in WPC boards",
+            "title": "Wardrobe",
+            "text": "Wardrobes and children's room furniture with no termite treatment."
+          },
+          {
+            "image": "images/products/wpc-board-office-furniture.webp",
+            "alt": "Office workstations in WPC boards",
+            "title": "Office Furniture",
+            "text": "Workstations, cubicles and partitions."
+          },
+          {
+            "image": "images/products/wpc-board-reception.webp",
+            "alt": "Reception counter in WPC boards",
+            "title": "Reception Area",
+            "text": "Counters and decorative panels in modern interiors."
+          },
+          {
+            "image": "images/products/wpc-board-hospital.webp",
+            "alt": "Hospital cabinets in WPC boards",
+            "title": "Hospital",
+            "text": "Cabinets and storage that are wiped down every day."
+          }
+        ],
+        "also_title": "From our catalogue",
+        "also": [
+          "Kitchen cabinets",
+          "Bathroom cabinets",
+          "Bathroom doors",
+          "Children's room furniture",
+          "Office furniture",
+          "Decorative thru grilling and wave boards",
+          "Modern interior architecture designs",
+          "Cubicles and partitions"
+        ]
+      },
+      "installation": null,
+      "lab": {
+        "ref": "common.lab_tests.door_board",
+        "lead": "A Greenplastwood WPC door and board sample was tested by Alekh Plastics Testing Centre, Ahmedabad. Reports dated 24 November 2022."
+      },
+      "properties": null,
+      "ordering": {
+        "tell_us": [
+          "Board type: WPC / PVC board or 3 layer board",
+          "Thickness: 5 to 18 mm",
+          "Size: 8 ft × 4 ft, or your size on big orders",
+          "Colour",
+          "Density, if you need more than standard",
+          "Quantity and delivery city"
+        ],
+        "min_order": [
+          {
+            "label": "WPC / PVC boards",
+            "value": "Minimum 100 sheets per colour and thickness"
+          },
+          {
+            "label": "3 layer boards",
+            "value": "Bulk orders from 9 tons"
+          },
+          {
+            "label": "Custom thickness, length or density",
+            "value": "On bulk orders"
+          },
+          {
+            "label": "Custom sheet size",
+            "value": "On big orders"
+          }
+        ]
+      },
+      "downloads": {
+        "lead": "Board and 3 layer board specifications are in the company profile.",
+        "files": [
+          {
+            "ref": "common.company_profile_pdf"
+          }
+        ],
+        "guides": [
+          {
+            "href": "guide-wpc-vs-plywood-door-frames.html",
+            "title": "WPC vs wood vs plywood",
+            "desc": "A side-by-side comparison for wet areas."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Is a WPC board better than plywood for kitchens?",
+          "a": "For wet areas, yes. WPC boards are 100% water proof, termite and borer proof and do not swell or shrink, while plywood absorbs moisture and needs treatment. WPC is still cut, screwed, glued and laminated like plywood."
+        },
+        {
+          "q": "What thickness and size do WPC boards come in?",
+          "a": "WPC / PVC boards are made in 5, 6, 8, 10, 12, 15, 17 and 18 mm thickness, and 3 layer boards in 6 to 18 mm. The standard size is 8 ft × 4 ft. Other sizes can be made on big orders.",
+          "changed": "Corrected to 5–18 mm per client PDF (old page text listed up to 35 mm)."
+        },
+        {
+          "q": "What is the density of a WPC board?",
+          "a": "WPC / PVC boards are 450 to 600 kg/m³ and 3 layer boards 550 to 600 kg/m³; both can be made up to 750 kg/m³ on order. A lab-tested door and board sample showed 0.66 g/cc density, 0.2% water absorption, a UL-94 V-0 rating, 23 MPa flexural strength and 1565 N screw withdrawal force."
+        },
+        {
+          "q": "What is a WPC 3 layer board?",
+          "a": "A board built in three layers for a harder and smoother finish than a single-layer board, with the same water proof and termite proof properties. It is used for kitchens, wardrobes, office furniture and partitions."
+        },
+        {
+          "q": "How is a 3 layer board different from a normal WPC board?",
+          "a": "WPC / PVC boards start at 5 mm and 450 kg/m³. 3 layer boards start at 6 mm and 550 kg/m³, with a three-layer build for a tougher surface."
+        },
+        {
+          "q": "Which colours are available and what is the minimum order?",
+          "a": "WPC / PVC boards: White, Red, Ivory, Orange, Coco Brown, Dark Grey, Yellow, Blue and Green, with a minimum of 100 sheets per colour and thickness. 3 layer boards: White is standard, with Ivory, Brown and WPC colour; bulk orders start at 9 tons."
+        },
+        {
+          "q": "Can WPC boards be laminated?",
+          "a": "Yes. The surface is smooth and takes glue and laminate. Lamination is done as per your design."
+        },
+        {
+          "q": "Can a carpenter work with WPC boards?",
+          "a": "Yes. They are sawn, cut and screwed with traditional carpentry tools and hold screws well."
+        }
+      ],
+      "finishes": null,
+      "pallet_comparison": null,
+      "related": [
+        "door-frames",
+        "window-frames",
+        "doors",
+        "pvc-panel"
+      ]
+    },
+    {
+      "id": "pvc-panel",
+      "order": 5,
+      "page": "product-wpc-louvers.html",
+      "page_note": "Keep the file name product-wpc-louvers.html (SEO/links). Never show the word 'louver' on the page.",
+      "name": "PVC Panel",
+      "name_long": "PVC Panel",
+      "h1": [
+        "PVC",
+        "Panel"
+      ],
+      "eyebrow": "Interior and exterior wall panels",
+      "tagline": "Fluted wall panels with a wooden look, without termites or upkeep.",
+      "description": "Greenplastwood PVC panels are pre-finished fluted panels for interior and exterior walls and ceilings. They are 100% water and moisture resistant, termite proof and stain resistant, and they do not deform, rot or fade.",
+      "card": {
+        "tag": "Wall, ceiling and exterior paneling",
+        "summary": "Pre-finished fluted panels for walls and ceilings in wood, marble, stone and solid finishes. Ready to install.",
+        "chips": [
+          "12 / 15 / 24 mm",
+          "63 designs",
+          "Exterior too"
+        ],
+        "image": "images/products/cards/louvers.webp"
+      },
+      "quote_product": "PVC Panel",
+      "quote_url": "contact.html?product=PVC+Panel#contactInquiryForm",
+      "sample_url": "contact.html?product=PVC+Panel+Sample#contactInquiryForm",
+      "key_facts": [
+        {
+          "label": "Series",
+          "value": "12 mm 2G, 15 mm 8G, 24 mm and exterior"
+        },
+        {
+          "label": "Panel size",
+          "value": "200 × 2900 mm (12 mm) · 165 × 2900 mm (15 and 24 mm)"
+        },
+        {
+          "label": "Designs",
+          "value": "63, each with a design code"
+        },
+        {
+          "label": "Finishes",
+          "value": "Wood, marble, stone and solid colours"
+        },
+        {
+          "label": "Exterior PVC panels",
+          "value": "215 × 25 / 26 mm, 8 ft and 10 ft"
+        },
+        {
+          "label": "Used on",
+          "value": "Walls and ceilings"
+        }
+      ],
+      "hero_stats": [
+        {
+          "value": "3",
+          "label": "interior series",
+          "note": "12, 15 and 24 mm"
+        },
+        {
+          "value": "63",
+          "label": "designs",
+          "note": "21 per series"
+        },
+        {
+          "value": "2900",
+          "label": "mm panel length",
+          "note": "interior series"
+        },
+        {
+          "value": "3",
+          "label": "exterior colours",
+          "note": "Brown, Teak, Grey"
+        }
+      ],
+      "footnote": null,
+      "trust_lines": [
+        "ISO 9001:2015 certified",
+        "63 designs, each with a design code",
+        "9 years of WPC manufacturing in our own plants in Gujarat"
+      ],
+      "quick_picks": [
+        {
+          "label": "12 mm 2G",
+          "target": "type-12"
+        },
+        {
+          "label": "15 mm 8G",
+          "target": "type-15"
+        },
+        {
+          "label": "24 mm",
+          "target": "type-24"
+        },
+        {
+          "label": "Exterior",
+          "target": "type-exterior"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "images/products/cards/louvers.webp",
+          "alt": "Living room wall in wood-finish PVC panels",
+          "caption": "Living room wall"
+        },
+        {
+          "src": "images/louvers/louvers-living-room.webp",
+          "alt": "PVC panel wall behind a sofa",
+          "caption": "Living room"
+        },
+        {
+          "src": "images/louvers/louvers-hallway.webp",
+          "alt": "PVC panels in a hallway",
+          "caption": "Hallway"
+        },
+        {
+          "src": "images/louvers/louvers-feature-wall.webp",
+          "alt": "Dark PVC panel feature wall",
+          "caption": "Feature wall"
+        },
+        {
+          "src": "images/louvers/louvers-profiles-colours.webp",
+          "alt": "PVC panel profiles in grey, light wood, dark grey and brown",
+          "caption": "PVC panel profiles in four finishes"
+        },
+        {
+          "src": "images/louvers/exterior-louver-bungalow.webp",
+          "alt": "Bungalow facade with exterior PVC panels",
+          "caption": "Exterior PVC panels"
+        }
+      ],
+      "overview": {
+        "title": [
+          "About",
+          "PVC Panel"
+        ],
+        "paragraphs": [
+          "PVC panels are fluted panels that give a wall or ceiling the lines and shadow of timber battens. In wood, that look means polish, termite treatment and warping near water. Greenplastwood PVC panels come pre-finished in wood, marble, stone and solid designs and need none of it.",
+          "There are three interior series, 12 mm 2G, 15 mm 8G and 24 mm, each 2900 mm long and in 21 designs, and an exterior PVC panel in three colours for facades and ceilings."
+        ],
+        "image": {
+          "src": "images/louvers/louvers-profiles-colours.webp",
+          "alt": "PVC panel profiles in grey, light wood, dark grey and brown",
+          "caption": "PVC panel profiles in four finishes."
+        },
+        "problem_vs_solution": {
+          "problem_title": "Timber battens",
+          "problems": [
+            "Need polish",
+            "Need termite treatment",
+            "Warp near water"
+          ],
+          "solution_title": "Greenplastwood PVC panel",
+          "solutions": [
+            "Pre-finished",
+            "Termite proof",
+            "100% water and moisture resistant"
+          ]
+        },
+        "feature_cards": [
+          {
+            "title": "Exceptional aesthetics",
+            "text": "A wide palette of textures and designs that mimic wood, marble and fabric with high-definition clarity."
+          },
+          {
+            "title": "Superior functionality",
+            "text": "100% water and moisture resistant, durable and low on maintenance, so they suit kitchens and bathrooms where hygiene matters."
+          },
+          {
+            "title": "Value for money",
+            "text": "Affordable and long-lasting, with zero maintenance cost."
+          },
+          {
+            "title": "Easy installation and long life",
+            "text": "Advanced polymer technology withstands tough conditions, termites and fading. The panels are light, so fitting is quick and clean."
+          }
+        ]
+      },
+      "advantages": null,
+      "advantage_groups": null,
+      "types": {
+        "title": [
+          "PVC Panel",
+          "Series"
+        ],
+        "lead": "Three interior series and one exterior profile.",
+        "items": [
+          {
+            "id": "type-12",
+            "name": "12 Mm 2G · 200 Series",
+            "text": "The widest panel, 200 mm, with two broad flutes. It gives a clean linear texture that suits rooms of normal height.",
+            "image": {
+              "src": "images/louvers/series-l12.webp",
+              "alt": "Greenplastwood 12 mm 2G PVC panels in five designs"
+            },
+            "specs": [
+              {
+                "label": "Panel size",
+                "value": "200 mm × 2900 mm",
+                "note": ""
+              },
+              {
+                "label": "Thickness",
+                "value": "12 mm",
+                "note": ""
+              },
+              {
+                "label": "Series",
+                "value": "200 Series",
+                "note": ""
+              },
+              {
+                "label": "Designs",
+                "value": "21, each with a design code",
+                "note": ""
+              },
+              {
+                "label": "Generally used for",
+                "value": "TV wall backdrops, wardrobes, bedrooms",
+                "note": ""
+              }
+            ],
+            "cta": "Get a quote for 12 mm 2G"
+          },
+          {
+            "id": "type-15",
+            "name": "15 Mm 8G · 300 Series",
+            "text": "A 165 mm panel with eight slim flutes for a denser, finer rhythm on the wall.",
+            "image": {
+              "src": "images/louvers/series-l15.webp",
+              "alt": "Greenplastwood 15 mm 8G PVC panels in five designs"
+            },
+            "specs": [
+              {
+                "label": "Panel size",
+                "value": "165 mm × 2900 mm",
+                "note": ""
+              },
+              {
+                "label": "Thickness",
+                "value": "15 mm",
+                "note": ""
+              },
+              {
+                "label": "Series",
+                "value": "300 Series",
+                "note": ""
+              },
+              {
+                "label": "Designs",
+                "value": "21, each with a design code",
+                "note": ""
+              },
+              {
+                "label": "Generally used for",
+                "value": "Feature walls, bedroom headboard walls, ceilings, reception areas",
+                "note": ""
+              }
+            ],
+            "cta": "Get a quote for 15 mm 8G"
+          },
+          {
+            "id": "type-24",
+            "name": "24 Mm · 100 Series",
+            "text": "The deepest profile. The 24 mm flutes throw a stronger shadow, which reads well on tall walls and from a distance.",
+            "image": {
+              "src": "images/louvers/series-l24.webp",
+              "alt": "Greenplastwood 24 mm PVC panels in five designs"
+            },
+            "specs": [
+              {
+                "label": "Panel size",
+                "value": "165 mm × 2900 mm",
+                "note": ""
+              },
+              {
+                "label": "Thickness",
+                "value": "24 mm",
+                "note": ""
+              },
+              {
+                "label": "Series",
+                "value": "100 Series",
+                "note": ""
+              },
+              {
+                "label": "Designs",
+                "value": "21, each with a design code",
+                "note": ""
+              },
+              {
+                "label": "Generally used for",
+                "value": "Double-height walls, foyers and lobbies",
+                "note": ""
+              }
+            ],
+            "cta": "Get a quote for 24 mm"
+          },
+          {
+            "id": "type-exterior",
+            "name": "Exterior PVC Panels",
+            "text": "Co-extruded panels made from recycled hardwood fibre and virgin polymer resin. Pre-finished and ready to install on facades, elevations, boundary walls, ceilings and sunshades.",
+            "image": {
+              "src": "images/louvers/exterior-louver-bungalow.webp",
+              "alt": "Bungalow facade with PVC exterior panels"
+            },
+            "specs": [
+              {
+                "label": "Panel size",
+                "value": "215 × 26 mm (Brown) · 215 × 25 mm (Teak, Grey)",
+                "note": ""
+              },
+              {
+                "label": "Standard length",
+                "value": "8 ft and 10 ft",
+                "note": ""
+              },
+              {
+                "label": "Colours",
+                "value": "Brown, Teak, Grey",
+                "note": ""
+              },
+              {
+                "label": "Generally used for",
+                "value": "Facades, elevations, balcony ceilings, gates",
+                "note": ""
+              }
+            ],
+            "cta": "Get a quote for exterior PVC panels",
+            "catalogue": "docs/Green-Plastwood-WPC-Interior-Exterior.pdf",
+            "naming_note": "The client's Interior & Exterior catalogue calls these 'WPC Cladding'. Name 'Exterior PVC panels' is pending client confirmation."
+          }
+        ],
+        "models": null
+      },
+      "type_comparison": {
+        "title": "The Series Side By Side",
+        "columns": [
+          "",
+          "12 mm 2G",
+          "15 mm 8G",
+          "24 mm",
+          "Exterior"
+        ],
+        "rows": [
+          [
+            "Series",
+            "200 Series",
+            "300 Series",
+            "100 Series",
+            "–"
+          ],
+          [
+            "Thickness",
+            "12 mm",
+            "15 mm",
+            "24 mm",
+            "25 / 26 mm"
+          ],
+          [
+            "Panel width",
+            "200 mm",
+            "165 mm",
+            "165 mm",
+            "215 mm"
+          ],
+          [
+            "Length",
+            "2900 mm",
+            "2900 mm",
+            "2900 mm",
+            "8 ft and 10 ft"
+          ],
+          [
+            "Flutes",
+            "2 broad flutes",
+            "8 slim flutes",
+            "Deep flutes",
+            "Box flutes"
+          ],
+          [
+            "Designs",
+            "21",
+            "21",
+            "21",
+            "3 colours: Brown, Teak, Grey"
+          ],
+          [
+            "Used",
+            "Interior walls and ceilings",
+            "Interior walls and ceilings",
+            "Interior walls and ceilings",
+            "Exterior and interior walls and ceilings"
+          ]
+        ],
+        "note": "For rooms with a 9 to 10 ft ceiling, 12 mm 2G or 15 mm 8G gives balanced proportions; 24 mm is generally chosen for taller walls. General guidance only.",
+        "guide_link": "guide-wpc-wall-louvers.html"
+      },
+      "sizes": null,
+      "colours": {
+        "title": [
+          "Exterior",
+          "Colours"
+        ],
+        "lead": "Interior panels come in 63 printed designs (see the design library). Exterior panels come in three colours.",
+        "groups": [
+          {
+            "name": "Exterior PVC panels",
+            "items": [
+              {
+                "name": "Brown",
+                "size": "215 × 26 mm, 8 ft and 10 ft",
+                "image": "images/louvers/exterior-louver-brown.webp"
+              },
+              {
+                "name": "Teak",
+                "size": "215 × 25 mm, 8 ft and 10 ft",
+                "image": "images/louvers/exterior-louver-teak.webp"
+              },
+              {
+                "name": "Grey",
+                "size": "215 × 25 mm, 8 ft and 10 ft",
+                "image": "images/louvers/exterior-louver-grey.webp"
+              }
+            ]
+          }
+        ],
+        "note": "Printed and screen colours vary. Ask for a sample of the design code you like before you order.",
+        "finish": "Wood, marble, stone and solid finishes, pre-finished",
+        "exterior_drawing": "images/louvers/exterior-louver-profile-drawing.webp",
+        "exterior_lead": "From our Interior & Exterior catalogue. Made from recycled hardwood fibre and virgin polymer resin with co-extrusion technology: pre-finished, ready to install, water and termite proof and stain resistant."
+      },
+      "designs": {
+        "title": [
+          "PVC Panel Design",
+          "Library"
+        ],
+        "lead": "All 63 designs across the 200, 300 and 100 series. Filter by series, search a code and tap a design to enquire.",
+        "groups": [
+          {
+            "name": "12 mm 2G · 200 Series",
+            "count": 21,
+            "codes": [
+              "201",
+              "202",
+              "203",
+              "205",
+              "206",
+              "207",
+              "209",
+              "212",
+              "214",
+              "215",
+              "219",
+              "220",
+              "221",
+              "222",
+              "223",
+              "225",
+              "226",
+              "227",
+              "228",
+              "229",
+              "231"
+            ],
+            "image_pattern": "images/louvers/designs/l12-{code}.webp"
+          },
+          {
+            "name": "15 mm 8G · 300 Series",
+            "count": 21,
+            "codes": [
+              "301",
+              "302",
+              "303",
+              "305",
+              "306",
+              "307",
+              "309",
+              "312",
+              "314",
+              "315",
+              "319",
+              "320",
+              "321",
+              "322",
+              "323",
+              "325",
+              "326",
+              "327",
+              "328",
+              "329",
+              "331"
+            ],
+            "image_pattern": "images/louvers/designs/l15-{code}.webp"
+          },
+          {
+            "name": "24 mm · 100 Series",
+            "count": 21,
+            "codes": [
+              "101",
+              "102",
+              "103",
+              "105",
+              "106",
+              "107",
+              "109",
+              "112",
+              "114",
+              "115",
+              "119",
+              "120",
+              "121",
+              "122",
+              "123",
+              "125",
+              "126",
+              "127",
+              "128",
+              "129",
+              "131"
+            ],
+            "image_pattern": "images/louvers/designs/l24-{code}.webp"
+          }
+        ],
+        "catalogues": [],
+        "rule": "63 designs (21 per series) is a confirmed count from the client's catalogues and may be shown."
+      },
+      "photos": null,
+      "compare": null,
+      "applications": {
+        "title": [
+          "Where PVC Panels",
+          "Are Used"
+        ],
+        "lead": "Interior and exterior walls and ceilings in homes, offices and commercial spaces.",
+        "cards": [
+          {
+            "image": "images/louvers/louvers-living-room.webp",
+            "alt": "PVC panel wall behind a sofa",
+            "title": "Living Room",
+            "text": "A full wall behind the sofa or the TV unit."
+          },
+          {
+            "image": "images/louvers/louvers-hallway.webp",
+            "alt": "PVC panels in a hallway",
+            "title": "Hallway And Entrance",
+            "text": "Wall and partition panels that take daily contact."
+          },
+          {
+            "image": "images/louvers/louvers-feature-wall.webp",
+            "alt": "Dark PVC panel feature wall",
+            "title": "Feature Wall",
+            "text": "A dark fluted wall behind art or a console."
+          },
+          {
+            "image": "images/louvers/louvers-lounge.webp",
+            "alt": "PVC panels in a lounge with shelves",
+            "title": "Lounge And Library",
+            "text": "Panelling behind shelves and seating."
+          },
+          {
+            "image": "images/louvers/louver-living-room-pattern.webp",
+            "alt": "PVC panels laid in an angled pattern behind a bed",
+            "title": "Patterned Wall",
+            "text": "Panels cut and laid at angles for a headboard wall."
+          },
+          {
+            "image": "images/louvers/louver-office-ceiling.webp",
+            "alt": "PVC panel ceiling in an office",
+            "title": "Office Ceiling",
+            "text": "Linear ceilings over work areas and reception."
+          },
+          {
+            "image": "images/louvers/exterior-louver-bungalow.webp",
+            "alt": "Bungalow facade with exterior PVC panels",
+            "title": "Bungalow Facade",
+            "text": "Exterior PVC panels on elevations and boundary walls."
+          },
+          {
+            "image": "images/products/cards/louvers.webp",
+            "alt": "Warm wood PVC panel wall in a living room",
+            "title": "TV And Bedroom Walls",
+            "text": "Warm wood finishes for TV rooms and bedrooms."
+          }
+        ],
+        "also_title": "From our catalogues",
+        "also": [
+          "Kitchen",
+          "Living room",
+          "Bathroom",
+          "TV room",
+          "Bedroom",
+          "Library",
+          "Café and restaurant",
+          "Shopping complex",
+          "Office ceiling",
+          "Bungalow"
+        ]
+      },
+      "installation": {
+        "title": [
+          "Installation And",
+          "Care"
+        ],
+        "lead": "The steps from our PVC panel guide. Panels are pre-finished, so there is no polish or paint after fitting.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Prepare the wall",
+            "text": "The plaster should be dry and flat. If the wall is damp or uneven, fix a light aluminium or WPC batten grid at 300 mm centres first."
+          },
+          {
+            "step": 2,
+            "title": "Fix the starting trim",
+            "text": "Fix the L-angle or J-trim along the skirting and the side corner with countersunk screws."
+          },
+          {
+            "step": 3,
+            "title": "Place the first panel",
+            "text": "Slot it into the starting trim and check it is plumb with a spirit level."
+          },
+          {
+            "step": 4,
+            "title": "Fix the edge",
+            "text": "Fasten the groove edge to the wall or frame with clips or fine countersunk screws. No screws show on the finished face."
+          },
+          {
+            "step": 5,
+            "title": "Interlock the next panel",
+            "text": "Slide its tongue into the groove until it sits tight, and repeat across the wall."
+          },
+          {
+            "step": 6,
+            "title": "Cut and finish",
+            "text": "Cut panels with a fine-tooth saw and finish the top and corner joints with matching edge profiles."
+          }
+        ],
+        "need": null,
+        "after": null,
+        "care": "Dust with a soft cloth or wipe with a damp cloth and mild soap. The surface is stain resistant and needs no polish, coating or touch-up.",
+        "wet_areas": "The panels are 100% water and moisture resistant, so they can be used in kitchens and bathrooms.",
+        "guide_link": "guide-wpc-wall-louvers.html"
+      },
+      "lab": null,
+      "properties": null,
+      "ordering": {
+        "tell_us": [
+          "Series: 12 mm 2G, 15 mm 8G, 24 mm or exterior",
+          "Design code, e.g. 201, 325 or 114",
+          "Wall or ceiling size, in feet or metres",
+          "Interior or exterior use",
+          "Quantity, if you already know the panel count",
+          "Delivery city"
+        ],
+        "min_order": [
+          {
+            "label": "Interior panels",
+            "value": "2900 mm long; 200 mm wide (12 mm) or 165 mm wide (15 and 24 mm)"
+          },
+          {
+            "label": "Exterior panels",
+            "value": "8 ft and 10 ft long, 215 mm wide"
+          },
+          {
+            "label": "Minimum order",
+            "value": "Ask our team for stock and minimum quantity"
+          }
+        ],
+        "sample_text": "Printed and screen colours vary. Ask for a sample of the design code you like before you order, and send us the wall size so we can work out the number of panels."
+      },
+      "downloads": {
+        "lead": "The new PVC Panel catalogue is being prepared. Exterior panels are in the Interior & Exterior catalogue.",
+        "files": [
+          {
+            "title": "PVC Panel Catalogue",
+            "file": null,
+            "desc": "New catalogue coming soon. Ask us on WhatsApp.",
+            "action": "whatsapp",
+            "PENDING": "Client to send the new PVC Panel catalogue PDF."
+          },
+          {
+            "title": "Interior & Exterior",
+            "file": "docs/Green-Plastwood-WPC-Interior-Exterior.pdf",
+            "cover": "images/docs/green-plastwood-wpc-interior-exterior-cover.webp",
+            "desc": "Exterior PVC panels, cladding, decking, pergola. 23 pages."
+          }
+        ],
+        "guides": [
+          {
+            "href": "guide-wpc-wall-louvers.html",
+            "title": "PVC wall panels: 12, 15 and 24 mm explained",
+            "desc": "Which series to use where, and how to fit them."
+          },
+          {
+            "href": "guide-wpc-wall-cladding-pergola.html",
+            "title": "WPC wall cladding and pergola",
+            "desc": "Exterior profiles from the Interior & Exterior catalogue."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "What sizes do PVC panels come in?",
+          "a": "Three interior series: 12 mm 2G panels are 200 mm × 2900 mm; 15 mm 8G and 24 mm panels are 165 mm × 2900 mm. Exterior PVC panels are 215 × 25 or 26 mm in 8 ft and 10 ft lengths."
+        },
+        {
+          "q": "How many designs are available?",
+          "a": "63 designs: 21 in each of the 200, 300 and 100 series, in wood grains, marble, stone and solid colours. Share the design code, for example 201 or 325, when you enquire."
+        },
+        {
+          "q": "Which series should I choose?",
+          "a": "For rooms with a 9 to 10 ft ceiling, 12 mm 2G or 15 mm 8G gives balanced proportions. The 24 mm profile is generally chosen for taller walls and larger spaces, where the deeper flutes can be seen from a distance. This is general guidance; our team can advise for your wall."
+        },
+        {
+          "q": "Can PVC panels be used in bathrooms and kitchens?",
+          "a": "Yes. The panels are 100% water and moisture resistant and easy to clean, so they suit kitchens, bathrooms and other humid areas."
+        },
+        {
+          "q": "Are PVC panels suitable for exterior walls?",
+          "a": "Yes. Exterior PVC panels, 215 mm wide, are made for facades, elevations and ceilings and do not rot, deform or fade."
+        },
+        {
+          "q": "How are PVC panels installed?",
+          "a": "On a dry, flat wall the first panel is set into a starting trim and checked for plumb, then each panel is fixed along its edge and the next panel slides into it, so no screws show. On an uneven or damp wall a batten frame is fixed first."
+        },
+        {
+          "q": "Do PVC panels need polishing or painting?",
+          "a": "No. All 63 designs come pre-finished, so there is no polish, coating or touch-up."
+        },
+        {
+          "q": "How do I clean them?",
+          "a": "Dust with a soft cloth or wipe with a damp cloth and mild soap. The surface is stain resistant."
+        }
+      ],
+      "common_benefits_note": "The current page shows the common WPC benefit chips. PVC panel is PVC, not WPC: if a design shows a benefits strip, prefer the panel's own claims (water and moisture resistant, termite proof, stain resistant, does not deform, rot or fade).",
+      "finishes": null,
+      "pallet_comparison": null,
+      "related": [
+        "door-frames",
+        "window-frames",
+        "doors",
+        "boards"
+      ]
+    },
+    {
+      "id": "recycled-sheet",
+      "order": 6,
+      "page": "product-recycled-plastic-sheet.html",
+      "name": "Recycled Plastic Sheet",
+      "name_long": "Recycled Plastic Sheet",
+      "h1": [
+        "Recycled Plastic",
+        "Sheet"
+      ],
+      "eyebrow": "By SNG Eco India · since 2012",
+      "tagline": "Strong, water proof sheets made from recycled plastic.",
+      "description": "SNG Eco India, the company behind Greenplastwood, has made plastic solid sheets and recycled plastic sheets in Gujarat since 2012. They are used as pallets in fly ash brick and paver block plants, and in place of traditional shuttering ply in construction.",
+      "card": {
+        "tag": "By SNG Eco India",
+        "summary": "Recycled plastic solid sheets for the construction industry. Sizes and thickness on request.",
+        "chips": [
+          "Brick pallets",
+          "Shuttering",
+          "Custom sizes"
+        ],
+        "image": "images/products/recycled/recycled-plastic-sheet-hero.webp"
+      },
+      "quote_product": "Recycled Plastic Sheet",
+      "quote_url": "contact.html?product=Recycled+Plastic+Sheet#contactInquiryForm",
+      "sample_url": "contact.html?product=Recycled+Plastic+Sheet+Sample#contactInquiryForm",
+      "key_facts": [
+        {
+          "label": "Used as",
+          "value": "Brick & paver block pallets, shuttering"
+        },
+        {
+          "label": "Thickness",
+          "value": "8 to 50 mm"
+        },
+        {
+          "label": "Density",
+          "value": "1.30 g/cm³"
+        },
+        {
+          "label": "Water absorption",
+          "value": "0.25%"
+        },
+        {
+          "label": "Machines",
+          "value": "Automatic, semi-automatic, manual"
+        },
+        {
+          "label": "Buy back",
+          "value": "At 20%"
+        }
+      ],
+      "hero_stats": [
+        {
+          "value": "8–50",
+          "label": "mm thickness",
+          "note": "brick and paver pallets"
+        },
+        {
+          "value": "0.25%",
+          "label": "water absorption",
+          "note": "pallets catalogue"
+        },
+        {
+          "value": "72 h",
+          "label": "boiling, no swelling",
+          "note": "pallets catalogue"
+        },
+        {
+          "value": "20%",
+          "label": "buy back",
+          "note": "ask for current terms"
+        }
+      ],
+      "footnote": null,
+      "trust_lines": [
+        "Made by SNG Eco India since 2012",
+        "ISO 9001:2015 quality system",
+        "Size can be customised for bulk orders"
+      ],
+      "quick_picks": [
+        {
+          "label": "Brick pallets",
+          "target": "sizes"
+        },
+        {
+          "label": "Paver block pallets",
+          "target": "sizes"
+        },
+        {
+          "label": "Shuttering",
+          "target": "uses"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "images/products/recycled/recycled-plastic-sheet-hero.webp",
+          "alt": "Stack of black recycled plastic sheets",
+          "caption": "Recycled plastic sheets"
+        },
+        {
+          "src": "images/products/recycled/sheet-stack.webp",
+          "alt": "Stack of recycled plastic sheets",
+          "caption": "Ready for dispatch"
+        },
+        {
+          "src": "images/products/recycled/recycled-plastic-sheet-in-use.webp",
+          "alt": "Fresh concrete bricks on recycled plastic pallets coming off machine",
+          "caption": "Brick pallets in use"
+        },
+        {
+          "src": "images/products/recycled/paver-block-pallets.webp",
+          "alt": "Paver blocks on plastic pallets",
+          "caption": "Paver block pallets"
+        },
+        {
+          "src": "images/products/recycled/recycled-plastic-sheet-shuttering.webp",
+          "alt": "Black recycled plastic sheets used as shuttering formwork on construction site",
+          "caption": "Shuttering in place of ply"
+        }
+      ],
+      "overview": {
+        "title": [
+          "About Recycled",
+          "Plastic Sheet"
+        ],
+        "paragraphs": [
+          "Brick and paver block plants traditionally use ply, wood, metal or PVC foam pallets. Wood swells and gets termites, metal rusts, and both wear out with daily water and cement. Greenplastwood pallets are made from recycled plastic sheet that is water proof, termite proof and rust proof, so one set of pallets lasts far longer.",
+          "The same sheets replace traditional shuttering ply on construction sites. Our motto: recycle every day instead of throwing plastic away."
+        ],
+        "image": {
+          "src": "images/products/recycled/sheet-stack.webp",
+          "alt": "Stack of recycled plastic sheets",
+          "caption": "Recycled plastic sheets, ready for dispatch."
+        },
+        "problem_vs_solution": {
+          "problem_title": "Ply, wood, metal or PVC foam pallets",
+          "problems": [
+            "Wood swells and gets termites",
+            "Metal rusts",
+            "Wear out with water and cement"
+          ],
+          "solution_title": "Greenplastwood pallets",
+          "solutions": [
+            "Water proof",
+            "Termite proof",
+            "Rust proof"
+          ]
+        }
+      },
+      "advantages": [
+        "Long life and cost effective",
+        "Suitable for all machine types",
+        "Water proof and rust proof",
+        "Termite proof",
+        "Light weight, high strength",
+        "Special reinforcement for heavy load and big pallets",
+        "No swelling after 72 hours of boiling",
+        "Buy back at 20%"
+      ],
+      "advantage_groups": null,
+      "types": {
+        "title": [
+          "Where Recycled Plastic Sheets",
+          "Are Used"
+        ],
+        "lead": "Photos from our pallets catalogue.",
+        "items": [
+          {
+            "id": "use-brick",
+            "name": "Fly Ash Brick Pallets",
+            "text": "Works with automatic, semi-automatic and manual brick machines.",
+            "image": {
+              "src": "images/products/recycled/recycled-plastic-sheet-in-use.webp",
+              "alt": "Fresh concrete bricks on recycled plastic pallets coming off machine"
+            }
+          },
+          {
+            "id": "use-paver",
+            "name": "Paver Block Pallets",
+            "text": "For stacking moulds of all sizes and shapes in paver block plants.",
+            "image": {
+              "src": "images/products/recycled/paver-block-pallets.webp",
+              "alt": "Paver blocks on plastic pallets"
+            }
+          },
+          {
+            "id": "use-shuttering",
+            "name": "Shuttering Ply Replacement",
+            "text": "Used in place of traditional shuttering ply in the construction industry.",
+            "image": {
+              "src": "images/products/recycled/recycled-plastic-sheet-shuttering.webp",
+              "alt": "Black recycled plastic sheets used as shuttering formwork on construction site"
+            }
+          }
+        ],
+        "more_photos": [
+          {
+            "src": "images/products/recycled/brick-machine-pallets.webp",
+            "alt": "Bricks coming off an automatic machine on plastic pallets"
+          },
+          {
+            "src": "images/products/recycled/paver-machine-pallets.webp",
+            "alt": "Paver blocks on pallets at a semi-automatic machine"
+          },
+          {
+            "src": "images/products/recycled/manual-machine.webp",
+            "alt": "Manual brick machine"
+          },
+          {
+            "src": "images/products/recycled/pallets-stacked.webp",
+            "alt": "Blocks stacked on pallets for curing"
+          },
+          {
+            "src": "images/products/recycled/framed-pallets.webp",
+            "alt": "Pallets in a framed rack"
+          },
+          {
+            "src": "images/products/recycled/shuttering-wall.webp",
+            "alt": "Plastic shuttering on a retaining wall"
+          },
+          {
+            "src": "images/products/recycled/shuttering-site.webp",
+            "alt": "Plastic shuttering at a building site"
+          }
+        ],
+        "models": null,
+        "section_id_note": "On the current page this section id is 'uses'."
+      },
+      "type_comparison": null,
+      "sizes": {
+        "title": [
+          "Sizes And",
+          "Thickness"
+        ],
+        "lead": "Standard sizes from our pallets catalogue. Size can be customised for bulk orders.",
+        "groups": [
+          {
+            "name": "Brick Pallets",
+            "text": "For fly ash brick machines: automatic, semi-automatic and manual.",
+            "thickness": "16, 18, 20, 25 and 50 mm",
+            "sizes": [
+              "600 × 600 mm",
+              "600 × 700 mm",
+              "800 × 850 mm",
+              "950 × 750 mm"
+            ]
+          },
+          {
+            "name": "Paver Block Pallets",
+            "text": "For stacking paver block moulds of all sizes and shapes.",
+            "thickness": "8 and 12 mm",
+            "sizes": [
+              "2440 × 120 mm",
+              "1220 × 1220 mm",
+              "1220 × 620 mm",
+              "610 × 610 mm"
+            ],
+            "check_note": "'2440 × 120 mm' is as printed in the pallets catalogue; confirm with client if it looks odd."
+          }
+        ],
+        "note": "Special reinforcement is available for heavy loads and big pallets. Tell us your machine and mould size.",
+        "how_to_choose": null,
+        "size_chart": null,
+        "profile_drawings": null
+      },
+      "colours": null,
+      "designs": null,
+      "photos": null,
+      "compare": null,
+      "pallet_comparison": {
+        "title": "Traditional Pallets Vs Greenplastwood",
+        "lead": "From our catalogue: why plants move from ply, wood, metal and PVC foam pallets.",
+        "traditional": [
+          "Ply & wood",
+          "Metal sheet",
+          "PVC foam sheet"
+        ],
+        "traditional_text": "Wear out with water, cement and daily handling, and need replacing often.",
+        "greenplastwood": [
+          "Water proof",
+          "Termite proof",
+          "Long life",
+          "Rust proof",
+          "Cost effective",
+          "Light weight",
+          "High strength",
+          "Buy back at 20%"
+        ]
+      },
+      "applications": null,
+      "installation": null,
+      "lab": null,
+      "properties": {
+        "title": [
+          "Physical",
+          "Properties"
+        ],
+        "lead": "Values from our pallets catalogue.",
+        "rows": [
+          [
+            "Density",
+            "1.30 g/cm³"
+          ],
+          [
+            "Durometer hardness",
+            "31%"
+          ],
+          [
+            "Elongation at break",
+            "70%"
+          ],
+          [
+            "Tensile strength at break",
+            "25.70%"
+          ],
+          [
+            "Flexural strength",
+            "22.73 N/mm²"
+          ],
+          [
+            "Impact test (no. of blows)",
+            "827"
+          ],
+          [
+            "4 hrs boiling + 4 hrs air dry",
+            "No delamination"
+          ],
+          [
+            "72 hrs boiling",
+            "No swelling"
+          ],
+          [
+            "Screw holding strength",
+            "134 kg"
+          ],
+          [
+            "Nail holding strength",
+            "12.67 kg"
+          ],
+          [
+            "Drilling",
+            "Easy"
+          ],
+          [
+            "Heating (80–85 °C)",
+            "No change"
+          ],
+          [
+            "Water absorption",
+            "0.25%"
+          ]
+        ],
+        "check_note": "Units are exactly as printed in the client's pallets catalogue (e.g. tensile strength shown as %). Do not 'correct' them."
+      },
+      "ordering": {
+        "tell_us": [
+          "Use: brick pallet, paver block pallet or shuttering",
+          "Your machine type and pallet size",
+          "Thickness",
+          "Quantity and delivery city"
+        ],
+        "min_order": [
+          {
+            "label": "Custom size",
+            "value": "On bulk orders"
+          },
+          {
+            "label": "Heavy load / big pallets",
+            "value": "Special reinforcement available"
+          },
+          {
+            "label": "Buy back",
+            "value": "At 20% (ask for current terms)"
+          }
+        ],
+        "min_order_title": "Customisation And Buy Back",
+        "sample_text": "Ask for a sample pallet to try on your machine before you order."
+      },
+      "downloads": {
+        "lead": null,
+        "files": [
+          {
+            "title": "Plastic Pallets Catalogue",
+            "file": "docs/Green-Plastwood-WPC-Plastic-Pallets.pdf",
+            "cover": "images/docs/plastic-pallets-cover.webp",
+            "desc": "Sizes, physical properties and comparison. 8 pages."
+          }
+        ],
+        "guides": [
+          {
+            "href": "guide-wpc-industrial-pallets.html",
+            "title": "Pallets for fly ash brick and paver block plants",
+            "desc": "Sizes, physical properties and the buy-back offer."
+          },
+          {
+            "href": "blog-plastic-pallets-fly-ash-bricks-paver-blocks.html",
+            "title": "Plastic pallets: sizes, strength and guide",
+            "desc": "How to choose pallets for your plant."
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "q": "What is a Greenplastwood recycled plastic sheet?",
+          "a": "It is a solid sheet made from recycled plastic by SNG Eco India Pvt. Ltd., the company behind Greenplastwood. It is used mainly as a pallet in fly ash brick and paver block plants, and in place of traditional shuttering ply in construction."
+        },
+        {
+          "q": "Which sizes and thicknesses are available?",
+          "a": "Brick pallets are made in 16, 18, 20, 25 and 50 mm thickness, in 600 × 600, 600 × 700, 800 × 850 and 950 × 750 mm. Paver block pallets are made in 8 and 12 mm, in 1220 × 1220, 1220 × 620 and 610 × 610 mm, plus 2440 × 120 mm as listed in our catalogue. Other sizes can be made on bulk orders."
+        },
+        {
+          "q": "Will the pallets work on my machine?",
+          "a": "Yes. Our catalogue lists them as suitable for all machine types used for fly ash bricks: automatic, semi-automatic and manual. Tell us your machine and pallet size and we will confirm."
+        },
+        {
+          "q": "How long do the pallets last?",
+          "a": "They are water proof, termite proof and rust proof, and in tests they showed no swelling after 72 hours of boiling and no delamination after 4 hours of boiling and 4 hours of air drying. They are made for long life and repeated use."
+        },
+        {
+          "q": "What is the 20% buy back?",
+          "a": "Our catalogue offers a buy back at 20% for Greenplastwood pallets. Ask our team for the current terms when you order."
+        }
+      ],
+      "common_benefits_note": "This is an SNG Eco India recycled plastic product, not WPC: do not show the WPC common-benefit chips, WPC vs plywood table or WPC lab tests on this page.",
+      "finishes": null,
+      "related": [
+        "door-frames",
+        "window-frames",
+        "doors",
+        "boards"
+      ]
+    }
+  ]
+}

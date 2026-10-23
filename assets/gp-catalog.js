@@ -1,4 +1,4 @@
-/* GREEN PLASTWOOD — catalogue behaviour: design filters, code search, load-more, lightbox */
+/* GREENPLASTWOOD — catalogue behaviour: design filters, code search, load-more, lightbox */
 (function () {
   'use strict';
 
@@ -23,7 +23,7 @@
       var limit = (q || !page) ? matches.length : shown;
       items.forEach(function (it) { it.classList.add('is-hidden'); });
       matches.forEach(function (it, i) { if (i < limit) it.classList.remove('is-hidden'); });
-      if (count) count.textContent = matches.length ? ('Showing ' + Math.min(limit, matches.length) + ' of ' + matches.length + ' designs') : 'No design found for that code — try e.g. SGD-104 or SG-003';
+      if (count) count.textContent = matches.length ? ('Showing ' + Math.min(limit, matches.length) + ' designs' + (matches.length > limit ? ' · load more below' : '')) : 'No design found for that code — try e.g. SGD-104 or SG-003';
       if (moreBtn) moreBtn.style.display = (!q && page && matches.length > limit) ? '' : 'none';
     }
     chips.forEach(function (c) {
@@ -148,7 +148,7 @@
       modal.addEventListener('click', function (e) { if (e.target === modal || e.target.classList.contains('gpv-close')) close(); });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
     }
-    modal.querySelector('.gpv-modal-box').innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" title="Green Plastwood video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    modal.querySelector('.gpv-modal-box').innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" title="Greenplastwood video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
     modal.classList.add('is-open'); document.documentElement.style.overflow = 'hidden';
     if (window.gpTrack) window.gpTrack('video_play', { video_id: id });
   }

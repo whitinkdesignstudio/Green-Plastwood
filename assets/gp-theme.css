@@ -4,9 +4,9 @@
    Emerald (GREEN) + earth brown (PLASTWOOD) + leaf lime + cream ground.
    ========================================================================== */
 :root {
-  --lg-brand: #009C78; --lg-primary: #00866A; --lg-primary-dk: #006E56;
-  --lg-deep: #073A30; --lg-deepest: #052A23; --lg-mint: #7ED6BB; --lg-leaf: #8DC63F;
-  --lg-tint: #E3F2EC; --lg-earth: #543C3C; --lg-ink: #2B2422; --lg-cream: #F6F4EF;
+  --lg-brand: #0BB0BF; --lg-primary: #05838E; --lg-primary-dk: #046B74;
+  --lg-deep: #0A393D; --lg-deepest: #07292C; --lg-mint: #8DD1D7; --lg-leaf: #A7AD1A;
+  --lg-tint: #E5F1F2; --lg-earth: #554744; --lg-ink: #2B2422; --lg-cream: #F6F4EF;
 }
 /* headings: logo structure — brown-black words with the emerald highlight */
 section h1, section h2 { color: var(--lg-ink); }
@@ -38,7 +38,7 @@ h1, h2, h3, h4, .gp-h1, .gp-h2, .gp-h3, .v2-head h2, .gp-head h2, .legacy-title,
 
 /* ---------- One footer on every page (logo deep green) ---------- */
 .site-footer, footer.site-footer, footer.footer {
-  background: #052A23 !important;
+  background: #07292C !important;
   color: rgba(255,255,255,.78) !important;
   border-top: 0 !important;
   padding-top: 75px !important;
@@ -115,11 +115,11 @@ h1, h2, h3, h4, .gp-h1, .gp-h2, .gp-h3, .v2-head h2, .gp-head h2, .legacy-title,
 }
 
 .site-footer .social-btn:hover {
-  background: #00866A !important;
-  border-color: #31A888 !important;
+  background: #05838E !important;
+  border-color: #38A4AE !important;
   color: #ffffff !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(0, 134, 106, 0.4) !important;
+  box-shadow: 0 4px 12px rgba(5, 131, 142, 0.4) !important;
 }
 
 .site-footer .social-btn:hover svg {
@@ -158,7 +158,7 @@ h1, h2, h3, h4, .gp-h1, .gp-h2, .gp-h3, .v2-head h2, .gp-head h2, .legacy-title,
 }
 
 .site-footer .footer-links-list a:hover {
-  color: #7ED6BB !important;
+  color: #8DD1D7 !important;
 }
 
 .site-footer .footer-contact-list {
@@ -191,7 +191,7 @@ h1, h2, h3, h4, .gp-h1, .gp-h2, .gp-h3, .v2-head h2, .gp-head h2, .legacy-title,
 }
 
 .site-footer .contact-line a:hover {
-  color: #7ED6BB !important;
+  color: #8DD1D7 !important;
 }
 
 .site-footer .contact-line-icon {
@@ -230,7 +230,7 @@ h1, h2, h3, h4, .gp-h1, .gp-h2, .gp-h3, .v2-head h2, .gp-head h2, .legacy-title,
 }
 
 .site-footer .newsletter-btn {
-  background: #00866A !important;
+  background: #05838E !important;
   border: none !important;
   color: #ffffff !important;
   padding: 0 16px !important;
@@ -240,7 +240,7 @@ h1, h2, h3, h4, .gp-h1, .gp-h2, .gp-h3, .v2-head h2, .gp-head h2, .legacy-title,
 }
 
 .site-footer .newsletter-btn:hover {
-  background: #00A884 !important;
+  background: #06A4B2 !important;
 }
 
 .site-footer .gp-footer-seo {
@@ -251,7 +251,7 @@ h1, h2, h3, h4, .gp-h1, .gp-h2, .gp-h3, .v2-head h2, .gp-head h2, .legacy-title,
 .site-footer .gp-footer-seo h2 {
   font-size: 14px !important;
   font-weight: 700 !important;
-  color: #7ED6BB !important;
+  color: #8DD1D7 !important;
   margin: 0 0 6px !important;
 }
 
@@ -284,7 +284,7 @@ h1, h2, h3, h4, .gp-h1, .gp-h2, .gp-h3, .v2-head h2, .gp-head h2, .legacy-title,
 }
 
 .site-footer .footer-bottom-links a:hover {
-  color: #7ED6BB !important;
+  color: #8DD1D7 !important;
 }
 
 @media (max-width: 1100px) {
@@ -336,8 +336,8 @@ h1, h2, h3, h4, .gp-h1, .gp-h2, .gp-h3, .v2-head h2, .gp-head h2, .legacy-title,
   }
   .gp-doc-actions a {
     padding: 8px 12px !important;
-    background: #f0f7f4 !important;
-    border: 1px solid #d4e7df !important;
+    background: #f1f6f7 !important;
+    border: 1px solid #d6e6e7 !important;
     border-radius: 6px !important;
     font-size: 11.5px !important;
     font-weight: 700 !important;
@@ -348,9 +348,9 @@ h1, h2, h3, h4, .gp-h1, .gp-h2, .gp-h3, .v2-head h2, .gp-head h2, .legacy-title,
     flex: 1 !important;
   }
   .gp-doc-actions a:hover {
-    background: #00866A !important;
+    background: #05838E !important;
     color: #ffffff !important;
-    border-color: #00866A !important;
+    border-color: #05838E !important;
   }
   .gp-doc-actions a:hover svg {
     stroke: #ffffff !important;

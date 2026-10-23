@@ -1,15 +1,16 @@
 /* ==========================================================================
-   GREEN PLASTWOOD — LEAD ENGINE
+   GREENPLASTWOOD — LEAD ENGINE
    · Sticky Call / WhatsApp / Quote (mobile bar + desktop WhatsApp bubble)
-   · Quick Quote & Request-a-Sample modal (Name, Mobile, City, Product)
+   · "Get a Quote / Sample / Catalogue / Business Associate" buttons open the Contact page form (one form on the site)
    · UTM / click-ID capture (first + last touch) → hidden fields on every form
-   · All forms → optional endpoint (Formspree / Apps Script) → thank-you page
+   · Forms on the pages → e-mail endpoint (Google Apps Script) → thank-you page
+   · Pop-up forms → WhatsApp with the details filled in (+ a copy to the e-mail endpoint)
    · GTM / GA4 / Google Ads / Meta Pixel loader (IDs in gp-config.js)
    ========================================================================== */
 (function () {
   'use strict';
   var C = window.GP_CONFIG || {};
-  var PRODUCTS = ["WPC Door Frames", "WPC Window Frames", "WPC Solid Doors", "WPC 3 Layer Doors", "WPC / PVC Boards & Sheets", "WPC 3 Layer Boards", "WPC / PVC Louvers"];
+  var PRODUCTS = ["WPC Door Frames", "WPC Window Frames", "WPC Solid Doors", "WPC 3 Layer Doors", "WPC / PVC Boards & Sheets", "WPC 3 Layer Boards", "PVC Panel", "Recycled Plastic Sheet"];
   var ATTR_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid'];
 
   /* ---------- safe storage ---------- */
@@ -72,6 +73,63 @@
   }
   window.gpAttribution = attribution;
 
+  /* ---------- form body + pop-up forms that continue on WhatsApp ---------- */
+  function formBody(form, extra) {
+    var p = new URLSearchParams();
+    new FormData(form).forEach(function (v, k) { if (typeof v === 'string') p.append(k, v); });
+    Object.keys(extra || {}).forEach(function (k) { p.set(k, extra[k]); });
+    return p;
+  }
+  var POPUPS = '#gpQuoteModal, #distributorModal, #allCertsModal, #brochureModal';
+  function isPopupForm(form) { return !!(form.closest && form.closest(POPUPS)); }
+  var WA_LABELS = { fullName: 'Name', name: 'Name', firstName: 'First name', surname: 'Surname', companyName: 'Company', phone: 'Mobile', mobile: 'Mobile',
+    email: 'Email', cityState: 'City', city: 'City', state: 'State', productService: 'Product', interestCategory: 'Interested in', product: 'Product',
+    designCode: 'Design', wpcUser: 'WPC user', experience: 'Experience', message: 'Message', orderQuantity: 'Quantity' };
+  var WA_INTENT = { quick_quote: 'I would like a quote.', sample_request: 'I would like a sample.', dealer_enquiry: 'I would like to become a business associate.',
+    catalogue_request: 'please share your product catalogue.', certificate_request: 'please share your certificates and test reports.' };
+  function waMessage(form, formName, lead) {
+    var intent = WA_INTENT[formName] || 'I have an enquiry.';
+    if (formName === 'catalogue_request' && /brochure/i.test(lead.type)) intent = 'please share your company brochure.';
+    var lines = ['Hi Greenplastwood, ' + intent, ''], seen = {};
+    Array.prototype.forEach.call(form.elements, function (el) {
+      var label = WA_LABELS[el.name], v = (el.value || '').replace(/\s+/g, ' ').trim();
+      if (!label || !v || seen[label]) return;
+      if ((el.type === 'radio' || el.type === 'checkbox') && !el.checked) return;
+      seen[label] = 1; lines.push(label + ': ' + v);
+    });
+    return lines.join('\n');
+  }
+  function fireLeadConversion(formName, lead) {
+    var key = 'gp_conv_' + formName + '_' + (lead.phone || '') + '_' + (lead.product || ''), fired = false;
+    try { fired = sessionStorage.getItem(key); sessionStorage.setItem(key, '1'); } catch (e) { }
+    if (fired) return;
+    var params = { form_name: formName, request_type: lead.type, product: lead.product, delivery: 'whatsapp' };
+    window.dataLayer.push(Object.assign({ event: 'generate_lead' }, params));
+    if (window.gtag && C.ga4Id) window.gtag('event', 'generate_lead', params);
+    if (window.gtag && C.googleAdsId && C.googleAdsLeadLabel) window.gtag('event', 'conversion', { send_to: C.googleAdsId + '/' + C.googleAdsLeadLabel });
+    if (window.fbq) window.fbq('track', 'Lead', { content_name: lead.product || formName, content_category: lead.type });
+  }
+  function sendToWhatsApp(form, formName, lead) {
+    var url = waLink(waMessage(form, formName, lead));
+    // copy to the e-mail endpoint, so the lead is kept even if "send" is never pressed in WhatsApp
+    if (C.formEndpoint && C.whatsappFormsAlsoEmail !== false) {
+      var body = formBody(form, { delivery: 'whatsapp' });
+      try { if (!(navigator.sendBeacon && navigator.sendBeacon(C.formEndpoint, body))) fetch(C.formEndpoint, { method: 'POST', body: body, keepalive: true }).catch(function () { }); } catch (e) { }
+    }
+    fireLeadConversion(formName, lead);
+    track('whatsapp_click', { location: 'form', form_name: formName });
+    // close the pop-up and clear the form, so the page is clean when the visitor comes back
+    var box = form.closest(POPUPS);
+    if (box) { box.classList.remove('is-open', 'open', 'active'); }
+    document.documentElement.classList.remove('gpq-lock'); document.body.style.overflow = '';
+    try { form.reset(); } catch (e) { }
+    var mobile = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent);
+    if (mobile) { location.href = url; return; }
+    var w = window.open(url, '_blank');
+    if (w) { try { w.opener = null; } catch (e) { } } else { location.href = url; }
+  }
+  window.gpWaMessage = waMessage;
+
   /* ---------- lead submit (every form) ---------- */
   function val(form, names) { for (var i = 0; i < names.length; i++) { var el = form.querySelector('[name="' + names[i] + '"]'); if (el && el.value) return el.value; } return ''; }
   window.gpSubmitLead = function (e, formName) {
@@ -95,6 +153,7 @@
     };
     sset('gp_last_lead', lead, true);
     track('lead_submit', { form_name: formName, product: lead.product, request_type: lead.type });
+    if (C.whatsappForms !== false && isPopupForm(form)) { sendToWhatsApp(form, formName, lead); return false; }
     var btn = form.querySelector('[type=submit]');
     if (btn) { btn.disabled = true; btn.dataset.label = btn.innerHTML; btn.innerHTML = '<span>SENDING…</span>'; }
     var q = new URLSearchParams({ form: formName });
@@ -104,7 +163,7 @@
     var go = function () { location.href = (C.thankYouPage || 'thank-you.html') + '?' + q.toString(); };
     if (C.formEndpoint) {
       var done = false, timer = setTimeout(function () { if (!done) { done = true; go(); } }, 7000);
-      fetch(C.formEndpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      fetch(C.formEndpoint, { method: 'POST', body: formBody(form), headers: { Accept: 'application/json' }, keepalive: true })
         .catch(function () { })
         .then(function () { if (!done) { done = true; clearTimeout(timer); go(); } });
     } else { go(); }
@@ -114,7 +173,7 @@
     e.preventDefault();
     var form = e.target; stampForm(form, 'newsletter');
     track('newsletter_signup', {});
-    if (C.formEndpoint) fetch(C.formEndpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } }).catch(function () { });
+    if (C.formEndpoint) fetch(C.formEndpoint, { method: 'POST', body: formBody(form), headers: { Accept: 'application/json' }, keepalive: true }).catch(function () { });
     var inp = form.querySelector('input[type=email]');
     if (inp) { inp.value = ''; inp.placeholder = 'Thank you — subscribed!'; }
     return false;
@@ -127,7 +186,7 @@
     return h1 ? h1.innerText.replace(/\s+/g, ' ').trim() : document.title;
   }
   window.gpWhatsApp = function (topic) {
-    var t = 'Hi GREEN PLASTWOOD, I would like details about ' + (topic || pageTopic()) + '.';
+    var t = 'Hi GREENPLASTWOOD, I would like details about ' + (topic || pageTopic()) + '.';
     track('whatsapp_click', { topic: topic || pageTopic() });
     window.open(waLink(t), '_blank', 'noopener');
   };
@@ -140,57 +199,32 @@
   };
   var TITLES = {
     Quote: ['Get a Quick Quote', 'Share 4 details — our team will call you back with pricing & specifications.', 'GET MY QUOTE'],
-    Sample: ['Request a Free Sample', 'See the finish, weight and quality in hand before you specify or order.', 'REQUEST SAMPLE'],
-    Dealership: ['Become a Channel Partner', 'Tell us your city — our dealer team will share the partnership details.', 'SEND DEALER ENQUIRY'],
+    Sample: ['Request a Sample', 'See the finish, weight and quality in hand before you specify or order.', 'REQUEST SAMPLE'],
+    Dealership: ['Become a Business Associate', 'Tell us your city — our team will share the business associate details.', 'SEND ENQUIRY'],
     Catalogue: ['Get the Product Catalogue', 'We will share the latest catalogue & technical details on WhatsApp / email.', 'SEND ME THE CATALOGUE'],
     Brochure: ['Get the Company Brochure', 'We will share the latest brochure on WhatsApp / email.', 'SEND ME THE BROCHURE']
   };
 
   function trustPanel() {
     return '<div class="gpq-trust">' +
-      '<div class="gpq-amb"><img src="images/hero_spokesperson_clean.png" alt="GREEN PLASTWOOD brand ambassador Dayanand Shetty" loading="lazy" /></div>' +
+      '<div class="gpq-amb"><img src="images/hero_spokesperson_clean.webp" alt="GREENPLASTWOOD brand ambassador Dayanand Shetty" loading="lazy" /></div>' +
       '<div class="gpq-trust-body"><span class="gpq-tag">Brand Ambassador · Dayanand Shetty</span>' +
       '<ul class="gpq-trust-list">' +
-      '<li><b>Since 2012</b><span>13 years of WPC manufacturing</span></li>' +
-      '<li><b>3 Plants</b><span>manufacturing in Gujarat</span></li>' +
+      '<li><b>9 Years</b><span>of WPC manufacturing (since 2017)</span></li>' +
+      '<li><b>1,300 MT</b><span>capacity a month · 3 plants</span></li>' +
       '<li><b>300+ Projects</b><span>50+ stock points · 4+ export countries</span></li>' +
-      '<li><b>ISO 9001:2015</b><span>certified · lab-tested products</span></li>' +
+      '<li><b>9+ Certifications</b><span>ISO 9001:2015 · 125+ team</span></li>' +
       '</ul></div></div>';
   }
   window.gpTrustPanel = trustPanel;
 
   function productOptions(selected) {
-    var list = PRODUCTS.concat(['Dealership / Distribution', 'Customised WPC Solution', 'Other']);
+    var list = PRODUCTS.concat(['Business Associate Enquiry', 'Customised WPC Solution', 'Other']);
     return '<option value="" disabled' + (selected ? '' : ' selected') + '>Product Interested In *</option>' +
       list.map(function (p) { return '<option value="' + p + '"' + (p === selected ? ' selected' : '') + '>' + p + '</option>'; }).join('');
   }
   window.gpProductOptions = productOptions;
 
-  function buildModal() {
-    var m = document.createElement('div');
-    m.className = 'gpq-backdrop'; m.id = 'gpQuoteModal'; m.setAttribute('role', 'dialog'); m.setAttribute('aria-modal', 'true'); m.setAttribute('aria-labelledby', 'gpqTitle');
-    m.innerHTML = '<div class="gpq-card">' +
-      '<button type="button" class="gpq-close" aria-label="Close">×</button>' + trustPanel() +
-      '<form class="gpq-form" novalidate data-form="quick_quote">' +
-      '<h3 id="gpqTitle">Get a Quick Quote</h3><p class="gpq-sub"></p>' +
-      '<input type="hidden" name="requestType" value="Quote" />' +
-      '<label class="gpq-field"><span>Full Name *</span><input name="fullName" type="text" autocomplete="name" required /></label>' +
-      '<label class="gpq-field"><span>Mobile Number *</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9+ ]{10,15}" title="10-digit mobile number" required /></label>' +
-      '<label class="gpq-field"><span>City *</span><input name="cityState" type="text" autocomplete="address-level2" required /></label>' +
-      '<label class="gpq-field"><span>Product *</span><select name="productService" required>' + productOptions('') + '</select></label>' +
-      '<button type="submit" class="gpq-submit">GET MY QUOTE →</button>' +
-      '<p class="gpq-note">We respect your privacy. Our team will contact you on this number.</p>' +
-      '</form></div>';
-    document.body.appendChild(m);
-    m.addEventListener('click', function (e) { if (e.target === m || e.target.classList.contains('gpq-close')) closeModal(); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
-    m.querySelector('form').addEventListener('submit', function (e) {
-      var f = e.target; window.gpSubmitLead(e, f.dataset.form || 'quick_quote');
-    });
-    return m;
-  }
-  var modal;
-  function closeModal() { if (modal) { modal.classList.remove('is-open'); document.documentElement.classList.remove('gpq-lock'); } }
   function splitDesign(product) {
     var m = (product || '').match(/\b(MSD|SG)-\d{3}\b/i);
     if (!m) return [product, ''];
@@ -198,30 +232,73 @@
     if (PRODUCTS.indexOf(base) < 0) base = 'WPC Solid Doors';
     return [base, m[0].toUpperCase()];
   }
+  /* One enquiry form on the website: every "Get a Quote / Sample / Business Associate / Catalogue" button
+     opens the Contact page form (contact.html#contactInquiryForm) with the product already selected.
+     WhatsApp and call buttons are not changed. */
+  var CONTACT_PAGE = 'contact.html';
+  function enquiryProduct(type, product) {
+    if (type === 'Dealership') return 'Business Associate Partnership';
+    if (type === 'Catalogue' || type === 'Brochure' || type === 'Certificates') return 'Catalogue / Test Reports / Documents';
+    var ALIAS = { 'wpc chaukhat': 'WPC Door Frames', 'wpc window frame': 'WPC Window Frames', 'wpc doors': 'WPC Solid Doors',
+      'wpc sheets & boards': 'WPC / PVC Boards & Sheets', 'pvc panels': 'PVC Panel', 'industrial pallets': 'Recycled Plastic Sheet',
+      'wpc cladding': 'Customised WPC Solution', 'wpc decking': 'Customised WPC Solution', 'certificate copies': 'Catalogue / Test Reports / Documents' };
+    product = (product || '').replace(/&amp;/g, '&').trim();
+    if (ALIAS[product.toLowerCase()]) return ALIAS[product.toLowerCase()];
+    if (product && PRODUCTS.indexOf(product) > -1) return product;
+    if (product && /custom/i.test(product)) return 'Customised WPC Solution';
+    return '';
+  }
+  function fillContactForm(product, type, design) {
+    var form = document.getElementById('contactInquiryForm');
+    if (!form) return false;
+    var sel = form.querySelector('select[name="productService"]');
+    if (sel && product) {
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value.toLowerCase() === product.toLowerCase() || sel.options[i].text.toLowerCase() === product.toLowerCase()) { sel.selectedIndex = i; sel.style.color = '#2B2422'; sel.dispatchEvent(new Event('change', { bubbles: true })); break; }
+      }
+    }
+    if (type === 'Dealership') {
+      var cat = form.querySelector('select[name="category"]');
+      if (cat) { for (var j = 0; j < cat.options.length; j++) if (/business associate/i.test(cat.options[j].text)) { cat.selectedIndex = j; cat.style.color = '#2B2422'; cat.dispatchEvent(new Event('change', { bubbles: true })); break; } }
+    }
+    [['requestType', type], ['designCode', design]].forEach(function (kv) {
+      if (!kv[1]) return;
+      var h = form.querySelector('input[type=hidden][name="' + kv[0] + '"]');
+      if (!h) { h = document.createElement('input'); h.type = 'hidden'; h.name = kv[0]; form.appendChild(h); }
+      h.value = kv[1];
+    });
+    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(function () { var n = form.querySelector('input[name="firstName"]') || form.querySelector('input[name="fullName"]'); if (n) n.focus({ preventScroll: true }); }, 450);
+    return true;
+  }
   window.gpOpenQuote = function (type, product) {
     type = type ? type.charAt(0).toUpperCase() + type.slice(1).toLowerCase() : 'Quote';
-    type = TITLES[type] ? type : 'Quote';
-    var sd = splitDesign(product); product = sd[0]; var design = sd[1];
-    modal = modal || buildModal();
-    // never stack with the first-visit brochure popup
-    var bp = document.getElementById('brochurePopupModal'); if (bp) bp.classList.remove('active');
-    try { sessionStorage.setItem('gp_brochure_viewed', 'true'); } catch (e) { }
-    var t = TITLES[type], f = modal.querySelector('form');
-    modal.querySelector('#gpqTitle').textContent = design ? ('Enquire for Design ' + design) : t[0];
-    var dc = f.querySelector('[name=designCode]');
-    if (!dc) { dc = document.createElement('input'); dc.type = 'hidden'; dc.name = 'designCode'; f.appendChild(dc); }
-    dc.value = design;
-    modal.querySelector('.gpq-sub').textContent = t[1];
-    f.querySelector('.gpq-submit').textContent = t[2] + ' →';
-    f.querySelector('[name=requestType]').value = type;
-    f.dataset.form = type === 'Sample' ? 'sample_request' : type === 'Dealership' ? 'dealer_enquiry' : type === 'Catalogue' || type === 'Brochure' ? 'catalogue_request' : 'quick_quote';
-    var sel = f.querySelector('[name=productService]');
-    var p = product && PRODUCTS.indexOf(product) > -1 ? product : (type === 'Dealership' ? 'Dealership / Distribution' : (product && /custom/i.test(product) ? 'Customised WPC Solution' : ''));
-    sel.innerHTML = productOptions(p);
-    modal.classList.add('is-open'); document.documentElement.classList.add('gpq-lock');
-    track('quote_open', { request_type: type, product: p || '' });
-    setTimeout(function () { var i = f.querySelector('[name=fullName]'); if (i) i.focus(); }, 60);
+    if (['Quote', 'Sample', 'Dealership', 'Catalogue', 'Brochure', 'Certificates'].indexOf(type) < 0) type = 'Quote';
+    var sd = splitDesign(product), design = sd[1];
+    var p = enquiryProduct(type, sd[0]);
+    track('quote_click', { request_type: type, product: p });
+    if (fillContactForm(p, type, design)) return;
+    var q = new URLSearchParams();
+    if (p) q.set('product', p);
+    if (type !== 'Quote') q.set('type', type);
+    if (design) q.set('design', design);
+    var qs = q.toString();
+    location.href = CONTACT_PAGE + (qs ? '?' + qs : '') + '#contactInquiryForm';
   };
+  function splitDesign(product) {
+    var m = (product || '').match(/\b(MSD|SG|SGD)-\d{3}\b/i);
+    if (!m) return [product || '', ''];
+    var base = product.replace(/\s*[–-]\s*(MSD|SG|SGD)-\d{3}.*$/i, '').trim();
+    if (PRODUCTS.indexOf(base) < 0) base = 'WPC Solid Doors';
+    return [base, m[0].toUpperCase()];
+  }
+  // Contact page opened from a button on another page: select the product and keep the request type / design code
+  function contactFromUrl() {
+    if (!document.getElementById('contactInquiryForm')) return;
+    var q = new URLSearchParams(location.search);
+    var t = q.get('type') || '', d = q.get('design') || '';
+    if (t || d || q.get('product')) fillContactForm(q.get('product') || '', t, d);
+  }
 
   function buildSticky() {
     var tel = 'tel:' + (C.phone || '');
@@ -229,11 +306,11 @@
     bar.className = 'gp-sticky-bar';
     bar.innerHTML = '<a href="' + tel + '" class="gp-sb-call" data-gp-track="call">' + ICON.phone + '<span>Call</span></a>' +
       '<a href="#" class="gp-sb-wa" data-gp-wa>' + ICON.wa + '<span>WhatsApp</span></a>' +
-      '<a href="#" class="gp-sb-quote" data-gp-quote="Quote">' + ICON.quote + '<span>Get Quote</span></a>';
+      '<a href="contact.html#contactInquiryForm" class="gp-sb-quote" data-gp-quote="Quote">' + ICON.quote + '<span>Get Quote</span></a>';
     document.body.appendChild(bar);
     var bub = document.createElement('div');
     bub.className = 'gp-float';
-    bub.innerHTML = '<a href="' + tel + '" class="gp-float-call" data-gp-track="call" aria-label="Call GREEN PLASTWOOD">' + ICON.phone + '</a>' +
+    bub.innerHTML = '<a href="' + tel + '" class="gp-float-call" data-gp-track="call" aria-label="Call GREENPLASTWOOD">' + ICON.phone + '</a>' +
       '<a href="#" class="gp-float-wa" data-gp-wa aria-label="Chat on WhatsApp">' + ICON.wa + '<span class="gp-float-tip">Chat on WhatsApp</span></a>';
     document.body.appendChild(bub);
     document.body.classList.add('gp-has-sticky');
@@ -264,15 +341,14 @@
 
   // after page scripts: route legacy "Get a Quote" / "Send Inquiry" to the quick modal
   window.addEventListener('load', function () {
-    var isContact = /contact\.html/.test(location.pathname);
     var hq = document.getElementById('headerQuoteBtn');
-    if (hq) { var clone = hq.cloneNode(true); clone.setAttribute('data-gp-quote', 'Quote'); hq.parentNode.replaceChild(clone, hq); }
-    if (!isContact) {
-      window.openQuoteModal = function (ctx) { window.gpOpenQuote('Quote', typeof ctx === 'string' ? ctx : ''); };
-      window.openInquiryModal = function (ctx) { window.gpOpenQuote('Quote', typeof ctx === 'string' ? ctx : ''); };
-    }
+    if (hq) { var clone = hq.cloneNode(true); clone.removeAttribute('onclick'); clone.setAttribute('data-gp-quote', 'Quote'); hq.parentNode.replaceChild(clone, hq); }
+    window.openQuoteModal = window.openInquiryModal = function (ctx) { window.gpOpenQuote('Quote', typeof ctx === 'string' ? ctx : ''); };
+    window.openBrochureModal = function () { window.gpOpenQuote('Catalogue', pageProduct()); };
     window.handleDirectBrochureDownload = window.handleDirectBrochureDownloadProd = function () { window.gpOpenQuote('Brochure'); };
-    window.openBrochureModal = function () { window.gpOpenQuote('Catalogue', (document.querySelector('h1') || {}).innerText ? pageProduct() : ''); };
+    window.openDistributorModal = function () { window.gpOpenQuote('Dealership'); };
+    window.openDownloadAllModal = function () { window.gpOpenQuote('Certificates'); };
+    contactFromUrl();
   });
   function pageProduct() {
     var t = (document.querySelector('h1') || { innerText: '' }).innerText.toLowerCase();

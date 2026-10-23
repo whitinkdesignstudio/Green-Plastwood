@@ -2,7 +2,7 @@
    Green Plastwood — blog listing page (blogs.html) and blog articles (blog-*.html)
    Loaded after gp-v2.css and before gp-type.css.
    ===================================================================== */
-.bl-page { --bl-line: #E5DFD7; --bl-ink: #231F1D; --bl-text: #4E4644; --bl-mute: #6E6663; --bl-green: #00866A; --bl-green-d: #00785F; --bl-dark: #073A30; --bl-cream: #F7F4EE; --bl-soft: #E3F2EC; --bl-top: 75px; }
+.bl-page { --bl-line: #E5DFD7; --bl-ink: #231F1D; --bl-text: #4E4644; --bl-mute: #6E6663; --bl-green: #05838E; --bl-green-d: #05757F; --bl-dark: #0A393D; --bl-cream: #F7F4EE; --bl-soft: #E5F1F2; --bl-top: 75px; }
 @media (max-width: 991px) { .bl-page { --bl-top: 69px; } }
 .bl-crumb { font-size: 14px; color: var(--bl-mute); margin: 0 0 22px; }
 .bl-crumb a { color: var(--bl-mute); text-decoration: none; } .bl-crumb a:hover { color: var(--bl-green-d); text-decoration: underline; }
@@ -30,7 +30,7 @@
 .bl-cards--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .bl-card { min-width: 0; }
 .bl-card a { display: flex; flex-direction: column; height: 100%; background: #fff; border: 1px solid var(--bl-line); border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; transition: border-color .2s, box-shadow .2s; }
-.bl-card a:hover, .bl-card a:focus-visible { border-color: var(--bl-green); box-shadow: 0 16px 30px -20px rgba(7, 58, 48, .5); outline: none; }
+.bl-card a:hover, .bl-card a:focus-visible { border-color: var(--bl-green); box-shadow: 0 16px 30px -20px rgba(10, 57, 61, .5); outline: none; }
 .bl-card-img { aspect-ratio: 4 / 3; overflow: hidden; background: #E9E4DA; }
 .bl-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s ease; }
 .bl-card a:hover .bl-card-img img { transform: scale(1.04); }
@@ -65,14 +65,14 @@
 .bl-cta { background: var(--bl-dark); color: #fff; overflow: hidden; }
 .bl-cta-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, .5fr); gap: clamp(22px, 3.2vw, 44px); align-items: center; }
 .bl-cta-text { padding: 46px 0; }
-.bl-cta-text .bl-kicker { color: #7ED6BB; }
+.bl-cta-text .bl-kicker { color: #8DD1D7; }
 :root:root:root:root .bl-cta-text h2 { color: #fff; margin: 0 0 14px !important; }
 :root:root:root:root .bl-cta-text p.bl-cta-lead { font-size: 18px !important; line-height: 1.6 !important; color: rgba(255, 255, 255, .82); margin: 0; max-width: 34ch; }
 .bl-form { background: #fff; border-radius: 12px; padding: 22px; margin: 34px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .bl-form input, .bl-form textarea { width: 100%; border: 1px solid #D9D2C8; border-radius: 6px; padding: 12px 14px; font: inherit; font-size: 15.5px; color: var(--bl-ink); background: #fff; }
 .bl-form input { height: 48px; }
 .bl-form textarea { grid-column: 1 / -1; min-height: 78px; resize: vertical; }
-.bl-form input:focus, .bl-form textarea:focus { outline: none; border-color: var(--bl-green); box-shadow: 0 0 0 3px rgba(0, 134, 106, .12); }
+.bl-form input:focus, .bl-form textarea:focus { outline: none; border-color: var(--bl-green); box-shadow: 0 0 0 3px rgba(5, 131, 142, .12); }
 .bl-form button { grid-column: 1 / -1; justify-self: start; border: 0; cursor: pointer; }
 .bl-cta-img { align-self: stretch; margin-right: calc(-1 * max(24px, (100vw - 1280px) / 2 + 24px)); position: relative; min-height: 260px; }
 .bl-cta-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -136,3 +136,9 @@
 .bl-article strong { color: var(--bl-ink); }
 .bl-article a:not(.gp-btn) { color: var(--bl-green-d); }
 .bl-faq-grid > *, .bl-cta-grid > *, .bl-grid > * { min-width: 0; }
+
+/* 23 Oct 2026: blog enquiry box now sends visitors to the one Contact page form */
+.bl-form--go { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.bl-form--go p { flex: 1 1 100%; margin: 0 0 6px; font-size: 16px; line-height: 1.6; color: var(--bl-text, #4E4644); }
+.bl-form--go .gp-btn { justify-self: auto; }
+@media (max-width: 760px) { .bl-form--go .gp-btn { flex: 1 1 100%; justify-content: center; text-align: center; } }

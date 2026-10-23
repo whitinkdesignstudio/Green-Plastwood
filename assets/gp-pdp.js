@@ -1,4 +1,4 @@
-/* Green Plastwood — product detail pages: gallery, sticky section nav, type tabs from links */
+/* Greenplastwood — product detail pages: gallery, sticky section nav, type tabs from links */
 (function () {
   'use strict';
   var root = document.documentElement;

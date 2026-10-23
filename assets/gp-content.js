@@ -1,4 +1,4 @@
-/* Green Plastwood — shared behaviour for content components */
+/* Greenplastwood — shared behaviour for content components */
 (function () {
   // Tabs: <div data-gp-tabs> ... <button class="gp-tab" data-tab="x"> ... <div class="gp-tab-panel" data-panel="x">
   document.querySelectorAll('[data-gp-tabs]').forEach(function (group) {

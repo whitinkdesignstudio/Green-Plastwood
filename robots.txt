@@ -3,4 +3,4 @@ Allow: /
 Disallow: /lp-
 Disallow: /thank-you.html
 
-Sitemap: https://whitinkdesignstudio.github.io/Green-Plastwood/sitemap.xml
+Sitemap: https://sngecoindia.com/sitemap.xml

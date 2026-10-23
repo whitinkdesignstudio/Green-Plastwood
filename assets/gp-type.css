@@ -7,34 +7,107 @@
    Text: Questrial (files in assets/fonts, SIL Open Font License).
    Headings: Avenir Light where the device has it (Apple devices); other devices show Questrial.
    Avenir is a licensed font and is not shipped with the site, exactly as on the CELVION site. */
-@font-face { font-family: 'Questrial'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/questrial-latin-ext-400-normal.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-@font-face { font-family: 'Questrial'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/questrial-latin-400-normal.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: 'Avenir Light'; font-style: normal; font-weight: 300; src: local('Avenir Light'), local('Avenir-Light'), local('AvenirNext-Light'), local('Avenir Next Light'); }
-:root { --gp-font-body: 'Questrial', -apple-system, 'Segoe UI', Roboto, sans-serif; --gp-font-head: 'Avenir Light', 'Avenir Next', 'Avenir', 'Questrial', sans-serif; }
-body, button, input, select, textarea { font-family: var(--gp-font-body); }
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/questrial-latin-ext-400-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/questrial-latin-400-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Avenir Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Avenir Light'), local('Avenir-Light'), local('AvenirNext-Light'), local('Avenir Next Light');
+}
+
+:root {
+  --gp-font-body: 'Questrial', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --gp-font-head: 'Avenir Light', 'Avenir Next', 'Avenir', 'Questrial', sans-serif;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--gp-font-body);
+}
+
 /* headings: Avenir Light / Questrial at regular weight, as on the CELVION site */
-:root:root:root:root:root h1, :root:root:root:root:root h2, :root:root:root:root:root h3,
-:root:root:root:root:root .v2-slide-title, :root:root:root:root:root .product-main-title, :root:root:root:root:root .gp-page-title, :root:root:root:root:root .gpx-title, :root:root:root:root:root .v2-vhero-title {
-  font-family: var(--gp-font-head) !important; font-weight: 400 !important; }
+:root:root:root:root:root h1,
+:root:root:root:root:root h2,
+:root:root:root:root:root h3,
+:root:root:root:root:root .v2-slide-title,
+:root:root:root:root:root .product-main-title,
+:root:root:root:root:root .gp-page-title,
+:root:root:root:root:root .gpx-title,
+:root:root:root:root:root .v2-vhero-title {
+  font-family: var(--gp-font-head) !important;
+  font-weight: 400 !important;
+}
+
 /* Questrial has one weight: stop the browser drawing a heavy fake bold on large text */
-:root:root:root:root:root h1 b, :root:root:root:root:root h2 b, :root:root:root:root:root h1 strong, :root:root:root:root:root h2 strong,
-:root:root:root:root:root h1 span, :root:root:root:root:root h2 span, :root:root:root:root:root h3 span, :root:root:root:root:root h1 a, :root:root:root:root:root h2 a, :root:root:root:root:root h3 a, :root:root:root:root:root h1 em, :root:root:root:root:root h2 em {
-  font-family: inherit !important; font-weight: 400 !important; }
+:root:root:root:root:root h1 b,
+:root:root:root:root:root h2 b,
+:root:root:root:root:root h1 strong,
+:root:root:root:root:root h2 strong,
+:root:root:root:root:root h1 span,
+:root:root:root:root:root h2 span,
+:root:root:root:root:root h3 span,
+:root:root:root:root:root h1 a,
+:root:root:root:root:root h2 a,
+:root:root:root:root:root h3 a,
+:root:root:root:root:root h1 em,
+:root:root:root:root:root h2 em {
+  font-family: inherit !important;
+  font-weight: 400 !important;
+}
+
 /* ---------- end fonts ---------- */
 
 
 
 :root {
-  --gp-h: 38px;        /* every page / section main heading (h1, h2) */
-  --gp-sub: 26px;      /* sub-heading inside a section */
-  --gp-card-h: 21px;   /* card / tile title */
-  --gp-p: 19px;        /* paragraph */
-  --gp-card-p: 16px;   /* text inside cards */
+  --gp-h: 38px;
+  /* every page / section main heading (h1, h2) */
+  --gp-sub: 26px;
+  /* sub-heading inside a section */
+  --gp-card-h: 21px;
+  /* card / tile title */
+  --gp-p: 19px;
+  /* paragraph */
+  --gp-card-p: 16px;
+  /* text inside cards */
 }
-@media (max-width: 991px) { :root { --gp-h: 32px; --gp-sub: 24px; } }
-@media (max-width: 600px) { :root { --gp-h: 28px; --gp-sub: 22px; --gp-card-h: 19px; --gp-p: 17px; --gp-card-p: 15.5px; } }
+
+@media (max-width: 991px) {
+  :root {
+    --gp-h: 32px;
+    --gp-sub: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --gp-h: 28px;
+    --gp-sub: 22px;
+    --gp-card-h: 19px;
+    --gp-p: 17px;
+    --gp-card-p: 15.5px;
+  }
+}
 
 /* ---------- main headings: hero + section, same size everywhere ---------- */
 :root:root:root:root section h1,
@@ -56,8 +129,8 @@ body, button, input, select, textarea { font-family: var(--gp-font-body); }
 :root:root:root:root section .v2-vals-clean-title,
 :root:root:root:root section .v2-qp-policy h3,
 :root:root:root:root section .v2-mv-card-new h3,
-:root:root:root:root section .gpm-block > .gp-h3,
-:root:root:root:root section .gp-wrap > .gp-h3,
+:root:root:root:root section .gpm-block>.gp-h3,
+:root:root:root:root section .gp-wrap>.gp-h3,
 :root:root:root:root section .gp-article h2 {
   font-size: var(--gp-sub) !important;
   line-height: 1.25 !important;
@@ -66,7 +139,7 @@ body, button, input, select, textarea { font-family: var(--gp-font-body); }
 }
 
 /* ---------- card / tile titles ---------- */
-:root:root:root:root section .gp-card > .gp-h3,
+:root:root:root:root section .gp-card>.gp-h3,
 :root:root:root:root section .gp-tab-panel .gp-h3,
 :root:root:root:root section .gpc-product-body h3,
 :root:root:root:root section .v2-line-body h3,
@@ -82,12 +155,18 @@ body, button, input, select, textarea { font-family: var(--gp-font-body); }
   font-size: var(--gp-card-h) !important;
   line-height: 1.3 !important;
 }
+
 /* compact cards keep their own smaller title size */
-:root:root:root:root section .v2-qc-card > .gp-h3 { font-size: 16px !important; }
+:root:root:root:root section .v2-qc-card>.gp-h3 {
+  font-size: 16px !important;
+}
 
 /* no heading is forced to capitals: the case typed in the page is the case shown */
 :root:root:root:root section h3,
-:root:root:root:root section h4 { text-transform: none !important; letter-spacing: 0 !important; }
+:root:root:root:root section h4 {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
 
 /* ---------- paragraphs ---------- */
 :root:root:root:root section .gp-lead,
@@ -111,14 +190,14 @@ body, button, input, select, textarea { font-family: var(--gp-font-body); }
 :root:root:root:root section .v2-qp-policy p,
 :root:root:root:root section .v2-qp-policy li,
 :root:root:root:root section .v2-qp-belief p:not(.v2-qp-quote),
-:root:root:root:root section .gp-qq-form > p,
+:root:root:root:root section .gp-qq-form>p,
 :root:root:root:root section .gp-cta p,
 :root:root:root:root section .gpc-qa details p,
 :root:root:root:root section .faq-answer-panel,
 :root:root:root:root section .accordion-body,
 :root:root:root:root section .gpm-sub,
 :root:root:root:root section .v2-trusted-head p,
-:root:root:root:root section .gp-reveal:not(.gp-card):not(.gp-address-card) > p:not([class]) {
+:root:root:root:root section .gp-reveal:not(.gp-card):not(.gp-address-card)>p:not([class]) {
   font-size: var(--gp-p) !important;
   line-height: 1.65 !important;
 }
@@ -139,15 +218,1817 @@ body, button, input, select, textarea { font-family: var(--gp-font-body); }
 
 /* taglines sit between a heading and its paragraph */
 :root:root:root:root section .product-tagline,
-:root:root:root:root section .v2-phero-text p.v2-phero-tag { font-size: 22px !important; line-height: 1.4 !important; }
+:root:root:root:root section .v2-phero-text p.v2-phero-tag {
+  font-size: 22px !important;
+  line-height: 1.4 !important;
+}
+
 @media (max-width: 600px) {
+
   :root:root:root:root section .product-tagline,
-  :root:root:root:root section .v2-phero-text p.v2-phero-tag { font-size: 19px !important; }
+  :root:root:root:root section .v2-phero-text p.v2-phero-tag {
+    font-size: 19px !important;
+  }
 }
 
 /* ---------- heading lines ---------- */
 /* no forced breaks inside a heading: it runs on one line when it fits, otherwise it splits into even lines */
-:root:root:root:root section h1 > span,
-:root:root:root:root section h2 > span { display: inline !important; }
+:root:root:root:root section h1>span,
+:root:root:root:root section h2>span {
+  display: inline !important;
+}
+
 :root:root:root:root section h1,
-:root:root:root:root section h2 { max-width: none !important; text-wrap: balance; }
+:root:root:root:root section h2 {
+  max-width: none !important;
+  text-wrap: balance;
+}
+
+/* ---------- header on screens 861 to 1023 px wide (large phones held sideways, small tablets) ----------
+   The full menu does not fit at these widths: the logo was squeezed or missing and the quote button was cut off.
+   These screens now get the same menu button and drop-down menu that phones already have (860 px and below). */
+@media (min-width: 861px) and (max-width: 1023px) {
+  header.header .nav-wrapper {
+    padding: 0 20px !important;
+    height: 68px !important;
+  }
+
+  header.header .brand-logo {
+    flex: 0 0 auto !important;
+  }
+
+  header.header .brand-logo-img {
+    height: 36px !important;
+    width: auto !important;
+    max-width: 170px !important;
+    object-fit: contain !important;
+    flex-shrink: 0 !important;
+  }
+
+  header.header .hamburger-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #dcd7cc;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #2B2422;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+  }
+
+  header.header .hamburger-btn:hover {
+    background: #f4f0e6;
+    border-color: var(--green-primary, #05838E);
+    color: var(--green-primary, #05838E);
+  }
+
+  header.header .nav-menu {
+    display: none !important;
+    position: absolute !important;
+    top: 68px !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 16px 24px 24px !important;
+    border-bottom: 2px solid var(--green-primary, #05838E);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+    gap: 0 !important;
+    max-height: calc(100vh - 68px);
+    overflow-y: auto;
+    z-index: 9999;
+  }
+
+  header.header .nav-menu.open {
+    display: flex !important;
+  }
+
+  header.header .nav-menu>.nav-item {
+    width: 100%;
+    border-bottom: 1px solid #f0ece3;
+  }
+
+  header.header .nav-menu .nav-link {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 0 !important;
+    font-size: 15px !important;
+    font-weight: 600;
+    color: #2B2422;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  header.header .nav-menu .nav-link.active {
+    color: var(--green-primary, #05838E);
+    font-weight: 700;
+  }
+
+  header.header .nav-menu .nav-link.active::after {
+    display: none !important;
+  }
+
+  header.header .nav-menu .nav-item .dropdown {
+    position: static !important;
+    box-shadow: none !important;
+    border: 1px solid #ede8de;
+    background: #fbf9f5;
+    border-radius: 6px;
+    padding: 6px 8px;
+    margin: 4px 0 10px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    display: block !important;
+  }
+
+  header.header .nav-menu .nav-item .dropdown a {
+    padding: 9px 14px;
+    font-size: 13.5px;
+    border-radius: 4px;
+    color: #2C2523;
+  }
+}
+
+/* 861 to 900 px: the bottom Call / WhatsApp / Get Quote bar is on screen, so the header button is not repeated (same as on phones) */
+@media (min-width: 861px) and (max-width: 900px) {
+
+  header.header .btn-header-quote,
+  header.header .btn-quote-outline {
+    display: none !important;
+  }
+}
+
+/* Contact page: its header has wider side margins, so at 1024 to 1099 px the logo touched the menu. A little less space between the menu items. */
+@media (min-width: 1024px) and (max-width: 1099px) {
+  header.header:not(#navbar) .nav-menu {
+    gap: 9px !important;
+  }
+}
+
+/* Phone / tablet menu: the sub-menu links (WPC Chaukhat, WPC Doors, Blogs ...) kept the desktop "hidden until hover" setting,
+   so the first tap on them did nothing. They now open on the first tap. Nothing changes visually. */
+@media (max-width: 1023px) {
+  header.header .nav-menu .dropdown {
+    pointer-events: auto !important;
+  }
+}
+
+/* Open menu on screens that also show the bottom Call / WhatsApp / Get Quote bar: room to scroll the last item clear of that bar */
+@media (max-width: 900px) {
+  header.header .nav-menu {
+    padding-bottom: calc(92px + env(safe-area-inset-bottom)) !important;
+  }
+}
+
+/* Brochure pop-up (Home, Contact) on wide but short screens, e.g. a phone held sideways: the card was taller than the screen
+   and its close button sat above the top edge. It now fits the screen and scrolls, with the close button inside, as on phones. */
+@media (min-width: 821px) and (max-height: 600px) {
+  .brochure-popup-card {
+    max-height: calc(100vh - 32px) !important;
+    overflow-y: auto !important;
+  }
+
+  .brochure-popup-left {
+    min-height: 0 !important;
+  }
+
+  .brochure-popup-close {
+    top: 8px !important;
+    right: 8px !important;
+  }
+}
+
+/* Small pop-up boxes (dealer form, directions, success message): on a short screen the box was taller than the screen and could
+   not be scrolled, so its close button and last fields were out of reach. It now scrolls inside the screen. No change where it fits. */
+.modal-backdrop .modal-box {
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Very narrow screens (under 320 px, e.g. a folded Galaxy Fold): three blocks ran a few pixels past the right edge */
+@media (max-width: 319px) {
+
+  .gph-uses,
+  .lp-trust-in {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .ab5-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .ab5-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+
+  .ab5-stats>* {
+    min-width: 0 !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  :root:root:root:root:root .ab5-stats span {
+    font-size: 11.5px !important;
+  }
+
+  .gph-uses>*,
+  .lp-trust-in>*,
+  .ab5-grid>* {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: auto !important;
+  }
+}
+
+/* =====================================================================
+   Client corrections, round 1 (Oct 2026)
+   ===================================================================== */
+/* Home "Our Products": six cards, three per row on desktop, two on tablet, one on phone */
+@media (min-width: 981px) {
+  .v2-lines .v2-line:nth-child(n) {
+    grid-column: span 2 !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .v2-lines .v2-line:nth-child(n) {
+    grid-column: span 1 !important;
+  }
+}
+
+/* Certifications: "How we control quality" check list */
+.cert-qc-list {
+  list-style: none;
+  margin: 18px 0 22px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.cert-qc-list li {
+  background: #fff;
+  border: 1px solid #D5E7E9;
+  border-left: 4px solid #0BB0BF;
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cert-qc-list b {
+  color: #0A393D;
+  font-size: 16.5px;
+  font-weight: 400;
+  font-family: var(--gp-font-head);
+}
+
+.cert-qc-list span {
+  color: #4A5B5D;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .cert-qc-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.v2-benefits .v2-ben-track {
+  animation-duration: 72s !important;
+}
+
+/* Home brochures: five catalogues in one row on desktop */
+@media (min-width: 1101px) {
+  .v2-bros {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Home "Green Plastwood in numbers" (official company statistics) */
+.v2-stats {
+  background: #0A393D;
+  color: #fff;
+  padding: 64px 0;
+}
+
+.v2-stats-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 40px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+:root:root:root:root:root .v2-stats .gp-h2 {
+  color: #fff !important;
+  margin: 0 !important;
+}
+
+:root:root:root:root:root .v2-stats .gp-h2 .v2-green {
+  color: #91DAE1 !important;
+}
+
+:root:root:root:root:root .v2-stats .gp-lead {
+  color: rgba(255, 255, 255, .78) !important;
+  margin: 0 !important;
+  max-width: 46ch;
+}
+
+.v2-stats-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(145, 218, 225, .22);
+  border: 1px solid rgba(145, 218, 225, .22);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.v2-stats-grid li {
+  background: #0A393D;
+  padding: 26px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.v2-stats-grid b {
+  font-family: var(--gp-font-head);
+  font-weight: 400;
+  font-size: clamp(32px, 3.4vw, 46px);
+  line-height: 1.05;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.v2-stats-grid b small {
+  font-size: .45em;
+  color: #91DAE1;
+  letter-spacing: 0;
+}
+
+.v2-stats-grid span {
+  font-size: 15.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, .8);
+}
+
+.v2-stats-grid li:hover {
+  background: #0D4549;
+}
+
+@media (max-width: 900px) {
+  .v2-stats {
+    padding: 48px 0;
+  }
+
+  .v2-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .v2-stats-grid li {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .v2-stats-grid span {
+    font-size: 14px;
+  }
+}
+
+/* About "Six product lines": three per row on desktop + common closing line */
+@media (min-width: 1101px) {
+  .v2-wms {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+  }
+
+  .v2-wms .v2-wm-img {
+    aspect-ratio: 16 / 9 !important;
+  }
+}
+
+.v2-wms-note {
+  margin: 18px 0 0;
+  padding: 14px 18px;
+  background: #E5F1F2;
+  border-left: 4px solid #0BB0BF;
+  border-radius: 10px;
+  color: #0A393D;
+  font-size: 17px;
+}
+
+/* Contact: address text aligned the same way everywhere + three plant cards with their own map */
+.touch-info-content p,
+.gp-address-card p,
+.gp-plant-body p {
+  text-align: left;
+}
+
+.gp-address-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.gp-address-card h3,
+.gp-address-card p {
+  margin: 0 !important;
+}
+
+.gp-anchor {
+  display: block;
+  position: relative;
+  top: -110px;
+  visibility: hidden;
+}
+
+.gp-plants-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 44px 0 16px;
+}
+
+.gp-plants-head .gp-h3 {
+  margin: 0 !important;
+}
+
+.gp-plants-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gp-plant-card {
+  background: #fff;
+  border: 1px solid #D5E7E9;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gp-plant-card .gp-map--sm {
+  height: 220px !important;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #D5E7E9;
+}
+
+.gp-plant-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+}
+
+.gp-plant-body h3 {
+  margin: 0 !important;
+  color: #0A393D;
+}
+
+.gp-plant-body p {
+  margin: 0 0 4px !important;
+  color: #4A5B5D;
+  line-height: 1.6;
+  flex: 1;
+}
+
+@media (max-width: 980px) {
+  .gp-plants-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gp-plant-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  }
+
+  .gp-plant-card .gp-map--sm {
+    height: 100% !important;
+    min-height: 200px;
+    border-bottom: 0;
+    border-right: 1px solid #D5E7E9;
+  }
+}
+
+@media (max-width: 600px) {
+  .gp-plant-card {
+    display: flex;
+  }
+
+  .gp-plant-card .gp-map--sm {
+    height: 200px !important;
+    border-right: 0;
+    border-bottom: 1px solid #D5E7E9;
+  }
+}
+
+/* Resources: exhibition news & updates */
+.gp-ex-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gp-ex-card {
+  background: #fff;
+  border: 1px solid #D5E7E9;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gp-ex-img {
+  aspect-ratio: 4 / 3;
+  background: #E5F1F2;
+  overflow: hidden;
+}
+
+.gp-ex-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gp-ex-img--none {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #0A393D, #05838E);
+}
+
+.gp-ex-img--none span {
+  font-family: var(--gp-font-head);
+  font-size: 54px;
+  color: rgba(255, 255, 255, .9);
+  letter-spacing: .02em;
+}
+
+.gp-ex-body {
+  padding: 16px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gp-ex-year {
+  align-self: flex-start;
+  background: #E5F1F2;
+  color: #05838E;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 13px;
+}
+
+:root:root:root:root section .gp-ex-body h3 {
+  margin: 6px 0 0 !important;
+  font-size: 19px !important;
+  color: #0A393D;
+}
+
+.gp-ex-place {
+  margin: 0 !important;
+  color: #05838E;
+  font-size: 14.5px !important;
+}
+
+.gp-ex-body p:last-child {
+  margin: 4px 0 0;
+  color: #4A5B5D;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+@media (max-width: 1100px) {
+  .gp-ex-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .gp-ex-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 440px) {
+  .gp-ex-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* PVC Panel page: placeholder card until the client's PVC Panel catalogue arrives */
+.v2-bro-img--ask {
+  display: grid !important;
+  place-items: center;
+  background: linear-gradient(150deg, #0A393D, #05838E) !important;
+}
+
+.v2-bro-img--ask span {
+  color: #fff !important;
+  font-family: var(--gp-font-head);
+  font-size: 20px !important;
+  line-height: 1.25;
+  text-align: center;
+  margin: 0 !important;
+}
+
+/* Logo: the same size on every page (48 px tall on desktop, 36 px on tablet and phone), landing pages included */
+@media (min-width: 1024px) {
+
+  :root:root header.header .brand-logo-img,
+  :root:root header .brand-logo-img {
+    height: 48px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root:root header .brand-logo-img {
+    height: 36px !important;
+    width: auto !important;
+  }
+}
+
+:root:root .lp-head img:first-of-type {
+  height: 48px !important;
+  width: auto !important;
+}
+
+@media (max-width: 1023px) {
+  :root:root .lp-head img:first-of-type {
+    height: 36px !important;
+  }
+}
+
+/* ---------- Bigger type (client correction: larger headings, sub-headings and body text) ---------- */
+:root {
+  --gp-h: 38px;
+  --gp-sub: 26px;
+  --gp-card-h: 21px;
+  --gp-p: 19px;
+  --gp-card-p: 16px;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --gp-h: 38px;
+    --gp-sub: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --gp-h: 30px;
+    --gp-sub: 22px;
+    --gp-card-h: 19px;
+    --gp-p: 17px;
+    --gp-card-p: 15.5px;
+  }
+}
+
+.touch-items-list p,
+.touch-info-content p,
+.touch-info-content a {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+.touch-info-content h4 {
+  font-size: 18px !important;
+}
+
+/* ---------- Designed section headings: brand bar removed ---------- */
+:root:root section .gp-h2::before,
+:root:root section .v2-ben-title::before,
+:root:root section .cert-sec-title::before,
+:root:root section .legacy-title::before,
+:root:root section .faq-title::before,
+:root:root section .sec-faq-title::before,
+:root:root #trusted .v2-trusted-head h2::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* paragraphs: one alignment everywhere (left), centred only where the heading block is centred */
+:root:root section p {
+  text-align: left;
+}
+
+:root:root .v2-head--center p,
+:root:root .gp-head--center p,
+:root:root .v2-trusted-head p,
+:root:root .gp-cta--center p {
+  text-align: center;
+}
+
+:root:root:root:root section .gp-address-card h3,
+:root:root:root:root section .gp-plant-body h3 {
+  font-size: var(--gp-card-h) !important;
+  color: #0A393D !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+:root:root:root:root section .gp-address-card p {
+  font-size: 16.5px !important;
+  line-height: 1.65 !important;
+  color: #3F4F51;
+}
+
+:root:root:root:root section .gp-plants-head .gp-h3 {
+  font-size: var(--gp-sub) !important;
+}
+
+/* Certifications "How we control quality": photo fills the full height of the taller text column */
+#legacy .legacy-grid {
+  align-items: stretch !important;
+}
+
+#legacy .legacy-photo-wrap {
+  position: relative;
+  align-self: stretch;
+  background: #E5F1F2 !important;
+}
+
+#legacy .legacy-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100% !important;
+  max-height: none !important;
+}
+
+.cert-qc-note {
+  margin: 0 0 18px !important;
+  color: #05838E;
+  font-size: 16.5px !important;
+}
+
+/* ---------- Product pages: clearer "at a glance" specs, designed comparisons, boxed advantages ---------- */
+:root:root .pd-facts {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  border: 0 !important;
+  margin: 22px 0 !important;
+}
+
+:root:root .pd-facts>div {
+  display: flex !important;
+  flex-direction: column;
+  gap: 4px;
+  background: #fff;
+  border: 1px solid #D5E7E9 !important;
+  border-top: 3px solid #0BB0BF !important;
+  border-radius: 12px;
+  padding: 12px 14px !important;
+  min-width: 0;
+}
+
+:root:root .pd-facts dt {
+  font-size: 13px !important;
+  color: #05838E !important;
+  margin: 0 !important;
+  width: auto !important;
+}
+
+:root:root .pd-facts dd {
+  font-size: 16.5px !important;
+  color: #0A393D !important;
+  margin: 0 !important;
+  line-height: 1.35;
+}
+
+@media (max-width: 600px) {
+  :root:root .pd-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* yes / no marks as badges */
+:root:root .gpc-yes,
+:root:root .gpc-no {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+:root:root .gpc-yes {
+  background: #0BB0BF;
+  color: #fff !important;
+}
+
+:root:root .gpc-no {
+  background: #FDECEC;
+  color: #C62828 !important;
+}
+
+/* WPC vs plywood: the Green Plastwood column is highlighted */
+:root:root .pp8-vs-table thead th:nth-child(2) {
+  background: #05838E !important;
+  color: #fff !important;
+}
+
+:root:root .pp8-vs-table tbody td:nth-of-type(1) {
+  background: #E5F1F2 !important;
+  color: #0A393D;
+  font-weight: 600;
+}
+
+:root:root .pp8-vs-table {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px -22px rgba(10, 57, 61, .45);
+}
+
+/* product advantages as boxes */
+:root:root .pd-checks--2 {
+  gap: 10px !important;
+}
+
+:root:root .pd-checks--2 li {
+  background: #fff;
+  border: 1px solid #D5E7E9;
+  border-radius: 10px;
+  padding: 11px 12px 11px 44px !important;
+  display: flex;
+  align-items: center;
+}
+
+:root:root .pd-checks--2 li::before {
+  left: 14px !important;
+  top: 50% !important;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  background: #0BB0BF !important;
+}
+
+:root:root .pd-checks--2 li::after {
+  left: 20px !important;
+  top: 50% !important;
+  margin-top: -4px;
+  border-color: #fff !important;
+}
+
+@media (max-width: 600px) {
+  .contact-split-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .get-in-touch-col,
+  .touch-info-content {
+    min-width: 0 !important;
+  }
+
+  .touch-info-content p {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 600px) {
+  #partner .gpx-dstats strong {
+    font-size: 22px !important;
+    white-space: nowrap;
+  }
+
+  #partner .gpx-dstats div {
+    padding: 14px 10px !important;
+  }
+}
+
+/* About: real Gujarat Excellence 2026 trophy photo, shown whole */
+.ab5-award img.ab5-award-real {
+  object-fit: cover;
+  object-position: center 45%;
+  background: #EEF3F3;
+}
+
+/* Home journey: eight milestones (2017 brand launch added) */
+.v2-journey .v2-tl {
+  grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  min-width: 1240px !important;
+}
+
+@media (min-width: 1360px) {
+  .v2-journey .v2-tl {
+    min-width: 0 !important;
+  }
+
+  .v2-journey .v2-tl-scroll {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 1359px) {
+  .v2-journey .v2-tl-scroll {
+    overflow-x: auto !important;
+  }
+}
+
+
+/* Recycled Plastic Sheet product page */
+.rps-strip {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.rps-strip figure {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  cursor: zoom-in;
+  background: #E5F1F2;
+}
+
+.rps-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s;
+}
+
+.rps-strip figure:hover img {
+  transform: scale(1.05);
+}
+
+.rps-size-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.rps-vs {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.4fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.rps-vs-col {
+  border-radius: 16px;
+  padding: 26px 26px 24px;
+}
+
+.rps-vs-col h3 {
+  margin: 0 0 14px !important;
+  font-size: var(--gp-card-h) !important;
+}
+
+.rps-vs-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.rps-vs-col--old {
+  background: #F4F0E8;
+  border: 1px solid #E5DFD7;
+  color: #4A4542;
+}
+
+.rps-vs-col--old li {
+  padding: 10px 14px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #E5DFD7;
+}
+
+.rps-vs-col--old p {
+  margin: 14px 0 0;
+  font-size: 15px;
+  color: #6E6663;
+}
+
+.rps-vs-col--new {
+  background: #0A393D;
+  color: #fff;
+}
+
+.rps-vs-col--new h3 {
+  color: #fff !important;
+}
+
+.rps-vs-ticks {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.rps-vs-ticks li {
+  position: relative;
+  padding: 10px 12px 10px 40px;
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(145, 218, 225, .25);
+  border-radius: 8px;
+}
+
+.rps-vs-ticks li::before {
+  content: "✓";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0BB0BF;
+  color: #fff;
+  font-size: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.rps-vs-arrow {
+  align-self: center;
+  font-size: 30px;
+  color: #0BB0BF;
+}
+
+@media (max-width: 900px) {
+  .rps-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .rps-vs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rps-vs-arrow {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .rps-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .rps-size-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rps-vs-ticks {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Gallery: awards and exhibition photos, year by year (16 items) */
+.gal-years {
+  display: grid;
+  gap: 14px;
+}
+
+.gal-year {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  padding: 22px 0;
+  border-top: 1px solid #D5E7E9;
+}
+
+.gal-year:first-child {
+  border-top: 0;
+  padding-top: 6px;
+}
+
+:root:root:root:root section .gal-year-h {
+  margin: 0 !important;
+  font-size: 40px !important;
+  line-height: 1 !important;
+  color: #0BB0BF;
+  position: sticky;
+  top: 96px;
+}
+
+.gal-year-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.gal-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #D5E7E9;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: zoom-in;
+  transition: box-shadow .3s, transform .3s;
+  flex: 0 0 auto;
+}
+
+.gal-item:hover,
+.gal-item:focus-visible {
+  box-shadow: 0 14px 30px -18px rgba(10, 57, 61, .55);
+  transform: translateY(-3px);
+}
+
+.gal-item-img {
+  height: 260px;
+  background: #0E2A2C;
+}
+
+.gal-item--photo .gal-item-img {
+  width: 400px;
+}
+
+.gal-item--award .gal-item-img {
+  width: 200px;
+}
+
+.gal-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gal-item figcaption {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 0;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.gal-item figcaption b {
+  color: #0A393D;
+  font-size: 16.5px;
+  font-weight: 400;
+  font-family: var(--gp-font-head);
+}
+
+.gal-item figcaption span {
+  color: #5A6B6D;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .gal-year {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  :root:root:root:root section .gal-year-h {
+    position: static;
+    font-size: 32px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .gal-year-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .gal-item-img,
+  .gal-item--photo .gal-item-img,
+  .gal-item--award .gal-item-img {
+    width: 100%;
+    height: 170px;
+  }
+
+  .gal-item--photo:only-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Resources: exhibition news with real photos */
+.gp-ex-img {
+  position: relative;
+  cursor: zoom-in;
+}
+
+.gp-ex-badge {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: #0A393D;
+  color: #fff;
+  font-size: 12.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.gp-ex-date {
+  margin: 0 !important;
+  color: #0A393D;
+  font-size: 14.5px !important;
+}
+
+/* About: growth path chart */
+.gr-fig {
+  margin: 0;
+  background: #fff;
+  border: 1px solid #D5E7E9;
+  border-radius: 18px;
+  padding: 22px 22px 18px;
+}
+
+.gr-plot {
+  position: relative;
+}
+
+.gr-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.gr-grid {
+  stroke: #E3ECED;
+  stroke-width: 1;
+}
+
+.gr-base {
+  stroke: #B9CFD1;
+  stroke-width: 1;
+}
+
+.gr-tick {
+  fill: #6B7C7E;
+  font-size: 13px;
+  font-family: var(--gp-font-body);
+}
+
+.gr-line {
+  fill: none;
+  stroke: #0BB0BF;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+
+.gr-hit {
+  fill: transparent;
+  cursor: pointer;
+}
+
+.gr-dot {
+  fill: #fff;
+  stroke: #05838E;
+  stroke-width: 3;
+  transition: r .2s;
+}
+
+.gr-pt {
+  outline: none;
+}
+
+.gr-pt.is-on .gr-dot,
+.gr-pt:focus-visible .gr-dot {
+  fill: #05838E;
+  r: 9;
+}
+
+.gr-lbl {
+  fill: #0A393D;
+  font-size: 13.5px;
+  font-family: var(--gp-font-body);
+  pointer-events: none;
+}
+
+.gr-tip {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  background: #0A393D;
+  color: #fff;
+  border-radius: 10px;
+  padding: 9px 12px;
+  width: max-content;
+  max-width: 260px;
+  pointer-events: none;
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, .5);
+  z-index: 2;
+}
+
+.gr-tip b {
+  display: block;
+  font-weight: 400;
+  font-family: var(--gp-font-head);
+  font-size: 15px;
+}
+
+.gr-tip span {
+  display: block;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, .82);
+  line-height: 1.45;
+  margin-top: 2px;
+}
+
+.gr-list {
+  display: none;
+}
+
+.gr-today {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #E3ECED;
+}
+
+.gr-today span {
+  background: #E5F1F2;
+  color: #0A393D;
+  border-radius: 30px;
+  padding: 6px 12px;
+  font-size: 14.5px;
+}
+
+.gr-today b {
+  font-weight: 400;
+  font-family: var(--gp-font-head);
+  color: #05838E;
+}
+
+.gr-today em {
+  font-style: normal;
+  color: #6B7C7E;
+  font-size: 14px;
+  margin-left: auto;
+}
+
+@media (max-width: 760px) {
+  .gr-lbl {
+    display: none;
+  }
+
+  .gr-list {
+    display: grid;
+    gap: 8px;
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+  }
+
+  .gr-list li {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 8px;
+    font-size: 14.5px;
+    line-height: 1.45;
+    color: #4A5B5D;
+  }
+
+  .gr-list li b {
+    color: #05838E;
+    font-weight: 400;
+    font-family: var(--gp-font-head);
+    font-size: 16px;
+  }
+
+  .gr-list li strong {
+    color: #0A393D;
+    font-weight: 400;
+  }
+
+  .gr-today em {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .gr-fig {
+    padding: 16px 14px;
+  }
+}
+
+/* Gallery: awards & recognition grid (fills the full width, year badge on each card) */
+.aw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.aw-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid #D5E7E9;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: zoom-in;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .3s, transform .3s;
+}
+
+.aw-card:hover,
+.aw-card:focus-visible {
+  box-shadow: 0 16px 32px -20px rgba(10, 57, 61, .55);
+  transform: translateY(-3px);
+}
+
+.aw-img {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #EEF3F3;
+  overflow: hidden;
+}
+
+.aw-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .45s;
+}
+
+.aw-card:hover .aw-img img {
+  transform: scale(1.04);
+}
+
+.aw-year {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 1;
+  background: #0A393D;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 13.5px;
+  font-family: var(--gp-font-head);
+}
+
+.aw-card figcaption {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.aw-card figcaption b {
+  font-family: var(--gp-font-head);
+  font-weight: 400;
+  font-size: 17.5px;
+  color: #0A393D;
+}
+
+.aw-card figcaption span {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #5A6B6D;
+}
+
+@media (max-width: 1100px) {
+  .aw-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .aw-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .aw-card figcaption {
+    padding: 10px 12px 12px;
+  }
+
+  .aw-card figcaption b {
+    font-size: 15.5px;
+  }
+
+  .aw-card figcaption span {
+    font-size: 13px;
+  }
+}
+
+/* Resources: exhibitions & recognition inside News & Updates */
+.gp-ex-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px 24px;
+  margin: 46px 0 20px;
+  scroll-margin-top: 110px;
+}
+
+.gp-ex-head .gp-h3 {
+  margin: 0 !important;
+  width: 100%;
+  font-size: var(--gp-sub) !important;
+}
+
+.gp-ex-head p {
+  margin: 0 !important;
+  color: #4A5B5D;
+  flex: 1 1 380px;
+}
+
+.gp-ex-kind {
+  align-self: flex-start;
+  background: #E5F1F2;
+  color: #05838E;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 12.5px;
+}
+
+.gp-ex-img--none span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 34px !important;
+}
+
+.gp-ex-img--none small {
+  font-size: 15px;
+  color: rgba(255, 255, 255, .75);
+  font-family: var(--gp-font-body);
+}
+
+#news .gp-ex-img {
+  aspect-ratio: 1 / 1;
+}
+
+/* even rows: 15 awards in the gallery (5 x 3), 15 news cards on Resources (3 x 5) */
+@media (min-width: 1200px) {
+  .aw-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1199px) {
+  .aw-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 761px) {
+  #news .gp-ex-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  #news .gp-ex-img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* =====================================================================
+   Type scale (client, 9 Oct 2026): main headings 38 px everywhere, paragraphs 19 px,
+   ONE size for every sub-heading (26 px) and ONE size for every card / box title (21 px).
+   ===================================================================== */
+/* sub-headings */
+:root:root:root:root:root section .v2-celv-sub,
+:root:root:root:root:root section .pd-h3--gap,
+:root:root:root:root:root section .pd-type-body>.pd-h3,
+:root:root:root:root:root section .gp-wrap>.pd-h3,
+:root:root:root:root:root section .gp-ex-head .gp-h3,
+:root:root:root:root:root section .gp-plants-head .gp-h3,
+:root:root:root:root:root article.gp-article h2,
+:root:root:root:root:root .gp-article>h2 {
+  font-size: var(--gp-sub) !important;
+  line-height: 1.25 !important;
+}
+
+/* card / box titles */
+:root:root:root:root:root section .pd-box>.pd-h3,
+:root:root:root:root:root section .pd-step .pd-h3,
+:root:root:root:root:root section .mf6-body h3,
+:root:root:root:root:root section .pp8-card-body h3,
+:root:root:root:root:root section .gp-ex-body h3,
+:root:root:root:root:root section .gp-news-grid .gp-h3,
+:root:root:root:root:root section .gp-card .gp-h3,
+:root:root:root:root:root section .pd-card-body h3,
+:root:root:root:root:root section .bl-card-body h3,
+:root:root:root:root:root section .gp-img-card-body h3,
+:root:root:root:root:root section .res-card-heading,
+:root:root:root:root:root section .cert-card-title,
+:root:root:root:root:root section .ab5-who-body h4,
+:root:root:root:root:root section .v2-val-clean-header h4,
+:root:root:root:root:root section .touch-info-content h4,
+:root:root:root:root:root section .gp-article h3,
+:root:root:root:root:root section .aw-card figcaption b {
+  font-size: var(--gp-card-h) !important;
+  line-height: 1.3 !important;
+}
+
+/* paragraphs inside sections: 19 px (cards keep the card text size) */
+:root:root:root:root:root section .pd-p,
+:root:root:root:root:root section .legacy-desc,
+:root:root:root:root:root section .cert-sec-subtitle,
+:root:root:root:root:root section .res-subtitle,
+:root:root:root:root:root section .gp-ex-head p,
+:root:root:root:root:root .gp-article p {
+  font-size: var(--gp-p) !important;
+}
+
+:root:root:root:root:root section div>.pd-h3:not(.pd-h3--gap),
+:root:root:root:root:root section .gp-h3--light {
+  font-size: var(--gp-card-h) !important;
+  line-height: 1.3 !important;
+}
+
+/* =====================================================================
+   Plain text areas turned into boxes (CELVION style: white rounded cards, soft shadow,
+   accent left border for notes)
+   ===================================================================== */
+/* About: "What we hold ourselves to" values as cards */
+:root:root .v2-vals-clean-grid {
+  gap: 16px !important;
+}
+
+:root:root .v2-val-clean-item {
+  background: #fff;
+  border: 1px solid #D5E7E9 !important;
+  border-top: 3px solid #0BB0BF !important;
+  border-radius: 14px;
+  padding: 20px 20px 18px !important;
+  box-shadow: 0 10px 26px -20px rgba(10, 57, 61, .45);
+}
+
+:root:root .v2-val-clean-item p {
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+}
+
+/* "Other SNG Eco India products" lines as a note box */
+:root:root .v2-other,
+:root:root .pp8-range .gpc-note {
+  background: #E5F1F2;
+  border-left: 4px solid #0BB0BF;
+  border-radius: 10px;
+  padding: 14px 18px !important;
+  font-size: 16.5px !important;
+  line-height: 1.6;
+  color: #0A393D;
+}
+
+/* Contact: "Get in touch" column as one card, each contact item boxed */
+:root:root .get-in-touch-col {
+  background: #fff;
+  border: 1px solid #D5E7E9;
+  border-radius: 18px;
+  padding: 28px 26px !important;
+  box-shadow: 0 14px 34px -26px rgba(10, 57, 61, .5);
+  align-self: start;
+}
+
+:root:root .touch-items-list .touch-item:not([style*="display:block"]) {
+  background: #F5FAFA;
+  border: 1px solid #E1EEEF;
+  border-radius: 12px;
+  padding: 14px 14px !important;
+  margin: 0 0 10px !important;
+}
+
+/* Product pages: "What you need / After fitting" under the installation steps as boxes */
+:root:root .pd-sec#installation .pd-split>div {
+  background: #fff;
+  border: 1px solid #D5E7E9;
+  border-radius: 14px;
+  padding: 22px 22px 18px;
+  box-shadow: 0 10px 26px -20px rgba(10, 57, 61, .45);
+}
+
+@media (max-width: 600px) {
+  :root:root .get-in-touch-col {
+    padding: 20px 16px !important;
+  }
+}
+
+:root:root .touch-items-list {
+  gap: 10px !important;
+}
+
+:root:root .touch-items-list .touch-item:not([style*="display:block"]) {
+  margin: 0 !important;
+}
+
+/* TASK: Quality Control section (id="legacy") photo responsiveness */
+@media (max-width: 991px) {
+  #legacy .legacy-photo-wrap {
+    min-height: 320px !important;
+    aspect-ratio: 4 / 3;
+  }
+
+  #legacy .legacy-photo {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+}
+
+/* TASK: Hero Brand Banner Slide 1 title styling */
+.v2-slide-title--hero {
+  font-size: 52px !important;
+  line-height: 1.15 !important;
+  max-width: 750px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, .35);
+}
+
+@media (max-width: 900px) {
+  .v2-slide-title--hero {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+    max-width: 100%;
+  }
+}
+
+/* BRAND AMBASSADOR ANNOUNCEMENT CARD */
+.gp-feature-card {
+  align-items: stretch;
+}
+
+.gp-announcement-img-wrap {
+  position: relative;
+  background: #07292C;
+  min-height: 480px;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gp-announcement-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center;
+  background: #07292C;
+  display: block;
+}
+
+.gp-announcement-body {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+}
+
+.gp-announcement-link {
+  margin-top: 18px;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .gp-announcement-img-wrap {
+    min-height: 420px;
+    aspect-ratio: 2 / 3;
+    width: 100%;
+  }
+}
