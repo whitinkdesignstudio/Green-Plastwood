@@ -240,7 +240,8 @@ Base: your latest zip (v3). Your design tweaks are kept; only content, images, l
 
 ## Update 27 — Menu, footer, CELVION link, fonts (4 Oct 2026)
 - Products menu: All Products + the 5 products + CELVION. CELVION removed from the About us menu and now opens http://www.celvionglobal.com/
-  in a new tab (the "Visit CELVION" buttons on Home and Products use the same address).
+  in a new tab
+    (the "Visit CELVION" buttons on Home and Products use the same address).
 - Footer: the paragraph at the bottom ("WPC door frame and door manufacturer, Gujarat …" and the longer one on About) is removed.
   One combined paragraph now sits under the logo on every page. "Blogs" is in the footer quick links.
 - Fonts: same pair as celvionglobal.com. Text is Questrial; headings are Avenir Light on devices that have it (Apple) and Questrial elsewhere,
@@ -649,3 +650,607 @@ email-setup: enquiries go to sales.executive11@sngecoindia.com; new form names; 
 - Backed up modified files to `_backup/2026-10-23/`.
 - Checked viewports 360, 390, 768, 860, 1024, 1366, 1440, and 1920 px: 0 sideways scroll, 0 console errors; checker `python _data/check_product_pages.py` 7/7 PASS.
 
+## Update 66 — Cleanup on about.html & contact.html (24 Oct 2026)
+- `about.html`:
+  - Removed `<div class="ab5-stats">` (9 Years / 3 Plants in Gujarat / 125+ Team members) from the "Our Founders" sidebar (`<aside class="ab5-side">`).
+  - Preserved the founders list (`.ab5-dirs`) and the Gujarat Excellence 2026 award figure (`.ab5-award`).
+- `contact.html`:
+  - Removed `<section class="gp-sec gp-sec--tight" id="why-us">` (dark band with Dayanand Shetty photo, stats, and buttons) and removed its now-unused page CSS rules starting with `#why-us` inside the `<style>` block.
+  - Map area: removed both address cards on the right of the map ("Corporate Headquarter" and "Manufacturing Facility"), removed the now-empty inner `<div class="gp-grid" style="gap:14px;">`, and updated the map container grid to `grid-template-columns: 1fr; gap: 18px;` making the map full width. Preserved map iframe, "Get Directions" button, `#plants` anchor, and the entire "Our Plants" block. Did not touch the "Corporate Headquarter" item in the top "Get in touch" list (`.touch-item`).
+  - "Become A Business Associate" section (`#partner`): removed `<div class="gpx-dstats">` stats block (1,300 MT / 3 Plants / 125+ / 50+ / 300+ / 4+). Preserved both paragraphs, the "Become a Business Associate" button, and the right-hand cards.
+- Backed up modified files to `_backup/2026-10-24/` before edits.
+- Tested `about.html` and `contact.html` at 360, 390, 768, 1024, 1366, and 1920 px: 0 sideways scroll, 0 console errors, no empty gaps, map full width, contact form buttons functional.
+- Checked product pages: `python _data/check_product_pages.py` (all 7 PASS).
+- Saved desktop + mobile screenshots of changed areas in `_data/shots/24oct-1/`.
+
+## Update 67 — Moved Exhibitions & Recognition from resources.html to gallery.html (24 Oct 2026)
+- `gallery.html` (section `#awards`):
+  - Enriched award cards with full details copied verbatim from `resources.html`: added `<span class="aw-kind">`, `<span class="aw-place">`, `<span class="aw-date">`, and `<p class="aw-desc">` under the existing `<b>` title.
+  - Replaced the previous condensed `<span>` sub-line on matching cards; in India Wood 2018 preserved `<span>Trophy for participation · organised by PDA Trade Fairs, supported by EUMABOIS</span>` which contains unique organiser/award information.
+  - Added two text-card figures for exhibitions without photos in their correct year positions: Plastindia 2023 (`Feb 2023`, year 2023) and Kolkata Wood 2025 (`Sep 2025`, year 2025) using `<div class="aw-img aw-img--none"><span class="aw-year">{year}</span><span class="aw-none-title">{name}<small>{date}</small></span></div>` without `data-lb` or `tabindex`.
+  - Preserved Sardardham GPBO and TradeIndia cards as they were.
+  - Preserved all `data-lb`, `data-lb-title`, `data-lb-sub`, year badges, image paths, width/height, and alt attributes.
+- `resources.html`:
+  - Deleted the 15-card "Exhibitions & Recognition" block (`<div class="gp-ex-head" id="exhibitions">` and `<div class="gp-ex-grid" data-lb-group>...</div>`).
+  - Updated the link "See all exhibitions →" from `href="#exhibitions"` to `href="gallery.html#awards"`.
+  - Preserved the "News & Updates" section and brand announcement card intact.
+- `assets/gp-type.css`:
+  - Added award card typography and badge styling (`.aw-kind`, `.aw-place`, `.aw-date`, `.aw-desc`, `.aw-img--none`, `.aw-none-title`, `.aw-none-title small`) at the end of the file.
+  - Ensured equal height for all cards in a row (`.aw-grid { align-items: stretch; }`, `.aw-card { height: 100%; }`, `.aw-card figcaption { flex: 1 1 auto; }`), `cursor: default` on non-lightbox cards, and mobile responsive font sizing.
+- Backed up modified files to `_backup/2026-10-24/` before edits.
+- Tested `gallery.html` and `resources.html` at 360, 390, 768, 1024, 1366, and 1920 px: 0 sideways scroll, 0 console errors, cards readable, equal row height, lightbox functional on all photo cards.
+- Product checker: `python _data/check_product_pages.py` (all 7 PASS).
+- Saved desktop + mobile screenshots to `_data/shots/24oct-2/`.
+
+## Update 68 — Staged studio backgrounds for all 15 real awards & certificates (24 Oct 2026)
+- Created consistent studio backgrounds for all 15 real awards and certificates in `images/awards/staged/` matching the reference style (`images/awards/1.webp`, `3.webp`, `5.webp`, `7.webp` — dark green vertical fluted wall, soft top spotlight, tropical palm frond, white marble tabletop with gold trim and subtle reflection & soft contact shadows).
+- Awards remain 100% real: cut precisely from original phone photos in `images/awards/real/` using anti-aliased contour masking and seeded GrabCut segmentation. Zero AI redrawing, retyping, or alteration of trophies, frames, text, logos, or dates. Original photos in `images/awards/real/` remain untouched as backups.
+- Generated 15 WebP images at 1200 × 1200 px (quality 85) in `images/awards/staged/`:
+  - `abkkp-business-exhibition-2023.webp`
+  - `gpbs-2025.webp`
+  - `gujarat-excellence-2026.webp`
+  - `hblf-2022.webp`
+  - `igbc-membership-2024.webp`
+  - `india-wood-pda.webp`
+  - `indiamart-trustseal-2024.webp`
+  - `indiawood-2024.webp`
+  - `intext-expo-2026.webp`
+  - `iso-9001-qro-2021.webp`
+  - `msme-conclave-2025.webp`
+  - `sardardham-gpbo.webp`
+  - `tradeindia-certificate-of-trust.webp`
+  - `woodex-asia-2018.webp`
+  - `woodex-asia-2019.webp`
+- `gallery.html`:
+  - Updated all 15 award cards in section `#awards` to point `src` and `data-lb` to `images/awards/staged/<name>.webp` with `width="1200"` and `height="1200"`.
+  - Preserved all award titles, subtitles, dates, descriptions, badges, and attributes untouched.
+- `about.html`:
+  - Updated Founders box award figure (`gujarat-excellence-2026`) to point `src` and `data-lb` to `images/awards/staged/gujarat-excellence-2026.webp` with `width="1200"` and `height="1200"`.
+  - Preserved all captions and layout untouched.
+- No CSS files modified.
+- Backed up modified files (`gallery.html`, `about.html`, `CHANGES.md`) to `_backup/2026-10-24/`.
+- Verified at 360, 390, 768, 1024, 1366, and 1920 px: 0 sideways scroll, 0 console errors, lightbox functional on all photo cards.
+- Product checker: `python _data/check_product_pages.py` (all 7 PASS).
+- Saved side-by-side contact sheet of all 15 awards and desktop/mobile/lightbox screenshots in `_data/shots/24oct-3/`.
+
+## Update 69 — Manufacturing process photos replaced (Step 1, 2, 5, 6, 7, 9 photos replaced) (24 Oct 2026)
+- Replaced manufacturing process step photos with realistic industrial factory photos following strict image rules (no text, labels, or logos anywhere; no faces; 1200 × 800 px WebP quality 85):
+  - `images/manufacturing/step-6-finishing.webp` (Step 6 — Surface Treatment & Finishing): industrial sanding and embossing machine applying authentic wood-grain texture to extruded brown WPC profiles on a roller conveyor, with a technician seen strictly from behind inspecting the surface.
+  - `images/manufacturing/step-7-cutting.webp` (Step 7 — Cutting & Sizing): automated circular saw cutting extruded brown WPC profiles to length with realistic sawdust, and neatly stacked cut profiles on an adjacent roller transfer table.
+  - `images/manufacturing/step-9-packing-dispatch.webp` (Step 9 — Packing & Dispatch): single unified factory photo (no collage) of dispatch bay pallets with bundles of brown WPC door frame profiles wrapped in plain clear stretch film and plain brown cartons, loaded into a truck by a forklift driver seen from behind with no brand text or logos.
+- `manufacturing.html`:
+  - Updated `width="1200"` and `height="800"` on `<img>` tags for Step 6, Step 7, and Step 9.
+  - Corrected Step 8 (`step-8-quality-inspection.webp`) `<img>` tag from `width="720" height="480"` to match its actual image dimensions: `width="1200" height="896"`.
+- Backed up `manufacturing.html` and previous WebP photos to `_backup/2026-10-24/`.
+- Verified viewports 360, 390, 768, 1024, 1366, 1440, and 1920 px: 0 sideways scroll, 0 console errors.
+- Product checker: `python _data/check_product_pages.py` (all 7 PASS).
+
+## Update 70 — Journey timeline award photos replaced with staged studio background (24 Oct 2026)
+- Rebuilt the 4 award/exhibition photos in section "A Journey Built On Material, Trust & Scale" (`index.html`, `.v2-journey`) using the consistent luxury studio background (dark green vertical fluted acoustic wall, warm spotlight glow, palm fronds, white marble tabletop with gold rim and subtle reflection/contact shadows):
+  - `images/journey/03-first-exhibitions.webp` (2018 — First National Exhibitions) ← real award from `images/awards/real/woodex-asia-2018.webp` (848 × 1264 px, WebP quality 85).
+  - `images/journey/04-woodex-2019.webp` (2019 — Woodex Asia 2019) ← real award from `images/awards/real/woodex-asia-2019.webp` (848 × 1264 px, WebP quality 85).
+  - `images/journey/07-india-wood-igbc.webp` (2024 — India Wood And IGBC) ← real award from `images/awards/real/indiawood-2024.webp` (848 × 1264 px, WebP quality 85).
+  - `images/journey/08-recognition.webp` (2025–26 — Recognition And Reach) ← real award from `images/awards/real/gujarat-excellence-2026.webp` (848 × 1264 px, WebP quality 85).
+- Awards remain 100% authentic: extracted cleanly from original unedited photos in `images/awards/real/` without redrawing, retyping, or regenerating any text, logo, or frame.
+- Perfectly positioned for `.v2-journey .v2-tl-img` window (`object-fit: cover; object-position: center 64%`): award centers positioned at 56–61% of vertical height and width ~70% (48% for vertical trophy) with clean margins.
+- Preserved untouched: timeline photos 01, 02, 05, 06, all timeline copy, HTML structure, attributes, and CSS.
+- Backed up previous 4 journey images to `_backup/2026-10-24/journey/`.
+- Verified viewports 360, 390, 768, 1024, 1366, 1440, and 1920 px: 0 sideways scroll, 0 console errors.
+- Product checker: `python _data/check_product_pages.py` (all 7 PASS).
+- Saved screenshots and side-by-side comparison grids in `_data/shots/24oct-5/`:
+  - `comparison_real_old_new.png` (Real photo vs Old blurred copy vs New studio photo)
+  - `journey-4-awards-old-vs-new.png` (Old vs New contact sheet)
+  - `journey-section-1440.png`, `journey-cards-2018-2019-1440.png`, `journey-cards-2024-2026-1440.png` (1440 px desktop)
+  - `journey-section-1024.png` (1024 px tablet)
+  - `journey-section-mobile-390.png` and individual card shots at 390 px mobile
+
+## Update 71 — Recycled Plastic Sheet photos replaced with authentic mottled/speckled photos (24 Oct 2026)
+- Replaced 4 photos showing incorrect plain black smooth sheets on `product-recycled-plastic-sheet.html`, `products.html`, and `index.html` with authentic photorealistic industrial product photography matching client samples (`images/products/recycled/recycled-plastic-sheets.webp` and in-use brick plant reference `images/products/recycled/recycled-plastic-sheet-in-use.webp`):
+  - `images/products/recycled/recycled-plastic-sheet-hero.webp` (1200 × 900 px, 187.8 KB, WebP quality 85): clean factory warehouse with neat strapped stacks of flat grey speckled recycled plastic sheets on wooden skids, centered composition, soft warehouse background with forklift and racks.
+  - `images/redesign/recycled/sheet-stack.webp` (1600 × 1350 px, 289.7 KB, WebP quality 85): close, slightly low-angle product shot of a tall neat stack of grey speckled sheets on a wooden pallet; side shows layered cut edges with dense multicolour composite flakes throughout, and top sheet reveals the terrazzo-like texture.
+  - `images/redesign/recycled/brick-pallets.webp` (1600 × 1000 px, 245.9 KB, WebP quality 85): outdoor fly ash brick plant in bright daylight; rows of freshly pressed grey fly ash bricks sitting directly on flat grey speckled recycled plastic pallet boards on the roller conveyor emerging from the brick-making machine.
+  - `images/redesign/recycled/paver-pallets.webp` (1400 × 1200 px, 323.9 KB, WebP quality 85): paver block plant; freshly molded grey zig-zag interlocking paver blocks sitting on a flat grey speckled recycled plastic pallet on a curing rack, with the front cut edge and speckled surface prominently visible in foreground.
+- Preserved untouched: client photos `recycled-plastic-sheet-in-use.webp`, `recycled-plastic-sheet-shuttering.webp`, `recycled-plastic-sheets.webp`.
+- Verified all HTML `<img>` width/height attributes match target dimensions across `product-recycled-plastic-sheet.html`, `products.html`, and `index.html`.
+- Backed up replaced files to `_backup/2026-10-24/recycled/`.
+- Tested across viewports 360, 390, 768, 1024, 1366, 1440, and 1920 px: 0 sideways scroll, 0 console errors.
+- Ran product checker `python _data/check_product_pages.py`: all 7 PASS (0 errors, 0 warnings).
+- Generated comparison contact sheet and element screenshots saved in `_data/shots/24oct-6/`:
+  - `reference_vs_new_images_comparison.png` (Client samples & in-use photo vs 4 new images)
+  - `rps-hero-slider-1440.png`, `rps-hero-slider-390.png`
+  - `rps-about-1440.png`, `rps-about-390.png`
+  - `rps-quality-1440.png`, `rps-quality-390.png`
+  - `rps-applications-1440.png`, `rps-applications-390.png`
+  - `rps-gallery-1440.png`, `rps-gallery-390.png`
+  - `products-page-recycled-card-1440.png`, `products-page-recycled-card-390.png`, `products-page-catalog-grid-1440.png`
+  - `index-page-recycled-card-1440.png`, `index-page-recycled-card-390.png`
+
+## Update 72 — Home page Banner 1 rebuilt with modern glass-district background, cutout Daya & live two-colour headline (25 Oct 2026)
+- Rebuilt Home page Banner 1 (`index.html`, `.v2-hero--banners`, slide `data-slide="1"`):
+  - **Clean Background Generation**: Generated architectural photograph of a modern city financial district with sleek blue/teal glass-facade skyscrapers under clear soft blue sky in bright daylight (no people, text, logos, or watermarks). Left 50% remains open, bright, and calm for headline text on desktop; top 40% remains calm sky on mobile.
+  - **Daya Cutout & Placement (Zero AI on face/body)**: Extracted authentic brand ambassador Dayanand Shetty directly from high-resolution studio source `_new-images/daya/daya-banner1-no-product.jpg` (arms open, no product) using anti-aliased alpha matting and color decontamination to remove all white edge fringing. Zero retouching, redrawing, or AI changes on his face or body.
+    - Desktop (`images/banners/hero-brand.webp`, 1920 × 860 px, WebP quality 88): Body centered at ~72% width, head top at ~7% from top edge, cropped cleanly at thighs/knees at bottom, arms fully inside image frame, soft natural ambient shadow cast onto scene behind him. Left 50% left clear for headline.
+    - Mobile (`images/banners/hero-brand-mobile.webp`, 900 × 1064 px, WebP quality 88): Centered horizontally (body center at 50%), head top at ~42% height, cropped at bottom, arms fully inside frame with comfortable margins, soft natural ambient shadow. Upper 42% clear sky reserved for headline.
+  - **Live Two-Colour Headline**:
+    - Removed hiding rule `.v2-slide[data-slide="1"] .v2-bslide-text { opacity: 0 !important; pointer-events: none !important; }` in `assets/gp-v2.css`.
+    - Removed old restrictive 901–1280 px rule capping slide 1 title to 46px.
+    - Added high-specificity rules at the end of `assets/gp-v2.css`:
+      - `:root:root:root:root:root .v2-slide[data-slide="1"] .v2-slide-title--hero { color:#0A393D !important; font-size:38px !important; line-height:1.15 !important; font-weight:400 !important; max-width:min(780px,52%) !important; text-shadow:0 1px 18px rgba(255,255,255,.55); }`
+      - `:root:root:root:root:root .v2-slide[data-slide="1"] .v2-slide-title--hero .v2-green { color:#05838E !important; }`
+      - `@media (max-width:900px){ :root:root:root:root:root .v2-slide[data-slide="1"] .v2-slide-title--hero { font-size:clamp(26px,7.2vw,34px) !important; max-width:100% !important; } }`
+    - Headline vertically centered on desktop; positioned at top above Daya on mobile.
+  - **HTML (`index.html`)**:
+    - Maintained exact text: `Build Sustainable,<br /><span class="v2-green">Build with Greenplastwood WPC.</span>`.
+    - Updated `<img>` alt attribute to: `"Brand ambassador Dayanand Shetty in front of modern glass buildings"`. Preserved dimensions `width="1920" height="860"`.
+- Backed up all modified files (`hero-brand.webp`, `hero-brand-mobile.webp`, `index.html`, `assets/gp-v2.css`, `CHANGES.md`) to `_backup/2026-10-25/`.
+- Verified at 360, 390, 768, 1024, 1280, 1440, and 1920 px:
+  - 0 sideways scroll.
+  - 0 console errors.
+  - Headline fully readable in two distinct colors (#0A393D and #05838E), never overlaps Daya's face or arms.
+  - Daya's head and hands never cut or stretched.
+  - Slider navigation dots and next/prev arrows verified functional across all 5 slides.
+- Product checker: `python _data/check_product_pages.py` (all 7 PASS).
+- Saved screenshots of Banner 1 at all viewports in `_data/shots/banner1/`:
+  - `banner1-1920px.png`
+  - `banner1-1440px.png`
+  - `banner1-1280px.png`
+  - `banner1-1024px.png`
+  - `banner1-768px.png`
+  - `banner1-390px.png`
+  - `banner1-360px.png`
+
+## Update 73 — Products page applications card links & tab-opening smooth scroll (25 Oct 2026)
+- Updated card `href`s in section `#applications` ("From Specification To Space.") on `products.html`:
+  - **Commercial**: `href="product-wpc-boards-sheets.html#applications"` (routes directly to the "Where WPC Boards Are Used" section).
+  - **Residential**: `href="product-wpc-louvers.html#applications"` (routes directly to the "Where PVC Panels Are Used" section).
+  - **Outdoor**: Kept `href="#more-products"`.
+- Enhanced `assets/gp-redesign.js`:
+  - In `reveal(h)`: when revealing a tab (such as `more-products`), activates the tab and targets the tabs container (`.rd-tabs`) for scroll alignment.
+  - In `fromHash()`: on page load with `#more-products`, reveals the tab and scrolls smoothly into view.
+  - Added delegated click handler for links targeting `#more-products` on this page: activates the "Exterior Range" tab (`data-tab="more-products"` / `data-panel="more-products"`), pushes the hash state, and smoothly scrolls to the tabs, even when `location.hash` is already `#more-products`.
+- Enhanced `assets/gp-redesign.css`:
+  - Added `scroll-margin-top: calc(var(--pd-top, 80px) + 16px)` to `.rd-tabs, .gp-tab, .rd-anchor` so that landing on the tab or anchor positions it cleanly below the fixed header without overlap.
+- Target page verification:
+  - Confirmed landing on `product-wpc-boards-sheets.html#applications` and `product-wpc-louvers.html#applications` positions section headings visible below the fixed header (heading tops are ~162px desktop, ~140px mobile; header height is 75px desktop, 69px mobile).
+- Backed up all modified files (`products.html`, `assets/gp-redesign.js`, `assets/gp-redesign.css`, `CHANGES.md`) to `_backup/2026-10-25/`.
+- Verified at 360, 390, 768, 1024, 1366, 1440, and 1920 px:
+  - 0 sideways scroll.
+  - 0 console errors.
+- Ran product checker `python _data/check_product_pages.py`: all 7 PASS (0 errors, 0 warnings).
+- Screenshots saved in `_data/shots/apps-links/`:
+  - `1-commercial-boards-1440.png`, `1-commercial-boards-390.png`
+  - `2-residential-louvers-1440.png`, `2-residential-louvers-390.png`
+  - `3-outdoor-more-products-1440.png`, `3-outdoor-more-products-390.png`
+  - `3b-outdoor-already-hash-1440.png`, `3b-outdoor-already-hash-390.png`
+
+## Update 74 — Cleaned printed text, captions and legacy logos from product & manufacturing photos (25 Oct 2026)
+- Cleaned printed marketing text, captions, and legacy "GREEN PLASTWOOD" logos from target product and manufacturing photos while keeping the underlying products, textures, room, lighting, and angles 100% identical:
+  1. **`images/products/cards/chaukhat.webp`** (1200 × 896, WebP q=88):
+     - Cropped out the outer beige marketing border with the top "GREEN PLASTWOOD" header and bottom descriptive caption bar.
+     - Scaled inner room photo back to 1200 × 896 (Lanczos).
+     - Inpainted all 21 small legacy logos printed along the vertical posts and top headers of all three frames (Ivory, Teak, Dark Brown) matching local wood grain.
+  2. **`images/products/cards/window.webp` & `images/gp_window.webp`** (1200 × 896, WebP q=88):
+     - Removed top-right inset box containing legacy logo and green frame border; reconstructed wall stucco texture, outer frame moulding, and 45° miter joint seamlessly.
+     - Removed bottom-right caption box; reconstructed baseboard moulding, lower wall, and wood floor reflection.
+     - Kept both files synchronized.
+  3. **`images/products/cards/doors.webp`** (1200 × 896, WebP q=88):
+     - Removed top header bar with "SOLID WPC DOORS" and "GREEN PLASTWOOD" logo, extending acoustic wall battens and structural column seamlessly.
+     - Removed floor finish labels ("Teak Wood Finish", "Carved Texture (SG-006)", "Ivory Finish") and bottom-right WPC tab; preserved natural floor reflections.
+     - All three doors, carved textures, hardware, and lighting remain 100% untouched.
+  4. **`images/manufacturing/step-3-mixing.webp`** (720 × 480, WebP q=88):
+     - Removed printed hopper text labels "WOOD FLOUR" and "POLYMER COMPOUND".
+     - Removed "KNETER" plate from the lower compounding unit, preserving brushed stainless steel textures.
+  5. **`images/manufacturing/step-4-extrusion.webp`** (720 × 480, WebP q=88):
+     - Removed machine label "WPC-120" and red accent stripe on foreground extruder housing, preserving cream machine paint and aluminum guide rail.
+     - Removed background green "SAFETY FIRST" sign and blue "LANE 3" sign from factory girders/walls.
+     - Removed text labels from electrical control cabinet.
+- Backed up all original uncleaned files to `_backup/2026-10-25/text-clean/`.
+- Site-wide image audit (393 candidate images across `index.html`, `products.html`, `about.html`, the 6 product pages, and blogs):
+  - No HTML changes required (all dimensions maintained).
+  - Detected 2 non-target images containing printed brand text / product labels (not modified, reported for review):
+    1. `images/products/recycled/recycled-plastic-sheets.webp` — printed sample display card label.
+    2. `images/louvers/exterior-louver-brown.webp`, `images/louvers/exterior-louver-grey.webp`, `images/louvers/exterior-louver-teak.webp` — manufacturer profile barcode/spec stickers.
+- Verification & Quality:
+  - 0 console errors across desktop (1440px) and mobile (390px) viewports on Chrome headless.
+  - `python _data/check_product_pages.py`: all 7 product pages PASS (0 errors, 0 warnings).
+  - Saved before/after side-by-side comparison images and UI screenshots in `_data/shots/text-clean/`:
+    - `chaukhat-before-after.png`
+    - `window-before-after.png`
+    - `doors-before-after.png`
+    - `step-3-mixing-before-after.png`
+    - `step-4-extrusion-before-after.png`
+    - `index-products-desktop.png`
+    - `index-products-mobile.png`
+    - `about-cards-desktop.png`
+
+## Update 75 — Manufacturing process Step 1, 2, and 5 photos replaced (25 Oct 2026)
+- Replaced mismatched photos for Steps 1, 2, and 5 in the "Our Process, Step By Step" section (`#process`, `li.mf6-card`) on `manufacturing.html`:
+  1. **`images/manufacturing/step-1-raw-material.webp`** (1200 × 800, 115 KB, WebP q=85):
+     - Raw Material Selection: Quality technician seen from behind at lab bench in factory inspecting sample trays of light-brown wood flour powder and white PVC resin granules, with analytical balance, moisture meter, and bulk sacks on pallets.
+     - Cleaned all instrument labels and logos; zero text/logos.
+  2. **`images/manufacturing/step-2-formulation.webp`** (1200 × 800, 182 KB, WebP q=85):
+     - Material Preparation & Formulation: Automated material dosing and formulation system with stainless steel hoppers and piping feeding central batch weighing unit, control panel screen displaying abstract schematics and bar graphs (no readable text), clean epoxy factory floor, worker in safety gear from behind.
+     - Inpainted gantry crane text, console bezel label, button tag squiggles, and drum label; completely unbranded.
+  3. **`images/manufacturing/step-5-cooling.webp`** (1200 × 800, 117 KB, WebP q=85):
+     - Cooling & Stabilisation: Freshly extruded solid brown WPC door frame profile emerging from the extruder die head and running through a long stainless steel vacuum calibration and water cooling bath with visible water sprays, fine mist, and guide rollers.
+     - Removed background cabinet labels and hazard signs.
+- **`manufacturing.html`**:
+  - Set `width="1200"` `height="800"` on `<img>` elements for Steps 1, 2, and 5.
+  - Updated `alt` attributes to accurately describe the new photographs.
+  - Kept Steps 3, 4, 6, 7, 8, and 9 completely untouched.
+  - Preserved all step titles, text, layouts, and CSS styles with zero modifications.
+- Backups:
+  - Copied original files to `_backup/2026-10-24/manufacturing/` prior to overwriting.
+  - Also mirrored backups in `_backup/2026-10-25/manufacturing/` along with `manufacturing.html`.
+- Verification & Quality:
+  - Verified 0 console errors across desktop (1440px) and mobile (390px) viewports on Chrome headless.
+  - Verified 0 horizontal/sideways scroll across all required viewports (360, 390, 768, 1024, 1366, 1920 px).
+  - Ran `python _data/check_product_pages.py`: all 7 product pages PASS (0 errors, 0 warnings).
+  - Saved desktop (1440 px) and mobile (390 px) screenshots of the process section in `_data/shots/24oct-4/`:
+    - `manufacturing-process-desktop-1440.png`
+    - `manufacturing-process-mobile-390.png`
+
+## Update 76 — Real solid WPC chaukhat product photos rebuilt in new scenes (25 Oct 2026)
+- Rebuilt two images that previously showed non-Greenplastwood profiles (such as hollow multi-chamber profiles or AI-drawn shapes) using the company's real solid WPC chaukhat product photos cut out cleanly and composited into empty generated photorealistic backgrounds:
+  1. **`images/redesign/material-profile-stone.webp`** (1400 × 1000, 117 KB, WebP q=88):
+     - Used on `products.html`, section "Material That Performs."
+     - Scene: warm softly blurred modern interior with light grey polished granite island worktop in foreground. Left 48% calm worktop and ambient blur to sit smoothly under the CSS beige gradient overlay and text.
+     - Product: real teak brown chaukhat profile section piece large in the right 55%, lying on the worktop with solid end face and rebate step clearly visible, with the real black chaukhat profile piece slightly behind it, grounded with natural contact shadows and subtle granite reflection.
+     - Updated alt text on `products.html` to: `"Solid Greenplastwood WPC chaukhat profiles in teak brown and black"`.
+  2. **`images/products/wpc-chaukhat-sizes-guide.webp`** (1200 × 896, 75 KB, WebP q=88):
+     - Used on `resources.html` (Guides card "WPC Chaukhat Sizes Explained"), `guide-wpc-chaukhat-sizes.html`, and `product-wpc-door-frames.html` (hero slider slide 2 and gallery).
+     - Scene: rustic light wood carpenter workbench with closed vintage metal tape measure (retracted, no text), wooden pencil, and clean white drafting paper with faint pencil guidelines (0 readable text or numbers anywhere).
+     - Product: three real Greenplastwood chaukhat profile section pieces side-by-side in three colours (teak brown, black, chocolate brown) with end faces towards the camera, clearly displaying their solid core and differing rebate / groove shapes.
+     - Updated alt text to: `"Greenplastwood WPC chaukhat profiles in three colours on a carpenter's table"` across `resources.html`, `guide-wpc-chaukhat-sizes.html`, and `product-wpc-door-frames.html`.
+- Backups:
+  - Backed up original image files and modified HTML files to `_backup/2026-10-25/real-product/`.
+- Verification & Quality:
+  - Verified 0 console errors across desktop (1440px) and mobile (390px) viewports on Chrome headless.
+  - Verified 0 horizontal/sideways scroll across all required viewports (360, 390, 768, 1024, 1366, 1920 px).
+  - Ran `python _data/check_product_pages.py`: all 7 product pages PASS (0 errors, 0 warnings).
+  - Saved side-by-side source photo comparisons and UI screenshots in `_data/shots/real-product/`:
+    - `compare-material-profile.png`
+    - `compare-sizes-guide.png`
+    - `products-material-1440.png`
+    - `products-material-390.png`
+    - `resources-guides-1440.png`
+    - `resources-guides-390.png`
+    - `guide-sizes-top-1440.png`
+    - `guide-sizes-top-390.png`
+
+## Update 77 — Home Banner 1 glass background images generated (27 Oct 2026)
+- TASK H1: Home Banner 1 background image processing from `_new-images/banner-gen/b1-glass-wide.png` (1672 × 940 px):
+  - **Desktop (`images/banners/hero-b1-glass.webp`)**:
+    - Centre-cropped to 1920:860 ratio (crop box: 0, 95, 1672, 844; size: 1672 × 749).
+    - Resized to exactly 1920 × 860 px with Lanczos resampling.
+    - Applied light unsharp mask (radius 1, percent 40, threshold 2).
+    - Saved as WebP (quality 85, 241.2 KB / 246,992 bytes).
+  - **Mobile (`images/banners/hero-b1-glass-mobile.webp`)**:
+    - Full-height centre crop at 900:1064 ratio (crop box: 438, 0, 1233, 940; size: 795 × 940).
+    - Resized to exactly 900 × 1064 px with Lanczos resampling.
+    - Applied light unsharp mask (radius 1, percent 40, threshold 2).
+    - Saved as WebP (quality 85, 97.3 KB / 99,596 bytes).
+- Zero changes to HTML, CSS, or JS files.
+- Backed up generated files to `_backup/2026-10-27/images/banners/`.
+- Product page checker (`python _data/check_product_pages.py`): all 7 PASS (0 errors, 0 warnings).
+
+## Update 78 — Home product banners 2 (Chaukhat) and 3 (Window) generated (27 Oct 2026)
+- TASK H-PRODUCT: Generated and composited desktop and mobile banners for banners 2 and 3 without modifying HTML, CSS, or JS files:
+  1. **Banner 2 — WPC Chaukhat (`hero-b2-chaukhat`)**:
+     - Background: `_new-images/banner-gen/b2-chaukhat-bg.png` (1376 × 768 px) generated from `images/banners/hero-chaukhats.webp` by removing the man and product to retain deep teal-green vertical lines transitioning into dark moody luxury interior lighting.
+     - Daya Cut-out: Pose `_new-images/daya/poses/2-chaukhat-189814.jpg` cleanly segmented in Python (Pillow + OpenCV) with decontaminated edges and zero halo, face and attire 100% untouched.
+     - Product Cut-out: Teak wood WPC door frame cleanly segmented from real showroom photo `images/redesign/chaukhat/showroom-frames.webp`.
+     - Desktop (`images/banners/hero-b2-chaukhat.webp`): 1920 × 860 px, WebP q=82 (42.7 KB / 42,698 bytes). Daya standing in right third (height ~90%, head near top), chaukhat frame beside him, both within right 45% of frame (x >= 1056) with natural contact shadows; left 55% negative space for text.
+     - Mobile (`images/banners/hero-b2-chaukhat-mobile.webp`): 900 × 1064 px, WebP q=82 (41.0 KB / 41,034 bytes). Right side of background, Daya centered with head ~8% from top shown to knee level, product beside him in upper 70%.
+     - Side-by-side preview: `scratch/banner-preview/hero-b2-chaukhat-preview.png` (2667 × 860 px).
+  2. **Banner 3 — WPC Window Frame (`hero-b3-window`)**:
+     - Background: `_new-images/banner-gen/b3-window-bg.png` (1376 × 768 px) generated matching the reference style with deep teal vertical lines on left and a softly blurred luxury interior with a large rain-streaked window and monsoon garden on right.
+     - Daya Cut-out: Pose `_new-images/daya/poses/3-window-189990.jpg` cleanly segmented in Python with subpixel antialiasing and zero halo, preserving Daya completely unedited.
+     - Product Cut-out: Real wood-finish window frame cleanly segmented from `images/products/wpc-window-frame-clean.webp`.
+     - Desktop (`images/banners/hero-b3-window.webp`): 1920 × 860 px, WebP q=82 (61.8 KB / 61,804 bytes). Daya in right third, window frame beside him at viewing level within right 45% with soft natural contact shadows; left 55% negative space for text.
+     - Mobile (`images/banners/hero-b3-window-mobile.webp`): 900 × 1064 px, WebP q=82 (61.2 KB / 61,202 bytes). Right side of background, Daya head at ~8% from top shown to knees, window frame beside him in upper 70%.
+     - Side-by-side preview: `scratch/banner-preview/hero-b3-window-preview.png` (2667 × 860 px).
+- Zero changes to HTML, CSS, or JS files.
+- Backed up `CHANGES.md` and all generated banners to `_backup/2026-10-27/`.
+- Product page checker (`python _data/check_product_pages.py`): all 7 product pages PASS (0 errors, 0 warnings).
+
+## Update 79 — Home product banners 4 (Doors), 5 (Boards), 6 (PVC Louvers) and 7 (Recycled Sheet) generated (27 Oct 2026)
+- TASK H-PRODUCT-ALL: Generated and composited desktop and mobile banners for banners 4, 5, 6, and 7 without modifying HTML, CSS, or JS files:
+  1. **Banner 4 — WPC Doors (hero-b4-doors)**:
+     - Background: _new-images/banner-gen/b4-doors-bg.png (1376 × 768 px) generated as a new background matching 2-chaukhat-bg.png reference style (deep teal-green vertical fluting on left transitioning to dark negative space, and a softly blurred luxury hallway with ambient warm architectural wall lights and dark floor on right; 0 doors, doorways, people, products, text, or logos).
+     - Daya Cut-out: Pose _new-images/daya/poses/4-doors-189856.jpg cleanly segmented in Python (Pillow + OpenCV) with subpixel antialiasing, 1–2 px feathering, zero halo, face and attire 100% untouched.
+     - Product Cut-out: Real WPC door pattern 1 (images/products/mockups/wpc-door-pattern-1.webp) cleanly cut out from studio white background.
+     - Desktop (images/banners/hero-b4-doors.webp): 1920 × 860 px, WebP q=85 (56.2 KB / 56,162 bytes). Daya and door standing in right 45% (x >= 1056), Daya height ~90%, head 6-8% from top, door beside him with soft natural floor shadow; left 55% negative space for text.
+     - Mobile (images/banners/hero-b4-doors-mobile.webp): 900 × 1064 px, WebP q=85 (50.5 KB / 50,496 bytes). Right side of background, Daya head ~8% from top shown to knee level, door beside him in upper 70%.
+     - Side-by-side preview: scratch/banner-preview/hero-b4-doors-preview.png; face crop: scratch/banner-preview/hero-b4-doors-face.png.
+  2. **Banner 5 — WPC Boards & Sheets (hero-b5-boards)**:
+     - Background: _new-images/banner-gen/b5-boards-bg.png (1376 × 768 px) edited from images/banners/hero-boards.webp to completely remove man and board, seamlessly continuing deep teal-green fluted lines into dark minimalist interior with zero products, people, text, or logos.
+     - Daya Cut-out: Pose _new-images/daya/poses/5-boards-189758.jpg cleanly segmented in Python; white WPC board in his hands preserved intact with zero paint over hands or body.
+     - Product Cut-out: Real 3-colour board samples (images/products/mockups/wpc-board-samples-white-ivory-brown.webp) cut out from white background.
+     - Desktop (images/banners/hero-b5-boards.webp): 1920 × 860 px, WebP q=85 (38.9 KB / 38,938 bytes). Daya in right 45%, board samples standing beside him at waist height with soft natural contact shadow; left 55% calm negative space.
+     - Mobile (images/banners/hero-b5-boards-mobile.webp): 900 × 1064 px, WebP q=85 (42.7 KB / 42,702 bytes). Daya head ~8% from top, board samples in upper 70%.
+     - Side-by-side preview: scratch/banner-preview/hero-b5-boards-preview.png; face crop: scratch/banner-preview/hero-b5-boards-face.png.
+  3. **Banner 6 — PVC Fluted Panels / Louvers (hero-b6-pvc)**:
+     - Background: _new-images/banner-gen/b6-pvc-bg.png (1376 × 768 px) generated matching 2-chaukhat-bg.png style with deep teal vertical lines on left and a softly blurred luxury living room interior with smooth painted walls and ambient lighting on right; 0 wall panels, louvers, people, text, or logos.
+     - Daya Cut-out: Pose _new-images/daya/poses/6-pvc-panel-190156.jpg cleanly segmented with subpixel antialiasing and zero halo.
+     - Product Cut-out: Real louver design images/louvers/designs/l15-301.webp assembled as a 3-panel wall section standing beside Daya at realistic height (~tall as him) with soft floor shadow.
+     - Desktop (images/banners/hero-b6-pvc.webp): 1920 × 860 px, WebP q=85 (54.0 KB / 54,034 bytes). Both inside right 45% (x >= 1056).
+     - Mobile (images/banners/hero-b6-pvc-mobile.webp): 900 × 1064 px, WebP q=85 (52.8 KB / 52,846 bytes).
+     - Side-by-side preview: scratch/banner-preview/hero-b6-pvc-preview.png; face crop: scratch/banner-preview/hero-b6-pvc-face.png.
+  4. **Banner 7 — Recycled Plastic Sheet (hero-b7-recycled)**:
+     - Background: _new-images/banner-gen/b7-recycled-bg.png (1376 × 768 px) generated matching reference style with deep teal vertical lines on left and a softly blurred low-key industrial warehouse with stacked clay bricks on right; 0 plastic sheets, products, people, text, or logos.
+     - Daya Cut-out: Pose _new-images/daya/poses/7-recycled-189793.jpg cleanly segmented; the white sheet in his hands filled with the real speckled recycled texture from images/products/recycled/recycled-plastic-sheet-hero.webp preserving sheet shape, edges, and natural luminance shading, with fingers staying completely in front and zero paint on hands, arms, body, or face.
+     - Desktop (images/banners/hero-b7-recycled.webp): 1920 × 860 px, WebP q=85 (59.1 KB / 59,092 bytes). Daya holding recycled sheet inside right 45% (x >= 1056).
+     - Mobile (images/banners/hero-b7-recycled-mobile.webp): 900 × 1064 px, WebP q=85 (61.3 KB / 61,316 bytes). Daya centered, head ~8% from top, holding product in upper 70%.
+     - Side-by-side preview: scratch/banner-preview/hero-b7-recycled-preview.png; face crop: scratch/banner-preview/hero-b7-recycled-face.png.
+- Zero changes to HTML, CSS, or JS files.
+- Backed up CHANGES.md and all generated banners to _backup/2026-10-27/.
+- Product page checker (python _data/check_product_pages.py): all 7 product pages PASS (0 errors, 0 warnings).
+
+## Update 80 — Contact Us hero office image generated (28 Oct 2026)
+- TASK C1: Generated clean corporate office reception hero image to replace `images/contact/contact-hero-experience-centre.webp` without modifying any HTML, CSS, or JS files:
+  - Generated photorealistic interior photograph of a modern, premium corporate office reception in India: warm wood-finish reception desk, calm teal-green accent wall, tall glass windows with soft natural daylight and outdoor greenery, indoor potted plants, light polished stone floor; clean, uncluttered, welcoming, and professional.
+  - Verification: zero people, zero text/letters, zero logos/signage, zero doors, zero product displays, and zero watermarks.
+  - Processed and saved as `images/contact/contact-hero-office.webp` (exactly 1200 × 896 px, WebP quality 85, 85.1 KB / 87,104 bytes).
+  - Preserved original `images/contact/contact-hero-experience-centre.webp` intact (no overwrite or deletion).
+  - Backed up original image and new image to `_backup/2026-10-28/images/contact/`.
+  - Zero HTML, CSS, or JS files modified.
+
+## Update 81 — Contact Us page updates (28 Oct 2026)
+- TASK C2: Updated `contact.html` with focused content refinements, office hero visual, and precise layout alignment:
+  1. **Hero Section (`#hero`)**:
+     - Updated heading to `<h1 class="gpx-title">Connect With <span class="v2-green">Our Team.</span></h1>`.
+     - Updated lead description to `Talk to our sales team for product details, pricing and bulk orders.`.
+     - Removed redundant `.gpx-hours` paragraph.
+     - Updated image src to `images/contact/contact-hero-office.webp` and alt to `"Greenplastwood corporate office reception in Ahmedabad"`, keeping width (1200), height (896), and `fetchpriority="high"`.
+  2. **Get In Touch Card (Left column of `#contact-form`)**:
+     - Removed `Brand: Greenplastwood` paragraph and gave `SNG Eco India Pvt. Ltd.` `margin-bottom: 14px`.
+     - Renamed heading to `Corporate Headquarters`. Address formatted in clean 3-line format matching client reference: `1312-1313-1314, 13th Floor, Fortune Business Hub,`, `Nr. Shell Petrol Pump, Science City Road,`, and `Sola, Ahmedabad – 380060, Gujarat, India`.
+     - Renamed heading to `Manufacturing Plants`. Kept unit lines and plant link intact.
+     - Renamed heading to `Business Hours`. Replaced lines with `Monday to Saturday: 9:30 AM – 6:30 PM` and `Sunday: Closed`.
+     - Aligned all 5 items identically: left-aligned icon, matching gap to heading and text across all items, and calibrated column widths and typography so that no words break onto their own line at 1440px, 1024px, 768px, and 390px.
+  3. **Form Header & Footer**:
+     - Kept `Send Us Your Requirement` heading and `Request A Quote Or Product Consultation` subheading intact.
+     - Updated `p.form-subtitle-text` to `Share your requirement and our team will call you back.`.
+     - Removed `<p class="gp-form-note">Our team will contact you shortly.</p>` below the submit button.
+     - Kept all form inputs, selects, hidden tracking fields, and submit handler intact.
+  4. **Social Card (`div.form-connect-bar`)**:
+     - Updated heading to `Follow Greenplastwood` and description to `Our latest designs, projects and exhibitions.`.
+  5. **Become A Business Associate (`#partner`)**:
+     - Removed eyebrow tag as requested.
+     - Updated left heading to `Let's Build A Stronger <span class="v2-green">Business Together.</span>`.
+     - Updated lead paragraphs to highlight in-house production, distribution network, and partnerships across business associates, distributors, builders, and professionals.
+     - Updated CTA button text to `EXPLORE PARTNERSHIP OPPORTUNITIES →`.
+     - Kept both right-side cards intact.
+  6. **Final CTA (`#final-cta`)**:
+     - Updated heading to `Have A Project <span class="v2-green">In Mind?</span>`.
+     - Updated description to `Call, WhatsApp or send an enquiry to find the right product.`.
+     - Removed hours line. Kept CTA buttons intact.
+  7. **Preserved Sections**:
+     - Did not touch form fields, map & plants section, footer, visit modal, JSON-LD schema, or other pages.
+  8. **Testing & Verification**:
+     - Responsiveness verified at 1440px, 1024px, 768px, and 390px in Chrome: 0 console errors, 0 horizontal overflow.
+     - Form submission handler verified intact (`gpSubmitLead(event, 'contact_enquiry')`).
+     - Product page checker (`python _data/check_product_pages.py`): all 7 product pages PASS (0 errors, 0 warnings).
+     - Captured and verified 8 screenshots at 1440px and 390px in `scratch/contact-preview/`.
+     - Backed up all modified files to `_backup/2026-10-28/`.
+
+
+## Update 82 — Contact Us social connect bar moved to left column under Business Hours (29 Oct 2026)
+- User Request: Relocate the social media connect bar from beneath the form on the right over to the left column under Business Hours to fill the vacant vertical space and balance the column heights.
+- Implementation in `contact.html`:
+  - Moved `.form-connect-bar` from `.message-form-col` to `.get-in-touch-col` directly beneath `.touch-items-list` (below Business Hours).
+  - Styled `.get-in-touch-col .form-connect-bar` with clean card aesthetics (`margin-top: 24px; background: #ffffff; border: 1px solid var(--border-light); border-radius: 8px; padding: 16px 20px; box-shadow: 0 4px 18px rgba(0,0,0,0.03);`).
+  - Styled social links with 38px circle buttons and clean typography (`font-size: 14.5px` heading, `font-size: 12.5px` subtitle) fitting seamlessly in 1 row on desktop without wrapping.
+  - Responsive layout verified across viewports (1440px, 1024px, 768px, and 390px): 0 horizontal scroll/overflow, 0 console errors.
+  - Column heights at 1440px balanced: Left column: 912px, Right column: 832px (vacant blank space resolved).
+- Verification:
+  - Form submission handler (`gpSubmitLead(event, 'contact_enquiry')`) and all fields remain 100% intact.
+  - Product page checker (`python _data/check_product_pages.py`): all 7 product pages PASS (0 errors, 0 warnings).
+  - Updated screenshots captured at 1440px and 390px in `scratch/contact-preview/`.
+  - Backed up modified files to `_backup/2026-10-29/`.
+
+
+## Update 83 — Door frame guide images generated (TASK GI-1) (29 Oct 2026)
+- TASK GI-1: Replaced door frame guide images following P0 and GI-RULES:
+  1. **images/guides/wpc-chaukhat-profiles.webp** (1600 × 1200 px, 4:3, WebP q=85, 42.7 KB / 42,662 bytes):
+     - Method A (composite):
+     - Background: Generated photorealistic product photography studio backdrop with clean light warm-grey concrete surface meeting soft beige wall, soft diffused daylight from the left, minimal and premium, empty (0 people, 0 text, 0 logos).
+     - Product: Clean subpixel cutouts of 4 real frame profiles from images/products/mockups/wpc-door-frames-colour-profiles.webp (black, teak, ivory, white). Kept exact shape, colour, and proportions with zero halo artifacts.
+     - Composition: Centred upright side by side with equal 48 px gaps, height ~70% of image height (840 px), realistic directional daylight cast shadow and base contact ambient occlusion.
+  2. **images/guides/wpc-vs-plywood-frames.webp** (1600 × 1200 px, 4:3, WebP q=85, 49.3 KB / 49,330 bytes):
+     - Method A (composite):
+     - Background: Generated photorealistic interior photograph of a clean, modern Indian bathroom entrance corridor with light marble-look floor tiles, soft warm wall, and an empty rectangular doorway opening leading to modern bathroom interior with soft natural daylight (0 doors, 0 people, 0 text, 0 logos).
+     - Product: Real teak WPC door frame cutout from images/redesign/chaukhat/showroom-frames.webp, preserving original wood grain, colour, and proportions, with interior opening made transparent to view the bathroom space beyond.
+     - Composition: Placed frame plumb and straight inside doorway opening onto floor threshold with realistic wall jamb shadow and floor contact shadows. (Shows only real WPC frame, no plywood frame drawn).
+  3. **images/guides/door-frame-installation-steps.webp**:
+     - Investigated source catalogue technical drawings. The target file was not present on disk in images/guides/. In accordance with GI Rule G ('keep the old image, skip it and tell me'), skipped modifying/overwriting this file. Prepared a candidate composite in scratch/door-frame-installation-steps-candidate.webp from the 15 installation technical diagrams in images/install/ on a 1600 px white background with 60 px margins for user review.
+- Deliverables:
+  - Saved preview sheet to scratch/guide-preview/run-1.png.
+  - Mirrored generated guide images to _backup/2026-10-29/images/guides/.
+  - Zero HTML, CSS, or JS files modified (GI Rule H).
+  - Product page checker (python _data/check_product_pages.py): all 7 product pages PASS (0 errors, 0 warnings).
+
+## Update 84 — Guide images generated for wall panels and deck flooring (TASK GI-2) (29 Oct 2026)
+- TASK GI-2: Replaced 4 guide images using Method B (reference edit) following P0 and GI-RULES:
+  1. **images/guides/pvc-panel-feature-wall.webp** (1600 × 1200 px, 4:3, WebP q=85, 165.7 KB / 169,712 bytes):
+     - Method B reference edit from images/applications/bedroom-feature-wall.webp.
+     - Photorealistic premium photograph of modern Indian master bedroom feature wall clad in rich walnut fluted panels with identical groove spacing and colour tone, upholstered bed in front, warm cove lighting, and soft daylight.
+     - Verification: zero people, zero hands, zero text, zero logos, zero watermarks.
+  2. **images/guides/pvc-panel-exterior-bungalow.webp** (1600 × 1200 px, 4:3, WebP q=85, 221.9 KB / 227,194 bytes):
+     - Method B reference edit from images/louvers/exterior-louver-bungalow.webp.
+     - Ultra-sharp architectural photograph of modern luxury bungalow elevation featuring the exact vertical exterior fluted batten panels in natural warm teak wood colour and spacing, smooth facade, bright natural daylight, clear sky, and neat landscaping.
+     - Verification: zero people, zero hands, zero text, zero logos, zero signage, zero watermarks.
+  3. **images/guides/wpc-deck-walkway.webp** (1600 × 1200 px, 4:3, WebP q=85, 315.0 KB / 322,554 bytes):
+     - Method B reference edit from images/products/range/deck-flooring.webp.
+     - Photorealistic architectural photograph of luxury rooftop terrace deck featuring teak-brown grooved WPC deck planks identical in colour, width, and groove texture to reference, with planters and outdoor seating at edges under warm evening daylight.
+     - Verification: zero people, zero hands, zero text, zero logos, zero watermarks.
+  4. **images/guides/wpc-deck-tiles-pool.webp** (1600 × 1200 px, 4:3, WebP q=85, 343.5 KB / 351,736 bytes):
+     - Method B reference edit from images/products/range/deck-tiles.webp.
+     - Tack-sharp premium architectural photograph of square interlocking WPC deck tiles in dark brown with 4-slat checkerboard pattern, beside clean swimming pool with stainless steel ladder and resort-style Indian villa setting under bright daylight.
+     - Verification: zero people, zero hands, zero text, zero logos, zero watermarks.
+- Deliverables & Compliance:
+  - Saved full resolution preview sheet to scratch/guide-preview/run-2.png (3260 × 2640 px).
+  - All files backed up to _backup/2026-10-29/images/guides/.
+  - Zero HTML, CSS, or JS files modified (GI Rule H).
+  - Product page checker (python _data/check_product_pages.py): all 7 product pages PASS (0 errors, 0 warnings).
+\n
+
+## Update 85 — Guide images generated for cladding, pergolas, and industrial pallets (TASK GI-3) (29 Oct 2026)
+- TASK GI-3: Replaced 5 guide images using Method B (reference edit) following P0 and GI-RULES:
+  1. **images/guides/wpc-cladding-exterior.webp** (1600 × 1200 px, 4:3, WebP q=85, 212.8 KB / 217,858 bytes):
+     - Method B reference edit from `images/products/range/wall-cladding.webp`.
+     - Photorealistic architectural photograph of a modern Indian luxury villa facade finished with horizontal teak-colour WPC cladding boards with matching width and shadow joints, white plaster cantilevered walls, dark-framed expansive glazing, bright natural daylight, and a manicured front lawn.
+     - Verification: zero people, zero hands, zero text, zero logos, zero signage, zero watermarks.
+  2. **images/guides/wpc-cladding-house.webp** (1600 × 1200 px, 4:3, WebP q=85, 177.1 KB / 181,376 bytes):
+     - Method B reference edit from catalogue cover elevation (`images/docs/green-plastwood-wpc-interior-exterior-cover.webp`).
+     - Tack-sharp photorealistic architectural exterior of modern gabled house elevation featuring identical vertical grey WPC composite cladding with matching board spacing and tone, dark standing-seam metal pitched roof, crisp light render facade, modern black window frames with glass balustrade, entrance canopy, and clean landscaping in soft daylight.
+     - Verification: zero people, zero hands, zero text, zero logos, zero watermarks.
+  3. **images/guides/wpc-pergola-terrace.webp** (1600 × 1200 px, 4:3, WebP q=85, 290.9 KB / 297,882 bytes):
+     - Method B reference edit from catalogue cover pergola and `images/products/range/pergola-gazebo.webp`.
+     - Photorealistic architectural photograph of a luxury rooftop terrace pergola with identical warm teak-tone WPC posts and beams, black metal corner brackets, overhead horizontal shade planks, integrated warm lighting, horizontal wood privacy slat wall, two hanging wicker egg chairs with cushions, round coffee table, lush potted plants, warm late-afternoon golden hour lighting, and an expansive city skyline in the background.
+     - Verification: zero people, zero hands, zero text, zero logos, zero watermarks.
+  4. **images/guides/pallets-fly-ash-bricks.webp** (1600 × 1200 px, 4:3, WebP q=85, 296.2 KB / 303,296 bytes):
+     - Method B reference edit from `images/products/recycled/brick-pallets-in-use.webp`.
+     - Sharp, realistic industrial photograph showing rows of grey composite pallets loaded with neatly arranged freshly made grey fly ash bricks stacked on curing racks inside a clean brick plant under soft daylight through the shed roof.
+     - Verification: zero people, zero hands, zero text, zero logos, zero signage, zero watermarks.
+  5. **images/guides/pallets-brick-machine.webp** (1200 × 1600 px, 3:4 portrait, WebP q=85, 173.0 KB / 177,202 bytes):
+     - Method B reference edit from `images/redesign/recycled/paver-pallets.webp`.
+     - Realistic industrial photograph in 3:4 portrait format of the teal-blue hydraulic brick-making machine producing fly ash bricks on a grey composite pallet along a roller conveyor on a clean factory floor under even natural daylight.
+     - Verification: zero people, zero hands, zero text, zero logos, zero brand names on the machine, zero watermarks.
+- Deliverables & Compliance:
+  - Saved full resolution preview sheet to `scratch/guide-preview/run-3.png` (2600 × 1560 px).
+  - All files backed up to `_backup/2026-10-29/images/guides/` and source references to `_backup/2026-10-29/source_refs/`.
+  - Zero HTML, CSS, or JS files modified (GI Rule H).
+  - Product page checker (`python _data/check_product_pages.py`): all 7 product pages PASS (0 errors, 0 warnings).
+
+## Update 86 — Product guide cards refined and speckled recycled plastic pallets integrated (29 Oct 2026)
+- User Request: Refine the first 3 guide cards in `resources.html` (which previously had improper/broken visuals) and update Card 7 (`pallets-fly-ash-bricks.webp`) to use Greenplastwood's authentic thick speckled recycled composite plastic pallets based on the user-provided product photo reference while keeping the industrial plant shed, curing racks, and fly ash bricks intact.
+- Replaced / Generated 4 guide images at 1600 × 1200 px (4:3), WebP quality 85:
+  1. **Card 1: `images/guides/wpc-vs-plywood-frames.webp`** (1600 × 1200 px, 4:3, WebP q=85, 110.0 KB / 112,648 bytes):
+     - Architectural studio product comparison photograph showing side by side: on the left, a traditional plywood door frame showing moisture absorption, water staining, swelling, and delaminating edge; on the right, a pristine Greenplastwood 100% waterproof WPC door frame in rich teak wood grain with a factory-precision 45° miter joint and water droplets beading cleanly off the hydrophobic surface.
+     - Verification: zero people, zero hands, zero text, zero labels, zero logos, zero watermarks.
+  2. **Card 2: `images/guides/wpc-chaukhat-profiles.webp`** (1600 × 1200 px, 4:3, WebP q=85, 140.0 KB / 143,368 bytes):
+     - Architectural workshop / drafting workbench photograph featuring real solid Greenplastwood WPC door frame (chaukhat) cross-section profile samples in rich teak and dark walnut wood finishes showing single and double rebates (for main door and mosquito mesh shutter), accompanied by a metallic retractable tape measure with extended blade, a carpenter pencil, and clean dimensioned section drawings.
+     - Verification: zero people, zero hands, zero readable text, zero logos, zero watermarks.
+  3. **Card 3: `images/guides/door-frame-installation-steps.webp`** (1600 × 1200 px, 4:3, WebP q=85, 92.3 KB / 94,490 bytes):
+     - Architectural construction photograph resolving the previously missing/broken file on disk: a rich teak-finish WPC door frame installed plumb and square in a plastered masonry doorway opening, secured by metal fixing anchor brackets, with a precision yellow spirit level aligned vertically against the door jamb checking plumb, leveling shims at the base, and polished marble floor in natural daylight.
+     - Verification: zero people, zero hands, zero text, zero logos, zero watermarks.
+  4. **Card 7: `images/guides/pallets-fly-ash-bricks.webp`** (1600 × 1200 px, 4:3, WebP q=85, 315.4 KB / 323,006 bytes):
+     - Realistic industrial photograph inside a clean fly ash brick manufacturing plant with multi-tiered racks carrying freshly molded grey bricks supported on Greenplastwood's thick speckled recycled composite plastic pallets (matching user's reference photo with light-grey terrazzo base and blue, green, and dark recycled plastic flakes visible throughout the surfaces and solid cut edges).
+     - Verification: zero people, zero hands, zero text, zero logos, zero signage, zero watermarks.
+- Deliverables & Verification:
+  - Saved comprehensive 7-card preview sheet to `scratch/guide-preview/run-4.png` (2624 × 1296 px).
+  - All modified files backed up to `_backup/2026-10-29/images/guides/` and reference to `_backup/2026-10-29/source_refs/`.
+  - Zero HTML, CSS, or JS files modified (GI Rule H).
+  - Product page checker (`python _data/check_product_pages.py`): all 7 product pages PASS (0 errors, 0 warnings).
+
+## Update 87 — Review of Contact, Resources and guide pages; captions matched to new images (30 Oct 2026)
+- Checked contact.html, resources.html and all 7 guide pages at 1440 px and 390 px: no sideways scroll, no console errors, no broken images, no banned words.
+- Guide images from Updates 83–86 are new generated images, so figure captions no longer say "from the catalogue / company profile". Captions and alt text in the 7 guides and on the resources guide cards now describe what each image shows.
+- door-frame-installation-steps.webp is now a photo, so the "contain" frame style was removed on the resources card and the install guide.
+
+## Update 88 — Certifications page rebuilt and Gallery limited to awards (30 Oct 2026)
+- certificate.html:
+  - New hero: "Certified Quality You Can Trust." with a composite of the real ISO 9001:2015, Udyam and IGBC certificates (images/certificates/certifications-hero.webp).
+  - New section "Certifications, Registrations & Approvals" with 8 real certificate scans from the company profile (images/certificates/scans/): ISO 9001:2015, Udyam (MSME), IEC, IGBC, PWD Bhopal approved brand, MP Housing Board approval, IndiaMART and TradeIndia certificates of trust. Tap to enlarge.
+  - New section "Independent Test Reports" with the 4 Alekh Plastics Testing Centre reports (Nov 2022).
+  - "How We Control Quality" kept as the next section (heading now h2, card titles in Title Case, small text fixes).
+  - FAQ image replaced with images/journey/05-lab-tested.webp (Indian technician); FAQ answers updated in page and schema.
+  - CTA: "Need Certificates For Your Project?" with Request Certificate Copies and Call Now.
+- gallery.html:
+  - ISO 9001:2015, IndiaMART TrustSEAL, IGBC and TradeIndia cards removed (certificates now on certificate.html); schema updated. Image files kept.
+  - All 13 award cards rebuilt in one format: year, title, type, place, date and a short two-line description.
+  - New intro text with a link to the Certifications page; videos intro and CTA ("Discover The Greenplastwood Range") rewritten.
+- Checked at 1440, 768 and 390 px: no sideways scroll, no console errors, lightbox works; product checker 7/7 PASS.
+
+## Update 89 — Gallery and Certifications matched to the client's awards list (30 Oct 2026)
+- gallery.html: Plastindia 2023 and Kolkata Wood 2025 cards removed (not in the client's awards list, no photos).
+- certificate.html: the older IndiaMART Certificate of Trust (2018) replaced with the IndiaMART TrustSEAL (April 2024) from the client's list, using images/awards/staged/indiamart-trustseal-2024.webp.
+
+## Update 90 — Manufacturing page content, quality images and plant statistics (30 Oct 2026)
+- Meta description rewritten (no lab figures). Headings: "Our WPC Manufacturing Process", "Our Manufacturing Plants", "Our Quality Commitment", "Quality Control At Every Stage", CTA "Visit Our Plant Or Get A Quote" (India-wide supply, no "Gujarat only").
+- Process steps put in the standard WPC extrusion order: Raw Material Selection, Weighing & Dosing, Mixing, Extrusion, Calibration & Cooling, Cutting To Length, Surface Finishing, Quality Inspection, Packing & Dispatch (cutting now before finishing; images moved with their steps). All card texts are two lines or less.
+- Our Manufacturing Plants: new lead text, checklist wording, and a 10-figure statistics grid (official company figures).
+- Quality checks: titles and texts rewritten; Dimensional Inspection now uses a real caliper photo (images/manufacturing/qc-dimensional-caliper.webp, cropped from images/certificates/wpc-quality-inspection.webp). Physical Property Checks and Final Inspection images still to be replaced (prompts given).
+- Quality policy bullets rewritten in plain English. Checked at 1440, 1024, 768 and 390 px; product checker 7/7 PASS.
+
+## Update 91 — Interactive manufacturing process section (30 Oct 2026)
+- manufacturing.html #process: the 9 step cards replaced with an interactive process viewer: numbered step list joined by a line (desktop), a large image panel with step name and text, a progress bar, previous/next arrows and dots; swipe on phones. Keyboard arrows work on the step list. Old version backed up as _backup/2026-10-30/manufacturing-before-process.html.
+
+## Update 92 — Manufacturing process redesigned with real factory photos (30 Oct 2026)
+- #process: the tab viewer from Update 91 replaced with a zig-zag timeline (photo and text alternate around a centre line, numbered nodes; the line fills and nodes turn teal as you scroll). Single column with a left line on phones.
+- All 9 step photos are now real frames from the SNG corporate video (images/manufacturing/real/step-1 … step-9).
+- Quality Control: Physical Property Checks (profile on a weighing scale) and Final Inspection (team checking finished laminated boards) now use real video frames (images/manufacturing/real/qc-*.webp).
+
+## Update 93 — Manufacturing process as a horizontal stage rail (30 Oct 2026)
+- #process: zig-zag timeline (now reserved for the About page) replaced with a horizontal card rail grouped into three stages (Prepare, Form, Finish & Dispatch). Stage tabs jump to their steps and highlight while scrolling; arrows, progress bar, keyboard arrows and swipe. 3 cards per view on desktop, 2 on tablet, 1 on phones.
+- Step images moved to images/manufacturing/process/step-1 … step-9.webp (4:3). These are video-frame placeholders, to be replaced by AI versions (prompts: Greenplastwood-Manufacturing-Images-Prompts-30oct.md). Reference frames in _new-images/process-refs/.
+
+## Update 94 — Process rail design refined (30 Oct 2026)
+- #process: soft teal gradient background with a light dot pattern; stage selector is now a connected stepper (Prepare → Form → Finish & Dispatch) whose line fills as you move through the steps; step chip on each photo, outline step number, small flow arrows between cards, softer card shadows. Tap and swipe tested on phone emulation.
+- Image guide for ChatGPT: Greenplastwood-Manufacturing-Images-ChatGPT-30oct.md (11 images, references in _new-images/process-refs/).
+
+## Update 95 — Manufacturing process as a pinned horizontal "production line" (30 Oct 2026)
+- #process rebuilt (scroll-driven, inspired by VERTAX / interactive process sites): dark teal section with a faint grid; the section pins while you scroll and the 9 steps slide sideways one by one (large photo, big outline step number, stage tag, title, text). Each step rests fully in view before the next one moves in. A numbered production-line rail below shows the current step and stage (Prepare / Form / Finish & Dispatch); clicking a number jumps to that step.
+- Phones: no pinning; steps swipe sideways and the rail follows. Reduced motion respected. Previous rail kept in _backup/2026-10-30/manufacturing-rail-v2.html.
+
+## Update 96 — Manufacturing process as a hexagon production path (30 Oct 2026)
+- #process rebuilt as an infographic (based on the client's hexagon / step-path references): 9 hexagon stations with line icons on a zig-zag path, coloured by stage (Prepare, Form, Finish & Dispatch, with legend). Selecting a hexagon fills the path up to that step and shows its photo, stage and text in a detail card below (arrows and keyboard also work).
+- Phones: vertical zig-zag of hexagons with the text under each step.
+- Previous version kept in _backup/2026-10-30/manufacturing-pinned.html.
+
+## Update 97 — About page content and founder section redesign (31 Oct 2026)
+- Founders: new H1 "The People Behind Greenplastwood" and sub-heading; new layout with real portraits of Mr. Shailesh Patel and Mr. Gautam Patel (frames from the SNG corporate video, images/about/founders/) and a letter card "A Message From Our Founders" (text edited to plural voice). Gujarat Excellence trophy image removed from this section.
+- Vision / Mission / Values: new vision (growth in capacity, range and reach; no invented figures), new mission, Title Case value names and clearer value lines.
+- Brand Promise: right-side cards replaced with promise points (Consistent Quality, Honest Commitments, Reliable Supply, Support At Every Step, Products That Last, Long-Term Partnership) with new icons.
+- Removed sections: "Six Product Lines, One Factory Standard" and "Our Products Are Trusted By".
+- Where We Supply: statistics removed, text rewritten, "near Morbi" removed from map caption and alt.
+- Why Choose Greenplastwood: new left text and rewritten points (no counts). Valued Customers sub-heading rewritten. Meta description updated.
+- (31 Oct, revision) Founder portraits removed from the page as requested; the left side now shows one founder-themed image (placeholder images/about/founders/founders-vision.webp, to be replaced with an AI image) with the two founder name cards below.
+- (31 Oct, revision 2) Founder image replaced by a typographic panel (Since 2012, founders line, names) — no photo or AI image needed.
+- (31 Oct, revision 3) Founder panel refined: SP/GP monogram, Est. 2012 tag, large outline 2012, value chips, names at the base; letter with teal quote bar, drop cap and script signatures (Allura, Google Fonts); soft cream background; panel matches letter height.
+- (31 Oct, revision 4) Founder panel: empty middle filled with a small founder journey path (2012 SNG Eco India founded, 2017 Greenplastwood launched, Today).
+- (31 Oct, revision 5) Journey path removed from the founder panel; replaced with "Our Founding Principles" (Quality First, Honest Business, Growth Together) with icons.
+
+## Update 98 — Home page: journey, benefits, where used, trusted (31 Oct 2026)
+- Journey: rebuilt in the client's sequence (2012–2015 Renewable Energy, 2016 Entering WPC, 2019 Scaling Up, 2021 Door Frame Capacity + ISO, 2023 Pvt. Ltd. and Texture Facility, 2024 NFC, 2025 Expanding Capabilities, 2026 Industry-Scale Production, 2027 What's Next / Coming soon) with the client's wording. New design: year rail + one large card (photo, outline year, title, text), arrows, swipe. Heading "A Journey Built On Sustainability And Innovation". Photos are placeholders from the corporate video (images/journey/v2/).
+- Why Greenplastwood WPC: was company benefits (capacity, delivery etc.); now the 12 WPC product benefits from the client range document and catalogue (water proof, termite & borer proof, fire retardant, UV, no swelling, low maintenance, carpenter friendly, design flexibility, high density, non toxic, eco friendly & recyclable, long-term value).
+- Where Our Products Are Used: 6 main categories (Residential, Commercial, Hospitality, Healthcare, Education, Public & Government); Kitchens & Wardrobes removed as a main card (it is part of Residential). Tap/hover a card to see its sub-categories (from the client's range document). New lead text and button.
+- Trusted section: heading without counts ("Trusted By Leading Companies Across India"). All 65 logos checked against the company profile customer pages: all are from the catalogue.
+
+## Update 99 — Home journey as in the client PDF; Where Used from the range document (31 Oct 2026)
+- Journey: rebuilt to match the client's "Desktop view" PDF: intro, vertical centre line with dots, alternating image / text, large years, uppercase sub-titles, PVC Panels in bold, "ISO 9001:2015 Certified" and "Coming Soon" tags, 2027 shown as an open (future) step. Text exactly as the PDF. Images left as labelled placeholders (to be made with AI later).
+- Where Our Products Are Used: the old first card (Residential) removed; 8 categories built from every application group in the client's WPC Product Range document (Bathrooms & Wet Areas, Kitchens & Utility Areas, Bedrooms & Living Spaces, Furniture & Storage, Walls & Ceilings, Offices & Commercial Spaces, Institutions, Outdoor & Renovation), each with its full sub-category list on tap/hover. 4 × 2 grid.
+
+## Update 100 — Products page: content, headings and image slots (31 Oct 2026)
+- Title, meta and H1 now cover all six product lines: "Our Complete Product Range". The hero text names every product.
+- Product cards: new one-line briefs for all six products. Images point to `images/products/hub/` (placeholders until the AI images are ready).
+- Material section: "Why Choose WPC Over Wood." with new text. Icons are "Water Proof" and "Termite & Borer Proof" (no % figures). Image slot is `hub/material.webp`.
+- Guide section: "19 pages" removed; new brochure line.
+- Quality section: "Quality Built Into Every Product." New text, button and five points with no figures.
+- Applications section replaced by "The Right Product For Every Customer.": six customer cards (Builders, Architects, Contractors, Furniture Makers, Institutions, Brick & Paver Plants), each linking to the matching page. This is different from Home (by space) and the product pages (by product).
+- CTA heading: "Need Help Choosing The Right Product?". The "Talk To Our Team" button now links to the contact form.
+- `_new-images/hub-refs/` holds the reference photos for the 13 ChatGPT prompts. Do not upload it.
+
+## Update 101 — All 6 product pages: content, sections and images (1 Nov 2026)
+Pages: product-wpc-door-frames, product-wpc-window-frames, product-wpc-solid-doors, product-wpc-boards-sheets, product-wpc-louvers (PVC Panel), product-recycled-plastic-sheet.
+- New "… Types At A Glance" section on every page, right after About (`#range`, `.rd-types`): every type of the product in one place with its key sizes. About button now "See … Types" and links here.
+- "Designed For Better Spaces" replaced by "Why Choose …" with 12 advantages per product, taken from the catalogue and the client's range document.
+- "Where … Are Used" rebuilt from the client's WPC Product Range document: area groups, each with its full list (`.rd-uses`). Images are copies in `images/products/<product>/uses/` (placeholders until the AI images).
+- "Dimensions & Details" → "Sizes And Specifications". Page counts removed from Download Resources.
+- Gallery: "Inspiration From Real Spaces" → "… In Finished Spaces" (Recycled: "At Work").
+- CTA "Let's Build Your Vision Together." → a product-specific heading and text on each page.
+- Wrong images fixed: door-frame profiles removed from the Window Frame hero slider and specification image; door photos removed from the Door Frame gallery.
+- Unrelated resources removed: door-frame guides from Window Frames, "WPC vs plywood door frames" from Boards.
+- Recycled hero text now about the product (not the company); `_data/product-data.json` updated to match.
+- CSS: `.rd-types` and `.rd-uses` added to assets/gp-redesign.css (now ?v=4 on the 6 pages).
+
+## Update 102 — Site ready for making images inside the folder (1 Nov 2026)
+- Every image that will be made with AI now has its own file on the site, so a new image goes straight to the right place:
+  - Home: Our Products cards use the 6 Products page images (`images/products/hub/`); Journey placeholders are now real image files (`images/journey/journey-YYYY.webp`, labelled "image coming"); Where Used cards use `images/home/where/`; video poster `images/home/video-poster.webp`.
+  - Gallery video thumbnails: `images/gallery/video-*.webp`. Certificate FAQ image: `images/certificates/cert-lab-testing.webp`.
+  - Product pages: white-background product photos now point to `images/products/<product>/bg/` (Door Frames colours and profile, Doors range, Boards, PVC exterior panel, Recycled sheets).
+- `_tools/place_images.py` + `_tools/image-map.json`: put finished images in `_new-images/ai-output/` and run the script; it crops, resizes, saves WEBP in the right place and backs up the old file.
+- Reference photos for every AI image are in `_new-images/image-refs/<page>/`. The page-by-page Antigravity prompts are kept outside the website folder.
+- Do not upload `_tools` or `_new-images` to the server.

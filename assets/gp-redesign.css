@@ -19,9 +19,10 @@
 .rd-page *, .rd-page *::before, .rd-page *::after { box-sizing: border-box; }
 .rd-wrap { width: 100%; max-width: var(--rd-wrap); margin: 0 auto; padding: 0 24px; }
 .rd-sec { padding: 72px 0; scroll-margin-top: calc(var(--pd-top, 80px) + 16px); }
+.rd-tabs, .gp-tab { scroll-margin-top: calc(var(--pd-top, 80px) + 16px); }
 .rd-sec--white { background: #fff; }
 .rd-sec--beige { background: var(--rd-beige); }
-.rd-anchor { display: block; position: relative; top: calc(-1 * (var(--pd-top, 80px) + 16px)); visibility: hidden; height: 0; }
+.rd-anchor { display: block; position: relative; top: calc(-1 * (var(--pd-top, 80px) + 16px)); scroll-margin-top: calc(var(--pd-top, 80px) + 16px); visibility: hidden; height: 0; }
 .rd-page img { max-width: 100%; display: block; }
 .rd-page a { text-decoration: none; }
 
@@ -472,3 +473,29 @@
   .rd-faq-grid > :first-child { position: sticky; top: calc(var(--pd-top, 80px) + 24px); }
 }
 .rd-faq-grid .rd-p { margin-bottom: 0 !important; }
+
+/* ===== Update 101: PDP range-at-a-glance (.rd-types) and uses by area (.rd-uses) ===== */
+.rd-types { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+.rd-type { background: #fff; border: 1px solid var(--rd-line); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+.rd-type-vis { aspect-ratio: 16 / 10; background: var(--rd-tile); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.rd-type-vis img { width: 100%; height: 100%; object-fit: cover; }
+.rd-type-vis.is-contain img { object-fit: contain; padding: 14px; }
+.rd-type-vis svg { width: 62%; height: auto; color: #b07a45; }
+.rd-type-body { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+:root:root:root .rd-page .rd-type h3 { margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600; color: var(--rd-text); }
+:root:root:root .rd-page .rd-type p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--rd-mute); }
+.rd-type dl { margin: 4px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 14px; line-height: 1.45; border-top: 1px solid var(--rd-line); padding-top: 12px; }
+.rd-type dt { color: var(--rd-mute); }
+.rd-type dd { margin: 0; color: var(--rd-text); font-weight: 600; }
+.rd-uses { display: grid; grid-template-columns: repeat(var(--uses-cols, 5), 1fr); gap: 16px; }
+.rd-use { background: #fff; border: 1px solid var(--rd-line); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+.rd-use figure { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; background: var(--rd-tile); }
+.rd-use img { width: 100%; height: 100%; object-fit: cover; }
+.rd-use-body { padding: 16px 16px 18px; }
+:root:root:root .rd-page .rd-use h3 { margin: 0 0 10px; font-size: 16.5px; line-height: 1.3; font-weight: 600; color: var(--rd-text); }
+.rd-use ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.rd-use li { position: relative; padding-left: 14px; font-size: 14px; line-height: 1.45; color: var(--rd-mute); }
+.rd-use li::before { content: ""; position: absolute; left: 0; top: .55em; width: 5px; height: 5px; border-radius: 50%; background: var(--rd-accent); }
+@media (max-width: 1180px) { .rd-uses { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 860px) { .rd-uses { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .rd-uses, .rd-types { grid-template-columns: 1fr; } .rd-use figure { aspect-ratio: 16 / 9; } }

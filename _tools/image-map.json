@@ -1,0 +1,714 @@
+{
+ "chaukhat.png": {
+  "target": "images/products/hub/chaukhat.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Products page + Home"
+ },
+ "window.png": {
+  "target": "images/products/hub/window.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Products page + Home"
+ },
+ "doors.png": {
+  "target": "images/products/hub/doors.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Products page + Home"
+ },
+ "boards.png": {
+  "target": "images/products/hub/boards.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Products page + Home"
+ },
+ "pvc-panel.png": {
+  "target": "images/products/hub/pvc-panel.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Products page + Home"
+ },
+ "recycled-sheet.png": {
+  "target": "images/products/hub/recycled-sheet.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Products page + Home"
+ },
+ "material.png": {
+  "target": "images/products/hub/material.webp",
+  "size": [
+   1500,
+   1000
+  ],
+  "page": "Products page"
+ },
+ "aud-builders.png": {
+  "target": "images/products/hub/aud-builders.webp",
+  "size": [
+   1200,
+   800
+  ],
+  "page": "Products page"
+ },
+ "aud-architects.png": {
+  "target": "images/products/hub/aud-architects.webp",
+  "size": [
+   1200,
+   800
+  ],
+  "page": "Products page"
+ },
+ "aud-contractors.png": {
+  "target": "images/products/hub/aud-contractors.webp",
+  "size": [
+   1200,
+   800
+  ],
+  "page": "Products page"
+ },
+ "aud-furniture.png": {
+  "target": "images/products/hub/aud-furniture.webp",
+  "size": [
+   1200,
+   800
+  ],
+  "page": "Products page"
+ },
+ "aud-institutions.png": {
+  "target": "images/products/hub/aud-institutions.webp",
+  "size": [
+   1200,
+   800
+  ],
+  "page": "Products page"
+ },
+ "aud-plants.png": {
+  "target": "images/products/hub/aud-plants.webp",
+  "size": [
+   1200,
+   800
+  ],
+  "page": "Products page"
+ },
+ "journey-2012.png": {
+  "target": "images/journey/journey-2012.webp",
+  "size": [
+   1600,
+   900
+  ],
+  "page": "Home"
+ },
+ "journey-2016.png": {
+  "target": "images/journey/journey-2016.webp",
+  "size": [
+   1600,
+   900
+  ],
+  "page": "Home"
+ },
+ "journey-2019.png": {
+  "target": "images/journey/journey-2019.webp",
+  "size": [
+   1600,
+   900
+  ],
+  "page": "Home"
+ },
+ "journey-2021.png": {
+  "target": "images/journey/journey-2021.webp",
+  "size": [
+   1600,
+   900
+  ],
+  "page": "Home"
+ },
+ "journey-2023.png": {
+  "target": "images/journey/journey-2023.webp",
+  "size": [
+   1600,
+   900
+  ],
+  "page": "Home"
+ },
+ "journey-2024.png": {
+  "target": "images/journey/journey-2024.webp",
+  "size": [
+   1600,
+   900
+  ],
+  "page": "Home"
+ },
+ "journey-2025.png": {
+  "target": "images/journey/journey-2025.webp",
+  "size": [
+   1600,
+   900
+  ],
+  "page": "Home"
+ },
+ "journey-2026.png": {
+  "target": "images/journey/journey-2026.webp",
+  "size": [
+   1600,
+   900
+  ],
+  "page": "Home"
+ },
+ "journey-2027.png": {
+  "target": "images/journey/journey-2027.webp",
+  "size": [
+   1600,
+   900
+  ],
+  "page": "Home"
+ },
+ "where-bathrooms.png": {
+  "target": "images/home/where/bathrooms.webp",
+  "size": [
+   960,
+   1200
+  ],
+  "page": "Home"
+ },
+ "where-kitchens.png": {
+  "target": "images/home/where/kitchens.webp",
+  "size": [
+   960,
+   1200
+  ],
+  "page": "Home"
+ },
+ "where-bedrooms.png": {
+  "target": "images/home/where/bedrooms.webp",
+  "size": [
+   960,
+   1200
+  ],
+  "page": "Home"
+ },
+ "where-furniture.png": {
+  "target": "images/home/where/furniture.webp",
+  "size": [
+   960,
+   1200
+  ],
+  "page": "Home"
+ },
+ "where-walls.png": {
+  "target": "images/home/where/walls.webp",
+  "size": [
+   960,
+   1200
+  ],
+  "page": "Home"
+ },
+ "where-offices.png": {
+  "target": "images/home/where/offices.webp",
+  "size": [
+   960,
+   1200
+  ],
+  "page": "Home"
+ },
+ "where-institutions.png": {
+  "target": "images/home/where/institutions.webp",
+  "size": [
+   960,
+   1200
+  ],
+  "page": "Home"
+ },
+ "where-outdoor.png": {
+  "target": "images/home/where/outdoor.webp",
+  "size": [
+   960,
+   1200
+  ],
+  "page": "Home"
+ },
+ "video-poster.png": {
+  "target": "images/home/video-poster.webp",
+  "size": [
+   1920,
+   1080
+  ],
+  "page": "Home"
+ },
+ "step-1.png": {
+  "target": "images/manufacturing/process/step-1.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Manufacturing"
+ },
+ "step-2.png": {
+  "target": "images/manufacturing/process/step-2.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Manufacturing"
+ },
+ "step-3.png": {
+  "target": "images/manufacturing/process/step-3.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Manufacturing"
+ },
+ "step-4.png": {
+  "target": "images/manufacturing/process/step-4.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Manufacturing"
+ },
+ "step-5.png": {
+  "target": "images/manufacturing/process/step-5.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Manufacturing"
+ },
+ "step-6.png": {
+  "target": "images/manufacturing/process/step-6.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Manufacturing"
+ },
+ "step-7.png": {
+  "target": "images/manufacturing/process/step-7.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Manufacturing"
+ },
+ "step-8.png": {
+  "target": "images/manufacturing/process/step-8.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Manufacturing"
+ },
+ "step-9.png": {
+  "target": "images/manufacturing/process/step-9.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Manufacturing"
+ },
+ "qc-physical.png": {
+  "target": "images/manufacturing/real/qc-physical-checks.webp",
+  "size": [
+   1200,
+   800
+  ],
+  "page": "Manufacturing"
+ },
+ "qc-final.png": {
+  "target": "images/manufacturing/real/qc-final-inspection.webp",
+  "size": [
+   1200,
+   800
+  ],
+  "page": "Manufacturing"
+ },
+ "df-homes.png": {
+  "target": "images/products/door-frames/uses/homes.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: door-frames"
+ },
+ "df-bathrooms.png": {
+  "target": "images/products/door-frames/uses/bathrooms.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: door-frames"
+ },
+ "df-kitchens.png": {
+  "target": "images/products/door-frames/uses/kitchens.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: door-frames"
+ },
+ "df-commercial.png": {
+  "target": "images/products/door-frames/uses/commercial.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: door-frames"
+ },
+ "df-institutions.png": {
+  "target": "images/products/door-frames/uses/institutions.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: door-frames"
+ },
+ "wf-homes.png": {
+  "target": "images/products/window-frames/uses/homes.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: window-frames"
+ },
+ "wf-bathrooms.png": {
+  "target": "images/products/window-frames/uses/bathrooms.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: window-frames"
+ },
+ "wf-commercial.png": {
+  "target": "images/products/window-frames/uses/commercial.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: window-frames"
+ },
+ "wf-institutions.png": {
+  "target": "images/products/window-frames/uses/institutions.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: window-frames"
+ },
+ "wf-renovation.png": {
+  "target": "images/products/window-frames/uses/renovation.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: window-frames"
+ },
+ "d-homes.png": {
+  "target": "images/products/doors/uses/homes.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: doors"
+ },
+ "d-bathrooms.png": {
+  "target": "images/products/doors/uses/bathrooms.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: doors"
+ },
+ "d-kitchens.png": {
+  "target": "images/products/doors/uses/kitchens.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: doors"
+ },
+ "d-commercial.png": {
+  "target": "images/products/doors/uses/commercial.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: doors"
+ },
+ "d-institutions.png": {
+  "target": "images/products/doors/uses/institutions.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: doors"
+ },
+ "d-interiors.png": {
+  "target": "images/products/doors/uses/interiors.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: doors"
+ },
+ "b-furniture.png": {
+  "target": "images/products/boards/uses/furniture.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: boards"
+ },
+ "b-walls.png": {
+  "target": "images/products/boards/uses/walls.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: boards"
+ },
+ "b-bathrooms.png": {
+  "target": "images/products/boards/uses/bathrooms.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: boards"
+ },
+ "b-kitchens.png": {
+  "target": "images/products/boards/uses/kitchens.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: boards"
+ },
+ "b-offices.png": {
+  "target": "images/products/boards/uses/offices.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: boards"
+ },
+ "b-interiors.png": {
+  "target": "images/products/boards/uses/interiors.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: boards"
+ },
+ "b-outdoor.png": {
+  "target": "images/products/boards/uses/outdoor.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: boards"
+ },
+ "p-feature-walls.png": {
+  "target": "images/products/pvc-panel/uses/feature-walls.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: pvc-panel"
+ },
+ "p-ceilings.png": {
+  "target": "images/products/pvc-panel/uses/ceilings.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: pvc-panel"
+ },
+ "p-partitions.png": {
+  "target": "images/products/pvc-panel/uses/partitions.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: pvc-panel"
+ },
+ "p-bathrooms.png": {
+  "target": "images/products/pvc-panel/uses/bathrooms.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: pvc-panel"
+ },
+ "p-commercial.png": {
+  "target": "images/products/pvc-panel/uses/commercial.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: pvc-panel"
+ },
+ "p-furniture.png": {
+  "target": "images/products/pvc-panel/uses/furniture.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: pvc-panel"
+ },
+ "p-outdoor.png": {
+  "target": "images/products/pvc-panel/uses/outdoor.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: pvc-panel"
+ },
+ "r-brick-plants.png": {
+  "target": "images/products/recycled/uses/brick-plants.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: recycled"
+ },
+ "r-paver-plants.png": {
+  "target": "images/products/recycled/uses/paver-plants.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: recycled"
+ },
+ "r-construction.png": {
+  "target": "images/products/recycled/uses/construction.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product page: recycled"
+ },
+ "df-colours-bg.png": {
+  "target": "images/products/door-frames/bg/colours.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product pages (background)"
+ },
+ "df-profile-bg.png": {
+  "target": "images/products/door-frames/bg/profile.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product pages (background)"
+ },
+ "d-range-bg.png": {
+  "target": "images/products/doors/bg/range.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product pages (background)"
+ },
+ "b-boards-bg.png": {
+  "target": "images/products/boards/bg/boards.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product pages (background)"
+ },
+ "b-3layer-bg.png": {
+  "target": "images/products/boards/bg/3layer.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product pages (background)"
+ },
+ "p-exterior-bg.png": {
+  "target": "images/products/pvc-panel/bg/exterior.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product pages (background)"
+ },
+ "r-sheets-bg.png": {
+  "target": "images/products/recycled/bg/sheets.webp",
+  "size": [
+   1200,
+   900
+  ],
+  "page": "Product pages (background)"
+ },
+ "video-brand-film.png": {
+  "target": "images/gallery/video-brand-film.webp",
+  "size": [
+   1280,
+   720
+  ],
+  "page": "Gallery"
+ },
+ "video-factory.png": {
+  "target": "images/gallery/video-factory.webp",
+  "size": [
+   1280,
+   720
+  ],
+  "page": "Gallery"
+ },
+ "video-installation.png": {
+  "target": "images/gallery/video-installation.webp",
+  "size": [
+   1280,
+   720
+  ],
+  "page": "Gallery"
+ },
+ "video-products.png": {
+  "target": "images/gallery/video-products.webp",
+  "size": [
+   1280,
+   720
+  ],
+  "page": "Gallery"
+ },
+ "cert-lab-testing.png": {
+  "target": "images/certificates/cert-lab-testing.webp",
+  "size": [
+   848,
+   1272
+  ],
+  "page": "Certificate"
+ },
+ "cert-hero.png": {
+  "target": "images/certificates/certifications-hero.webp",
+  "size": [
+   1200,
+   1000
+  ],
+  "page": "Certificate"
+ },
+ "cert-quality-inspection.png": {
+  "target": "images/certificates/wpc-quality-inspection.webp",
+  "size": [
+   1200,
+   1500
+  ],
+  "page": "Certificate"
+ }
+}

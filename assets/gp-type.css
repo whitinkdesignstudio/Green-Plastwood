@@ -2032,3 +2032,73 @@ textarea {
     width: 100%;
   }
 }
+
+/* Awards & Recognition card enhancements moved from resources.html */
+.aw-grid {
+  align-items: stretch;
+}
+.aw-card {
+  height: 100%;
+}
+.aw-card:not([data-lb]) {
+  cursor: default;
+}
+.aw-card figcaption {
+  flex: 1 1 auto;
+}
+.aw-card figcaption .aw-kind {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 6px 0 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #E9F2F3;
+  color: #05838E;
+  font-size: 12.5px;
+}
+.aw-card figcaption .aw-place {
+  display: block;
+  color: #05838E;
+  font-size: 14.5px;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+.aw-card figcaption .aw-date {
+  display: block;
+  color: #4E4644;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.aw-card figcaption .aw-desc {
+  margin: 6px 0 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #4E4644;
+  overflow-wrap: break-word;
+}
+.aw-img--none {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0A393D, #05838E);
+}
+.aw-img--none .aw-none-title {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.2;
+}
+.aw-img--none .aw-none-title small {
+  display: block;
+  font-size: 15px;
+  opacity: .8;
+  margin-top: 6px;
+}
+@media (max-width: 760px) {
+  .aw-img--none .aw-none-title {
+    font-size: 22px;
+  }
+  .aw-img--none .aw-none-title small {
+    font-size: 13px;
+  }
+}

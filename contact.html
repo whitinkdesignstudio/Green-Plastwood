@@ -485,6 +485,46 @@
       position: relative;
     }
 
+    .form-connect-bar {
+      margin-top: 16px;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      padding: 18px 28px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .form-connect-text h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2B2422;
+      margin: 0 0 2px;
+    }
+
+    .form-connect-text p {
+      font-size: 13px;
+      color: #6F6665;
+      margin: 0;
+    }
+
+    .form-connect-bar .gp-social-row {
+      margin-top: 0;
+    }
+
+    @media (max-width: 640px) {
+      .form-connect-bar {
+        padding: 16px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+
     .message-form-container {
       position: relative;
       background: #ffffff;
@@ -2157,16 +2197,6 @@
       transform: rotate(180deg);
       opacity: 1;
     }
-
-    @media (max-width:900px) {
-      #why-us .gpq-trust {
-        grid-template-columns: 1fr !important
-      }
-
-      #why-us .gpq-trust-list {
-        grid-template-columns: 1fr 1fr !important
-      }
-    }
   </style>
   <link rel="stylesheet" href="assets/gp-content.css" />
   <link rel="stylesheet" href="assets/gp-typography.css" />
@@ -2392,6 +2422,139 @@
   </style>
   <link rel="stylesheet" href="assets/gp-v2.css" />
   <link rel="stylesheet" href="assets/gp-type.css" />
+  <style>
+    /* Contact Page: Get In Touch card alignment and line fit (Task C2 / Rule 2.e) */
+    @media (min-width: 1081px) {
+      .contact-split-grid {
+        grid-template-columns: 510px 1fr !important;
+        gap: 36px !important;
+      }
+    }
+
+    :root:root .touch-item {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 14px !important;
+    }
+
+    :root:root .touch-icon-circle {
+      width: 44px !important;
+      height: 44px !important;
+      flex-shrink: 0 !important;
+    }
+
+    :root:root .touch-info-content {
+      flex: 1 1 auto !important;
+      min-width: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    :root:root .touch-info-content h4 {
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      color: #2B2422 !important;
+      margin-bottom: 4px !important;
+      line-height: 1.25 !important;
+    }
+
+    :root:root .touch-items-list p,
+    :root:root .touch-info-content p,
+    :root:root .touch-info-content a {
+      font-size: 13.5px !important;
+      color: #5E5756 !important;
+      line-height: 1.45 !important;
+      margin: 0 !important;
+      text-wrap: pretty;
+    }
+
+    /* Contact Page: Social connect bar in left column under Business Hours */
+    .get-in-touch-col .form-connect-bar {
+      margin-top: 14px;
+      background: #F5FAFA;
+      border: 1px solid #E1EEEF;
+      border-radius: 12px;
+      padding: 14px 14px !important;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .get-in-touch-col .form-connect-text h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2B2422;
+      margin: 0 0 2px;
+      line-height: 1.25;
+    }
+
+    .get-in-touch-col .form-connect-text p {
+      font-size: 11.5px;
+      color: #5E5756;
+      margin: 0;
+      line-height: 1.35;
+      white-space: nowrap;
+    }
+
+    .get-in-touch-col .form-connect-bar .gp-social-row {
+      display: flex;
+      gap: 6px;
+      margin-top: 0;
+      flex-shrink: 0;
+    }
+
+    .get-in-touch-col .form-connect-bar .gp-social-row a {
+      width: 36px;
+      height: 36px;
+      background: #ffffff;
+    }
+
+    .get-in-touch-col .form-connect-bar .gp-social-row a svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .contact-form-section .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+      :root:root .get-in-touch-col {
+        padding: 18px 12px !important;
+        border-radius: 14px !important;
+      }
+      .get-in-touch-col .form-connect-bar {
+        padding: 12px 12px !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+      }
+      .get-in-touch-col .form-connect-text p {
+        white-space: normal !important;
+      }
+      :root:root .touch-items-list .touch-item:not([style*="display:block"]) {
+        padding: 11px 9px !important;
+        gap: 10px !important;
+        border-radius: 10px !important;
+      }
+      :root:root .touch-icon-circle {
+        width: 38px !important;
+        height: 38px !important;
+      }
+      :root:root .touch-info-content h4 {
+        font-size: 14px !important;
+        margin-bottom: 3px !important;
+      }
+      :root:root .touch-items-list p,
+      :root:root .touch-info-content p,
+      :root:root .touch-info-content a {
+        font-size: 12.5px !important;
+        line-height: 1.4 !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -2477,9 +2640,8 @@
     <div class="container">
       <div class="gpx-hero-grid">
         <div class="gpx-hero-text">
-          <h1 class="gpx-title">Call, WhatsApp <span class="v2-green">Or Visit Us.</span></h1>
-          <p class="gpx-lead">Prices, samples, bulk orders and business associate enquiries. Our office is at Science
-            City Road, Ahmedabad.</p>
+          <h1 class="gpx-title">Connect With <span class="v2-green">Our Team.</span></h1>
+          <p class="gpx-lead">Talk to our sales team for product details, pricing and bulk orders.</p>
           <div class="gpx-quick">
             <a href="tel:+919016336119" class="gpx-q"><small>Call</small><b>+91 90163 36119</b></a>
             <a href="https://wa.me/919016336119" target="_blank" rel="noopener"
@@ -2487,11 +2649,10 @@
             <a href="mailto:sales.executive11@sngecoindia.com"
               class="gpx-q"><small>Email</small><b>sales.executive11@sngecoindia.com</b></a>
           </div>
-          <p class="gpx-hours">Monday to Saturday, 9:30 AM to 6:30 PM</p>
         </div>
         <div class="gpx-hero-img">
-          <img src="images/contact/contact-hero-experience-centre.webp"
-            alt="Greenplastwood WPC doors, door frames, boards and PVC panels on display at the Ahmedabad office" width="1200"
+          <img src="images/contact/contact-hero-office.webp"
+            alt="Greenplastwood corporate office reception in Ahmedabad" width="1200"
             height="896" fetchpriority="high" />
         </div>
       </div>
@@ -2511,10 +2672,7 @@
           <div class="touch-items-list">
             <div style="margin-bottom:6px;">
               <h2 class="gp-h2" style="margin-bottom:8px;">Get In <span class="v2-green">Touch</span></h2>
-              <p style="font-size:15px;font-weight:700;color:#2B2422;margin:0;">SNG Eco India Pvt. Ltd.</p>
-              <p style="font-size:13px;color:#7A716D;margin:2px 0 10px;letter-spacing:.5px;">Brand: Greenplastwood</p>
-              <p style="font-size:14px;color:#4E4744;line-height:1.65;margin:0;">For project and bulk enquiries, share
-                the product, size and quantity.</p>
+              <p style="font-size:15px;font-weight:700;color:#2B2422;margin:0 0 14px;">SNG Eco India Pvt. Ltd.</p>
             </div>
             <div class="touch-item">
               <div class="touch-icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -2525,9 +2683,8 @@
                     d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01" />
                 </svg></div>
               <div class="touch-info-content">
-                <h4>Corporate Headquarter</h4>
-                <p>1312, 1313, 1314, 13th Floor, Fortune Business Hub,<br />Nr. Shell Petrol Pump, Science City
-                  Road,<br />Sola, Ahmedabad – 380060, Gujarat, India</p>
+                <h4>Corporate Headquarters</h4>
+                <p>1312-1313-1314, 13th Floor, Fortune Business Hub,<br />Nr. Shell Petrol Pump, Science City Road,<br />Sola, Ahmedabad – 380060, Gujarat, India</p>
               </div>
             </div>
             <div class="touch-item">
@@ -2538,7 +2695,7 @@
                   <path d="M17 20v-4h2v4M6 16h2M11 16h2" />
                 </svg></div>
               <div class="touch-info-content">
-                <h4>Manufacturing plants</h4>
+                <h4>Manufacturing Plants</h4>
                 <p>Unit 1 and Unit 2: Hirapar, Morbi</p>
                 <p>Unit 3: Village Gala, Morbi</p>
                 <p><a href="#plants">See full addresses ↓</a></p>
@@ -2574,37 +2731,41 @@
                   <polyline points="12 6 12 12 16 14" />
                 </svg></div>
               <div class="touch-info-content">
-                <h4>Business hours</h4>
-                <p>Monday – Saturday</p>
-                <p>9:30 AM – 6:30 PM</p>
-                <p>Sunday – Closed</p>
+                <h4>Business Hours</h4>
+                <p>Monday to Saturday: 9:30 AM – 6:30 PM</p>
+                <p>Sunday: Closed</p>
               </div>
             </div>
-            <div class="touch-item" style="display:block;">
-              <h4 style="margin-bottom:4px;">Connect with Greenplastwood</h4>
-              <p style="font-size:13px;color:#4E4744;margin:0 0 10px;">New designs and exhibition dates.</p>
-              <div class="gp-social-row" style="margin-top:6px;">
-                <a href="https://www.facebook.com/greenplastwoodindia" target="_blank" rel="noopener"
-                  aria-label="Facebook"><svg viewBox="0 0 24 24">
-                    <path
-                      d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07" />
-                  </svg></a>
-                <a href="https://www.instagram.com/greenplastwoodindia/" target="_blank" rel="noopener"
-                  aria-label="Instagram"><svg viewBox="0 0 24 24">
-                    <path
-                      d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.64.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12c0-3.2.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
-                  </svg></a>
-                <a href="https://www.linkedin.com/company/greenplastwoodindia/" target="_blank" rel="noopener"
-                  aria-label="LinkedIn"><svg viewBox="0 0 24 24">
-                    <path
-                      d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.73a1.76 1.76 0 1 1 0-3.53 1.76 1.76 0 0 1 0 3.53zM20 19h-3v-5.6c0-3.37-4-3.11-4 0V19h-3V8h3v1.77c1.4-2.59 7-2.78 7 2.47V19z" />
-                  </svg></a>
-                <a href="https://www.youtube.com/@greenplastwoodindia" target="_blank" rel="noopener"
-                  aria-label="YouTube"><svg viewBox="0 0 24 24">
-                    <path
-                      d="M23.5 6.19a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3 3 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3 3 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3 3 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z" />
-                  </svg></a>
-              </div>
+
+          </div>
+
+          <!-- Social media connect bar moved under Business Hours -->
+          <div class="form-connect-bar">
+            <div class="form-connect-text">
+              <h4>Follow Greenplastwood</h4>
+              <p>Our latest designs, projects and exhibitions.</p>
+            </div>
+            <div class="gp-social-row">
+              <a href="https://www.facebook.com/greenplastwoodindia" target="_blank" rel="noopener"
+                aria-label="Facebook"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07" />
+                </svg></a>
+              <a href="https://www.instagram.com/greenplastwoodindia/" target="_blank" rel="noopener"
+                aria-label="Instagram"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.64.07 4.85 0 3.2-.01 3.58-.07 4.85-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12c0-3.2.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
+                </svg></a>
+              <a href="https://www.linkedin.com/company/greenplastwoodindia/" target="_blank" rel="noopener"
+                aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.73a1.76 1.76 0 1 1 0-3.53 1.76 1.76 0 0 1 0 3.53zM20 19h-3v-5.6c0-3.37-4-3.11-4 0V19h-3V8h3v1.77c1.4-2.59 7-2.78 7 2.47V19z" />
+                </svg></a>
+              <a href="https://www.youtube.com/@greenplastwoodindia" target="_blank" rel="noopener"
+                aria-label="YouTube"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M23.5 6.19a3 3 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3 3 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3 3 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3 3 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z" />
+                </svg></a>
             </div>
           </div>
         </div>
@@ -2616,7 +2777,7 @@
 
             <div class="form-header-content">
               <h2 class="gp-h2" style="margin-bottom:6px;">Send Us Your <span class="v2-green">Requirement</span></h2>
-              <p class="form-subtitle-text">Fill the form and we will call you back.</p>
+              <p class="form-subtitle-text">Share your requirement and our team will call you back.</p>
               <h3 style="font-size:14px;font-weight:800;color:#05838E;margin:14px 0 4px;">Request A Quote Or Product
                 Consultation</h3>
             </div>
@@ -2748,37 +2909,7 @@
               <div class="form-submit-row">
                 <button type="submit" class="btn-solid-green"><span>SUBMIT ENQUIRY</span><span>&rarr;</span></button>
               </div>
-              <p class="gp-form-note">Our team will contact you shortly.</p>
             </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="gp-sec gp-sec--tight" id="why-us"
-    style="padding-top: 56px !important; padding-bottom: 56px !important;">
-    <div class="gp-wrap">
-      <div class="gp-qq-grid" style="grid-template-columns:1fr;">
-        <div class="gpq-trust"
-          style="display:grid;grid-template-columns:260px 1fr;border-radius:10px;box-shadow: 0 10px 30px rgba(0,0,0,0.06);">
-          <div class="gpq-amb" style="height:auto;min-height:240px;background:#07292C;"><img
-              src="images/banners/hero-chaukhats-mobile.webp" alt="Greenplastwood brand ambassador Dayanand Shetty"
-              style="object-position:center 8%;" loading="lazy" /></div>
-          <div class="gpq-trust-body" style="display:flex;flex-direction:column;justify-content:center;">
-            <span class="gpq-tag">Why architects &amp; builders choose Greenplastwood</span>
-            <ul class="gpq-trust-list" style="grid-template-columns:repeat(4,1fr);gap:18px;">
-              <li style="flex-direction:column;border:0;"><b>9 Years</b><span>of WPC manufacturing (since 2017)</span>
-              </li>
-              <li style="flex-direction:column;border:0;"><b>1,300 MT</b><span>production capacity a month · 3
-                  plants</span></li>
-              <li style="flex-direction:column;border:0;"><b>300+ Projects</b><span>50+ stock points · 4+
-                  countries</span></li>
-              <li style="flex-direction:column;border:0;"><b>9+ Certifications</b><span>ISO 9001:2015 · 125+ team</span>
-              </li>
-            </ul>
-            <div class="gp-btns" style="margin-top:20px;"><a href="#" class="gp-btn gp-btn--sample"
-                data-gp-quote="Sample">Request a Sample <span>→</span></a><a href="#" class="gp-btn gp-btn--wa"
-                data-gp-wa>WhatsApp Us <span>→</span></a></div>
           </div>
         </div>
       </div>
@@ -2801,25 +2932,11 @@
               target="_blank" rel="noopener" class="gp-btn">Get Directions <span>→</span></a></div>
         </div>
       </div>
-      <div class="gp-grid" style="grid-template-columns:2fr 1fr;gap:18px;">
+      <div class="gp-grid" style="grid-template-columns:1fr;gap:18px;">
         <div class="gp-map gp-reveal"><iframe
             src="https://maps.google.com/maps?q=23.0785043,72.5015009&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
             loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             title="Greenplastwood Corporate Office — Fortune Business Hub, Sola, Ahmedabad"></iframe></div>
-        <div class="gp-grid" style="gap:14px;">
-          <div class="gp-address-card gp-reveal">
-            <h3>Corporate Headquarter</h3>
-            <p>SNG Eco India Pvt. Ltd.<br />1312, 1313, 1314, 13th Floor, Fortune Business Hub, Nr. Shell Petrol Pump,
-              Science City Road, Sola, Ahmedabad – 380060, Gujarat, India</p><a
-              href="https://maps.app.goo.gl/K83KDwBeTtUMk2uH7" target="_blank" rel="noopener"
-              class="gp-btn gp-btn--ghost">Open in Google Maps <span>→</span></a>
-          </div>
-          <div class="gp-address-card gp-reveal">
-            <h3>Manufacturing Facility</h3>
-            <p>Unit 1, 2 &amp; 3: Hirapar and Gala, Morbi, Gujarat</p><a href="#plants" class="gp-link">See plant
-              addresses ↓</a>
-          </div>
-        </div>
       </div>
       <span id="plants" class="gp-anchor"></span>
       <div class="gp-plants-head">
@@ -2873,23 +2990,14 @@
        ======================================================================== -->
   <section class="gp-sec gp-sec--dark" id="partner">
     <div class="gp-wrap">
-      <h2 class="gp-h2 gp-h2--full">Become A <span class="v2-green">Business Associate</span></h2>
       <div class="gp-split gp-split--top">
         <div class="gp-reveal">
+          <h2 class="gp-h2" style="margin:0 0 20px;">Let's Build A Stronger <span class="v2-green">Business Together.</span></h2>
 
-          <p class="gp-lead">We are adding business associates in cities where we do not have a stock point yet.</p>
-          <p class="gp-lead">Business associates get stock, samples, catalogues and our support on project enquiries in
-            their area.</p>
-          <div class="gpx-dstats">
-            <div><strong>1,300 MT</strong><span>Capacity a month</span></div>
-            <div><strong>3</strong><span>Plants</span></div>
-            <div><strong>125+</strong><span>Team strength</span></div>
-            <div><strong>50+</strong><span>Major stock points</span></div>
-            <div><strong>300+</strong><span>Projects</span></div>
-            <div><strong>4+</strong><span>Countries exported to</span></div>
-          </div>
+          <p class="gp-lead">Partner with Greenplastwood, a WPC manufacturer backed by in-house production and a growing distribution network. Explore opportunities to expand your business with our range of WPC doors, door frames, boards and PVC panels.</p>
+          <p class="gp-lead">Whether you're a business associate, distributor, builder or industry professional, let's create new opportunities and grow together.</p>
           <div class="gp-btns"><button type="button" class="gp-btn gp-btn--light"
-              onclick="openDistributorModal()">Become a Business Associate <span>→</span></button></div>
+              onclick="openDistributorModal()">EXPLORE PARTNERSHIP OPPORTUNITIES <span>→</span></button></div>
         </div>
         <div class="gp-grid gp-g2 gp-reveal">
           <div class="gp-card">
@@ -2925,9 +3033,8 @@
     <div class="gp-wrap">
       <div class="gp-cta gp-reveal">
         <div>
-          <h2 class="gp-h2">Let's Start The <span class="v2-green">Conversation</span></h2>
-          <p>Call, WhatsApp or send an enquiry.</p>
-          <p>Monday to Saturday, 9:30 AM to 6:30 PM.</p>
+          <h2 class="gp-h2">Have A Project <span class="v2-green">In Mind?</span></h2>
+          <p>Call, WhatsApp or send an enquiry to find the right product.</p>
         </div>
         <div class="gp-btns"><a href="#contactInquiryForm" class="gp-btn gp-btn--light">Send Enquiry
             <span>→</span></a><a href="tel:+919016336119" class="gp-btn gp-btn--line-light">Call Now <span>→</span></a>

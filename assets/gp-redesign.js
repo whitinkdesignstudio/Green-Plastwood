@@ -61,21 +61,56 @@
 
   /* open closed panels / accordions / tabs when the URL points inside them */
   function reveal(h) {
-    if (!h) return;
+    if (!h) return null;
     var el = document.getElementById(h);
     var tab = document.querySelector('.rd-page .gp-tab[data-tab="' + h + '"]');
-    if (tab) { tab.click(); el = el || tab; }
+    if (tab) {
+      tab.click();
+      el = tab.closest('.rd-tabs') || tab;
+    }
     if (!el) { var t2 = document.querySelector('.gp-tab[data-tab="' + h + '"]'); if (t2) el = t2; }
-    if (!el) return;
+    if (!el) return null;
     var d = el.closest('details'); if (d && !d.open) d.open = true;
     var hid = el.closest('[hidden]'); if (hid && hid.id) { hid.removeAttribute('hidden'); var b = document.querySelector('[data-rd-toggle="' + hid.id + '"]'); if (b) b.setAttribute('aria-expanded', 'true'); }
+    return el;
   }
-  function fromHash() { reveal(decodeURIComponent((location.hash || '').slice(1))); }
+  function fromHash() {
+    var h = decodeURIComponent((location.hash || '').slice(1));
+    var el = reveal(h);
+    if (el && h === 'more-products') {
+      setTimeout(function () { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }, 50);
+    }
+  }
   fromHash();
   window.addEventListener('hashchange', function () {
-    fromHash();
-    var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    var h = decodeURIComponent((location.hash || '').slice(1));
+    var el = reveal(h);
+    if (!el) el = document.getElementById(h);
     if (el) setTimeout(function () { el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }, 40);
+  });
+
+  /* click on #more-products: ensure tab opens and scrolls smoothly even if hash is already #more-products */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="#"]');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var hashIndex = href.indexOf('#');
+    if (hashIndex === -1) return;
+    var hash = href.slice(hashIndex + 1);
+    if (hash !== 'more-products') return;
+    var path = href.slice(0, hashIndex);
+    if (path && path !== location.pathname.split('/').pop() && path !== location.pathname) return;
+    e.preventDefault();
+    var target = reveal('more-products');
+    if (!target) target = document.querySelector('.rd-page .gp-tab[data-tab="more-products"]') || document.getElementById('more-products');
+    if (location.hash !== '#more-products') {
+      history.pushState(null, '', '#more-products');
+    }
+    if (target) {
+      setTimeout(function () {
+        target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      }, 40);
+    }
   });
 
   /* products page search */
