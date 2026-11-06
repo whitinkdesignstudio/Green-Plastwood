@@ -51,7 +51,7 @@
   "since": {
    "company": "2012",
    "brand": "2017",
-   "years_wpc": "9 years of WPC manufacturing (since 2017)"
+   "years_wpc": "10 years of WPC manufacturing (since 2016)"
   },
   "stats": {
    "capacity": "1,300 MT a month",
@@ -59,7 +59,7 @@
    "plants": "3",
    "area": "105,000 sq ft",
    "projects": "300+",
-   "certifications": "9+",
+   "certifications": "4",
    "stock_points": "50+",
    "countries": "4+",
    "companies": "150+",
@@ -151,7 +151,7 @@
     "label": "50+ stock points · 4+ countries"
    },
    {
-    "value": "9+ Certifications",
+    "value": "4 Certifications",
     "label": "ISO 9001:2015 · 125+ team"
    }
   ],
@@ -1140,7 +1140,7 @@
    {
     "href": "guide-wpc-wall-louvers.html",
     "image": "images/products/wpc-wall-louvers-guide.webp",
-    "title": "PVC Wall Panels: 12 Mm, 15 Mm And 24 Mm",
+    "title": "PVC Wall Panels: 12 mm, 15 mm And 24 mm",
     "desc": "The three series compared, and how to install them."
    },
    {
@@ -1165,7 +1165,7 @@
   "faqs": [
    {
     "q": "What is WPC and how is it different from wood?",
-    "a": "WPC (Wood Polymer Composite) is made from wood fibre and polymer. Unlike conventional wood, Greenplastwood products are 100% water proof, termite & borer proof and fire retardant, so they do not swell, crack or rot. In lab tests our WPC showed only 0.2% water absorption and a UL-94 V-0 flammability rating."
+    "a": "WPC (Wood Plastic Composite) is made from wood fibre and polymer. Unlike conventional wood, Greenplastwood products are 100% water proof, termite & borer proof and fire retardant, so they do not swell, crack or rot. In lab tests our WPC showed only 0.2% water absorption and a UL-94 V-0 flammability rating."
    },
    {
     "q": "Which products does Greenplastwood manufacture?",
@@ -1173,24 +1173,8 @@
     "changed": "Updated to the 6 official product lines (old answer missed PVC Panel and Recycled Plastic Sheet)."
    },
    {
-    "q": "Are WPC door frames suitable for bathrooms and kitchens?",
-    "a": "Yes. Our door frames are 100% water proof, termite & borer proof and fire retardant, making them ideal for bathrooms, kitchens and humid environments, with no chemical treatment required against termites."
-   },
-   {
-    "q": "Can door frames be painted, laminated or polished?",
-    "a": "Yes. Greenplastwood door frames are ready for paint, laminate & polish, like normal wood."
-   },
-   {
     "q": "Do you supply across India and for bulk projects?",
     "a": "Yes. We supply across India through 50+ stock points and take bulk project orders with custom sizes and colours. Call or WhatsApp us for a quote."
-   },
-   {
-    "q": "What sizes do WPC door frames come in?",
-    "a": "Single rebate frames from 75 × 50 mm to 150 × 63 mm, double rebate frames in 120 × 50, 125 × 63 and 150 × 63 mm, in 7, 8, 9 and 10 ft lengths. See the size guide."
-   },
-   {
-    "q": "Is there a warranty on WPC door frames?",
-    "a": "Greenplastwood door frames carry a 30 years warranty*. Ask our team for the warranty terms for your order."
    },
    {
     "q": "What is the minimum order?",
@@ -1291,7 +1275,7 @@
    "trust_lines": [
     "ISO 9001:2015 certified",
     "Lab tested: 0.2% water absorption, UL-94 V-0",
-    "9 years of WPC manufacturing in our own plants in Gujarat"
+    "10 years of WPC manufacturing in our own plants in Gujarat"
    ],
    "quick_picks": [
     {
@@ -1348,7 +1332,7 @@
      "Chaukhat"
     ],
     "paragraphs": [
-     "A chaukhat is the frame fixed in the wall that carries the door. It is also the part that fails first: it stands on a wet floor and it is the first thing termites reach. Greenplastwood chaukhats are made of wood polymer composite (WPC) at 750 to 1200 kg/m³, so they do not absorb water, swell or rot.",
+     "A chaukhat is the frame fixed in the wall that carries the door. It is also the part that fails first: it stands on a wet floor and it is the first thing termites reach. Greenplastwood chaukhats are made of wood plastic composite (WPC) at 750 to 1200 kg/m³, so they do not absorb water, swell or rot.",
      "They are worked like wood. Your carpenter cuts, joins and screws them with the same tools, and the frame can be painted, polished or laminated. Choose single or double rebate, three profile models, four lengths and eight colours. Sizes and colours can be customised on bulk orders."
     ],
     "image": {
@@ -2059,7 +2043,7 @@
    ],
    "eyebrow": "Window chaukhat in two profiles",
    "tagline": "Window frames that do not rot or swell in rain and sun.",
-   "description": "Greenplastwood WPC window frames are made of the same high-density wood polymer composite as our door chaukhats. They are 100% water proof, termite and borer proof and weather and ageing resistant, so they hold their shape in rain, sun and humidity.",
+   "description": "Greenplastwood WPC window frames are made of the same high-density wood plastic composite as our door chaukhats. They are 100% water proof, termite and borer proof and weather and ageing resistant, so they hold their shape in rain, sun and humidity.",
    "card": {
     "tag": "Two profiles",
     "summary": "Window frames in the same WPC as our chaukhats: water proof, termite proof and fit for exterior walls.",
@@ -2092,7 +2076,7 @@
     },
     {
      "label": "Material",
-     "value": "Wood polymer composite (WPC)"
+     "value": "Wood plastic composite (WPC)"
     },
     {
      "label": "Customisation",
@@ -2125,7 +2109,7 @@
    "trust_lines": [
     "ISO 9001:2015 certified",
     "Same WPC as our lab-tested door frames",
-    "9 years of WPC manufacturing in our own plants in Gujarat"
+    "10 years of WPC manufacturing in our own plants in Gujarat"
    ],
    "quick_picks": [
     {
@@ -2216,7 +2200,7 @@
     "items": [
      {
       "id": "type-70x30",
-      "name": "70 × 30 Mm Window Frame",
+      "name": "70 × 30 mm Window Frame",
       "text": "The lighter of the two profiles, generally used for smaller windows and ventilators.",
       "image": {
        "src": "images/products/mockups/wpc-door-frame-profile-coco-brown-rounded.webp",
@@ -2253,7 +2237,7 @@
      },
      {
       "id": "type-120x50",
-      "name": "120 × 50 Mm Window Frame",
+      "name": "120 × 50 mm Window Frame",
       "text": "The heavier profile, generally used for larger window openings.",
       "image": {
        "src": "images/products/mockups/wpc-door-frame-profile-coco-brown-front.webp",
@@ -2323,7 +2307,7 @@
      },
      {
       "label": "Material",
-      "value": "Wood polymer composite (WPC)"
+      "value": "Wood plastic composite (WPC)"
      }
     ],
     "note": null,
@@ -2631,7 +2615,7 @@
    "trust_lines": [
     "ISO 9001:2015 certified",
     "Lab tested: 0.2% water absorption, UL-94 V-0",
-    "9 years of WPC manufacturing in our own plants in Gujarat"
+    "10 years of WPC manufacturing in our own plants in Gujarat"
    ],
    "quick_picks": [
     {
@@ -3440,7 +3424,7 @@
     },
     {
      "label": "Colours",
-     "value": "White, Ivory, Grey, Sephia, Brown, Teakwood and more on order"
+     "value": "White, Ivory, Grey, Sephia, Brown, Teakwood"
     },
     {
      "label": "Minimum order",
@@ -3473,7 +3457,7 @@
    "trust_lines": [
     "ISO 9001:2015 certified",
     "Lab tested: 0.2% water absorption, UL-94 V-0",
-    "9 years of WPC manufacturing in our own plants in Gujarat"
+    "10 years of WPC manufacturing in our own plants in Gujarat"
    ],
    "quick_picks": [
     {
@@ -3920,10 +3904,6 @@
      "a": "A board built in three layers for a harder and smoother finish than a single-layer board, with the same water proof and termite proof properties. It is used for kitchens, wardrobes, office furniture and partitions."
     },
     {
-     "q": "How is a 3 layer board different from a normal WPC board?",
-     "a": "WPC / PVC boards start at 5 mm and 450 kg/m³. 3 layer boards start at 6 mm and 550 kg/m³, with a three-layer build for a tougher surface."
-    },
-    {
      "q": "Which colours are available and what is the minimum order?",
      "a": "WPC / PVC boards: White, Red, Ivory, Orange, Coco Brown, Dark Grey, Yellow, Blue and Green, with a minimum of 100 sheets per colour and thickness. 3 layer boards: White is standard, with Ivory, Brown and WPC colour; bulk orders start at 9 tons."
     },
@@ -3958,7 +3938,7 @@
    ],
    "eyebrow": "Interior and exterior wall panels",
    "tagline": "Fluted wall panels with a wooden look, without termites or upkeep.",
-   "description": "Greenplastwood PVC panels are pre-finished fluted panels for interior and exterior walls and ceilings. They are 100% water and moisture resistant, termite proof and stain resistant, and they do not deform, rot or fade.",
+   "description": "Greenplastwood PVC panels are pre-finished fluted panels for interior walls and ceilings, and the Exterior WPC Panel is made for outside walls. They are 100% water and moisture resistant, termite proof and stain resistant, and they do not deform, rot or fade.",
    "card": {
     "tag": "Wall, ceiling and exterior paneling",
     "summary": "Pre-finished fluted panels for walls and ceilings in wood, marble, stone and solid finishes. Ready to install.",
@@ -4024,7 +4004,7 @@
    "trust_lines": [
     "ISO 9001:2015 certified",
     "63 designs, each with a design code",
-    "9 years of WPC manufacturing in our own plants in Gujarat"
+    "10 years of WPC manufacturing in our own plants in Gujarat"
    ],
    "quick_picks": [
     {
@@ -4134,7 +4114,7 @@
     "items": [
      {
       "id": "type-12",
-      "name": "12 Mm 2G · 200 Series",
+      "name": "12 mm 2G · 200 Series",
       "text": "The widest panel, 200 mm, with two broad flutes. It gives a clean linear texture that suits rooms of normal height.",
       "image": {
        "src": "images/louvers/series-l12.webp",
@@ -4171,7 +4151,7 @@
      },
      {
       "id": "type-15",
-      "name": "15 Mm 8G · 300 Series",
+      "name": "15 mm 8G · 300 Series",
       "text": "A 165 mm panel with eight slim flutes for a denser, finer rhythm on the wall.",
       "image": {
        "src": "images/louvers/series-l15.webp",
@@ -4208,7 +4188,7 @@
      },
      {
       "id": "type-24",
-      "name": "24 Mm · 100 Series",
+      "name": "24 mm · 100 Series",
       "text": "The deepest profile. The 24 mm flutes throw a stronger shadow, which reads well on tall walls and from a distance.",
       "image": {
        "src": "images/louvers/series-l24.webp",

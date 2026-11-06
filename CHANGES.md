@@ -1,3 +1,27 @@
+# Greenplastwood Website Updates
+
+## Update 104: Home hero banners (5 Nov 2026)
+- Replaced the Home hero banner slider in index.html (section id="hero") with 7 new banners matching Our Products order:
+  1. Glass: modern glass buildings against a blue sky with main brand tagline.
+  2. WPC Chaukhat: Dayanand Shetty with WPC Chaukhat profiles on dark green.
+  3. WPC Window Frame: WPC window frame with three open glass shutters.
+  4. WPC Doors: Dayanand Shetty with walnut WPC door in corridor.
+  5. WPC Sheets & Boards: Dayanand Shetty leaning on WPC boards in hall.
+  6. PVC Panel: Dayanand Shetty sitting on sofa in front of fluted PVC wall panel.
+  7. Recycled Plastic Sheet: recycled plastic sheets used as construction pallets.
+- Generated 14 high-quality WebP banner images in images/banners/ (desktop 1920x860, mobile 900x1064):
+  - home-1-glass.webp, home-1-glass-mobile.webp
+  - home-2-chaukhat.webp, home-2-chaukhat-mobile.webp
+  - home-3-window.webp, home-3-window-mobile.webp
+  - home-4-doors.webp, home-4-doors-mobile.webp
+  - home-5-boards.webp, home-5-boards-mobile.webp
+  - home-6-pvc-panel.webp, home-6-pvc-panel-mobile.webp
+  - home-7-recycled.webp, home-7-recycled-mobile.webp
+- Removed old 5th slide (3 layer boards for furniture).
+- Updated hero dots to 7 buttons (aria-label "Show slide 1" to "Show slide 7", data-go "0" to "6").
+- Added CSS gradient overlay in assets/gp-v2.css on Glass slide for clean desktop text legibility.
+- Adjusted mobile cropping and object-position to ensure Dayanand Shetty and products are fully visible across all screen sizes.
+
 # Green Plastwood — Update (Sep 2026)
 
 Base: your latest zip (v3). Your design tweaks are kept; only content, images, leads and SEO were added.
@@ -1254,3 +1278,17 @@ Pages: product-wpc-door-frames, product-wpc-window-frames, product-wpc-solid-doo
 - `_tools/place_images.py` + `_tools/image-map.json`: put finished images in `_new-images/ai-output/` and run the script; it crops, resizes, saves WEBP in the right place and backs up the old file.
 - Reference photos for every AI image are in `_new-images/image-refs/<page>/`. The page-by-page Antigravity prompts are kept outside the website folder.
 - Do not upload `_tools` or `_new-images` to the server.
+
+## Update 103 — Content-fix review and supplied images placed (5 Nov 2026)
+Reviewed the content changes from the Content-Fix prompts (01–06) and the 12-image pack: all main pages load, no broken files or script errors, JSON-LD valid, checker 7/7 PASS.
+Small fixes found in the review:
+- contact.html: "Corporate Headquarters" → "Corporate Headquarter".
+- PVC Panel page: broken sentence in Quality And Range fixed ("…come under our ISO 9001:2015 quality system, which covers WPC and PVC products."); hero/schema description no longer says PVC panels are for exterior walls (points to the Exterior WPC Panel).
+- `_data/product-data.json` matched to the intended changes (Products page door-frame FAQs removed, merged board FAQ, board colours line, PVC description).
+- Home video poster replaced (old poster showed the word "Louver"); new poster = the Gallery brand-film image.
+Supplied images placed (cropped to each slot, WEBP 85, old files in `_backup/2026-11-05/`):
+- Home: Journey 2016, 2023, 2025 (factory sign text removed from the 2025 aerial photo); Our Products cards for Chaukhat and Doors now use their own files `images/home/products/`.
+- Products page: hero slides kitchen (Sheets & Boards) and profiles replaced; new door slide added; customer cards Institutions and Brick & Paver Block Plants.
+- Door Frames hero slides 1 and 2; Window Frames main photo; Doors hero slides 1 and 2, "Kitchens And Utility" card and 3 layer door photo; Boards spec/board-samples photo and a new hero slide; PVC Panel exterior house photo; Recycled Sheet shuttering and brick-pallet photos.
+Not used: the supplied Journey 2026 image (SNG text on shirts and a lab scene that does not match the 2026 text). The current 2026 image stays.
+- Where Used cards filled from the supplied images: Door Frames "Homes" (Home Chaukhat image) and "Bathrooms" (bathroom door image), Doors "Bedrooms And Living Spaces" (Home Doors image).

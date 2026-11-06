@@ -188,7 +188,7 @@ What they get: Products from our 3 plants in Gujarat; Brand campaigns with brand
 - WPC Vs Wood Vs Plywood: Which Door Frame For A Bathroom?: A plain comparison for each opening in a project. (guide-wpc-vs-plywood-door-frames.html)
 - WPC Chaukhat Sizes Explained: All sizes from 75 × 50 to 150 × 63 mm and which wall they suit. (guide-wpc-chaukhat-sizes.html)
 - How To Install A WPC Door Frame: Cutting, corner joints and fixing in the wall. (guide-install-wpc-door-frame.html)
-- PVC Wall Panels: 12 Mm, 15 Mm And 24 Mm: The three series compared, and how to install them. (guide-wpc-wall-louvers.html)
+- PVC Wall Panels: 12 mm, 15 mm And 24 mm: The three series compared, and how to install them. (guide-wpc-wall-louvers.html)
 - Installing WPC Deck Flooring And Deck Tiles: Deck planks on a frame, and interlocking tiles. (guide-wpc-deck-flooring-installation.html)
 - WPC Wall Cladding And Pergolas: Profiles, advantages and step-by-step installation. (guide-wpc-wall-cladding-pergola.html)
 - Pallets For Fly Ash Brick And Paver Block Plants: Sizes, physical properties and the buy-back offer. (guide-wpc-industrial-pallets.html)
@@ -445,7 +445,7 @@ Problem vs solution: **Wooden window frame**: Swells, then shrinks, Paint cracks
 
 ### Window Frame Profiles
 Two profile sizes.
-#### 70 × 30 Mm Window Frame  (anchor `#type-70x30`)
+#### 70 × 30 mm Window Frame  (anchor `#type-70x30`)
 The lighter of the two profiles, generally used for smaller windows and ventilators.
 | Spec | Value | Note |
 |---|---|---|
@@ -456,7 +456,7 @@ The lighter of the two profiles, generally used for smaller windows and ventilat
 | Customisation | Size, length and colour on bulk orders | – |
 
 
-#### 120 × 50 Mm Window Frame  (anchor `#type-120x50`)
+#### 120 × 50 mm Window Frame  (anchor `#type-120x50`)
 The heavier profile, generally used for larger window openings.
 | Spec | Value | Note |
 |---|---|---|
@@ -905,7 +905,7 @@ Problem vs solution: **Timber battens**: Need polish, Need termite treatment, Wa
 
 ### PVC Panel Series
 Three interior series and one exterior profile.
-#### 12 Mm 2G · 200 Series  (anchor `#type-12`)
+#### 12 mm 2G · 200 Series  (anchor `#type-12`)
 The widest panel, 200 mm, with two broad flutes. It gives a clean linear texture that suits rooms of normal height.
 | Spec | Value | Note |
 |---|---|---|
@@ -916,7 +916,7 @@ The widest panel, 200 mm, with two broad flutes. It gives a clean linear texture
 | Generally used for | TV wall backdrops, wardrobes, bedrooms | – |
 
 
-#### 15 Mm 8G · 300 Series  (anchor `#type-15`)
+#### 15 mm 8G · 300 Series  (anchor `#type-15`)
 A 165 mm panel with eight slim flutes for a denser, finer rhythm on the wall.
 | Spec | Value | Note |
 |---|---|---|
@@ -927,7 +927,7 @@ A 165 mm panel with eight slim flutes for a denser, finer rhythm on the wall.
 | Generally used for | Feature walls, bedroom headboard walls, ceilings, reception areas | – |
 
 
-#### 24 Mm · 100 Series  (anchor `#type-24`)
+#### 24 mm · 100 Series  (anchor `#type-24`)
 The deepest profile. The 24 mm flutes throw a stronger shadow, which reads well on tall walls and from a distance.
 | Spec | Value | Note |
 |---|---|---|

@@ -4049,12 +4049,30 @@
 @media (min-width: 901px) {
   .v2-hero--banners .v2-slides { height: clamp(400px, 60vh, 660px) !important; min-height: 0 !important; }
   .v2-hero--banners .v2-bslide-media img { object-position: right top; }
-  .v2-hero--banners .v2-bslide-text > * { max-width: min(600px, 50%); }
-  .v2-hero--banners .v2-bslide-text > .v2-slide-title { max-width: min(760px, 62%) !important; margin-bottom: 14px; }
+  .v2-hero--banners .v2-bslide-text > * { max-width: min(520px, 45%); }
+  .v2-hero--banners .v2-bslide-text > .v2-slide-title { max-width: min(760px, 60%) !important; margin-bottom: 14px; }
   .v2-hero--banners .v2-bslide-text .gp-btns { margin-top: 22px; }
 }
+/* hero banner 1 (glass) soft gradient overlay for text readability */
+.v2-slide[data-slide="1"] .v2-bslide-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.80) 30%, rgba(255, 255, 255, 0.35) 55%, transparent 72%);
+  pointer-events: none;
+  z-index: 1;
+}
 @media (max-width: 900px) {
-  .v2-hero--banners .v2-bslide-media img { max-height: 36vh; }
+  .v2-slide[data-slide="1"] .v2-bslide-media::after {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.6) 30%, transparent 60%);
+  }
+  .v2-hero--banners .v2-bslide-media img {
+    max-height: none !important;
+    height: auto !important;
+    aspect-ratio: 900 / 1064 !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
 }
 
 /* journey: seven milestones in one row, pictures that match each milestone */

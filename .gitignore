@@ -1,6 +1,16 @@
 _prompts/
 _backup/
 PEHLE-YE-PADHO.txt
+00-PEHLE-*.txt
+00-PEHLE-YE-PADHO-05nov.txt
 _new-images/
 .DS_Store
 Thumbs.db
+# Working folders that must never go to the live site
+Greenplastwood-Content-Fix/
+Greenplastwood-New-Images/
+_client-docs/
+_backup-before-content-fix/
+_backup-before-new-images/
+scratch/
+scratch_*.txt

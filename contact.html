@@ -2683,7 +2683,7 @@
                     d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01" />
                 </svg></div>
               <div class="touch-info-content">
-                <h4>Corporate Headquarters</h4>
+                <h4>Corporate Headquarter</h4>
                 <p>1312-1313-1314, 13th Floor, Fortune Business Hub,<br />Nr. Shell Petrol Pump, Science City Road,<br />Sola, Ahmedabad – 380060, Gujarat, India</p>
               </div>
             </div>
@@ -2995,7 +2995,7 @@
           <h2 class="gp-h2" style="margin:0 0 20px;">Let's Build A Stronger <span class="v2-green">Business Together.</span></h2>
 
           <p class="gp-lead">Partner with Greenplastwood, a WPC manufacturer backed by in-house production and a growing distribution network. Explore opportunities to expand your business with our range of WPC doors, door frames, boards and PVC panels.</p>
-          <p class="gp-lead">Whether you're a business associate, distributor, builder or industry professional, let's create new opportunities and grow together.</p>
+          <p class="gp-lead">Whether you're a business associate, builder or industry professional, let's create new opportunities and grow together.</p>
           <div class="gp-btns"><button type="button" class="gp-btn gp-btn--light"
               onclick="openDistributorModal()">EXPLORE PARTNERSHIP OPPORTUNITIES <span>→</span></button></div>
         </div>
@@ -3029,19 +3029,7 @@
 
 
 
-  <section class="gp-sec" id="final-cta">
-    <div class="gp-wrap">
-      <div class="gp-cta gp-reveal">
-        <div>
-          <h2 class="gp-h2">Have A Project <span class="v2-green">In Mind?</span></h2>
-          <p>Call, WhatsApp or send an enquiry to find the right product.</p>
-        </div>
-        <div class="gp-btns"><a href="#contactInquiryForm" class="gp-btn gp-btn--light">Send Enquiry
-            <span>→</span></a><a href="tel:+919016336119" class="gp-btn gp-btn--line-light">Call Now <span>→</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ========================================================================
        8. FOOTER
@@ -3056,9 +3044,7 @@
               loading="lazy" decoding="async" />
           </a>
           <p class="footer-about-text">WPC Life With Future. Greenplastwood is the WPC brand of SNG Eco India Pvt. Ltd.,
-            Ahmedabad. SNG Eco India started in 2012, and since 2017 Greenplastwood has made WPC chaukhats, doors,
-            boards, window frames and PVC panels in our 3 plants in Gujarat, and supply builders and business associates
-            across India through 50+ stock points.</p>
+            Ahmedabad. SNG Eco India started in 2012, and since 2016 we have made WPC chaukhats, doors, boards and window frames in our 3 plants in Gujarat. Our range also includes PVC panels.</p>
           <div class="footer-social-row">
             <a href="https://www.facebook.com/greenplastwoodindia" target="_blank" rel="noopener" class="social-btn"
               aria-label="Facebook">
@@ -3239,7 +3225,7 @@
       <div class="success-icon-badge">&#10003;</div>
       <h3 class="modal-title" id="successTitle">THANK YOU!</h3>
       <p class="modal-subtitle" id="successMsg" style="margin-bottom: 24px;">
-        Your inquiry has been successfully transmitted to our technical sales team.
+        Your enquiry has reached our sales team.
       </p>
       <button type="button" class="btn-solid-green" onclick="closeSuccessModal()" style="width: 100%;">
         OK, GOT IT
@@ -3281,8 +3267,8 @@
       const product = form.productService ? form.productService.value : '';
 
       showSuccessModal(
-        'INQUIRY RECEIVED',
-        `Thank you, ${name}! Your inquiry regarding "${product || 'Greenplastwood Products'}" has been registered. Our team will contact you shortly.`
+        'ENQUIRY RECEIVED',
+        `Thank you, ${name}! Your enquiry has reached our sales team.`
       );
       form.reset();
     }
@@ -3383,7 +3369,7 @@
       closeDistributorModal();
       showSuccessModal(
         'APPLICATION SUBMITTED',
-        `Thank you! The business associate inquiry for "${bName}" has been submitted to Greenplastwood Channel Operations.`
+        `Thank you! The business associate enquiry for "${bName}" has been submitted to Greenplastwood Channel Operations.`
       );
       e.target.reset();
     }
@@ -3509,7 +3495,7 @@
         if (formContainer && successBox) {
           formContainer.style.display = 'none';
           if (successMsg) {
-            successMsg.innerText = `Thank you, ${name}! Your inquiry for "${interest}" has been submitted successfully. Our team will contact you shortly and your brochure download has started.`;
+            successMsg.innerText = `Thank you, ${name}! Your enquiry for "${interest}" has been submitted successfully. Our team will contact you shortly and your brochure download has started.`;
           }
           successBox.style.display = 'block';
         }
