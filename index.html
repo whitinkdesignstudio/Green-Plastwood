@@ -3653,6 +3653,36 @@
       border: 1.5px dashed #05838E
     }
 
+    /* Update 104: machine capacity chart above the Journey timeline */
+    .pjc { background:#fff; border:1px solid #D5E7E9; border-radius:18px; padding:26px 28px 20px; margin:0 0 56px; display:grid; grid-template-columns:minmax(200px,260px) 1fr; gap:36px; align-items:end; }
+    .pjc-now { align-self:center; }
+    .pjc-num { display:block; font-size:clamp(56px,6vw,84px); line-height:.95; font-weight:600; color:#0A393D; letter-spacing:-.02em; }
+    .pjc-num small { font-size:.32em; font-weight:500; color:#05838E; letter-spacing:0; margin-left:6px; }
+    .pjc-now p { margin:12px 0 0; font-size:15px; line-height:1.55; color:#3E5456; }
+    .pjc-now p b { color:#0A393D; }
+    .pjc-bars { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(8,1fr); gap:10px; align-items:end; height:250px; }
+    .pjc-bars li { height:100%; }
+    .pjc-bar { all:unset; box-sizing:border-box; cursor:pointer; height:100%; width:100%; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:6px; border-radius:10px; }
+    .pjc-bar:focus-visible { outline:2px solid #05838E; outline-offset:3px; }
+    .pjc-val { font-size:15px; font-weight:600; color:#0A393D; }
+    .pjc-col { width:100%; max-width:56px; height:calc(var(--n) / 17 * 170px); min-height:6px; background:#05838E; border-radius:8px 8px 3px 3px; transition:background .2s, transform .2s; transform-origin:bottom; }
+    .pjc-bar:hover .pjc-col, .pjc-bar.is-on .pjc-col { background:#0A393D; }
+    .pjc-bar--plan .pjc-col { background:repeating-linear-gradient(135deg,#E3F2F3 0 6px,#fff 6px 12px); border:1.5px dashed #05838E; }
+    .pjc-bar--plan:hover .pjc-col { background:repeating-linear-gradient(135deg,#C8E7EA 0 6px,#fff 6px 12px); }
+    .pjc-yr { font-size:13px; color:#5E7375; border-top:1px solid #D5E7E9; width:100%; text-align:center; padding-top:8px; }
+    .pjc-bar.is-on .pjc-yr { color:#05838E; font-weight:600; }
+    .pjc-note { grid-column:1 / -1; margin:0; font-size:13px; color:#6E8385; border-top:1px solid #EEF4F4; padding-top:12px; }
+    .pj-item.is-flash .pj-year { color:#05838E; }
+    .pj-item.is-flash .pj-media img { box-shadow:0 0 0 4px #05838E; }
+    @media (prefers-reduced-motion:no-preference) { .pjc.is-in .pjc-col { animation:pjcGrow .7s ease-out both; animation-delay:calc(var(--i) * 70ms); } @keyframes pjcGrow { from { transform:scaleY(0); } } }
+    @media (max-width:860px) {
+      .pjc { grid-template-columns:1fr; gap:20px; padding:20px 16px 14px; margin-bottom:36px; }
+      .pjc-bars { gap:6px; height:200px; }
+      .pjc-col { height:calc(var(--n) / 17 * 130px); }
+      .pjc-val { font-size:13px; }
+      .pjc-yr { font-size:11px; }
+    }
+
     @media (max-width:860px) {
       .pj::before {
         left: 6px
@@ -3740,6 +3770,8 @@
       border-radius: 10px
     }
   </style>
+  <link rel="stylesheet" href="assets/gp-layout.css?v=1" />
+  <script src="assets/gp-layout.js?v=1" defer></script>
 </head>
 
 <body>
@@ -3844,7 +3876,7 @@
         </picture>
         <div class="gp-wrap v2-bslide-text">
           <h2 class="v2-slide-title">WPC Chaukhats <span class="v2-green">That Never Rot.</span></h2>
-          <p>100% water proof and termite proof door frames in 12+ sizes and 8 colours. 30 years warranty*.</p>
+          <p>100% water proof and termite proof door frames in many sizes and colours. 30 years warranty*.</p>
           <div class="gp-btns"><a href="product-wpc-door-frames.html" class="gp-btn">Explore WPC Chaukhats
               <span>→</span></a><a href="resources.html#brochures" class="gp-btn gp-btn--ghost">Download Brochure
               <span>↓</span></a></div>
@@ -3858,7 +3890,7 @@
         </picture>
         <div class="gp-wrap v2-bslide-text">
           <h2 class="v2-slide-title">WPC Window Frames <span class="v2-green">That Stand Rain And Sun.</span></h2>
-          <p>Water proof, termite proof window frames in two profiles, 70 × 30 mm and 120 × 50 mm, in 8 colours.</p>
+          <p>Water proof, termite proof window frames in a choice of profiles and colours.</p>
           <div class="gp-btns"><a href="product-wpc-window-frames.html" class="gp-btn">Explore WPC Window Frames
               <span>→</span></a><a href="resources.html#brochures" class="gp-btn gp-btn--ghost">Download Brochure
               <span>↓</span></a></div>
@@ -3887,7 +3919,7 @@
         </picture>
         <div class="gp-wrap v2-bslide-text">
           <h2 class="v2-slide-title">WPC Boards <span class="v2-green">Built For Wet Areas.</span></h2>
-          <p>5–18 mm boards in 8 × 4 ft sheets. An alternative to plywood for all kinds of residential and commercial
+          <p>Boards in a range of thicknesses. An alternative to plywood for all kinds of residential and commercial
             furniture.</p>
           <div class="gp-btns"><a href="product-wpc-boards-sheets.html" class="gp-btn">Explore WPC Boards
               <span>→</span></a><a href="resources.html#brochures" class="gp-btn gp-btn--ghost">Download Brochure
@@ -4215,8 +4247,7 @@
           <h2 class="gp-h2" style="margin:0;">Where Our Products <span class="v2-green">Are Used</span></h2>
         </div>
         <div>
-          <p class="gp-lead">Greenplastwood products are used in homes, businesses and institutions across India. Tap a
-            category to see where our products fit best.</p>
+          <p class="gp-lead">Greenplastwood products are used in homes, businesses and institutions across India.</p>
         </div>
       </div>
       <div class="gph-uses wu-grid">
@@ -4244,7 +4275,7 @@
         </div>
         <div class="gp-img-card wu-card gp-reveal">
           <button type="button" class="wu-toggle" aria-expanded="false"><img src="images/home/where/kitchens.webp"
-              alt="Modular kitchen made with WPC boards" loading="lazy" decoding="async" /><span
+              alt="Kitchen with Greenplastwood WPC door and cabinets" loading="lazy" decoding="async" /><span
               class="gp-img-card-num">02</span><span class="gp-img-card-arrow" aria-hidden="true">+</span>
             <div class="gp-img-card-body">
               <h3>Kitchens &amp; Utility Areas</h3>
@@ -4265,7 +4296,7 @@
         </div>
         <div class="gp-img-card wu-card gp-reveal">
           <button type="button" class="wu-toggle" aria-expanded="false"><img src="images/home/where/bedrooms.webp"
-              alt="Bedroom door in a modern home" loading="lazy" decoding="async" /><span
+              alt="Bedroom with Greenplastwood WPC wardrobe and door" loading="lazy" decoding="async" /><span
               class="gp-img-card-num">03</span><span class="gp-img-card-arrow" aria-hidden="true">+</span>
             <div class="gp-img-card-body">
               <h3>Bedrooms &amp; Living Spaces</h3>
@@ -4369,7 +4400,7 @@
         </div>
         <div class="gp-img-card wu-card gp-reveal">
           <button type="button" class="wu-toggle" aria-expanded="false"><img src="images/home/where/outdoor.webp"
-              alt="WPC deck and outdoor area" loading="lazy" decoding="async" /><span
+              alt="Carpenter fixing a Greenplastwood WPC door frame in place of old timber" loading="lazy" decoding="async" /><span
               class="gp-img-card-num">08</span><span class="gp-img-card-arrow" aria-hidden="true">+</span>
             <div class="gp-img-card-body">
               <h3>Outdoor &amp; Renovation</h3>
@@ -4404,8 +4435,15 @@
           into a dedicated manufacturer of Wood Plastic Composite (WPC) products, expanding our capacity and range at
           every step.</p>
       </div>
+
+      <figure class="pjc" aria-label="Production machines, year by year">
+        <div class="pjc-now"><span class="pjc-num">13<small>machines</small></span>
+          <p>Running in 2026: <b>10 door frame</b> and <b>3 door and sheet</b> machines, up from 2 lines in 2016. Tap a year to read its story.</p></div>
+        <ol class="pjc-bars"><li><button type="button" class="pjc-bar" data-go="j-2016" style="--n:2;--i:0" aria-label="2016: 2 machines. Show 2016 in the timeline"><span class="pjc-val">2</span><span class="pjc-col"></span><span class="pjc-yr">2016</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2019" style="--n:4;--i:1" aria-label="2019: 4 machines. Show 2019 in the timeline"><span class="pjc-val">4</span><span class="pjc-col"></span><span class="pjc-yr">2019</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2021" style="--n:8;--i:2" aria-label="2021: 8 machines. Show 2021 in the timeline"><span class="pjc-val">8</span><span class="pjc-col"></span><span class="pjc-yr">2021</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2023" style="--n:8;--i:3" aria-label="2023: 8 machines. Show 2023 in the timeline"><span class="pjc-val">8</span><span class="pjc-col"></span><span class="pjc-yr">2023</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2024" style="--n:8;--i:4" aria-label="2024: 8 machines. Show 2024 in the timeline"><span class="pjc-val">8</span><span class="pjc-col"></span><span class="pjc-yr">2024</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2025" style="--n:11;--i:5" aria-label="2025: 11 machines. Show 2025 in the timeline"><span class="pjc-val">11</span><span class="pjc-col"></span><span class="pjc-yr">2025</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2026" style="--n:13;--i:6" aria-label="2026: 13 machines. Show 2026 in the timeline"><span class="pjc-val">13</span><span class="pjc-col"></span><span class="pjc-yr">2026</span></button></li><li><button type="button" class="pjc-bar pjc-bar--plan" data-go="j-2027" style="--n:17;--i:7" aria-label="2027: 17 machines planned. Show 2027 in the timeline"><span class="pjc-val">17*</span><span class="pjc-col"></span><span class="pjc-yr">2027</span></button></li></ol>
+        <figcaption class="pjc-note">Machines in production at the end of each year, counted from the milestones below. *2027 is planned: four more door frame machines.</figcaption>
+      </figure>
       <ol class="pj">
-        <li class="pj-item">
+        <li id="j-2012" class="pj-item">
           <div class="pj-copy"><span class="pj-year">2012 – 2015</span><span class="pj-sub">The Beginning: Renewable
               Energy</span>
             <p>Our story began in the renewable sector, manufacturing biofuel pellets from wood. This foundation gave us
@@ -4416,7 +4454,7 @@
           <div class="pj-media"><img class="pj-img" src="images/journey/journey-2012.webp"
               alt="Natural wood biofuel pellets manufacturing" loading="lazy" width="1600" height="900" /></div>
         </li>
-        <li class="pj-item">
+        <li id="j-2016" class="pj-item">
           <div class="pj-copy"><span class="pj-year">2016</span><span class="pj-sub">Entering WPC Manufacturing</span>
             <p>Building on our wood-based expertise, we began research and development into Wood Plastic Composite (WPC)
               products. The effort led to the start of commercial production, with dedicated lines for WPC door frames
@@ -4426,7 +4464,7 @@
           <div class="pj-media"><img class="pj-img" src="images/journey/journey-2016.webp"
               alt="First commercial WPC extrusion production line" loading="lazy" width="1600" height="900" /></div>
         </li>
-        <li class="pj-item">
+        <li id="j-2019" class="pj-item">
           <div class="pj-copy"><span class="pj-year">2019</span><span class="pj-sub">Scaling Up</span>
             <p>Growing demand led us to add two more machines, expanding production capacity. We continued to invest in
               new product development and process improvement, steadily widening our portfolio.</p>
@@ -4435,7 +4473,7 @@
           <div class="pj-media"><img class="pj-img" src="images/journey/journey-2019.webp"
               alt="Expanded WPC production lines and capacity (2019)" loading="lazy" width="1600" height="900" /></div>
         </li>
-        <li class="pj-item">
+        <li id="j-2021" class="pj-item">
           <div class="pj-copy"><span class="pj-year">2021</span><span class="pj-sub">Strengthening Door Frame
               Capacity</span>
             <p>We added four new door frame machines, reinforcing our position as a reliable supplier and enabling us to
@@ -4446,7 +4484,7 @@
               alt="Four new WPC door frame extrusion lines (2021)" loading="lazy" width="1600"
               height="900" /></div>
         </li>
-        <li class="pj-item">
+        <li id="j-2023" class="pj-item">
           <div class="pj-copy"><span class="pj-year">2023</span><span class="pj-sub">A New Identity and a Finer
               Finish</span>
             <p>SNG Eco India became a Private Limited company, marking a new stage of professional governance, structure
@@ -4458,7 +4496,7 @@
               alt="Dedicated door texturing and finishing facility (2023)" loading="lazy" width="1600" height="900" />
           </div>
         </li>
-        <li class="pj-item">
+        <li id="j-2024" class="pj-item">
           <div class="pj-copy"><span class="pj-year">2024</span><span class="pj-sub">A New Product Category: NFC</span>
             <p>We expanded our portfolio with the launch of a new product category, NFC, extending our range beyond our
               existing door frame, door and sheet lines.</p>
@@ -4468,7 +4506,7 @@
               alt="Developing a new product category (2024)" loading="lazy" width="1600" height="900" />
           </div>
         </li>
-        <li class="pj-item">
+        <li id="j-2025" class="pj-item">
           <div class="pj-copy"><span class="pj-year">2025</span><span class="pj-sub">Expanding Our Capabilities</span>
             <p>We commissioned an additional door and sheet machine along with two door frame machines, further
               increasing capacity and delivery capability.</p>
@@ -4478,7 +4516,7 @@
               alt="Nationwide delivery and increased capacity dispatch (2025)" loading="lazy" width="1600"
               height="900" /></div>
         </li>
-        <li class="pj-item">
+        <li id="j-2026" class="pj-item">
           <div class="pj-copy"><span class="pj-year">2026</span><span class="pj-sub">Industry-Scale Production</span>
             <p>Two more door frame machines took our infrastructure to <b>10 door frame machines and 3 door and sheet
                 machines</b>, giving us the scale to serve growing demand with consistent quality.</p>
@@ -4488,7 +4526,7 @@
               alt="Industry-scale production floor with multiple door frame and sheet extrusion lines running (2026)"
               loading="lazy" width="1600" height="900" /></div>
         </li>
-        <li class="pj-item pj-item--next">
+        <li id="j-2027" class="pj-item pj-item--next">
           <div class="pj-copy"><span class="pj-year">2027</span><span class="pj-sub">What’s Next</span>
             <p>Our expansion continues with four additional door frame machines and the introduction of <b>PVC
                 Panels</b>, broadening our product range for new applications and markets.</p><span
@@ -4501,10 +4539,25 @@
       </ol>
     </div>
   </section>
+  <script>
+    (function () {
+      var fig = document.querySelector('.pjc'); if (!fig) return;
+      if ('IntersectionObserver' in window) { var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { fig.classList.add('is-in'); io.disconnect(); } }, { threshold: .35 }); io.observe(fig); } else fig.classList.add('is-in');
+      [].forEach.call(fig.querySelectorAll('.pjc-bar'), function (b) {
+        b.addEventListener('click', function () {
+          var li = document.getElementById(b.getAttribute('data-go')); if (!li) return;
+          [].forEach.call(fig.querySelectorAll('.pjc-bar'), function (x) { x.classList.toggle('is-on', x === b); });
+          var y = li.getBoundingClientRect().top + window.pageYOffset - 110;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+          li.classList.add('is-flash'); setTimeout(function () { li.classList.remove('is-flash'); }, 1800);
+        });
+      });
+    })();
+  </script>
   <section class="v2-trusted" id="trusted"
     style="border-radius:0 !important; margin:0 !important; border:none !important;">
     <div class="v2-trusted-head">
-      <h2>Trusted By <span class="v2-green">150+ Companies And 200+ Business Associates</span></h2>
+      <h2>Trusted By 150+ Companies <span class="v2-green">And 200+ Business Associates</span></h2>
       <p>Corporates, government departments, educational institutions and builders choose Greenplastwood for their
         projects.</p>
     </div>
@@ -4823,93 +4876,7 @@
       </div>
     </div>
   </section>
-  <section class="gp-sec gp-sec--cream" id="reviews">
-    <!-- SAMPLE REVIEWS: replace with real customer reviews before launch -->
-    <div class="gp-wrap">
-      <div class="v2-head v2-head--center">
-        <h2 class="gp-h2">What Our Customers <span class="v2-green">Say</span></h2>
-        <p class="gp-lead">Builders, carpenters, business associates and designers on working with Greenplastwood.</p>
-      </div>
-      <div class="v2-rev-mq">
-        <div class="v2-rev-track">
-          <figure class="v2-review">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“We replaced wooden chaukhats in all bathrooms with Greenplastwood WPC frames. Two monsoons
-              later, no swelling and no termites.”</blockquote>
-            <figcaption><b>Builder</b><span>Ahmedabad</span></figcaption>
-          </figure>
-          <figure class="v2-review">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“Carpenters were comfortable from day one. The frames cut, screw and polish like wood, and the
-              sizes are the same in every lot.”</blockquote>
-            <figcaption><b>Contractor</b><span>Rajkot</span></figcaption>
-          </figure>
-          <figure class="v2-review">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“We use their 3 layer doors for classrooms and toilets. They take daily cleaning and still look
-              new.”</blockquote>
-            <figcaption><b>School Administrator</b><span>Gujarat</span></figcaption>
-          </figure>
-          <figure class="v2-review">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“WPC boards were the right call for the modular kitchen. No water damage under the sink, unlike
-              plywood.”</blockquote>
-            <figcaption><b>Interior Designer</b><span>Surat</span></figcaption>
-          </figure>
-          <figure class="v2-review">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“Stock reaches on time and the business associate team helps with project enquiries in our
-              area.”
-            </blockquote>
-            <figcaption><b>Business Associate</b><span>Madhya Pradesh</span></figcaption>
-          </figure>
-          <figure class="v2-review">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“The PVC panels gave our showroom wall a premium wooden look without any maintenance.”
-            </blockquote>
-            <figcaption><b>Retail Owner</b><span>Vadodara</span></figcaption>
-          </figure>
-          <figure class="v2-review" aria-hidden="true">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“We replaced wooden chaukhats in all bathrooms with Greenplastwood WPC frames. Two monsoons
-              later, no swelling and no termites.”</blockquote>
-            <figcaption><b>Builder</b><span>Ahmedabad</span></figcaption>
-          </figure>
-          <figure class="v2-review" aria-hidden="true">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“Carpenters were comfortable from day one. The frames cut, screw and polish like wood, and the
-              sizes are the same in every lot.”</blockquote>
-            <figcaption><b>Contractor</b><span>Rajkot</span></figcaption>
-          </figure>
-          <figure class="v2-review" aria-hidden="true">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“We use their 3 layer doors for classrooms and toilets. They take daily cleaning and still look
-              new.”</blockquote>
-            <figcaption><b>School Administrator</b><span>Gujarat</span></figcaption>
-          </figure>
-          <figure class="v2-review" aria-hidden="true">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“WPC boards were the right call for the modular kitchen. No water damage under the sink, unlike
-              plywood.”</blockquote>
-            <figcaption><b>Interior Designer</b><span>Surat</span></figcaption>
-          </figure>
-          <figure class="v2-review" aria-hidden="true">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“Stock reaches on time and the business associate team helps with project enquiries in our
-              area.”
-            </blockquote>
-            <figcaption><b>Business Associate</b><span>Madhya Pradesh</span></figcaption>
-          </figure>
-          <figure class="v2-review" aria-hidden="true">
-            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
-            <blockquote>“The PVC panels gave our showroom wall a premium wooden look without any maintenance.”
-            </blockquote>
-            <figcaption><b>Retail Owner</b><span>Vadodara</span></figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
+  
   <section class="gp-sec gp-sec--cream v2-ytsec" id="videos" aria-label="Greenplastwood video showcase"
     style="padding: 30px 0;">
     <div style="width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 20px;">
@@ -5097,6 +5064,93 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="gp-sec gp-sec--cream" id="reviews">
+    <!-- SAMPLE REVIEWS: replace with real customer reviews before launch -->
+    <div class="gp-wrap">
+      <div class="v2-head v2-head--center">
+        <h2 class="gp-h2">What Our Customers <span class="v2-green">Say</span></h2>
+        <p class="gp-lead">Builders, carpenters, business associates and designers on working with Greenplastwood.</p>
+      </div>
+      <div class="v2-rev-mq">
+        <div class="v2-rev-track">
+          <figure class="v2-review">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“We replaced wooden chaukhats in all bathrooms with Greenplastwood WPC frames. Two monsoons
+              later, no swelling and no termites.”</blockquote>
+            <figcaption><b>Builder</b><span>Ahmedabad</span></figcaption>
+          </figure>
+          <figure class="v2-review">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“Carpenters were comfortable from day one. The frames cut, screw and polish like wood, and the
+              sizes are the same in every lot.”</blockquote>
+            <figcaption><b>Contractor</b><span>Rajkot</span></figcaption>
+          </figure>
+          <figure class="v2-review">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“We use their 3 layer doors for classrooms and toilets. They take daily cleaning and still look
+              new.”</blockquote>
+            <figcaption><b>School Administrator</b><span>Gujarat</span></figcaption>
+          </figure>
+          <figure class="v2-review">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“WPC boards were the right call for the modular kitchen. No water damage under the sink, unlike
+              plywood.”</blockquote>
+            <figcaption><b>Interior Designer</b><span>Surat</span></figcaption>
+          </figure>
+          <figure class="v2-review">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“Stock reaches on time and the business associate team helps with project enquiries in our
+              area.”
+            </blockquote>
+            <figcaption><b>Business Associate</b><span>Madhya Pradesh</span></figcaption>
+          </figure>
+          <figure class="v2-review">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“The PVC panels gave our showroom wall a premium wooden look without any maintenance.”
+            </blockquote>
+            <figcaption><b>Retail Owner</b><span>Vadodara</span></figcaption>
+          </figure>
+          <figure class="v2-review" aria-hidden="true">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“We replaced wooden chaukhats in all bathrooms with Greenplastwood WPC frames. Two monsoons
+              later, no swelling and no termites.”</blockquote>
+            <figcaption><b>Builder</b><span>Ahmedabad</span></figcaption>
+          </figure>
+          <figure class="v2-review" aria-hidden="true">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“Carpenters were comfortable from day one. The frames cut, screw and polish like wood, and the
+              sizes are the same in every lot.”</blockquote>
+            <figcaption><b>Contractor</b><span>Rajkot</span></figcaption>
+          </figure>
+          <figure class="v2-review" aria-hidden="true">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“We use their 3 layer doors for classrooms and toilets. They take daily cleaning and still look
+              new.”</blockquote>
+            <figcaption><b>School Administrator</b><span>Gujarat</span></figcaption>
+          </figure>
+          <figure class="v2-review" aria-hidden="true">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“WPC boards were the right call for the modular kitchen. No water damage under the sink, unlike
+              plywood.”</blockquote>
+            <figcaption><b>Interior Designer</b><span>Surat</span></figcaption>
+          </figure>
+          <figure class="v2-review" aria-hidden="true">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“Stock reaches on time and the business associate team helps with project enquiries in our
+              area.”
+            </blockquote>
+            <figcaption><b>Business Associate</b><span>Madhya Pradesh</span></figcaption>
+          </figure>
+          <figure class="v2-review" aria-hidden="true">
+            <div class="v2-stars" aria-label="5 out of 5">★★★★★</div>
+            <blockquote>“The PVC panels gave our showroom wall a premium wooden look without any maintenance.”
+            </blockquote>
+            <figcaption><b>Retail Owner</b><span>Vadodara</span></figcaption>
+          </figure>
         </div>
       </div>
     </div>

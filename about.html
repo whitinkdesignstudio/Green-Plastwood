@@ -2495,6 +2495,104 @@
 .ab7-princ b{display:block;font-weight:400;font-family:var(--gp-font-head);font-size:16px;color:#fff}
 .ab7-princ li span:not(.ab7-pi){display:block;font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.72)}
 </style>
+
+  <style>
+    /* Update 104: Our Growth Path, new layout (same milestones) */
+    .g9 { margin:0; background:#fff; border:1px solid #D5E7E9; border-radius:20px; padding:28px 28px 22px; }
+    .g9-plot { position:relative; }
+    .g9-svg { display:block; width:100%; height:auto; overflow:visible; }
+    .g9-base { stroke:#CFE3E5; stroke-width:1.5; }
+    .g9-line { fill:none; stroke:#05838E; stroke-width:3; stroke-linejoin:round; }
+    .g9-drop { stroke:#05838E; stroke-width:1; stroke-dasharray:3 4; opacity:.35; }
+    .g9-dot { fill:#fff; stroke:#05838E; stroke-width:3; transition:r .2s, fill .2s; }
+    .g9-yr { font-size:15px; fill:#5E7375; font-family:inherit; }
+    .g9-pt.is-on .g9-dot { fill:#05838E; r:11; }
+    .g9-pt.is-on .g9-yr { fill:#0A393D; font-weight:700; }
+    .g9-pt.is-on .g9-drop { opacity:1; }
+    .g9-cards { list-style:none; margin:26px 0 0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:12px; counter-reset:g9; }
+    .g9-card { border:1px solid #E3EEEF; border-radius:14px; padding:16px 18px 15px; background:#FBFCFC; transition:border-color .2s, background .2s; cursor:default; outline:none; }
+    .g9-card:hover, .g9-card:focus-visible, .g9-card.is-on { border-color:#05838E; background:#F1F9F9; }
+    .g9-cy { display:block; font-size:13px; font-weight:700; color:#05838E; letter-spacing:.02em; margin-bottom:4px; }
+    .g9-card b { display:block; font-size:16px; line-height:1.3; color:#0A393D; font-weight:600; }
+    .g9-card p { margin:6px 0 0; font-size:14px; line-height:1.5; color:#4A5F61; }
+    .g9-today { margin-top:20px; }
+    @media (max-width:900px) { .g9-cards { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:600px) {
+      .g9 { padding:18px 14px 16px; }
+      .g9-svg { margin:0 -4px; width:calc(100% + 8px); }
+      .g9-yr { font-size:22px; }
+      .g9-pt:nth-child(n) .g9-yr { display:none; }
+      .g9-pt:first-of-type .g9-yr, .g9-pt:last-of-type .g9-yr { display:block; }
+      .g9-cards { grid-template-columns:1fr; gap:8px; margin-top:16px; }
+      .g9-card { padding:12px 14px; display:grid; grid-template-columns:52px 1fr; column-gap:10px; }
+      .g9-cy { grid-row:span 2; font-size:15px; margin:1px 0 0; }
+      .g9-card p { grid-column:2; margin-top:3px; }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var f = document.querySelector('.g9'); if (!f) return;
+      var pts = f.querySelectorAll('.g9-pt'), cards = f.querySelectorAll('.g9-card');
+      function on(i) { [].forEach.call(pts, function (p) { p.classList.toggle('is-on', p.getAttribute('data-i') == i); }); [].forEach.call(cards, function (c) { c.classList.toggle('is-on', c.getAttribute('data-i') == i); }); }
+      [].forEach.call(cards, function (c) { var i = c.getAttribute('data-i'); c.addEventListener('mouseenter', function () { on(i); }); c.addEventListener('focus', function () { on(i); }); c.addEventListener('click', function () { on(i); }); });
+      [].forEach.call(pts, function (p) { var i = p.getAttribute('data-i'); p.addEventListener('mouseenter', function () { on(i); }); });
+      on(cards.length - 1);
+    });
+  </script>
+
+  <style>
+    /* Update 104: The People Behind Greenplastwood */
+    .pc-grid { list-style:none; margin:34px 0 0; padding:0; display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .pc-card { background:#fff; border:1px solid #E1ECED; border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+    .pc-card img { display:block; width:100%; aspect-ratio:3/2; object-fit:cover; }
+    .pc-body { padding:16px 18px 20px; }
+    :root:root:root:root:root section.pc .pc-body h3 { font-size:18px !important; line-height:1.3 !important; margin:0 0 6px !important; color:#0A393D; font-weight:600 !important; }
+    .pc-body p { margin:0; font-size:14.5px; line-height:1.55; color:#4A5F61; }
+    .pc-culture { margin-top:22px; display:grid; grid-template-columns:1fr 1.15fr; align-items:stretch; background:#0A393D; border-radius:18px; overflow:hidden; }
+    .pc-culture-copy { padding:34px 36px; color:#fff; align-self:center; }
+    :root:root:root:root:root section.pc .pc-culture h3 { color:#fff !important; font-size:clamp(22px,2.2vw,30px) !important; line-height:1.2 !important; margin:0 0 10px !important; font-weight:500 !important; }
+    .pc-culture-copy p { color:rgba(255,255,255,.82); margin:0; font-size:15.5px; line-height:1.6; max-width:460px; }
+    .pc-points { list-style:none; margin:22px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:10px; }
+    .pc-points li { display:flex; align-items:center; gap:8px; font-size:14px; color:#fff; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); border-radius:999px; padding:8px 14px; }
+    .pc-points svg { width:18px; height:18px; fill:none; stroke:#91DAE1; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; flex:none; }
+    .pc-culture > img { display:block; width:100%; height:100%; min-height:300px; object-fit:cover; }
+    @media (max-width:1024px) { .pc-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:760px) {
+      .pc-grid { grid-template-columns:1fr; gap:14px; margin-top:24px; }
+      .pc-culture { grid-template-columns:1fr; }
+      .pc-culture > img { order:-1; min-height:0; aspect-ratio:3/2; }
+      .pc-culture-copy { padding:24px 20px 26px; }
+    }
+  </style>
+
+  <style>
+    /* Update 107: founder card */
+    .ab7-people { align-self:start; position:sticky; top:110px; }
+    .ab9.ab7-panel { padding:34px 34px 30px; min-height:0; height:auto; display:flex; flex-direction:column; gap:26px; }
+    .ab9-top { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+    .ab9-tag { font-size:13px; letter-spacing:.04em; color:#91DAE1; border:1px solid rgba(145,218,225,.4); border-radius:999px; padding:6px 14px; }
+    .ab9-co { font-size:13px; color:rgba(255,255,255,.6); }
+    .ab9-line { margin:0; color:#fff; font-size:clamp(24px,2.2vw,32px); line-height:1.25; font-weight:400; }
+    .ab9-line em { font-style:normal; color:#62CBD5; }
+    .ab9-founders { list-style:none; margin:0; padding:0; display:grid; gap:14px; }
+    .ab9-founders li { display:flex; align-items:center; gap:14px; padding:14px 16px; border-radius:14px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); }
+    .ab9-mono { flex:none; width:48px; height:48px; border-radius:50%; display:grid; place-items:center; font-size:16px; font-weight:600; color:#0A393D; background:#62CBD5; }
+    .ab9-mono--b { background:#fff; }
+    .ab9-founders b { display:block; color:#fff; font-size:17px; font-weight:500; }
+    .ab9-founders span:not(.ab9-mono) { display:block; color:#91DAE1; font-size:14px; margin-top:2px; }
+    .ab9-facts { margin:0; display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid rgba(255,255,255,.14); padding-top:20px; gap:8px; }
+    .ab9-facts dt { color:#fff; font-size:26px; line-height:1; font-weight:500; }
+    .ab9-facts dd { margin:6px 0 0; color:rgba(255,255,255,.66); font-size:12.5px; line-height:1.35; }
+    .ab9-vals { list-style:none; margin:0; padding:0; display:flex; gap:8px; flex-wrap:wrap; }
+    .ab9-vals li { font-size:13px; color:#fff; border:1px solid rgba(255,255,255,.22); border-radius:999px; padding:6px 14px; }
+    @media (max-width:900px) {
+      .ab7-people { position:static; }
+      .ab9.ab7-panel { padding:24px 20px; gap:20px; }
+      .ab9-facts { grid-template-columns:repeat(2,1fr); row-gap:16px; }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/gp-layout.css?v=1" />
+  <script src="assets/gp-layout.js?v=1" defer></script>
 </head>
 
 <body>
@@ -2570,20 +2668,20 @@
       </div>
       <div class="ab7-grid">
         <div class="ab7-people">
-          <div class="ab7-panel">
-            <div class="ab7-panel-top">
-              <span class="ab7-mono" aria-hidden="true"><i>SP</i><i>GP</i></span>
-              <span class="ab7-since-tag">Est. 2012</span>
-            </div>
-            <span class="ab7-since" aria-hidden="true">2012</span>
-            <p class="ab7-panel-line">Two founders. One shared belief: <em>better materials build a better future.</em></p>
-            <ul class="ab7-vals"><li>Quality</li><li>Trust</li><li>Sustainability</li></ul>
-            
-            <div class="ab7-panel-names">
-              <div><b>Mr. Shailesh Patel</b><span>Founder &amp; Director</span></div>
-              <div><b>Mr. Gautam Patel</b><span>Founder &amp; Director</span></div>
-            </div>
-            <span class="ab7-panel-co">SNG Eco India Pvt. Ltd.</span>
+          <div class="ab7-panel ab9">
+            <div class="ab9-top"><span class="ab9-tag">Est. 2012</span><span class="ab9-co">SNG Eco India Pvt. Ltd.</span></div>
+            <p class="ab9-line">Two founders. One shared belief: <em>better materials build a better future.</em></p>
+            <ul class="ab9-founders">
+              <li><span class="ab9-mono" aria-hidden="true">SP</span><div><b>Mr. Shailesh Patel</b><span>Founder &amp; Director</span></div></li>
+              <li><span class="ab9-mono ab9-mono--b" aria-hidden="true">GP</span><div><b>Mr. Gautam Patel</b><span>Founder &amp; Director</span></div></li>
+            </ul>
+            <dl class="ab9-facts">
+              <div><dt>2012</dt><dd>Founded in Gujarat</dd></div>
+              <div><dt>3</dt><dd>Plants</dd></div>
+              <div><dt>125+</dt><dd>Team members</dd></div>
+              <div><dt>50+</dt><dd>Stock points</dd></div>
+            </dl>
+            <ul class="ab9-vals"><li>Quality</li><li>Trust</li><li>Sustainability</li></ul>
           </div>
         </div>
         <article class="ab7-letter">
@@ -2601,11 +2699,11 @@
   </section>
   <section class="gp-sec gp-sec--cream" id="growth">
     <div class="gp-wrap">
-      <div class="v2-head v2-head--row"><div><h2 class="gp-h2">Our Growth <span class="v2-green">Path</span></h2><p class="gp-lead">From biofuel pellets and recycled plastic sheets in 2012 to a WPC brand made in three plants. Each step is a real milestone; move over a point for details.</p></div></div>
-      <figure class="gr-fig">
-        <div class="gr-plot"><svg class="gr-svg" viewBox="0 0 1000 380" role="img" aria-labelledby="grTitle grDesc"><title id="grTitle">Greenplastwood growth path, 2012 to 2026</title><desc id="grDesc">A rising step line through nine milestones from the founding of SNG Eco India in 2012 to the Gujarat Excellence 2026 recognition.</desc><defs><linearGradient id="grFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0BB0BF" stop-opacity=".22"/><stop offset="1" stop-color="#0BB0BF" stop-opacity="0"/></linearGradient></defs><line x1="40.0" y1="30" x2="40.0" y2="320" class="gr-grid"/><line x1="171.4" y1="30" x2="171.4" y2="320" class="gr-grid"/><line x1="302.9" y1="30" x2="302.9" y2="320" class="gr-grid"/><line x1="434.3" y1="30" x2="434.3" y2="320" class="gr-grid"/><line x1="565.7" y1="30" x2="565.7" y2="320" class="gr-grid"/><line x1="697.1" y1="30" x2="697.1" y2="320" class="gr-grid"/><line x1="828.6" y1="30" x2="828.6" y2="320" class="gr-grid"/><line x1="960.0" y1="30" x2="960.0" y2="320" class="gr-grid"/><line x1="40" y1="320" x2="960" y2="320" class="gr-base"/><text x="40.0" y="346" class="gr-tick" text-anchor="middle">2012</text><text x="171.4" y="346" class="gr-tick" text-anchor="middle">2014</text><text x="302.9" y="346" class="gr-tick" text-anchor="middle">2016</text><text x="434.3" y="346" class="gr-tick" text-anchor="middle">2018</text><text x="565.7" y="346" class="gr-tick" text-anchor="middle">2020</text><text x="697.1" y="346" class="gr-tick" text-anchor="middle">2022</text><text x="828.6" y="346" class="gr-tick" text-anchor="middle">2024</text><text x="960.0" y="346" class="gr-tick" text-anchor="middle">2026</text><path d="M40.0,320.0 H368.6 V288.8 H434.3 V257.5 H500.0 V226.2 H697.1 V195.0 H762.9 V163.8 H828.6 V132.5 H894.3 V101.2 H960.0 V70.0 V320 H40.0 Z" fill="url(#grFill)"/><path d="M40.0,320.0 H368.6 V288.8 H434.3 V257.5 H500.0 V226.2 H697.1 V195.0 H762.9 V163.8 H828.6 V132.5 H894.3 V101.2 H960.0 V70.0" class="gr-line"/><g class="gr-pt" tabindex="0" data-y="2012" data-t="SNG Eco India founded" data-s="Starts in Gujarat, making wood biofuel pellets, recycled plastic sheets and pallets."><circle cx="40.0" cy="320.0" r="16" class="gr-hit"/><circle cx="40.0" cy="320.0" r="7" class="gr-dot"/><text x="34.0" y="250.0" text-anchor="start" class="gr-lbl">2012 · SNG Eco India founded</text></g><g class="gr-pt" tabindex="0" data-y="2017" data-t="Greenplastwood launched" data-s="The WPC brand for door frames, doors and boards."><circle cx="368.6" cy="288.8" r="16" class="gr-hit"/><circle cx="368.6" cy="288.8" r="7" class="gr-dot"/><text x="352.6" y="293.8" text-anchor="end" class="gr-lbl">2017 · Greenplastwood launched</text></g><g class="gr-pt" tabindex="0" data-y="2018" data-t="First national exhibitions" data-s="India Wood 2018, Bengaluru and Woodex Asia 2018, Gandhinagar."><circle cx="434.3" cy="257.5" r="16" class="gr-hit"/><circle cx="434.3" cy="257.5" r="7" class="gr-dot"/><text x="418.3" y="262.5" text-anchor="end" class="gr-lbl">2018 · First national exhibitions</text></g><g class="gr-pt" tabindex="0" data-y="2019" data-t="Woodex Asia 2019" data-s="Back at Woodex Asia with a certificate of appreciation."><circle cx="500.0" cy="226.2" r="16" class="gr-hit"/><circle cx="500.0" cy="226.2" r="7" class="gr-dot"/><text x="484.0" y="231.2" text-anchor="end" class="gr-lbl">2019 · Woodex Asia 2019</text></g><g class="gr-pt" tabindex="0" data-y="2022" data-t="Lab-tested products" data-s="Door frames, doors and boards tested by Alekh Plastics Testing Centre."><circle cx="697.1" cy="195.0" r="16" class="gr-hit"/><circle cx="697.1" cy="195.0" r="7" class="gr-dot"/><text x="681.1" y="200.0" text-anchor="end" class="gr-lbl">2022 · Lab-tested products</text></g><g class="gr-pt" tabindex="0" data-y="2023" data-t="ISO 9001:2015 certified" data-s="Quality management system certified in October 2023."><circle cx="762.9" cy="163.8" r="16" class="gr-hit"/><circle cx="762.9" cy="163.8" r="7" class="gr-dot"/><text x="746.9" y="168.8" text-anchor="end" class="gr-lbl">2023 · ISO 9001:2015 certified</text></g><g class="gr-pt" tabindex="0" data-y="2024" data-t="IGBC member" data-s="Member of the Indian Green Building Council. IndiaWood 2024."><circle cx="828.6" cy="132.5" r="16" class="gr-hit"/><circle cx="828.6" cy="132.5" r="7" class="gr-dot"/><text x="812.6" y="137.5" text-anchor="end" class="gr-lbl">2024 · IGBC member</text></g><g class="gr-pt" tabindex="0" data-y="2025" data-t="GPBS &amp; Kolkata Wood" data-s="Exhibitions in Gandhinagar and Kolkata."><circle cx="894.3" cy="101.2" r="16" class="gr-hit"/><circle cx="894.3" cy="101.2" r="7" class="gr-dot"/><text x="878.3" y="106.2" text-anchor="end" class="gr-lbl">2025 · GPBS &amp; Kolkata Wood</text></g><g class="gr-pt" tabindex="0" data-y="2026" data-t="Gujarat Excellence 2026" data-s="3 plants, 1,300 MT a month, 125+ team, 300+ projects."><circle cx="960.0" cy="70.0" r="16" class="gr-hit"/><circle cx="960.0" cy="70.0" r="7" class="gr-dot"/><text x="944.0" y="75.0" text-anchor="end" class="gr-lbl">2026 · Gujarat Excellence 2026</text></g></svg><div class="gr-tip" role="status" aria-live="polite" hidden></div></div>
-        <ol class="gr-list"><li><b>2012</b><span><strong>SNG Eco India founded</strong> Starts in Gujarat, making wood biofuel pellets, recycled plastic sheets and pallets.</span></li><li><b>2017</b><span><strong>Greenplastwood launched</strong> The WPC brand for door frames, doors and boards.</span></li><li><b>2018</b><span><strong>First national exhibitions</strong> India Wood 2018, Bengaluru and Woodex Asia 2018, Gandhinagar.</span></li><li><b>2019</b><span><strong>Woodex Asia 2019</strong> Back at Woodex Asia with a certificate of appreciation.</span></li><li><b>2022</b><span><strong>Lab-tested products</strong> Door frames, doors and boards tested by Alekh Plastics Testing Centre.</span></li><li><b>2023</b><span><strong>ISO 9001:2015 certified</strong> Quality management system certified in October 2023.</span></li><li><b>2024</b><span><strong>IGBC member</strong> Member of the Indian Green Building Council. IndiaWood 2024.</span></li><li><b>2025</b><span><strong>GPBS &amp; Kolkata Wood</strong> Exhibitions in Gandhinagar and Kolkata.</span></li><li><b>2026</b><span><strong>Gujarat Excellence 2026</strong> 3 plants, 1,300 MT a month, 125+ team, 300+ projects.</span></li></ol>
-        <figcaption class="gr-today"><span><b>1,300 MT</b> capacity / month</span><span><b>3</b> plants</span><span><b>125+</b> team</span><span><b>300+</b> projects</span><span><b>150+</b> companies served</span><span><b>200+</b> business associates</span><span><b>50+</b> stock points</span><span><b>4+</b> countries</span><em>Where we are in 2026</em></figcaption>
+      <div class="v2-head v2-head--row"><div><h2 class="gp-h2">Our Growth <span class="v2-green">Path</span></h2><p class="gp-lead">From biofuel pellets and recycled plastic sheets in 2012 to a WPC brand made in three plants. Each step is a real milestone.</p></div></div>
+      <figure class="g9">
+        <div class="g9-plot"><svg class="g9-svg" viewBox="0 0 1000 300" role="img" aria-labelledby="g9t"><title id="g9t">Greenplastwood growth path, 2012 to 2026: nine milestones</title><defs><linearGradient id="g9f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0BB0BF" stop-opacity=".28"/><stop offset="1" stop-color="#0BB0BF" stop-opacity="0"/></linearGradient></defs><line x1="40" y1="250" x2="960" y2="250" class="g9-base"/><path d="M40.0,250.0 H368.6 V223.8 H434.3 V197.5 H500.0 V171.2 H697.1 V145.0 H762.9 V118.8 H828.6 V92.5 H894.3 V66.2 H960.0 V40.0 V250 H40 Z" fill="url(#g9f)"/><path d="M40.0,250.0 H368.6 V223.8 H434.3 V197.5 H500.0 V171.2 H697.1 V145.0 H762.9 V118.8 H828.6 V92.5 H894.3 V66.2 H960.0 V40.0" class="g9-line"/><g class="g9-pt" data-i="0"><line x1="40.0" y1="250.0" x2="40.0" y2="250" class="g9-drop"/><circle cx="40.0" cy="250.0" r="8" class="g9-dot"/><text x="40.0" y="280" text-anchor="middle" class="g9-yr">2012</text></g><g class="g9-pt" data-i="1"><line x1="368.6" y1="223.8" x2="368.6" y2="250" class="g9-drop"/><circle cx="368.6" cy="223.8" r="8" class="g9-dot"/><text x="368.6" y="280" text-anchor="middle" class="g9-yr">2017</text></g><g class="g9-pt" data-i="2"><line x1="434.3" y1="197.5" x2="434.3" y2="250" class="g9-drop"/><circle cx="434.3" cy="197.5" r="8" class="g9-dot"/><text x="434.3" y="280" text-anchor="middle" class="g9-yr">2018</text></g><g class="g9-pt" data-i="3"><line x1="500.0" y1="171.2" x2="500.0" y2="250" class="g9-drop"/><circle cx="500.0" cy="171.2" r="8" class="g9-dot"/><text x="500.0" y="280" text-anchor="middle" class="g9-yr">2019</text></g><g class="g9-pt" data-i="4"><line x1="697.1" y1="145.0" x2="697.1" y2="250" class="g9-drop"/><circle cx="697.1" cy="145.0" r="8" class="g9-dot"/><text x="697.1" y="280" text-anchor="middle" class="g9-yr">2022</text></g><g class="g9-pt" data-i="5"><line x1="762.9" y1="118.8" x2="762.9" y2="250" class="g9-drop"/><circle cx="762.9" cy="118.8" r="8" class="g9-dot"/><text x="762.9" y="280" text-anchor="middle" class="g9-yr">2023</text></g><g class="g9-pt" data-i="6"><line x1="828.6" y1="92.5" x2="828.6" y2="250" class="g9-drop"/><circle cx="828.6" cy="92.5" r="8" class="g9-dot"/><text x="828.6" y="280" text-anchor="middle" class="g9-yr">2024</text></g><g class="g9-pt" data-i="7"><line x1="894.3" y1="66.2" x2="894.3" y2="250" class="g9-drop"/><circle cx="894.3" cy="66.2" r="8" class="g9-dot"/><text x="894.3" y="280" text-anchor="middle" class="g9-yr">2025</text></g><g class="g9-pt" data-i="8"><line x1="960.0" y1="40.0" x2="960.0" y2="250" class="g9-drop"/><circle cx="960.0" cy="40.0" r="8" class="g9-dot"/><text x="960.0" y="280" text-anchor="middle" class="g9-yr">2026</text></g></svg></div>
+        <ol class="g9-cards"><li class="g9-card" data-i="0" tabindex="0"><span class="g9-cy">2012</span><b>SNG Eco India founded</b><p>Starts in Gujarat, making wood biofuel pellets, recycled plastic sheets and pallets.</p></li><li class="g9-card" data-i="1" tabindex="0"><span class="g9-cy">2017</span><b>Greenplastwood launched</b><p>The WPC brand for door frames, doors and boards.</p></li><li class="g9-card" data-i="2" tabindex="0"><span class="g9-cy">2018</span><b>First national exhibitions</b><p>India Wood 2018, Bengaluru and Woodex Asia 2018, Gandhinagar.</p></li><li class="g9-card" data-i="3" tabindex="0"><span class="g9-cy">2019</span><b>Woodex Asia 2019</b><p>Back at Woodex Asia with a certificate of appreciation.</p></li><li class="g9-card" data-i="4" tabindex="0"><span class="g9-cy">2022</span><b>Lab-tested products</b><p>Door frames, doors and boards tested by Alekh Plastics Testing Centre.</p></li><li class="g9-card" data-i="5" tabindex="0"><span class="g9-cy">2023</span><b>ISO 9001:2015 certified</b><p>Quality management system certified in October 2023.</p></li><li class="g9-card" data-i="6" tabindex="0"><span class="g9-cy">2024</span><b>IGBC member</b><p>Member of the Indian Green Building Council. IndiaWood 2024.</p></li><li class="g9-card" data-i="7" tabindex="0"><span class="g9-cy">2025</span><b>GPBS &amp; Kolkata Wood</b><p>Exhibitions in Gandhinagar and Kolkata.</p></li><li class="g9-card" data-i="8" tabindex="0"><span class="g9-cy">2026</span><b>Gujarat Excellence 2026</b><p>3 plants, 1,300 MT a month, 125+ team, 300+ projects.</p></li></ol>
+        <figcaption class="gr-today g9-today"><span><b>1,300 MT</b> capacity / month</span><span><b>3</b> plants</span><span><b>125+</b> team</span><span><b>300+</b> projects</span><span><b>150+</b> companies served</span><span><b>200+</b> business associates</span><span><b>50+</b> stock points</span><span><b>4+</b> countries</span><em>Where we are in 2026</em></figcaption>
       </figure>
     </div>
   </section>
@@ -2697,6 +2795,32 @@
 
     </div>
   </section>
+  <section class="gp-sec gp-sec--cream pc" id="people">
+    <div class="gp-wrap">
+      <div class="v2-head">
+        <h2 class="gp-h2">Our Team <span class="v2-green">At Work</span></h2>
+        <p class="gp-lead">125+ people across our three plants and our Ahmedabad corporate office make, check and deliver every Greenplastwood product. These photos are of our own teams, at work.</p>
+      </div>
+      <ul class="pc-grid">
+          <li class="pc-card"><img src="images/about/people/people-1-material.webp" alt="Our raw material team checking and loading material into the mixer" width="1200" height="800" loading="lazy" /><div class="pc-body"><h3>Raw Material And Mixing</h3><p>Our team checks and loads the material for every batch, so each production run starts with the right mix.</p></div></li>
+          <li class="pc-card"><img src="images/about/people/people-2-shopfloor.webp" alt="Greenplastwood shopfloor team moving finished WPC profiles between production lines" width="1200" height="800" loading="lazy" /><div class="pc-body"><h3>Production Lines</h3><p>Experienced operators run our door frame, door and sheet lines and move finished profiles safely across the shopfloor.</p></div></li>
+          <li class="pc-card"><img src="images/about/people/people-3-quality.webp" alt="A Greenplastwood team member weighing a WPC door frame profile during a quality check" width="1200" height="800" loading="lazy" /><div class="pc-body"><h3>Quality Checks</h3><p>Profiles are weighed and every batch is checked for size and finish before it is packed for dispatch.</p></div></li>
+          <li class="pc-card"><img src="images/about/people/people-4-office.webp" alt="Greenplastwood team meeting at the corporate office in Ahmedabad" width="1200" height="800" loading="lazy" /><div class="pc-body"><h3>Corporate Office, Ahmedabad</h3><p>Our Ahmedabad team handles orders, project support and coordination with 50+ stock points across India.</p></div></li>
+      </ul>
+      <div class="pc-culture">
+        <div class="pc-culture-copy">
+          <h3>One Team, From Plant To Office</h3>
+          <p>From the shopfloor to the corporate office, we work as one team, with the same care for every product we make and dispatch.</p>
+          <ul class="pc-points">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 11V7M9 7h6"/></svg>Safety gear on every line</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5ZM6 10.5V15c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>Skills learned on the job</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7"/></svg>Pride in every batch</li>
+          </ul>
+        </div>
+        <img src="images/about/people/people-5-culture.webp" alt="The Greenplastwood team together in front of the plant" width="1200" height="800" loading="lazy" />
+      </div>
+    </div>
+  </section>
   <section class="v2-bp" id="brand-promise">
     <div class="gp-wrap">
       <div class="v2-bp-grid">
@@ -2708,6 +2832,38 @@
           <p>As we continue to grow, our focus remains unchanged: to improve continuously, respond to evolving market needs, and create lasting value for our customers and business associates.</p>
           <div class="v2-bp-sign"><strong>GREENPLASTWOOD</strong><span>More than a material. A partner you can build with.</span></div>
         </div>
+        <ul class="v2-bp-list">
+          <li><span class="v2-bp-ic"><span class="gp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l2 2 4-4"/><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 3.5h6v3H9z"/></svg></span></span>
+            <div><b>Consistent Quality</b>
+              <p>The same standard in every batch, backed by our ISO 9001:2015 quality system.</p>
+            </div>
+          </li>
+          <li><span class="v2-bp-ic"><span class="gp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-3 7.7-7 9-4-1.3-7-4.8-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span></span>
+            <div><b>Honest Commitments</b>
+              <p>Clear product information, fair pricing and promises we keep.</p>
+            </div>
+          </li>
+          <li><span class="v2-bp-ic"><span class="gp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6h11v10h-11z"/><path d="M13.5 9h4l3 3.5V16h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span></span>
+            <div><b>Reliable Supply</b>
+              <p>Orders delivered on time from our plants and stock points across India.</p>
+            </div>
+          </li>
+          <li><span class="v2-bp-ic"><span class="gp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><path d="M4 11h16v4a8 8 0 0 1-16 0z"/><path d="M9.5 15h5"/></svg></span></span>
+            <div><b>Support At Every Step</b>
+              <p>Help with product selection, samples and documents for your project.</p>
+            </div>
+          </li>
+          <li><span class="v2-bp-ic"><span class="gp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7"/></svg></span></span>
+            <div><b>Products That Last</b>
+              <p>Durable WPC products, with a 30 years warranty* on our door frames.</p>
+            </div>
+          </li>
+          <li><span class="v2-bp-ic"><span class="gp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5-3-8-6.5-8-11a8 8 0 0 1 16 0c0 4.5-3 8-8 11z"/><path d="M12 9v6M9 12h6"/></svg></span></span>
+            <div><b>Long-Term Partnership</b>
+              <p>Relationships with customers and business associates built to last.</p>
+            </div>
+          </li>
+        </ul>
         
       </div>
     </div>

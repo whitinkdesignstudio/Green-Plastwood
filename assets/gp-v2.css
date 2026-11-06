@@ -4679,3 +4679,41 @@
 :root:root:root:root:root .v2-slide[data-slide="1"] .v2-slide-title--hero { color:#0A393D !important; font-size:38px !important; line-height:1.15 !important; font-weight:400 !important; max-width:min(780px,52%) !important; text-shadow:0 1px 18px rgba(255,255,255,.55); }
 :root:root:root:root:root .v2-slide[data-slide="1"] .v2-slide-title--hero .v2-green { color:#05838E !important; }
 @media (max-width:900px){ :root:root:root:root:root .v2-slide[data-slide="1"] .v2-slide-title--hero { font-size:clamp(26px,7.2vw,34px) !important; max-width:100% !important; } }
+
+/* ================= Update 104: hero banner text kept clear of product and Daya ================= */
+@media (min-width: 901px) {
+  .v2-hero--banners .v2-bslide-text.gp-wrap { max-width: none; margin: 0; padding-left: 5vw; padding-right: 0; }
+  .v2-hero--banners .v2-bslide-text > *,
+  .v2-hero--banners .v2-bslide-text > .v2-slide-title,
+  :root:root:root:root:root:root section.v2-hero--banners .v2-bslide-text > .v2-slide-title { max-width: min(520px, 30vw) !important; }
+  :root:root:root:root:root:root section.v2-hero--banners .v2-slide-title { font-size: clamp(30px, 2.8vw, 46px) !important; line-height: 1.12 !important; }
+}
+
+/* ================= Update 106: Home layout fixes ================= */
+/* Numbers section: light background so it no longer merges with the dark "Why Greenplastwood WPC" strip */
+:root:root:root:root:root section.v2-stats { background:#fff; color:#0A393D; padding:72px 0; border-bottom:1px solid #E3EEEF; }
+:root:root:root:root:root:root section.v2-stats .gp-h2 { color:#0A393D !important; }
+:root:root:root:root:root:root section.v2-stats .gp-h2 .v2-green { color:#05838E !important; }
+:root:root:root:root:root:root section.v2-stats .gp-lead { color:#4A5F61 !important; }
+section.v2-stats .v2-stats-grid { background:#D5E7E9; border-color:#D5E7E9; }
+section.v2-stats .v2-stats-grid li { background:#F6FAFA; }
+section.v2-stats .v2-stats-grid li:hover { background:#EAF5F6; }
+section.v2-stats .v2-stats-grid b { color:#0A393D; }
+section.v2-stats .v2-stats-grid b small { color:#05838E; }
+section.v2-stats .v2-stats-grid span { color:#4A5F61; }
+@media (max-width:900px) { :root:root:root:root:root section.v2-stats { padding:48px 0; } }
+/* Journey: less empty space above the heading (same cream as the section before it) */
+:root:root:root:root section.pj-sec { padding-top:16px !important; }
+/* Hero banners: keep every heading and text inside the clear left area */
+@media (min-width: 901px) {
+  :root:root:root:root:root:root section.v2-hero--banners .v2-bslide-text > * { max-width:min(480px, 31vw) !important; }
+  :root:root:root:root:root:root section.v2-hero--banners .v2-slide-title { font-size:clamp(28px, 2.6vw, 44px) !important; }
+}
+@media (min-width: 901px) {
+  :root:root:root:root:root:root:root section.v2-hero--banners .v2-bslide-text > .gp-btns { max-width:none !important; flex-wrap:nowrap; }
+}
+@media (min-width: 901px) {
+  .v2-hero--banners .v2-bslide--light .v2-bslide-media::after { content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(90deg, rgba(248,246,241,.94) 0, rgba(248,246,241,.82) 26%, rgba(248,246,241,.35) 40%, rgba(248,246,241,0) 52%); }
+  .v2-hero--banners .v2-bslide-text { z-index:2; }
+}

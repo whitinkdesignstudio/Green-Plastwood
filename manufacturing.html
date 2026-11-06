@@ -3020,6 +3020,13 @@
       }
     }
 
+
+    /* Update 104: step photos on phones */
+    .mfh-mimg { display:none; }
+    @media (max-width:900px) {
+      .mfh-mimg { display:block; grid-column:1/-1; margin:8px 0 0 88px; width:calc(100% - 88px); aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
+    }
+    @media (max-width:420px) { .mfh-mimg { margin-left:0; width:100%; } }
     @media (prefers-reduced-motion:reduce) {
       .mfh * {
         transition: none !important;
@@ -3027,6 +3034,8 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="assets/gp-layout.css?v=1" />
+  <script src="assets/gp-layout.js?v=1" defer></script>
 </head>
 
 <body>
@@ -3105,7 +3114,7 @@
     </div>
   </header>
   <section class="mf7-hero" id="hero" aria-label="Greenplastwood manufacturing line">
-    <!-- HERO FILM: images/manufacturing/factory-line-film.mp4 (1280x540, about 20 s, no sound, loops).
+    <!-- HERO FILM: images/manufacturing/factory-line-film.mp4 (1280x540, about 10 s, no sound, loops; real clips from the corporate video).
          To use the real factory film, replace that file (and the poster) with the same names. -->
     <h1 class="mf7-sr">How Greenplastwood WPC Is Made</h1>
     <video class="mf7-video" controls autoplay muted loop playsinline preload="auto"
@@ -3378,7 +3387,7 @@
       <ul class="mf6-grid mf6-grid--4">
         <li class="mf6-card gp-reveal">
           <div class="mf6-img"><img src="images/manufacturing/qc-raw-material.webp"
-              alt="Greenplastwood quality control worker sampling PVC resin powder and wood flour raw materials with scoop into tray"
+              alt="Worker checking raw material on a weighing scale at the Greenplastwood plant"
               width="720" height="480" loading="lazy" decoding="async" /></div>
           <div class="mf6-body">
             <h3>Raw Material Checks</h3>
@@ -3387,7 +3396,7 @@
         </li>
         <li class="mf6-card gp-reveal">
           <div class="mf6-img"><img src="images/manufacturing/qc-process-monitoring.webp"
-              alt="Greenplastwood factory operator monitoring digital control panel parameters of WPC extrusion line"
+              alt="Extruder control panel showing temperature readings at the Greenplastwood plant"
               width="720" height="480" loading="lazy" decoding="async" /></div>
           <div class="mf6-body">
             <h3>Process Monitoring</h3>
@@ -3396,7 +3405,7 @@
         </li>
         <li class="mf6-card gp-reveal">
           <div class="mf6-img"><img src="images/manufacturing/qc-dimensional-caliper.webp"
-              alt="Inspector measuring a WPC profile with a digital caliper" width="1200" height="800" loading="lazy"
+              alt="Sensor checking the size of a WPC profile on the line" width="1200" height="800" loading="lazy"
               decoding="async" /></div>
           <div class="mf6-body">
             <h3>Dimensional Inspection</h3>
@@ -3405,7 +3414,7 @@
         </li>
         <li class="mf6-card gp-reveal">
           <div class="mf6-img"><img src="images/manufacturing/qc-surface.webp"
-              alt="Quality inspector examining wood-grain surface finish of Greenplastwood WPC door under bright light"
+              alt="Greenplastwood team checking the finish of WPC door sheets"
               width="720" height="480" loading="lazy" decoding="async" /></div>
           <div class="mf6-body">
             <h3>Surface Inspection</h3>
@@ -3423,7 +3432,7 @@
         </li>
         <li class="mf6-card gp-reveal">
           <div class="mf6-img"><img src="images/manufacturing/qc-batch-records.webp"
-              alt="Factory supervisor recording batch traceability on tablet beside stacked Greenplastwood WPC profiles"
+              alt="Packed and stacked batches of Greenplastwood products ready for dispatch"
               width="720" height="480" loading="lazy" decoding="async" /></div>
           <div class="mf6-body">
             <h3>Batch Traceability</h3>
@@ -3432,7 +3441,7 @@
         </li>
         <li class="mf6-card gp-reveal">
           <div class="mf6-img"><img src="images/manufacturing/qc-final-inspection.webp"
-              alt="Greenplastwood quality control inspector verifying 90-degree corner alignment of finished WPC door frame with precision square ruler"
+              alt="Workers packing finished WPC door frames after the final check"
               width="1200" height="800" loading="lazy" decoding="async" /></div>
           <div class="mf6-body">
             <h3>Final Inspection</h3>
@@ -3683,6 +3692,18 @@
       prev.addEventListener('click', function () { show(cur - 1); }); next.addEventListener('click', function () { show(cur + 1); });
       root.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); show(cur + 1); nodes[cur].focus(); } if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); show(cur - 1); nodes[cur].focus(); } });
       addEventListener('resize', draw); if (window.ResizeObserver) new ResizeObserver(draw).observe(root); show(0); draw();
+    })();
+  </script>
+
+  <script>
+    /* Update 104: copy each step photo under its step on phones */
+    (function () {
+      var items = document.querySelectorAll('.mfh-item');
+      [].forEach.call(document.querySelectorAll('template[data-step]'), function (tp) {
+        var li = items[+tp.getAttribute('data-step')], img = tp.content.querySelector('img');
+        if (!li || !img) return;
+        var c = img.cloneNode(true); c.className = 'mfh-mimg'; c.loading = 'lazy'; li.appendChild(c);
+      });
     })();
   </script>
 </body>

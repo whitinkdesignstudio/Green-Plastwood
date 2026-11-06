@@ -1,5 +1,82 @@
 # Greenplastwood Website Updates
 
+## Update 111: final checks (6 Nov 2026)
+- Home, trusted section heading: "Trusted By 150+ Companies And 200+ Business Associates" (checked).
+- Resources, Exhibitions And Trade Shows card: "See all exhibitions" link removed (checked; no such link left on any live page).
+
+## Update 110: one side space and justified text on every page (6 Nov 2026)
+- New files: assets/gp-layout.css and assets/gp-layout.js, linked at the end of <head> on all 37 live pages (redirect pages left out).
+- Side space: every section, the header and the footer now use the same side gutter as the Home video section (about 3.8% of the screen width; 16 px on phones, at most 72 px). The old fixed content widths (1120 to 1400 px) are removed, so content uses the full screen width.
+- Justified text: paragraphs, list items and captions that were left aligned are now justified (last line stays left). Headings, buttons, menus, centred text, large taglines (20 px and up) and short labels (under 70 characters) are left as they were.
+- To undo: remove the two lines with "gp-layout" from a page, or delete the two files. Page backups: _backup/2026-11-06-layout/.
+
+## Update 109: Products page hero and help section (6 Nov 2026)
+- Hero slider: the portrait door slide (white empty space on the right) now uses the landscape walnut door image (images/home/products/doors.webp), so it fills the frame.
+- Hero slider: the last slide (door frame profiles, a repeat of the first product) is replaced with recycled plastic sheets (images/banners/home-7-recycled.webp), so all 6 products are shown.
+- Why Choose WPC Over Wood: image checked, it matches the real brown and black profile photos. No change.
+- Need Help Choosing The Right Product?: the faded door frame image sat behind the text. It is now a clear product tile on the right, beside the buttons (hidden below 1100 px).
+- Backups: _backup/2026-11-06-pages/products.html and gp-redesign.css.
+
+## Update 108: Manufacturing real photos, Certificate hero, all-page check (6 Nov 2026)
+**Manufacturing**
+- Quality Control At Every Stage: 6 AI images replaced with frames from the corporate video (raw material weighing, extruder control panel, sensor size check, door sheet finish check, packed batches, packing of finished frames). Alt text updated. "Physical Property Checks" was already a real photo.
+- Hero film: the old AI film (with printed machine labels) replaced by a 10 s loop of real clips from the corporate video (production lines and calibration units). New poster.
+- Backups: _backup/2026-11-06-images/images/manufacturing/.
+
+**Certificate**
+- Hero: removed the 76 px empty band above the image (the hero had an extra top margin under the header).
+
+**Size and colour numbers removed from other pages**
+- lp-dealership.html, thank-you.html (product cards), lp-wpc-door-frames.html, lp-wpc-window-frames.html (descriptions and one lead line). Size tables and FAQs on the landing pages are kept. Backups: _backup/2026-11-06-pages/.
+
+**All-page check (products and product pages left out)**
+- 29 pages, desktop and mobile: 0 broken images, 0 script errors, 0 side scroll.
+
+## Update 107: About fixes and Home "Where Used" photos (6 Nov 2026)
+**About**
+- Founder section, left card: new layout. Est. 2012 tag, the shared belief line, both founders with their initials, 4 real figures (2012, 3 plants, 125+ team, 50+ stock points) and the values. The card no longer stretches with an empty lower half, and it stays in view while the letter scrolls. CSS inline in about.html.
+- Our Brand Promise: the six promise cards on the right are back (Consistent Quality, Honest Commitments, Reliable Supply, Support At Every Step, Products That Last, Long-Term Partnership).
+- The new team section heading is now "Our Team At Work", so it no longer repeats the founder section heading "The People Behind Greenplastwood".
+
+**Home, Where Our Products Are Used**
+- Kitchens, Bedrooms, Outdoor & Renovation: replaced with frames from the company's corporate video (Greenplastwood WPC door and cabinets; WPC wardrobe and door; a real WPC door frame being fixed). Backups in _backup/2026-11-06-images/images/home/where/.
+
+## Update 106: Home page fixes (6 Nov 2026)
+- Hero banners: no fixed size or colour numbers. Chaukhat: "in many sizes and colours"; Window: "in a choice of profiles and colours"; Boards: "Boards in a range of thicknesses".
+- Hero banners: heading and text kept inside the clear left area at every desktop width; both buttons on one line; soft light gradient behind the text on light banners (CSS only, images not edited).
+- "The Numbers Behind Our Growth" now has a light background, so it no longer merges with the dark "Why Greenplastwood WPC" strip.
+- "Where Our Products Are Used": removed "Tap a category to see where our products fit best."
+- Journey: less empty space above the heading.
+- "What Our Customers Say" moved to the end of the page, just above the footer.
+- Trusted section heading is "Trusted By Leading Companies Across India" (already in this version).
+- CSS: assets/gp-v2.css, block "Update 106" at the end.
+
+## Update 105: real photos, watermark fixes, Journey chart, About People section (6 Nov 2026)
+Backups of every replaced image: _backup/2026-11-06-images/ and _backup/2026-11-06-watermark/.
+
+**Home**
+- Hero banners (Update 104): text column narrowed on desktop (assets/gp-v2.css, end of file) so titles no longer run over the product or Dayanand Shetty.
+- Journey: new machine chart above the timeline (2 machines in 2016 to 13 in 2026, 17 planned in 2027). Clicking a year scrolls to that year. CSS and script inline in index.html.
+- Journey 2021 and 2024: real photos from the corporate video (four calibration lines; extruder close-up).
+- Journey 2025 (watermark crop) and 2026 (text removed) were done in Antigravity and checked.
+
+**About**
+- Our Growth Path: new layout. Same nine milestones and same "Where we are in 2026" figures; the step chart is cleaner and every milestone is shown as a card. Lead text: "move over a point for details" removed, as details are now always visible.
+- New section "The People Behind Greenplastwood" (id="people") after Vision, Mission & Values: four cards (raw material, production lines, quality checks, Ahmedabad office) and a team strip. All five photos are real frames from the corporate video (images/about/people/).
+
+**Manufacturing**
+- Step 5 and step 8 photos replaced with real frames from the corporate video (solid profile in the calibrator; sensor check).
+- Phones: each process step now shows its photo under the text (it was hidden before).
+
+**Gemini watermark (sparkle) removed by cropping**
+- images/products/3-layer-door-bathroom.webp
+- images/products/hub/aud-institutions.webp
+- images/products/wpc-chaukhat-sizes-guide.webp
+- images/redesign/chaukhat-hero.webp
+
+**Clean-up**
+- Deleted the scratch/ folder (Antigravity test scripts and screenshots).
+
 ## Update 104: Home hero banners (5 Nov 2026)
 - Replaced the Home hero banner slider in index.html (section id="hero") with 7 new banners matching Our Products order:
   1. Glass: modern glass buildings against a blue sky with main brand tagline.

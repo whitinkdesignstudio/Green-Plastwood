@@ -1,0 +1,27 @@
+/* ================= Update 110: one page width and side gutter for the whole site =================
+   Every section uses the same side space as the Home video section: about 4% of the screen on each
+   side (16 px on phones, never more than 72 px). Loaded last on every page. */
+:root { --gp-gutter: clamp(16px, 3.8vw, 72px); }
+:root:root:root:root .gp-wrap,
+:root:root:root:root .rd-wrap,
+:root:root:root:root .container,
+:root:root:root:root .container-wide,
+:root:root:root:root .lp-head-in,
+:root:root:root:root .lp-hero-grid,
+:root:root:root:root .lp-trust-in,
+:root:root:root:root .lp-foot-in,
+:root:root:root:root #videos > div {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: var(--gp-gutter) !important;
+  padding-right: var(--gp-gutter) !important;
+  box-sizing: border-box !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* containers nested inside another container must not add the gutter twice */
+:root:root:root:root :is(.gp-wrap, .rd-wrap, .container, .container-wide) :is(.gp-wrap, .rd-wrap, .container, .container-wide) {
+  padding-left: 0 !important; padding-right: 0 !important;
+}
+/* Justified body text: added by gp-layout.js only to text that is left aligned and runs over several lines */
+.gp-just { text-align: justify !important; text-justify: inter-word; }
