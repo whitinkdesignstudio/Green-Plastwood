@@ -1,5 +1,19 @@
 # Greenplastwood Website Updates
 
+## Update 114: Manufacturing and Gallery (16 Nov 2026)
+**Manufacturing**
+- Our Manufacturing Plants: lead line ends at "supplied across India" ("from our corporate office in Ahmedabad" removed); list item "Door frames, door cores and boards made on our own lines" removed; "colour customised" now "colour can be customised".
+- Our Quality Commitment: quote "...after it is installed."; text "replace traditional wood ... sustainable building materials".
+- Quality Control At Every Stage: "Final Inspection" card renamed "Packaging" (text: "Finished products are packed safely for dispatch."); Physical Property Checks photo replaced by the labelled-profile weighing photo (images/manufacturing/qc-physical-labelled.webp).
+- CTA: "send us your requirement to get a quote."
+- Spelling checked (no errors).
+
+**Gallery**
+- Awards checked against all award photos in images/awards/. IndiaMART TrustSEAL 2024 was missing from the site; added back (card and gallery schema). ISO 9001 and TradeIndia are on the Certifications page; IGBC left out on purpose.
+
+**Whole site**
+- gp-layout.css: titles inside justified blocks stay left aligned (fixes stretched award card names). Cache version v=2.
+
 ## Update 113: About page (16 Nov 2026)
 - Founder card: the four figures (2012, 3 plants, 125+ team, 50+ stock points) removed.
 - Vision and Mission: new text from the client (3 paragraphs each). Titles "Better Materials, Better Spaces" and "Reliable Solutions, Built To Last"; tags "Innovation · Responsible Growth" and "Quality · Consistency · Trust".

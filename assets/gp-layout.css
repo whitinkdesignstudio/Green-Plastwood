@@ -25,3 +25,5 @@
 }
 /* Justified body text: added by gp-layout.js only to text that is left aligned and runs over several lines */
 .gp-just { text-align: justify !important; text-justify: inter-word; }
+/* Update 114: titles inside a justified block (for example award card names) stay left aligned */
+.gp-just > :is(b, strong, h2, h3, h4, h5, span) { text-align: left !important; }
