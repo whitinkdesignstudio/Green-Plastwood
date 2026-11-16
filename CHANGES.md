@@ -1,5 +1,15 @@
 # Greenplastwood Website Updates
 
+## Update 119 (16 Nov 2026): Products page hero, heading spacing, quality button
+
+**products.html**
+- Hero split 40 / 60: heading and text on the left, image slider on the right inside a bordered white box with rounded corners. The left-side fade over the images is removed. The slider still changes images on its own every 5 seconds. On mobile the box sits below the text.
+- Hero heading now the same size as the other headings on the page (38 px desktop, 30 px tablet, 28 px mobile).
+- Removed the "How We Control Quality" button from the "Quality Built Into Every Product" section.
+
+**Products + all 6 product pages**
+- Headings with a second coloured line (.rd-l2) no longer show a small gap at the start of the second line when it wraps. CSS in assets/gp-redesign.css (link now ?v=5 on these 7 pages).
+
 ## Update 118 (16 Nov 2026): fixes in Forum's Home, About and Products text
 
 - Brand written as "Green Plastwood" changed to "Greenplastwood" (About hero, 2 Home FAQs, Home footer, Products FAQ). Typo "reen Plastwood" fixed in the Products FAQ. Wording otherwise kept as written.

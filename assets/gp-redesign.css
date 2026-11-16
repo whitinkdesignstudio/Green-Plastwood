@@ -507,3 +507,28 @@
 .rd-choose-pic { width: 240px; aspect-ratio: 1; border-radius: 16px; background: #fff; display: grid; place-items: center; }
 .rd-choose-pic img { width: 88%; height: 88%; object-fit: contain; }
 @media (max-width: 1100px) { .rd-choose-in { grid-template-columns: auto 1fr; } .rd-choose-pic { display: none; } }
+
+/* ===== Update 119 ===== */
+/* second line of rd headings: no left gap when it wraps (the HTML already has a space before the span) */
+:root:root:root:root:root:root:root .rd-l2 { margin-left: 0 !important; }
+/* products hero: 40 / 60 split, text left, image slider in a bordered box right, no fade on the images */
+.rd-phero--split .rd-phero-in { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 56px; align-items: center; min-height: 0; padding: 56px 0; }
+.rd-phero--split .rd-phero-txt { max-width: none; padding: 0; }
+.rd-phero--split .rd-phero-img.rd-phero-box { position: relative; inset: auto; width: auto; height: auto; aspect-ratio: 16 / 10; padding: 10px; border: 1px solid var(--rd-line); border-radius: 20px; background: #fff; box-shadow: 0 24px 50px -30px rgba(10, 57, 61, .45); }
+.rd-phero--split .rd-phero-img::before { content: none !important; display: none !important; }
+.rd-phero--split .rd-phero-box .rd-slide { inset: 10px; border-radius: 13px; overflow: hidden; }
+.rd-phero--split .rd-phero-box .rd-slide img { width: 100%; height: 100%; object-fit: cover; }
+/* products hero heading: same size as the other headings on the page */
+:root:root:root:root:root:root:root .rd-products .rd-phero h1.rd-h { font-size: 38px !important; line-height: 1.18 !important; letter-spacing: -.38px; }
+@media (max-width: 1024px) {
+  .rd-phero--split .rd-phero-in { gap: 32px; }
+}
+@media (max-width: 860px) {
+  .rd-phero--split .rd-phero-in { grid-template-columns: 1fr; gap: 24px; padding: 36px 0 40px; }
+  .rd-phero--split .rd-phero-img.rd-phero-box { aspect-ratio: 4 / 3; padding: 8px; border-radius: 16px; }
+  .rd-phero--split .rd-phero-box .rd-slide { inset: 8px; border-radius: 11px; }
+  :root:root:root:root:root:root:root .rd-products .rd-phero h1.rd-h { font-size: 30px !important; }
+}
+@media (max-width: 600px) {
+  :root:root:root:root:root:root:root .rd-products .rd-phero h1.rd-h { font-size: 28px !important; }
+}
