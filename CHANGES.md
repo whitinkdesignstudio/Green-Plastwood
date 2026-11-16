@@ -1,5 +1,11 @@
 # Greenplastwood Website Updates
 
+## Update 113: About page (16 Nov 2026)
+- Founder card: the four figures (2012, 3 plants, 125+ team, 50+ stock points) removed.
+- Vision and Mission: new text from the client (3 paragraphs each). Titles "Better Materials, Better Spaces" and "Reliable Solutions, Built To Last"; tags "Innovation · Responsible Growth" and "Quality · Consistency · Trust".
+- Our Team At Work: new lead line without numbers. Production Lines: new photo (extrusion lines with operators) and new text. Quality Checks: new photo (sheet edge and finish check); text adjusted to match the photo (no "weighed"). Corporate Office, Ahmedabad: new photo (office team at work) and text on what the team does. All photos from the corporate video; old ones in _backup/2026-11-16-content/images/about/people/.
+- Our Brand Promise: "Honest Commitments" renamed "Transparent Dealings" (same meaning and text).
+
 ## Update 112: Home content, window frames and shutters, footer, email (16 Nov 2026)
 **Home**
 - Our Products card: "WPC Window Frame & Shutter".
