@@ -1,5 +1,24 @@
 # Greenplastwood Website Updates
 
+## Update 117 (16 Nov 2026): Home video and CELVION, footer address, manufacturing steps, guides order
+
+**Content edits by Forum (index.html, about.html, products.html)** are included in this update: new Journey chart heading and year texts, new FAQ answers, About hero and Products hero text. These files were also re-formatted by a code formatter (line breaks only).
+
+**index.html**
+- Journey chart: removed the note line under the chart ("Machines in production ... *2027 is planned ..."), and the "*" after 17 on the 2027 bar.
+- CELVION: tiles 3 and 4 replaced with bagasse packaging photos (cosmetic tray, electronics tray), cropped from the CELVION packaging collage: images/celvion/celvion-packaging-cosmetic.webp, celvion-packaging-electronics.webp (800 x 800). Old clamshell/box images kept in the folder.
+- Video section: the local mp4 is replaced by the YouTube video qLEoZuiUe30 (autoplay, muted, loop), 16:9, max 1120 px wide.
+
+**Footer (35 pages)**
+- Address now on 6 lines: SNG Eco India Pvt. Ltd. / 1312, 1313, 1314, 13th Floor, / Fortune Business Hub, / Nr. Shell Petrol Pump, Science City Road, / Sola, Ahmedabad – 380060, / Gujarat, India. The 4th line stays on one line where it fits.
+- Contact column made wider on desktop (Newsletter column a little narrower). CSS in assets/gp-layout.css (link now ?v=3). Landing pages (lp-*) have a different one-line footer and are not changed.
+
+**manufacturing.html**
+- "Our Manufacturing Plants": the production lines point now shows the steps as a numbered sequence: Mixing → Extrusion → Cooling → Cutting → Finishing.
+
+**resources.html**
+- Guides order: WPC Vs Plywood, Install A WPC Door Frame, then product guides in product order (Chaukhat, Window Frame & Shutter, Door, Sheets & Boards, PVC Panel, Recycled Plastic Sheet). Pallets guide card removed (the page still exists and is linked from the pallets blog and the recycled sheet pages).
+
 ## Update 116 (16 Nov 2026): Guide table design
 
 - New table design for all 15 tables in the 10 guides: rounded card with a soft shadow, dark teal header, alternating row shading, row hover, and Yes / No shown as green tick and red cross badges.

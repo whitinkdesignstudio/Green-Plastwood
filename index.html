@@ -1902,6 +1902,7 @@
       font-size: 13px;
       color: rgba(255, 255, 255, 0.7);
       line-height: 1.5;
+      width 10%;
     }
 
     .contact-line-icon {
@@ -3654,35 +3655,196 @@
     }
 
     /* Update 104: machine capacity chart above the Journey timeline */
-    .pjc { background:#fff; border:1px solid #D5E7E9; border-radius:18px; padding:26px 28px 20px; margin:0 0 56px; display:grid; grid-template-columns:minmax(240px,340px) 1fr; gap:36px; align-items:end; }
-    .pjc-now { align-self:center; }
-    .pjc-num { display:block; font-size:clamp(56px,6vw,84px); line-height:.95; font-weight:600; color:#0A393D; letter-spacing:-.02em; }
-    .pjc-title { display:block; font-size:clamp(24px,1.9vw,30px); line-height:1.18; font-weight:400; color:#0A393D; }
-    .pjc-title em { font-style:normal; color:#05838E; }
-    .pjc-num small { font-size:.32em; font-weight:500; color:#05838E; letter-spacing:0; margin-left:6px; }
-    .pjc-now p { margin:12px 0 0; font-size:15px; line-height:1.55; color:#3E5456; }
-    .pjc-now p b { color:#0A393D; }
-    .pjc-bars { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(8,1fr); gap:10px; align-items:end; height:250px; }
-    .pjc-bars li { height:100%; }
-    .pjc-bar { all:unset; box-sizing:border-box; cursor:pointer; height:100%; width:100%; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; gap:6px; border-radius:10px; }
-    .pjc-bar:focus-visible { outline:2px solid #05838E; outline-offset:3px; }
-    .pjc-val { font-size:15px; font-weight:600; color:#0A393D; }
-    .pjc-col { width:100%; max-width:56px; height:calc(var(--n) / 17 * 170px); min-height:6px; background:#05838E; border-radius:8px 8px 3px 3px; transition:background .2s, transform .2s; transform-origin:bottom; }
-    .pjc-bar:hover .pjc-col, .pjc-bar.is-on .pjc-col { background:#0A393D; }
-    .pjc-bar--plan .pjc-col { background:repeating-linear-gradient(135deg,#E3F2F3 0 6px,#fff 6px 12px); border:1.5px dashed #05838E; }
-    .pjc-bar--plan:hover .pjc-col { background:repeating-linear-gradient(135deg,#C8E7EA 0 6px,#fff 6px 12px); }
-    .pjc-yr { font-size:13px; color:#5E7375; border-top:1px solid #D5E7E9; width:100%; text-align:center; padding-top:8px; }
-    .pjc-bar.is-on .pjc-yr { color:#05838E; font-weight:600; }
-    .pjc-note { grid-column:1 / -1; margin:0; font-size:13px; color:#6E8385; border-top:1px solid #EEF4F4; padding-top:12px; }
-    .pj-item.is-flash .pj-year { color:#05838E; }
-    .pj-item.is-flash .pj-media img { box-shadow:0 0 0 4px #05838E; }
-    @media (prefers-reduced-motion:no-preference) { .pjc.is-in .pjc-col { animation:pjcGrow .7s ease-out both; animation-delay:calc(var(--i) * 70ms); } @keyframes pjcGrow { from { transform:scaleY(0); } } }
+    .pjc {
+      background: #fff;
+      border: 1px solid #D5E7E9;
+      border-radius: 18px;
+      padding: 26px 28px 20px;
+      margin: 0 0 56px;
+      display: grid;
+      grid-template-columns: minmax(240px, 340px) 1fr;
+      gap: 36px;
+      align-items: end;
+    }
+
+    .pjc-now {
+      align-self: center;
+    }
+
+    .pjc-num {
+      display: block;
+      font-size: clamp(56px, 6vw, 84px);
+      line-height: .95;
+      font-weight: 600;
+      color: #0A393D;
+      letter-spacing: -.02em;
+    }
+
+    .pjc-title {
+      display: block;
+      font-size: clamp(24px, 1.9vw, 30px);
+      line-height: 1.18;
+      font-weight: 400;
+      color: #0A393D;
+    }
+
+    .pjc-title em {
+      font-style: normal;
+      color: #05838E;
+    }
+
+    .pjc-num small {
+      font-size: .32em;
+      font-weight: 500;
+      color: #05838E;
+      letter-spacing: 0;
+      margin-left: 6px;
+    }
+
+    .pjc-now p {
+      margin: 12px 0 0;
+      font-size: 15px;
+      line-height: 1.55;
+      color: #3E5456;
+    }
+
+    .pjc-now p b {
+      color: #0A393D;
+    }
+
+    .pjc-bars {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 10px;
+      align-items: end;
+      height: 250px;
+    }
+
+    .pjc-bars li {
+      height: 100%;
+    }
+
+    .pjc-bar {
+      all: unset;
+      box-sizing: border-box;
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 6px;
+      border-radius: 10px;
+    }
+
+    .pjc-bar:focus-visible {
+      outline: 2px solid #05838E;
+      outline-offset: 3px;
+    }
+
+    .pjc-val {
+      font-size: 15px;
+      font-weight: 600;
+      color: #0A393D;
+    }
+
+    .pjc-col {
+      width: 100%;
+      max-width: 56px;
+      height: calc(var(--n) / 17 * 170px);
+      min-height: 6px;
+      background: #05838E;
+      border-radius: 8px 8px 3px 3px;
+      transition: background .2s, transform .2s;
+      transform-origin: bottom;
+    }
+
+    .pjc-bar:hover .pjc-col,
+    .pjc-bar.is-on .pjc-col {
+      background: #0A393D;
+    }
+
+    .pjc-bar--plan .pjc-col {
+      background: repeating-linear-gradient(135deg, #E3F2F3 0 6px, #fff 6px 12px);
+      border: 1.5px dashed #05838E;
+    }
+
+    .pjc-bar--plan:hover .pjc-col {
+      background: repeating-linear-gradient(135deg, #C8E7EA 0 6px, #fff 6px 12px);
+    }
+
+    .pjc-yr {
+      font-size: 13px;
+      color: #5E7375;
+      border-top: 1px solid #D5E7E9;
+      width: 100%;
+      text-align: center;
+      padding-top: 8px;
+    }
+
+    .pjc-bar.is-on .pjc-yr {
+      color: #05838E;
+      font-weight: 600;
+    }
+
+    .pjc-note {
+      grid-column: 1 / -1;
+      margin: 0;
+      font-size: 13px;
+      color: #6E8385;
+      border-top: 1px solid #EEF4F4;
+      padding-top: 12px;
+    }
+
+    .pj-item.is-flash .pj-year {
+      color: #05838E;
+    }
+
+    .pj-item.is-flash .pj-media img {
+      box-shadow: 0 0 0 4px #05838E;
+    }
+
+    @media (prefers-reduced-motion:no-preference) {
+      .pjc.is-in .pjc-col {
+        animation: pjcGrow .7s ease-out both;
+        animation-delay: calc(var(--i) * 70ms);
+      }
+
+      @keyframes pjcGrow {
+        from {
+          transform: scaleY(0);
+        }
+      }
+    }
+
     @media (max-width:860px) {
-      .pjc { grid-template-columns:1fr; gap:20px; padding:20px 16px 14px; margin-bottom:36px; }
-      .pjc-bars { gap:6px; height:200px; }
-      .pjc-col { height:calc(var(--n) / 17 * 130px); }
-      .pjc-val { font-size:13px; }
-      .pjc-yr { font-size:11px; }
+      .pjc {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 16px 14px;
+        margin-bottom: 36px;
+      }
+
+      .pjc-bars {
+        gap: 6px;
+        height: 200px;
+      }
+
+      .pjc-col {
+        height: calc(var(--n) / 17 * 130px);
+      }
+
+      .pjc-val {
+        font-size: 13px;
+      }
+
+      .pjc-yr {
+        font-size: 11px;
+      }
     }
 
     @media (max-width:860px) {
@@ -3772,17 +3934,71 @@
       border-radius: 10px
     }
   </style>
-  <link rel="stylesheet" href="assets/gp-layout.css?v=2" />
+  <link rel="stylesheet" href="assets/gp-layout.css?v=3" />
   <script src="assets/gp-layout.js?v=1" defer></script>
 
   <style>
     /* Update 112: CELVION, four separate photos (2 tableware, 2 packaging) on the right half */
-    :root:root:root:root:root section.v2-celv .v2-celv-box { display:grid !important; grid-template-columns:1fr 1fr !important; align-items:center !important; gap:32px !important; padding:24px 24px 24px 40px !important; }
-    :root:root:root:root:root section.v2-celv .v2-celv-tiles { display:grid !important; grid-template-columns:repeat(4,1fr) !important; gap:12px !important; width:100% !important; max-width:none !important; height:auto !important; max-height:none !important; padding:0 !important; background:none !important; justify-content:stretch !important; }
-    :root:root:root:root:root section.v2-celv .v2-celv-tiles figure { margin:0; aspect-ratio:1/1; border-radius:12px; overflow:hidden; background:#fff; }
-    :root:root:root:root:root section.v2-celv .v2-celv-tiles img { width:100% !important; height:100% !important; max-height:none !important; max-width:none !important; aspect-ratio:auto !important; object-fit:cover !important; display:block; }
-    :root:root:root:root:root section.v2-celv .v2-celv-logo { width:min(260px,70%) !important; margin-bottom:14px !important; }
-    @media (max-width:900px) { :root:root:root:root:root section.v2-celv .v2-celv-box { grid-template-columns:1fr !important; padding:20px !important; } :root:root:root:root:root section.v2-celv .v2-celv-tiles { grid-template-columns:repeat(2,1fr) !important; } }
+    :root:root:root:root:root section.v2-celv .v2-celv-box {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      align-items: center !important;
+      gap: 32px !important;
+      padding: 24px 24px 24px 40px !important;
+    }
+
+    :root:root:root:root:root section.v2-celv .v2-celv-tiles {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 12px !important;
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      max-height: none !important;
+      padding: 0 !important;
+      background: none !important;
+      justify-content: stretch !important;
+    }
+
+    :root:root:root:root:root section.v2-celv .v2-celv-tiles figure {
+      margin: 0;
+      aspect-ratio: 1/1;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    :root:root:root:root:root section.v2-celv .v2-celv-tiles img {
+      width: 100% !important;
+      height: 100% !important;
+      max-height: none !important;
+      max-width: none !important;
+      aspect-ratio: auto !important;
+      object-fit: cover !important;
+      display: block;
+    }
+
+    :root:root:root:root:root section.v2-celv .v2-celv-logo {
+      width: min(260px, 70%) !important;
+      margin-bottom: 14px !important;
+    }
+
+    @media (max-width:900px) {
+      :root:root:root:root:root section.v2-celv .v2-celv-box {
+        grid-template-columns: 1fr !important;
+        padding: 20px !important;
+      }
+
+      :root:root:root:root:root section.v2-celv .v2-celv-tiles {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+  </style>
+  <style>
+    /* Update 117: YouTube video in the home video section */
+    #videos .v2-yt--embed { position: relative; width: 100%; max-width: 1120px; margin: 0 auto; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #07292C; box-shadow: 0 12px 40px -12px rgba(10, 57, 61, .35); }
+    #videos .v2-yt--embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+    @media (max-width: 600px) { #videos .v2-yt--embed { border-radius: 12px; } }
   </style>
 </head>
 
@@ -3901,9 +4117,11 @@
             width="1920" height="860" loading="lazy" />
         </picture>
         <div class="gp-wrap v2-bslide-text">
-          <h2 class="v2-slide-title">WPC Window Frames &amp; Shutters <span class="v2-green">That Stand Rain And Sun.</span></h2>
+          <h2 class="v2-slide-title">WPC Window Frames &amp; Shutters <span class="v2-green">That Stand Rain And
+              Sun.</span></h2>
           <p>Water proof, termite proof window frames and shutters in a choice of profiles and colours.</p>
-          <div class="gp-btns"><a href="product-wpc-window-frames.html" class="gp-btn">Explore WPC Window Frames &amp; Shutters
+          <div class="gp-btns"><a href="product-wpc-window-frames.html" class="gp-btn">Explore WPC Window Frames &amp;
+              Shutters
               <span>→</span></a><a href="resources.html#brochures" class="gp-btn gp-btn--ghost">Download Brochure
               <span>↓</span></a></div>
         </div>
@@ -3997,8 +4215,8 @@
           </div>
         </article>
         <article class="v2-line"><a class="v2-line-img" href="product-wpc-window-frames.html"><img
-              src="images/products/hub/window.webp" alt="WPC Window Frames &amp; Shutters by Greenplastwood" loading="lazy"
-              decoding="async" /><span class="v2-line-no">02</span></a>
+              src="images/products/hub/window.webp" alt="WPC Window Frames &amp; Shutters by Greenplastwood"
+              loading="lazy" decoding="async" /><span class="v2-line-no">02</span></a>
           <div class="v2-line-body">
             <h3><a href="product-wpc-window-frames.html">WPC Window Frame &amp; Shutter</a></h3>
             <a class="v2-line-go" href="product-wpc-window-frames.html">View product <span>→</span></a>
@@ -4412,8 +4630,9 @@
         </div>
         <div class="gp-img-card wu-card gp-reveal">
           <button type="button" class="wu-toggle" aria-expanded="false"><img src="images/home/where/outdoor.webp"
-              alt="Carpenter fixing a Greenplastwood WPC door frame in place of old timber" loading="lazy" decoding="async" /><span
-              class="gp-img-card-num">08</span><span class="gp-img-card-arrow" aria-hidden="true">+</span>
+              alt="Carpenter fixing a Greenplastwood WPC door frame in place of old timber" loading="lazy"
+              decoding="async" /><span class="gp-img-card-num">08</span><span class="gp-img-card-arrow"
+              aria-hidden="true">+</span>
             <div class="gp-img-card-body">
               <h3>Outdoor &amp; Renovation</h3>
               <p>Exterior uses and replacing old timber</p>
@@ -4432,7 +4651,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </section>
   <section class="gp-sec gp-sec--cream pj-sec" id="journey">
@@ -4446,10 +4665,38 @@
       </div>
 
       <figure class="pjc" aria-label="Production machines, year by year">
-        <div class="pjc-now"><span class="pjc-title">Our Production Capacity, <em>Growing Every Year</em></span>
-          <p>From our first lines in 2016, we keep adding machines for door frames, doors and sheets. Tap a year to read its story.</p></div>
-        <ol class="pjc-bars"><li><button type="button" class="pjc-bar" data-go="j-2016" style="--n:2;--i:0" aria-label="2016: 2 machines. Show 2016 in the timeline"><span class="pjc-val">2</span><span class="pjc-col"></span><span class="pjc-yr">2016</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2019" style="--n:4;--i:1" aria-label="2019: 4 machines. Show 2019 in the timeline"><span class="pjc-val">4</span><span class="pjc-col"></span><span class="pjc-yr">2019</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2021" style="--n:8;--i:2" aria-label="2021: 8 machines. Show 2021 in the timeline"><span class="pjc-val">8</span><span class="pjc-col"></span><span class="pjc-yr">2021</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2023" style="--n:8;--i:3" aria-label="2023: 8 machines. Show 2023 in the timeline"><span class="pjc-val">8</span><span class="pjc-col"></span><span class="pjc-yr">2023</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2024" style="--n:8;--i:4" aria-label="2024: 8 machines. Show 2024 in the timeline"><span class="pjc-val">8</span><span class="pjc-col"></span><span class="pjc-yr">2024</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2025" style="--n:11;--i:5" aria-label="2025: 11 machines. Show 2025 in the timeline"><span class="pjc-val">11</span><span class="pjc-col"></span><span class="pjc-yr">2025</span></button></li><li><button type="button" class="pjc-bar" data-go="j-2026" style="--n:13;--i:6" aria-label="2026: 13 machines. Show 2026 in the timeline"><span class="pjc-val">13</span><span class="pjc-col"></span><span class="pjc-yr">2026</span></button></li><li><button type="button" class="pjc-bar pjc-bar--plan" data-go="j-2027" style="--n:17;--i:7" aria-label="2027: 17 machines planned. Show 2027 in the timeline"><span class="pjc-val">17*</span><span class="pjc-col"></span><span class="pjc-yr">2027</span></button></li></ol>
-        <figcaption class="pjc-note">Machines in production at the end of each year, counted from the milestones below. *2027 is planned: four more door frame machines.</figcaption>
+        <div class="pjc-now"><span class="pjc-title">Built for scale, <em>Driven by growth.</em></span>
+          <p>Continuously expanding our manufacturing capabilities since 2016 through advanced infrastructure ,
+            technology
+            and Innovation. Strengthening production capacity to meet growing demand and deliver excellence across
+            markets.</p>
+        </div>
+        <ol class="pjc-bars">
+          <li><button type="button" class="pjc-bar" data-go="j-2016" style="--n:2;--i:0"
+              aria-label="2016: 2 machines. Show 2016 in the timeline"><span class="pjc-val">2</span><span
+                class="pjc-col"></span><span class="pjc-yr">2016</span></button></li>
+          <li><button type="button" class="pjc-bar" data-go="j-2019" style="--n:4;--i:1"
+              aria-label="2019: 4 machines. Show 2019 in the timeline"><span class="pjc-val">4</span><span
+                class="pjc-col"></span><span class="pjc-yr">2019</span></button></li>
+          <li><button type="button" class="pjc-bar" data-go="j-2021" style="--n:8;--i:2"
+              aria-label="2021: 8 machines. Show 2021 in the timeline"><span class="pjc-val">8</span><span
+                class="pjc-col"></span><span class="pjc-yr">2021</span></button></li>
+          <li><button type="button" class="pjc-bar" data-go="j-2023" style="--n:8;--i:3"
+              aria-label="2023: 8 machines. Show 2023 in the timeline"><span class="pjc-val">8</span><span
+                class="pjc-col"></span><span class="pjc-yr">2023</span></button></li>
+          <li><button type="button" class="pjc-bar" data-go="j-2024" style="--n:8;--i:4"
+              aria-label="2024: 8 machines. Show 2024 in the timeline"><span class="pjc-val">8</span><span
+                class="pjc-col"></span><span class="pjc-yr">2024</span></button></li>
+          <li><button type="button" class="pjc-bar" data-go="j-2025" style="--n:11;--i:5"
+              aria-label="2025: 11 machines. Show 2025 in the timeline"><span class="pjc-val">11</span><span
+                class="pjc-col"></span><span class="pjc-yr">2025</span></button></li>
+          <li><button type="button" class="pjc-bar" data-go="j-2026" style="--n:13;--i:6"
+              aria-label="2026: 13 machines. Show 2026 in the timeline"><span class="pjc-val">13</span><span
+                class="pjc-col"></span><span class="pjc-yr">2026</span></button></li>
+          <li><button type="button" class="pjc-bar pjc-bar--plan" data-go="j-2027" style="--n:17;--i:7"
+              aria-label="2027: 17 machines planned. Show 2027 in the timeline"><span class="pjc-val">17</span><span
+                class="pjc-col"></span><span class="pjc-yr">2027</span></button></li>
+        </ol>
       </figure>
       <ol class="pj">
         <li id="j-2012" class="pj-item">
@@ -4490,8 +4737,7 @@
           </div>
           <span class="pj-node" aria-hidden="true"></span>
           <div class="pj-media"><img class="pj-img" src="images/journey/journey-2021.webp"
-              alt="Four new WPC door frame extrusion lines (2021)" loading="lazy" width="1600"
-              height="900" /></div>
+              alt="Four new WPC door frame extrusion lines (2021)" loading="lazy" width="1600" height="900" /></div>
         </li>
         <li id="j-2023" class="pj-item">
           <div class="pj-copy"><span class="pj-year">2023</span><span class="pj-sub">A New Identity and a Finer
@@ -4516,9 +4762,11 @@
           </div>
         </li>
         <li id="j-2025" class="pj-item">
-          <div class="pj-copy"><span class="pj-year">2025</span><span class="pj-sub">Expanding Our Capabilities</span>
-            <p>We commissioned an additional door and sheet machine along with two door frame machines, further
-              increasing capacity and delivery capability.</p>
+          <div class="pj-copy"><span class="pj-year">2025</span><span class="pj-sub"> Accelerating Manufacturing
+              Strength</span>
+            <p>Strengthened our manufacturing infrastructure with the commissioning of an advanced door and sheet
+              production line, alongside two additional door frame machines — significantly enhancing production
+              capacity, operational efficiency and delivery capabilities.</p>
           </div>
           <span class="pj-node" aria-hidden="true"></span>
           <div class="pj-media"><img class="pj-img" src="images/journey/journey-2025.webp"
@@ -4526,9 +4774,13 @@
               height="900" /></div>
         </li>
         <li id="j-2026" class="pj-item">
-          <div class="pj-copy"><span class="pj-year">2026</span><span class="pj-sub">Industry-Scale Production</span>
-            <p>Two more door frame machines took our infrastructure to <b>10 door frame machines and 3 door and sheet
-                machines</b>, giving us the scale to serve growing demand with consistent quality.</p>
+          <div class="pj-copy"><span class="pj-year">2026</span><span class="pj-sub">Scaling Up for Greater
+              Possibilities
+            </span>
+            <p>Further expanded our manufacturing infrastructure with the addition of two advanced door frame machines,
+              taking our strength to 10 door frame machines and 3 door and sheet production machines — reinforcing our
+              large-scale manufacturing capabilities, production efficiency and readiness to serve growing market demand
+              with uncompromising quality.</p>
           </div>
           <span class="pj-node" aria-hidden="true"></span>
           <div class="pj-media"><img class="pj-img" src="images/journey/journey-2026.webp"
@@ -4536,10 +4788,12 @@
               loading="lazy" width="1600" height="900" /></div>
         </li>
         <li id="j-2027" class="pj-item pj-item--next">
-          <div class="pj-copy"><span class="pj-year">2027</span><span class="pj-sub">What’s Next</span>
-            <p>Our expansion continues with four additional door frame machines and the introduction of <b>PVC
-                Panels</b>, broadening our product range for new applications and markets.</p><span
-              class="pj-badge">Coming Soon</span>
+          <div class="pj-copy"><span class="pj-year">2027</span><span class="pj-sub">Expanding Horizons. Unlocking New
+              Markets.
+            </span>
+            <p>Taking our growth journey further with the addition of four advanced door frame machines and the
+              introduction of PVC Panels to our product portfolio — expanding manufacturing capacity, strengthening
+              product diversity and opening new avenues for market growth.</p><span class="pj-badge">Coming Soon</span>
           </div>
           <span class="pj-node" aria-hidden="true"></span>
           <div class="pj-media"><img class="pj-img" src="images/journey/journey-2027.webp" alt="PVC Panels"
@@ -4885,15 +5139,16 @@
       </div>
     </div>
   </section>
-  
+
   <section class="gp-sec gp-sec--cream v2-ytsec" id="videos" aria-label="Greenplastwood video showcase"
     style="padding: 30px 0;">
     <div style="width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 20px;">
-      <div class="v2-yt"
-        style="position:relative; width:100%; height:340px; border-radius:16px; overflow:hidden; background:#07292C; box-shadow:0 12px 40px -12px rgba(10, 57, 61, .35);">
-        <video id="gpShowcaseVideo" src="images/videos/green-plastwood-showcase.mp4"
-          poster="images/home/video-poster.webp" controls preload="metadata" loop playsinline
-          style="width:100%; height:100%; object-fit:cover; border-radius:16px; display:block;"></video>
+      <div class="v2-yt v2-yt--embed">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/qLEoZuiUe30?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=qLEoZuiUe30&amp;playsinline=1&amp;rel=0&amp;modestbranding=1"
+          title="Greenplastwood WPC products video" loading="lazy" frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </div>
   </section>
@@ -4907,7 +5162,19 @@
           <a href="http://www.celvionglobal.com/" target="_blank" rel="noopener" class="gp-btn">Visit CELVION
             <span>↗</span></a>
         </div>
-        <div class="v2-celv-img v2-celv-tiles"><figure><img src="images/celvion/celvion-tableware-plate.webp" alt="CELVION bagasse 4 compartment round plate with dosa, sambar and chutney" loading="lazy" width="800" height="800" /></figure><figure><img src="images/celvion/celvion-tableware-bowl.webp" alt="CELVION bagasse bowl with vegetable salad" loading="lazy" width="800" height="800" /></figure><figure><img src="images/celvion/celvion-packaging-clamshell.webp" alt="CELVION bagasse 6x6 clamshell box with fresh fruit" loading="lazy" width="800" height="800" /></figure><figure><img src="images/celvion/celvion-packaging-box.webp" alt="CELVION bagasse 8x8 clamshell box with banana chips" loading="lazy" width="800" height="800" /></figure></div>
+        <div class="v2-celv-img v2-celv-tiles">
+          <figure><img src="images/celvion/celvion-tableware-plate.webp"
+              alt="CELVION bagasse 4 compartment round plate with dosa, sambar and chutney" loading="lazy" width="800"
+              height="800" /></figure>
+          <figure><img src="images/celvion/celvion-tableware-bowl.webp" alt="CELVION bagasse bowl with vegetable salad"
+              loading="lazy" width="800" height="800" /></figure>
+          <figure><img src="images/celvion/celvion-packaging-cosmetic.webp"
+              alt="CELVION bagasse packaging tray holding cosmetic and skincare products" loading="lazy" width="800" height="800" />
+          </figure>
+          <figure><img src="images/celvion/celvion-packaging-electronics.webp"
+              alt="CELVION bagasse packaging tray holding a phone, charger and cable" loading="lazy" width="800" height="800" />
+          </figure>
+        </div>
       </div>
     </div>
   </section>
@@ -5003,7 +5270,8 @@
                   <span>Which products does Greenplastwood manufacture?</span>
                   <span class="faq-toggle-icon">+</span>
                 </button>
-                <div class="faq-answer-panel">Greenplastwood offers WPC door frames (chaukhats), WPC doors, WPC sheets &amp; boards, WPC window frames &amp; shutters, PVC panels and recycled plastic sheets.</div>
+                <div class="faq-answer-panel">Greenplastwood offers WPC door frames (chaukhats), WPC doors, WPC sheets
+                  &amp; boards, WPC window frames &amp; shutters, PVC panels and recycled plastic sheets.</div>
               </div>
               <div class="faq-item">
                 <button class="faq-question-btn" onclick="toggleAccordion(this)">
@@ -5019,7 +5287,8 @@
                   <span>Can door frames be painted, laminated or polished?</span>
                   <span class="faq-toggle-icon">+</span>
                 </button>
-                <div class="faq-answer-panel">Yes. Greenplastwood door frames are ready for paint, laminate &amp; polish, like traditional wood.</div>
+                <div class="faq-answer-panel">Yes. Greenplastwood door frames are ready for paint, laminate &amp;
+                  polish, like traditional wood.</div>
               </div>
               <div class="faq-item">
                 <button class="faq-question-btn" onclick="toggleAccordion(this)">
@@ -5035,7 +5304,14 @@
                   <span>What sizes do WPC door frames come in?</span>
                   <span class="faq-toggle-icon">+</span>
                 </button>
-                <div class="faq-answer-panel">Our door frames come in a wide range of sizes and lengths. For the full size list, please refer to our <a href="resources.html#brochures">catalogues</a> or visit the <a href="product-wpc-door-frames.html">WPC Chaukhat product page</a>, or <a href="contact.html">contact our team</a>.</div>
+                <div class="faq-answer-panel">Green Plastwood offers WPC Door Frames (WPC Chaukhat) in a wide range of
+                  standard and customised sizes, thicknesses and lengths to suit diverse residential, commercial and
+                  institutional applications.
+
+                  For detailed dimensions, available profiles and specifications, please explore our WPC Door Frames
+                  Product Page or download our Product Catalogues.
+
+                  For bulk requirements, customised sizes or technical assistance, contact our team.</div>
               </div>
               <div class="faq-item">
                 <button class="faq-question-btn" onclick="toggleAccordion(this)">
@@ -5050,14 +5326,21 @@
                   <span>What is the minimum order?</span>
                   <span class="faq-toggle-icon">+</span>
                 </button>
-                <div class="faq-answer-panel">The minimum order depends on the product, colour and size. Please <a href="contact.html">contact our sales team</a> for details.</div>
+                <div class="faq-answer-panel">The minimum order quantity (MOQ) varies depending on the product type,
+                  dimensions, thickness, colour and customisation requirements.
+
+                  As a WPC manufacturer and bulk supplier, Green Plastwood caters to bulk orders, project requirements
+                  and customised product specifications.
+
+                  For product-specific MOQ, pricing and order-related details, please contact our sales team.</div>
               </div>
               <div class="faq-item">
                 <button class="faq-question-btn" onclick="toggleAccordion(this)">
                   <span>How can I become a Greenplastwood business associate?</span>
                   <span class="faq-toggle-icon">+</span>
                 </button>
-                <div class="faq-answer-panel">Fill the business associate form on our <a href="contact.html">contact page</a> or WhatsApp us with your city and business. Our business team will contact you.</div>
+                <div class="faq-answer-panel">Fill the business associate form on our <a href="contact.html">contact
+                    page</a> or WhatsApp us with your city and business. Our business team will contact you.</div>
               </div>
             </div>
           </div>
@@ -5161,7 +5444,11 @@
             <img src="images/brand_logo_transparent.webp" alt="Greenplastwood - SNG ECO INDIA" class="footer-logo-img"
               loading="lazy" decoding="async" />
           </a>
-          <p class="footer-about-text">Greenplastwood is the WPC brand of SNG Eco India Pvt. Ltd., Ahmedabad. SNG Eco India started in 2012, and since 2016 we have manufactured WPC door frames (chaukhats), doors, sheets &amp; boards, and window frames &amp; shutters in our own plants in Gujarat. Our range also includes PVC panels and recycled plastic sheets.</p>
+          <p class="footer-about-text">Green Plastwood is the WPC brand of SNG Eco India Pvt. Ltd., Ahmedabad, Gujarat.
+            Established in 2012, SNG Eco India has been manufacturing premium-quality WPC door frames (chaukhats), WPC
+            doors, sheets, boards, window frames and shutters in its own manufacturing facilities since 2016. Our
+            product portfolio also includes PVC panels and recycled plastic sheets, serving diverse residential,
+            commercial and institutional applications.</p>
           <div class="footer-social-row">
             <a href="https://www.facebook.com/greenplastwoodindia" target="_blank" rel="noopener" class="social-btn"
               aria-label="Facebook">
@@ -5241,8 +5528,7 @@
                   aria-hidden="true">
                   <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
-                </svg></span><span>SNG Eco India Pvt. Ltd.<br />1312, 1313, 1314, 13th Floor, Fortune Business
-                Hub,<br />Nr. Shell Petrol Pump, Science City Road,<br />Sola, Ahmedabad – 380060, Gujarat, India</span>
+                </svg></span><span class="ft-addr">SNG Eco India Pvt. Ltd.<br />1312, 1313, 1314, 13th Floor,<br />Fortune Business Hub,<br /><span class="ft-nw">Nr. Shell Petrol Pump, Science City Road,</span><br />Sola, Ahmedabad – 380060,<br />Gujarat, India</span>
             </li>
             <li class="contact-line"><span class="contact-line-icon"><svg width="16" height="16" viewBox="0 0 24 24"
                   fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

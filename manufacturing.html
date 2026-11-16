@@ -3034,8 +3034,18 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="assets/gp-layout.css?v=2" />
+  <link rel="stylesheet" href="assets/gp-layout.css?v=3" />
   <script src="assets/gp-layout.js?v=1" defer></script>
+  <style>
+    /* Update 117: production line steps shown in sequence */
+    .mfg-plants-checklist .mfg-seq-label { display: block; margin-bottom: 10px; }
+    .mfg-plants-checklist ol.mfg-seq { list-style: none !important; margin: 0 !important; padding: 0 !important; display: flex !important; flex-wrap: wrap; align-items: center; gap: 8px 0; counter-reset: mseq; }
+    .mfg-plants-checklist ol.mfg-seq > li { counter-increment: mseq; display: inline-flex !important; align-items: center !important; gap: 0 !important; font-size: 13px !important; line-height: 1.2 !important; color: #F3EEEC !important; white-space: nowrap; }
+    .mfg-plants-checklist ol.mfg-seq > li::before { content: none !important; display: none !important; }
+    .mfg-plants-checklist .mfg-seq-pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 11px 4px 4px; border: 1px solid rgba(255, 255, 255, .16); border-radius: 999px; background: rgba(255, 255, 255, .06); }
+    .mfg-plants-checklist .mfg-seq-pill::before { content: counter(mseq); display: inline-flex; align-items: center; justify-content: center; width: 19px; height: 19px; border-radius: 50%; background: #05838E; color: #fff; font-size: 10.5px; font-weight: 700; }
+    .mfg-plants-checklist ol.mfg-seq > li:not(:last-child)::after { content: "→"; padding: 0 7px; color: #7FC4CA; font-size: 13px; }
+  </style>
 </head>
 
 <body>
@@ -3323,7 +3333,17 @@
         </div>
 
         <ul class="mfg-plants-checklist">
-          <li>Mixing, extrusion, cooling, cutting and finishing lines in every unit</li>
+          <li class="mfg-seq-item">
+            <div><span class="mfg-seq-label">Production lines in every unit, in this order:</span>
+              <ol class="mfg-seq" aria-label="Production sequence">
+                <li><span class="mfg-seq-pill">Mixing</span></li>
+                <li><span class="mfg-seq-pill">Extrusion</span></li>
+                <li><span class="mfg-seq-pill">Cooling</span></li>
+                <li><span class="mfg-seq-pill">Cutting</span></li>
+                <li><span class="mfg-seq-pill">Finishing</span></li>
+              </ol>
+            </div>
+          </li>
           <li>Finished goods storage and dispatch to business associates and project sites</li>
           <li>Size, thickness, length, density and colour can be customised on bulk orders</li>
         </ul>
@@ -3560,8 +3580,7 @@
                   aria-hidden="true">
                   <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
-                </svg></span><span>SNG Eco India Pvt. Ltd.<br />1312, 1313, 1314, 13th Floor, Fortune Business
-                Hub,<br />Nr. Shell Petrol Pump, Science City Road,<br />Sola, Ahmedabad – 380060, Gujarat, India</span>
+                </svg></span><span class="ft-addr">SNG Eco India Pvt. Ltd.<br />1312, 1313, 1314, 13th Floor,<br />Fortune Business Hub,<br /><span class="ft-nw">Nr. Shell Petrol Pump, Science City Road,</span><br />Sola, Ahmedabad – 380060,<br />Gujarat, India</span>
             </li>
             <li class="contact-line"><span class="contact-line-icon"><svg width="16" height="16" viewBox="0 0 24 24"
                   fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
