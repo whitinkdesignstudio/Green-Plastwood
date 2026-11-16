@@ -314,3 +314,33 @@ img, video, iframe { max-width: 100%; }
   .gp-strip-item { min-width: 0; }
 }
 /* ---- end responsive sweep ---- */
+
+/* ===== Guide tables (Update 116) — scoped to .gpc-gtable, product pages untouched ===== */
+.gpc-gtable { margin: 22px 0 30px; border: 1px solid #D7E4E3; border-radius: 16px; background: #fff; box-shadow: 0 10px 30px -18px rgba(10, 57, 61, .35); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.gpc-gtable .gpc-spec { border: 0; border-radius: 0; font-size: 15px; background: transparent; }
+.gpc-gtable .gpc-spec th, .gpc-gtable .gpc-spec td { padding: 13px 20px; border-bottom: 1px solid #ECE7DF; vertical-align: middle; line-height: 1.5; }
+.gpc-gtable .gpc-spec thead th { background: #0A393D; color: #fff; font-size: 14.5px; font-weight: 700; letter-spacing: .01em; padding-top: 16px; padding-bottom: 16px; border-bottom: 0; }
+.gpc-gtable .gpc-spec thead th + th { border-left: 1px solid rgba(255, 255, 255, .12); }
+.gpc-gtable .gpc-spec thead th.is-gp { background: #05838E; }
+.gpc-gtable .gpc-spec tbody th { width: 34%; background: transparent; color: #0A393D; font-weight: 600; }
+.gpc-gtable .gpc-spec tbody td { color: #3D3533; }
+.gpc-gtable .gpc-spec tbody tr:nth-child(even) > * { background: #FAF8F4; }
+.gpc-gtable .gpc-spec tbody td.is-gp { background: #F0F8F8 !important; color: #0A393D; font-weight: 500; }
+.gpc-gtable .gpc-spec tbody tr:hover > * { background: #EEF6F6; }
+.gpc-gtable .gpc-spec tbody tr:last-child > * { border-bottom: 0; }
+.gpc-gtable .gpc-spec tbody td + td, .gpc-gtable .gpc-spec tbody th + td { border-left: 1px solid #F0ECE5; }
+.gpc-yn { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px 4px 8px; border-radius: 999px; font-size: 13.5px; font-weight: 600; line-height: 1.2; white-space: nowrap; }
+.gpc-yn svg { width: 15px; height: 15px; flex: none; }
+.gpc-yn--y { background: #DDF0EF; color: #05707A; }
+.gpc-yn--n { background: #F6ECE8; color: #9A4A3A; }
+@media (max-width: 600px) {
+  .gpc-gtable { border-radius: 12px; }
+  .gpc-gtable .gpc-spec th, .gpc-gtable .gpc-spec td { padding: 11px 14px; font-size: 14px; }
+  .gpc-gtable .gpc-spec tbody th { width: 40%; }
+}
+@media (max-width: 600px) {
+  .gpc-gtable--fit .gpc-spec { min-width: 0 !important; }
+  .gpc-gtable--fit .gpc-spec th, .gpc-gtable--fit .gpc-spec td { padding: 10px 10px; font-size: 13.5px; }
+  .gpc-gtable--fit .gpc-spec tbody th { width: 38%; }
+  .gpc-gtable--fit .gpc-yn { padding: 3px 9px 3px 6px; font-size: 12.5px; }
+}

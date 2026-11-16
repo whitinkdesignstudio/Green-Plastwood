@@ -1,5 +1,12 @@
 # Greenplastwood Website Updates
 
+## Update 116 (16 Nov 2026): Guide table design
+
+- New table design for all 15 tables in the 10 guides: rounded card with a soft shadow, dark teal header, alternating row shading, row hover, and Yes / No shown as green tick and red cross badges.
+- The Greenplastwood column (WPC vs Plywood, Pallets) is highlighted in light teal.
+- 2 and 3 column tables now fit the mobile screen without side scrolling; wider tables still scroll.
+- CSS: new `.gpc-gtable` block at the end of assets/gp-catalog.css (link now `?v=116` on the guides). Product page tables are not changed.
+
 ## Update 115 (16 Nov 2026): Certifications, Resources, Contact
 
 **certificate.html**
