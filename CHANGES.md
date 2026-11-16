@@ -1,5 +1,13 @@
 # Greenplastwood Website Updates
 
+## Update 118 (16 Nov 2026): fixes in Forum's Home, About and Products text
+
+- Brand written as "Green Plastwood" changed to "Greenplastwood" (About hero, 2 Home FAQs, Home footer, Products FAQ). Typo "reen Plastwood" fixed in the Products FAQ. Wording otherwise kept as written.
+- Home Journey chart: heading in Title Case ("Built For Scale, Driven By Growth."), extra space before the comma and capital "Innovation" fixed.
+- Home FAQs (sizes, minimum order): links to the WPC Door Frames page, catalogues and contact page restored; paragraph breaks added; FAQ links shown in teal with underline; answers now open fully (panel height limit raised).
+- FAQ schema (JSON-LD) on Home and Products updated to match the new answers.
+- Removed an invalid CSS line (`width 10%`) from the Home footer styles.
+
 ## Update 117 (16 Nov 2026): Home video and CELVION, footer address, manufacturing steps, guides order
 
 **Content edits by Forum (index.html, about.html, products.html)** are included in this update: new Journey chart heading and year texts, new FAQ answers, About hero and Products hero text. These files were also re-formatted by a code formatter (line breaks only).
