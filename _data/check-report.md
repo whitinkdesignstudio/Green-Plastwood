@@ -4,7 +4,7 @@
 
 ## ✅ PASS: product-wpc-door-frames.html (WPC Chaukhat)
 
-## ✅ PASS: product-wpc-window-frames.html (WPC Window Frame)
+## ✅ PASS: product-wpc-window-frames.html (WPC Window Frame & Shutter)
 
 ## ✅ PASS: product-wpc-solid-doors.html (WPC Doors)
 

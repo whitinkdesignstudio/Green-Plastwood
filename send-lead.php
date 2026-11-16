@@ -12,8 +12,8 @@
 
 /* ============================== SETTINGS ============================== */
 $CONFIG = array(
-  'TO'          => 'sales.executive11@sngecoindia.com',   // inbox that receives every enquiry
-  'FROM'        => 'sales.executive11@sngecoindia.com',   // sender address (must be on this domain)
+  'TO'          => 'inquiry@sngecoindia.com',   // inbox that receives every enquiry
+  'FROM'        => 'inquiry@sngecoindia.com',   // sender address (must be on this domain)
   'FROM_NAME'   => 'Greenplastwood',
   'AUTO_REPLY'  => true,                                   // "we have received your details" mail to the visitor
   'ALLOWED'     => array('sngecoindia.com', 'www.sngecoindia.com'),  // forms are accepted only from these sites

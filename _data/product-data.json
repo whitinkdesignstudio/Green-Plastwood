@@ -70,7 +70,7 @@
    "phone": "+91 90163 36119",
    "tel": "tel:+919016336119",
    "whatsapp": "https://wa.me/919016336119",
-   "email": "sales.executive11@sngecoindia.com",
+   "email": "inquiry@sngecoindia.com",
    "hq": "1312, 1313, 1314, 13th Floor, Fortune Business Hub, Nr. Shell Petrol Pump, Science City Road, Sola, Ahmedabad – 380060, Gujarat, India",
    "hours": "Monday to Saturday, 9:30 AM to 6:30 PM"
   },
@@ -751,7 +751,7 @@
    "columns": [
     "Compare",
     "WPC Chaukhat",
-    "WPC Window Frame",
+    "WPC Window Frame & Shutter",
     "WPC Solid Doors",
     "WPC 3 Layer Doors",
     "WPC / PVC Boards & Sheets",
@@ -1169,7 +1169,7 @@
    },
    {
     "q": "Which products does Greenplastwood manufacture?",
-    "a": "WPC Chaukhat (door frames), WPC Window Frames, WPC Doors (solid, 3 layer, texture and digital print), WPC Sheets & Boards (WPC / PVC boards and 3 layer boards), PVC Panel and, from SNG Eco India, Recycled Plastic Sheet.",
+    "a": "WPC Chaukhat (door frames), WPC Window Frames & Shutters, WPC Doors (solid, 3 layer, texture and digital print), WPC Sheets & Boards (WPC / PVC boards and 3 layer boards), PVC Panel and, from SNG Eco India, Recycled Plastic Sheet.",
     "changed": "Updated to the 6 official product lines (old answer missed PVC Panel and Recycled Plastic Sheet)."
    },
    {
@@ -1762,7 +1762,7 @@
     "lead": "Eight standard colours. The colour runs through the profile, and the frame can also be painted, polished or laminated.",
     "groups": [
      {
-      "name": "Door & window frames",
+      "name": "Door & window frames and shutters",
       "items": [
        {
         "name": "Light Ivory",
@@ -2035,18 +2035,18 @@
    "id": "window-frames",
    "order": 2,
    "page": "product-wpc-window-frames.html",
-   "name": "WPC Window Frame",
-   "name_long": "WPC Window Frame",
+   "name": "WPC Window Frame & Shutter",
+   "name_long": "WPC Window Frame & Shutter",
    "h1": [
     "WPC Window",
     "Frame"
    ],
    "eyebrow": "Window chaukhat in two profiles",
-   "tagline": "Window frames that do not rot or swell in rain and sun.",
-   "description": "Greenplastwood WPC window frames are made of the same high-density wood plastic composite as our door chaukhats. They are 100% water proof, termite and borer proof and weather and ageing resistant, so they hold their shape in rain, sun and humidity.",
+   "tagline": "Window frames and shutters that do not rot or swell in rain and sun.",
+   "description": "Greenplastwood WPC window frames and shutters are made of the same high-density wood plastic composite as our door chaukhats. They are 100% water proof, termite and borer proof and weather and ageing resistant, so they hold their shape in rain, sun and humidity.",
    "card": {
     "tag": "Two profiles",
-    "summary": "Window frames in the same WPC as our chaukhats: water proof, termite proof and fit for exterior walls.",
+    "summary": "Window frames and shutters in the same WPC as our chaukhats: water proof, termite proof and fit for exterior walls.",
     "chips": [
      "70 × 30 mm",
      "120 × 50 mm",
@@ -2054,7 +2054,7 @@
     ],
     "image": "images/products/cards/window.webp"
    },
-   "quote_product": "WPC Window Frames",
+   "quote_product": "WPC Window Frames & Shutters",
    "quote_url": "contact.html?product=WPC+Window+Frames#contactInquiryForm",
    "sample_url": "contact.html?product=WPC+Window+Frames+Sample#contactInquiryForm",
    "key_facts": [
@@ -2125,7 +2125,7 @@
     {
      "src": "images/products/cards/window.webp",
      "alt": "Greenplastwood standard 3-panel casement WPC window frame in Teak Wood finish",
-     "caption": "Greenplastwood WPC Window Frame (Teak Finish)"
+     "caption": "Greenplastwood WPC Window Frame & Shutter (Teak Finish)"
     },
     {
      "src": "images/gp_window.webp",
@@ -2320,10 +2320,10 @@
      "Colours And",
      "Finish"
     ],
-    "lead": "Eight standard colours, the same as our door chaukhats, so the door and window frames in a room can match.",
+    "lead": "Eight standard colours, the same as our door chaukhats, so the door frames, window frames and shutters in a room can match.",
     "groups": [
      {
-      "name": "Door & window frames",
+      "name": "Door & window frames and shutters",
       "items": [
        {
         "name": "Light Ivory",
@@ -2392,7 +2392,7 @@
    "type_comparison": null,
    "applications": {
     "title": [
-     "Where WPC Window Frames",
+     "Where WPC Window Frames & Shutters",
      "Are Used"
     ],
     "lead": null,
@@ -2413,7 +2413,7 @@
       "image": "images/products/3-layer-door-office.webp",
       "alt": "Office",
       "title": "Office",
-      "text": "Window frames for offices and commercial buildings."
+      "text": "Window frames and shutters for offices and commercial buildings."
      },
      {
       "image": "images/products/3-layer-door-school.webp",
@@ -2444,7 +2444,7 @@
      "Installation",
      "Guide"
     ],
-    "lead": "Window frames are cut, joined and fixed the same way as our door chaukhats. The drawings below are from the installation guide in our catalogue.",
+    "lead": "Window frames and shutters are cut, joined and fixed the same way as our door chaukhats. The drawings below are from the installation guide in our catalogue.",
     "steps": "common.frame_installation_steps",
     "need": null,
     "after": null,
@@ -2452,7 +2452,7 @@
    },
    "lab": {
     "ref": "common.lab_tests.door_frame",
-    "lead": "Window frames are made of the same WPC, at the same density, as our door frames. The results below are for a Greenplastwood WPC door frame sample tested by Alekh Plastics Testing Centre, Ahmedabad. Reports dated 24 November 2022."
+    "lead": "Window frames and shutters are made of the same WPC, at the same density, as our door frames. The results below are for a Greenplastwood WPC door frame sample tested by Alekh Plastics Testing Centre, Ahmedabad. Reports dated 24 November 2022."
    },
    "properties": null,
    "ordering": {
@@ -2500,11 +2500,11 @@
    },
    "faqs": [
     {
-     "q": "What sizes are WPC window frames available in?",
-     "a": "Greenplastwood WPC window frames are made in 70 × 30 mm and 120 × 50 mm profiles, in 7, 8, 9 and 10 ft lengths. Sizes can be customised on bulk orders."
+     "q": "What sizes are WPC window frames and shutters available in?",
+     "a": "Greenplastwood WPC window frames and shutters are made in 70 × 30 mm and 120 × 50 mm profiles, in 7, 8, 9 and 10 ft lengths. Sizes can be customised on bulk orders."
     },
     {
-     "q": "Are WPC window frames good for exterior walls?",
+     "q": "Are WPC window frames and shutters good for exterior walls?",
      "a": "Yes. WPC is 100% water proof and weather and ageing resistant, and our catalogue lists it as best used as an exterior-grade material. It does not rot, swell or get termites like a wooden window frame."
     },
     {
@@ -2512,19 +2512,19 @@
      "a": "Light Ivory, Yellow Ivory, Pure White, Beach White, Teak Wood, Chocolate Brown, Coco Brown and Black. Other colours can be made on bulk orders."
     },
     {
-     "q": "Can WPC window frames be painted or polished?",
+     "q": "Can WPC window frames and shutters be painted or polished?",
      "a": "Yes. WPC is processed like natural wood: it is cut, screwed, polished or laminated, and polishing costs less than on wood."
     },
     {
      "q": "What is the density?",
-     "a": "Window frames are made at 750 to 1200 kg/m³, the same range as our door chaukhats. A lab-tested door-frame sample showed 0.90 g/cc density, 0.2% water absorption and a UL-94 V-0 rating."
+     "a": "Window frames and shutters are made at 750 to 1200 kg/m³, the same range as our door chaukhats. A lab-tested door-frame sample showed 0.90 g/cc density, 0.2% water absorption and a UL-94 V-0 rating."
     },
     {
      "q": "How is a WPC window frame installed?",
      "a": "Like a wooden one. The frame members are cut, joined at the corners with screws and fixed in the wall opening, using normal carpentry tools."
     },
     {
-     "q": "Do WPC window frames need termite treatment?",
+     "q": "Do WPC window frames and shutters need termite treatment?",
      "a": "No. They are termite and borer proof, so no chemical treatment is needed."
     }
    ],

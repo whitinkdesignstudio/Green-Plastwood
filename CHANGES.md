@@ -1,5 +1,19 @@
 # Greenplastwood Website Updates
 
+## Update 112: Home content, window frames and shutters, footer, email (16 Nov 2026)
+**Home**
+- Our Products card: "WPC Window Frame & Shutter".
+- Where Our Products Are Used: new card order 1 Furniture & Storage, 2 Bedrooms & Living Spaces, 3 Kitchens & Utility Areas, 4 Walls & Ceilings, 5 Bathrooms & Wet Areas, then Offices, Institutions, Outdoor. "View All Applications" button removed.
+- Journey chart: "13 machines" replaced by "Our Production Capacity, Growing Every Year", text without machine counts.
+- CELVION: the single collage replaced by four separate photos on the right half, taken from the CELVION website files (github.com/whitinkdesignstudio/CELVION): 4 compartment round plate and bowl (tableware), 6x6 and 8x8 clamshell boxes (packaging). Cropped to avoid the AI sparkle mark. Files: images/celvion/celvion-tableware-plate, -tableware-bowl, -packaging-clamshell, -packaging-box (.webp, 800 x 800). CELVION logo made smaller (260 px wide instead of 340 px).
+- FAQ 2: only the product list (no repeated "and", no exterior WPC profiles, no "Our range" line). FAQ 4: "like traditional wood". FAQ 6: sizes removed, points to catalogues, the Chaukhat page and our team. FAQ 8: "Please contact our sales team". FAQ 9: "Our business team will contact you". FAQ schema updated to match.
+
+**Whole site**
+- Window frames are now "window frames and shutters": product name "WPC Window Frame & Shutter" (singular) and "WPC Window Frames & Shutters" (plural) in menus, cards, headings, titles, meta, schema and forms; "window frames and shutters" in running text. Kept as "window frame": profile sizes (70 × 30 mm / 120 × 50 mm window frame), "wooden window frame", "window frame profiles", "How is a WPC window frame installed?". URLs unchanged. Also _data/product-data.json and llms.txt.
+- Footer text rewritten on all 31 pages that use it: "Greenplastwood is the WPC brand of SNG Eco India Pvt. Ltd., Ahmedabad. SNG Eco India started in 2012, and since 2016 we have manufactured WPC door frames (chaukhats), doors, sheets & boards, and window frames & shutters in our own plants in Gujarat. Our range also includes PVC panels and recycled plastic sheets."
+- Email: sales.executive11@sngecoindia.com changed to inquiry@sngecoindia.com everywhere, including send-lead.php (TO and FROM).
+- Backups: _backup/2026-11-16-content/.
+
 ## Update 111: final checks (6 Nov 2026)
 - Home, trusted section heading: "Trusted By 150+ Companies And 200+ Business Associates" (checked).
 - Resources, Exhibitions And Trade Shows card: "See all exhibitions" link removed (checked; no such link left on any live page).

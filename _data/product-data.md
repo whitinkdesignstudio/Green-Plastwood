@@ -43,7 +43,7 @@
 - Brand: **Greenplastwood** (GREENPLASTWOOD) · tagline WPC LIFE WITH FUTURE · company SNG Eco India Pvt. Ltd.
 - 9 years of WPC manufacturing (since 2017) · SNG Eco India since 2012
 - Stats: 1,300 MT a month · 3 plants · 125+ team · 105,000 sq ft · 300+ projects · 9+ certifications · 50+ stock points · 4+ countries · 150+ companies · 200+ business associates · ISO 9001:2015
-- Contact: +91 90163 36119 · sales.executive11@sngecoindia.com · Monday to Saturday, 9:30 AM to 6:30 PM
+- Contact: +91 90163 36119 · inquiry@sngecoindia.com · Monday to Saturday, 9:30 AM to 6:30 PM
 - Product order: door-frames → window-frames → doors → boards → pvc-panel → recycled-sheet
 
 ### Common WPC benefits (only for WPC products, not for PVC Panel or Recycled Sheet)
