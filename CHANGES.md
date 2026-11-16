@@ -1,5 +1,20 @@
 # Greenplastwood Website Updates
 
+## Update 115 (16 Nov 2026): Certifications, Resources, Contact
+
+**certificate.html**
+- Removed the sections Independent Test Reports, How We Control Quality and Frequently Asked Questions, and the FAQ schema.
+- The page now has the hero, Certifications & Registrations and the Need Certificates CTA. New sections are on hold until the client chooses.
+
+**resources.html + 4 new guide pages**
+- Removed the decking and cladding/pergola guide cards.
+- New guides: guide-choose-wpc-window-frame-shutter.html, guide-choose-wpc-door.html, guide-choose-wpc-sheets-boards.html, guide-choose-recycled-plastic-sheet.html (Article schema, breadcrumb, related links). Added to sitemap.xml.
+
+**contact.html**
+- Get In Touch and Send Us Your Requirement cards are now the same height on desktop.
+- "SNG Eco India Pvt. Ltd." shown in a bordered teal badge.
+- Maps: 4 cards in a 2 x 2 grid (1 column on mobile), each with a tag and heading: Corporate Office, Ahmedabad / Manufacturing Unit 1, Hirapar, Morbi / Unit 2, Hirapar, Morbi / Unit 3, Village Gala, Morbi. The head button is now "Plan A Plant Visit".
+
 ## Update 114: Manufacturing and Gallery (16 Nov 2026)
 **Manufacturing**
 - Our Manufacturing Plants: lead line ends at "supplied across India" ("from our corporate office in Ahmedabad" removed); list item "Door frames, door cores and boards made on our own lines" removed; "colour customised" now "colour can be customised".
